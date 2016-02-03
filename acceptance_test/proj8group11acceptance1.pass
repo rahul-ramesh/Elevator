@@ -1,0 +1,71 @@
+; proj8group11acceptance1.pass
+; 18-649 Distributed Embedded Systems
+; Group 11
+; Rahul Ramesh // rahulram. Daniel Santoro // ddsantor. David Thompson // davidtho. Jialiang Tan // jialiant
+; !@
+
+; DESCRIPTION: Project 8 acceptance test.
+
+;Project 8 acceptance test 4
+; The building starts filling up top 4 floors for meetings.
+;Time	Start Floor	Start Hallway	End Floor	End Hallway
++1s 1 FRONT 8 FRONT
++1s 3 FRONT 8 FRONT
++1s 4 FRONT 8 FRONT
++1s 5 FRONT 8 FRONT
++1s 6 FRONT 8 FRONT
++1s 7 FRONT 8 FRONT
++1s 7 BACK 8 FRONT
++1s 1 FRONT 7 BACK
++1s 1 BACK 7 BACK
++1s 2 BACK 7 BACK
++1s 3 FRONT 7 BACK
++1s 4 FRONT 7 BACK
++1s 5 FRONT 7 BACK
++1s 6 FRONT 7 BACK
++1s 1 FRONT 6 FRONT
++1s 1 BACK 6 FRONT
++1s 2 BACK 6 FRONT
++1s 3 FRONT 6 FRONT
++1s 4 FRONT 6 FRONT
++1s 5 FRONT 6 FRONT
++1s 1 FRONT 6 FRONT
++1s 1 FRONT 5 FRONT
++1s 1 BACK 5 FRONT
++1s 2 BACK 5 FRONT
++1s 3 FRONT 5 FRONT
++1s 4 FRONT 5 FRONT
++1s 1 FRONT 5 FRONT
++1s 1 FRONT 5 FRONT
++1s 1 FRONT 5 FRONT
+
+;people start leaving for lunch on floor 1
++1s 8 FRONT 1 FRONT
++1s 8 FRONT 1 FRONT
++1s 8 FRONT 1 FRONT
++1s 8 FRONT 1 BACK
++1s 8 FRONT 1 BACK
++1s 8 FRONT 1 BACK
++1s 8 FRONT 1 BACK
++1s 7 FRONT 1 FRONT
++1s 7 FRONT 1 FRONT
++1s 7 FRONT 1 FRONT
++1s 7 FRONT 1 BACK
++1s 7 BACK 1 BACK
++1s 7 BACK 1 BACK
++1s 7 BACK 1 BACK
++1s 6 FRONT 1 FRONT
++1s 6 FRONT 1 FRONT
++1s 6 FRONT 1 FRONT
++1s 6 FRONT 1 BACK
++1s 6 FRONT 1 BACK
++1s 6 FRONT 1 BACK
++1s 6 FRONT 1 BACK
++1s 5 FRONT 1 FRONT
++1s 5 FRONT 1 FRONT
++1s 5 FRONT 1 FRONT
++1s 5 FRONT 1 FRONT
++1s 5 FRONT 1 BACK
++1s 5 FRONT 1 BACK
++1s 5 FRONT 1 BACK
++1s 5 FRONT 1 BACK

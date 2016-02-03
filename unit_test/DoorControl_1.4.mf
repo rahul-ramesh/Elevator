@@ -1,0 +1,148 @@
+; DoorControl_1.4.mf
+; 18-649 Distributed Embedded Systems
+; Group 11
+; Rahul Ramesh // rahulram. Daniel Santoro // ddsantor. David Thompson // davidtho. Jialiang Tan // jialiant
+; !@
+
+;Note:  Assertions must be inserted more than two periods after a message or physical
+;value has been inserted to be sure that the change propagates through the system
+
+;this test file demonstrates network and framework message injections
+;and network, framework, and controller state assertions.
+
+#INCLUDE defines.mf 
+
+
+;Check initial conditions
+;#state 'CLOSED'
++100ms A F DoorMotor BACK LEFT : command == STOP
++0ms A N DOOR_MOTOR_COMMAND_[BACK][LEFT]_CAN_ID DoorMotorCommand BACK LEFT : getValue == MDOOR_STOP
+
+; Trigger transition to state 2
+;#transition 'PT1'
++50ms I DOOR_CLOSED_SENSOR_PERIOD N DOOR_CLOSED_SENSOR_[BACK][LEFT]_CAN_ID DoorClosed BACK LEFT = TRUE
++0ms I WEIGHT_PERIOD N CAR_WEIGHT_CAN_ID CarWeight = 500
++0ms I AT_FLOOR_PERIOD N AT_FLOOR_[1][BACK]_CAN_ID AtFloor 1 BACK = TRUE
++0ms I DISPATCHER_PERIOD N DESIRED_FLOOR_CAN_ID DesiredFloor = 1 STOP BACK
++0ms I DRIVE_PERIOD N DRIVE_SPEED_CAN_ID DriveSpeed = 0 UP
+
+;Check if in state 2
+;#state 'OPEN'
++1000ms A F DoorMotor BACK LEFT : command == OPEN
++0s A N DOOR_MOTOR_COMMAND_[BACK][LEFT]_CAN_ID DoorMotorCommand BACK LEFT : getValue == MDOOR_OPEN
+
+;Trigger transition to state 3
+;#transition 'PT2'
++500ms I DOOR_CLOSED_SENSOR_PERIOD N DOOR_CLOSED_SENSOR_[BACK][LEFT]_CAN_ID DoorClosed BACK LEFT = FALSE
++100ms I DISPATCHER_PERIOD N DESIRED_FLOOR_CAN_ID DesiredFloor = 2 STOP BACK
++500ms I DOOR_OPENED_SENSOR_PERIOD N DOOR_OPEN_SENSOR_[BACK][LEFT]_CAN_ID DoorOpened BACK LEFT = TRUE
+
+;Check if in state 3
+;#state 'OPENED_COUNTDOWN'
++1000ms A F DoorMotor BACK LEFT : command == STOP
++0s A N DOOR_MOTOR_COMMAND_[BACK][LEFT]_CAN_ID DoorMotorCommand BACK LEFT : getValue == MDOOR_STOP
+
+; Transition to state 4 triggered after dwell countdown
+;#transition 'PT3'
+;#state 'CLOSE'
++5.1s A F DoorMotor BACK LEFT : command == CLOSE
++0s A N DOOR_MOTOR_COMMAND_[BACK][LEFT]_CAN_ID DoorMotorCommand BACK LEFT : getValue == MDOOR_CLOSE
++10000ms I DOOR_OPENED_SENSOR_PERIOD N DOOR_OPEN_SENSOR_[BACK][LEFT]_CAN_ID DoorOpened BACK LEFT = FALSE
+
+;Inject doorReversal to trigger transition PT10 to state 8
+;transition 'PT10'
++1000ms I 100ms N DOOR_REVERSAL_SENSOR_[BACK][LEFT]_CAN_ID DoorReversal BACK LEFT = TRUE
+
+; Check if in state 8
+;#state 'REVERSAL'
++190ms A F DoorMotor BACK LEFT : command == OPEN
++0ms A N DOOR_MOTOR_COMMAND_[BACK][LEFT]_CAN_ID DoorMotorCommand BACK LEFT : getValue == MDOOR_OPEN
++1000ms I 100ms N DOOR_REVERSAL_SENSOR_[BACK][LEFT]_CAN_ID DoorReversal BACK LEFT = FALSE
+
+;Trigger transition to state 3
+;#transition 'PT11'
++10000ms I DOOR_OPENED_SENSOR_PERIOD N DOOR_OPEN_SENSOR_[BACK][LEFT]_CAN_ID DoorOpened BACK LEFT = TRUE
++0ms I DOOR_CLOSED_SENSOR_PERIOD N DOOR_CLOSED_SENSOR_[BACK][LEFT]_CAN_ID DoorClosed BACK LEFT = FALSE
+
+;Check if in state 3
+;#state 'OPENED_COUNTDOWN'
++1000ms A F DoorMotor BACK LEFT : command == STOP
++0s A N DOOR_MOTOR_COMMAND_[BACK][LEFT]_CAN_ID DoorMotorCommand BACK LEFT : getValue == MDOOR_STOP
++1000ms I 100ms N DOOR_REVERSAL_SENSOR_[BACK][LEFT]_CAN_ID DoorReversal BACK LEFT = FALSE
+
+; Transition to state 4 triggered after dwell countdown
+;#transition 'PT3'
+;#state 'CLOSE'
++5.3s A F DoorMotor BACK LEFT : command == CLOSE
++0s A N DOOR_MOTOR_COMMAND_[BACK][LEFT]_CAN_ID DoorMotorCommand BACK LEFT : getValue == MDOOR_CLOSE
++500ms I DOOR_OPENED_SENSOR_PERIOD N DOOR_OPEN_SENSOR_[BACK][LEFT]_CAN_ID DoorOpened BACK LEFT = FALSE
+
+;Inject doorReversal to trigger transition PT12 to state 5
+;transition 'PT12'
++1000ms I 100ms N DOOR_REVERSAL_SENSOR_[BACK][LEFT]_CAN_ID DoorReversal BACK LEFT = TRUE
+
+; Check if in state 5
+;#state 'NUDGE'
++180ms A F DoorMotor BACK LEFT : command == NUDGE
++0ms A N DOOR_MOTOR_COMMAND_[BACK][LEFT]_CAN_ID DoorMotorCommand BACK LEFT : getValue == MDOOR_NUDGE
+
+; trigger transition to state 4
+;#transition 'PT15'
++1000ms I 100ms N DOOR_REVERSAL_SENSOR_[BACK][LEFT]_CAN_ID DoorReversal BACK LEFT = FALSE
+
+; Check if in state 4
+;#state 'CLOSE'
++100ms A F DoorMotor BACK LEFT : command == CLOSE
++0s A N DOOR_MOTOR_COMMAND_[BACK][LEFT]_CAN_ID DoorMotorCommand BACK LEFT : getValue == MDOOR_CLOSE
+
+;Inject doorReversal to trigger transition PT12 to state 5
+;transition 'PT12'
++1000ms I 100ms N DOOR_REVERSAL_SENSOR_[BACK][LEFT]_CAN_ID DoorReversal BACK LEFT = TRUE
+
+; Check if in state 5
+;#state 'NUDGE'
++180ms A F DoorMotor BACK LEFT : command == NUDGE
++0ms A N DOOR_MOTOR_COMMAND_[BACK][LEFT]_CAN_ID DoorMotorCommand BACK LEFT : getValue == MDOOR_NUDGE
+
+; Trigger transition to state 6
+;#transition 'PT13'
++200ms I WEIGHT_PERIOD N CAR_WEIGHT_CAN_ID CarWeight = 20000
+
+; Check in in state 6
+;#state 'OVERWEIGHT'
++1000ms A F DoorMotor BACK LEFT : command == OPEN
++0ms A N DOOR_MOTOR_COMMAND_[BACK][LEFT]_CAN_ID DoorMotorCommand BACK LEFT : getValue == MDOOR_OPEN
+
+; Trigger transition to state 7
+;#transition 'PT6'
++500ms I DOOR_OPENED_SENSOR_PERIOD N DOOR_OPEN_SENSOR_[BACK][LEFT]_CAN_ID DoorOpened BACK LEFT = TRUE
+
+; Check if in state 7
+;#state 'OVERWEIGHT_OPENED'
++1000ms A F DoorMotor BACK LEFT : command == STOP
++0s A N DOOR_MOTOR_COMMAND_[BACK][LEFT]_CAN_ID DoorMotorCommand BACK LEFT : getValue == MDOOR_STOP
+
+;Trigger transition to state 3
+;#transition 'PT7'
++100ms I WEIGHT_PERIOD N CAR_WEIGHT_CAN_ID CarWeight = 500
+
+;Check if in state 3
+;#state 'OPENED_COUNTDOWN'
++1000ms A F DoorMotor BACK LEFT : command == STOP
++0s A N DOOR_MOTOR_COMMAND_[BACK][LEFT]_CAN_ID DoorMotorCommand BACK LEFT : getValue == MDOOR_STOP
++1000ms I 100ms N DOOR_REVERSAL_SENSOR_[BACK][LEFT]_CAN_ID DoorReversal BACK LEFT = FALSE
+
+; Transition to state 4 triggered after dwell countdown
+;#transition 'PT3'
+;#state 'CLOSE'
++5.1s A F DoorMotor BACK LEFT : command == CLOSE
++0s A N DOOR_MOTOR_COMMAND_[BACK][LEFT]_CAN_ID DoorMotorCommand BACK LEFT : getValue == MDOOR_CLOSE
+
+;Trigger transition to state 1
+;#transition 'PT4'
++100ms I DOOR_CLOSED_SENSOR_PERIOD N DOOR_CLOSED_SENSOR_[BACK][LEFT]_CAN_ID DoorClosed BACK LEFT = TRUE
+
+;Check if in state 1
+;#state 'CLOSED'
++500ms A F DoorMotor BACK LEFT : command == STOP
++0ms A N DOOR_MOTOR_COMMAND_[BACK][LEFT]_CAN_ID DoorMotorCommand BACK LEFT : getValue == MDOOR_STOP

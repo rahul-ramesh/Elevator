@@ -1,0 +1,37 @@
+; sd4a_0.stats
+; 18-649 Distributed Embedded Systems
+; Group 11
+; Rahul Ramesh // rahulram. Daniel Santoro // ddsantor. David Thompson // davidtho. Jialiang Tan // jialiant
+; !@
+
+Simulator Parameters:
+Command line = -cf ../../portfolio_grp11/integration_test/sd4a.cf -mf ../../portfolio_grp11/integration_test/sd4a.mf -head ../../portfolio_grp11/scripts/grp11.head
+RandomSeed = 1450147621263
+CanNetworkBitTime = 0 ns
+Effective Can Bitrate = Infinity
+Run Time = null
+Real time rate = null
+Message File = ../../portfolio_grp11/integration_test/sd4a.mf
+Controller File = ../../portfolio_grp11/integration_test/sd4a.cf
+
+Assertion Results:
+@3.5s:  PASSED simulator.payloads.CanMailbox$ReadableCanMailbox@305b7025 :: getValue ?== 0 PASSED
+@3.5s:  PASSED simulator.payloads.CanMailbox$ReadableCanMailbox@52c751fd :: getValue ?== 0 PASSED
+@4.5s:  PASSED simulator.payloads.CanMailbox$ReadableCanMailbox@7a98f6c7 :: getValue ?== 2 PASSED
+@4.5s:  PASSED simulator.payloads.CanMailbox$ReadableCanMailbox@5c63b660 :: getValue ?== 2 PASSED
+@6.0s:  PASSED simulator.payloads.DrivePayload$ReadableDrivePayload@737d7379 :: speed ?== LEVEL PASSED
+@6.0s:  PASSED simulator.payloads.DrivePayload$ReadableDrivePayload@4b9a1843 :: direction ?== DOWN PASSED
+@7.5s:  PASSED simulator.payloads.DrivePayload$ReadableDrivePayload@1783d08c :: speed ?== STOP PASSED
+@7.5s:  PASSED simulator.payloads.DrivePayload$ReadableDrivePayload@1876e112 :: direction ?== STOP PASSED
+@8.0s:  PASSED simulator.payloads.CanMailbox$ReadableCanMailbox@3f2bc418 :: getValue ?== true PASSED
+@8.0s:  PASSED simulator.payloads.CanMailbox$ReadableCanMailbox@57003d5d :: getValue ?== true PASSED
+@8.0s:  PASSED simulator.payloads.CanMailbox$ReadableCanMailbox@1c507aaf :: getValue ?== true PASSED
+@8.0s:  PASSED simulator.payloads.CanMailbox$ReadableCanMailbox@659297ab :: getValue ?== true PASSED
+@8.0s:  PASSED simulator.payloads.CanMailbox$ReadableCanMailbox@5babd8cb :: getValue ?== true PASSED
+
+
+******************Summary******************
+Passed:  13
+Failed:  0
+Total :  13
+

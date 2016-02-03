@@ -1,0 +1,300 @@
+; CarPositionControl_1_0.out
+; 18-649 Distributed Embedded Systems
+; Group 11
+; Rahul Ramesh // rahulram. Daniel Santoro // ddsantor. David Thompson // davidtho. Jialiang Tan // jialiant
+; !@
+
+
+Simulator Parameters:
+Command line = -cf ../../portfolio_grp11/unit_test/CarPositionControl.cf -mf ../../portfolio_grp11/unit_test/CarPositionControl_1.mf -head ../../portfolio_grp11/scripts/grp11.head
+RandomSeed = 1450146973173
+CanNetworkBitTime = 0 ns
+Effective Can Bitrate = Infinity
+Run Time = null
+Real time rate = null
+Message File = ../../portfolio_grp11/unit_test/CarPositionControl_1.mf
+Controller File = ../../portfolio_grp11/unit_test/CarPositionControl.cf
+
+
+[CarPositionControl] @0.000000000: Created CarPositionControl  with period = 0.05s
+[Elevator] @0.000000000: Starting Simulation ***
+[CarPositionControl] @0.050000000: CarPositionIndicator displaying floor 1
+[CarPositionControl] @0.100000000: CarPositionIndicator displaying floor 1
+[CarPositionControl] @0.150000000: CarPositionIndicator displaying floor 1
+[CarPositionControl] @0.200000000: CarPositionIndicator displaying floor 1
+[CarPositionControl] @0.250000000: CarPositionIndicator displaying floor 1
+[CarPositionControl] @0.300000000: CarPositionIndicator displaying floor 1
+[CarPositionControl] @0.350000000: CarPositionIndicator displaying floor 1
+[CarPositionControl] @0.400000000: CarPositionIndicator displaying floor 1
+[CarPositionControl] @0.450000000: CarPositionIndicator displaying floor 1
+[AssertionMonitor] @0.500000000: ************************************************************************************************************************
+[AssertionMonitor] @0.500000000: PASSED simulator.payloads.CarPositionIndicatorPayload$ReadableCarPositionIndicatorPayload@2515272a :: floor ?== 1 PASSED
+[AssertionMonitor] @0.500000000: ************************************************************************************************************************
+[CarPositionControl] @0.500000000: CarPositionIndicator displaying floor 1
+[CarPositionControl] @0.550000000: CarPositionIndicator displaying floor 1
+[CarPositionControl] @0.600000000: CarPositionIndicator displaying floor 1
+[CarPositionControl] @0.650000000: CarPositionIndicator displaying floor 1
+[CarPositionControl] @0.700000000: CarPositionIndicator displaying floor 1
+[CarPositionControl] @0.750000000: CarPositionIndicator displaying floor 1
+[CarPositionControl] @0.800000000: CarPositionIndicator displaying floor 1
+[CarPositionControl] @0.850000000: CarPositionIndicator displaying floor 1
+[CarPositionControl] @0.900000000: CarPositionIndicator displaying floor 1
+[CarPositionControl] @0.950000000: CarPositionIndicator displaying floor 1
+[CarPositionControl] @1.000000000: CarPositionIndicator displaying floor 1
+[CarPositionControl] @1.050000000: CarPositionIndicator displaying floor 2
+[CarPositionControl] @1.100000000: CarPositionIndicator displaying floor 2
+[CarPositionControl] @1.150000000: CarPositionIndicator displaying floor 2
+[CarPositionControl] @1.200000000: CarPositionIndicator displaying floor 2
+[CarPositionControl] @1.250000000: CarPositionIndicator displaying floor 2
+[CarPositionControl] @1.300000000: CarPositionIndicator displaying floor 2
+[CarPositionControl] @1.350000000: CarPositionIndicator displaying floor 2
+[CarPositionControl] @1.400000000: CarPositionIndicator displaying floor 2
+[CarPositionControl] @1.450000000: CarPositionIndicator displaying floor 2
+[AssertionMonitor] @1.500000000: ************************************************************************************************************************
+[AssertionMonitor] @1.500000000: PASSED simulator.payloads.CarPositionIndicatorPayload$ReadableCarPositionIndicatorPayload@15c617e0 :: floor ?== 2 PASSED
+[AssertionMonitor] @1.500000000: ************************************************************************************************************************
+[CarPositionControl] @1.500000000: CarPositionIndicator displaying floor 2
+[CarPositionControl] @1.550000000: CarPositionIndicator displaying floor 2
+[CarPositionControl] @1.600000000: CarPositionIndicator displaying floor 2
+[CarPositionControl] @1.650000000: CarPositionIndicator displaying floor 2
+[CarPositionControl] @1.700000000: CarPositionIndicator displaying floor 2
+[CarPositionControl] @1.750000000: CarPositionIndicator displaying floor 2
+[CarPositionControl] @1.800000000: CarPositionIndicator displaying floor 2
+[CarPositionControl] @1.850000000: CarPositionIndicator displaying floor 2
+[CarPositionControl] @1.900000000: CarPositionIndicator displaying floor 2
+[CarPositionControl] @1.950000000: CarPositionIndicator displaying floor 2
+[CarPositionControl] @2.000000000: CarPositionIndicator displaying floor 2
+[CarPositionControl] @2.050000000: CarPositionIndicator displaying floor 3
+[CarPositionControl] @2.100000000: CarPositionIndicator displaying floor 3
+[CarPositionControl] @2.150000000: CarPositionIndicator displaying floor 3
+[CarPositionControl] @2.200000000: CarPositionIndicator displaying floor 3
+[CarPositionControl] @2.250000000: CarPositionIndicator displaying floor 3
+[CarPositionControl] @2.300000000: CarPositionIndicator displaying floor 3
+[CarPositionControl] @2.350000000: CarPositionIndicator displaying floor 3
+[CarPositionControl] @2.400000000: CarPositionIndicator displaying floor 3
+[CarPositionControl] @2.450000000: CarPositionIndicator displaying floor 3
+[AssertionMonitor] @2.500000000: ************************************************************************************************************************
+[AssertionMonitor] @2.500000000: PASSED simulator.payloads.CarPositionIndicatorPayload$ReadableCarPositionIndicatorPayload@59026e12 :: floor ?== 3 PASSED
+[AssertionMonitor] @2.500000000: ************************************************************************************************************************
+[CarPositionControl] @2.500000000: CarPositionIndicator displaying floor 3
+[CarPositionControl] @2.550000000: CarPositionIndicator displaying floor 3
+[CarPositionControl] @2.600000000: CarPositionIndicator displaying floor 3
+[CarPositionControl] @2.650000000: CarPositionIndicator displaying floor 3
+[CarPositionControl] @2.700000000: CarPositionIndicator displaying floor 3
+[CarPositionControl] @2.750000000: CarPositionIndicator displaying floor 3
+[CarPositionControl] @2.800000000: CarPositionIndicator displaying floor 3
+[CarPositionControl] @2.850000000: CarPositionIndicator displaying floor 3
+[CarPositionControl] @2.900000000: CarPositionIndicator displaying floor 3
+[CarPositionControl] @2.950000000: CarPositionIndicator displaying floor 3
+[CarPositionControl] @3.000000000: CarPositionIndicator displaying floor 3
+[CarPositionControl] @3.050000000: CarPositionIndicator displaying floor 2
+[CarPositionControl] @3.100000000: CarPositionIndicator displaying floor 2
+[CarPositionControl] @3.150000000: CarPositionIndicator displaying floor 2
+[CarPositionControl] @3.200000000: CarPositionIndicator displaying floor 2
+[CarPositionControl] @3.250000000: CarPositionIndicator displaying floor 2
+[CarPositionControl] @3.300000000: CarPositionIndicator displaying floor 2
+[CarPositionControl] @3.350000000: CarPositionIndicator displaying floor 2
+[CarPositionControl] @3.400000000: CarPositionIndicator displaying floor 2
+[CarPositionControl] @3.450000000: CarPositionIndicator displaying floor 2
+[AssertionMonitor] @3.500000000: ***********************************************************************************************************************
+[AssertionMonitor] @3.500000000: PASSED simulator.payloads.CarPositionIndicatorPayload$ReadableCarPositionIndicatorPayload@6faf9c1 :: floor ?== 2 PASSED
+[AssertionMonitor] @3.500000000: ***********************************************************************************************************************
+[CarPositionControl] @3.500000000: CarPositionIndicator displaying floor 2
+[CarPositionControl] @3.550000000: CarPositionIndicator displaying floor 2
+[CarPositionControl] @3.600000000: CarPositionIndicator displaying floor 2
+[CarPositionControl] @3.650000000: CarPositionIndicator displaying floor 2
+[CarPositionControl] @3.700000000: CarPositionIndicator displaying floor 2
+[CarPositionControl] @3.750000000: CarPositionIndicator displaying floor 2
+[CarPositionControl] @3.800000000: CarPositionIndicator displaying floor 2
+[CarPositionControl] @3.850000000: CarPositionIndicator displaying floor 2
+[CarPositionControl] @3.900000000: CarPositionIndicator displaying floor 2
+[CarPositionControl] @3.950000000: CarPositionIndicator displaying floor 2
+[CarPositionControl] @4.000000000: CarPositionIndicator displaying floor 2
+[CarPositionControl] @4.050000000: CarPositionIndicator displaying floor 1
+[CarPositionControl] @4.100000000: CarPositionIndicator displaying floor 1
+[CarPositionControl] @4.150000000: CarPositionIndicator displaying floor 1
+[CarPositionControl] @4.200000000: CarPositionIndicator displaying floor 1
+[CarPositionControl] @4.250000000: CarPositionIndicator displaying floor 1
+[CarPositionControl] @4.300000000: CarPositionIndicator displaying floor 1
+[CarPositionControl] @4.350000000: CarPositionIndicator displaying floor 1
+[CarPositionControl] @4.400000000: CarPositionIndicator displaying floor 1
+[CarPositionControl] @4.450000000: CarPositionIndicator displaying floor 1
+[AssertionMonitor] @4.500000000: ************************************************************************************************************************
+[AssertionMonitor] @4.500000000: PASSED simulator.payloads.CarPositionIndicatorPayload$ReadableCarPositionIndicatorPayload@471be6b9 :: floor ?== 1 PASSED
+[AssertionMonitor] @4.500000000: ************************************************************************************************************************
+[CarPositionControl] @4.500000000: CarPositionIndicator displaying floor 1
+[CarPositionControl] @4.550000000: CarPositionIndicator displaying floor 1
+[CarPositionControl] @4.600000000: CarPositionIndicator displaying floor 1
+[CarPositionControl] @4.650000000: CarPositionIndicator displaying floor 1
+[CarPositionControl] @4.700000000: CarPositionIndicator displaying floor 1
+[CarPositionControl] @4.750000000: CarPositionIndicator displaying floor 1
+[CarPositionControl] @4.800000000: CarPositionIndicator displaying floor 1
+[CarPositionControl] @4.850000000: CarPositionIndicator displaying floor 1
+[CarPositionControl] @4.900000000: CarPositionIndicator displaying floor 1
+[CarPositionControl] @4.950000000: CarPositionIndicator displaying floor 1
+[CarPositionControl] @5.000000000: CarPositionIndicator displaying floor 1
+[CarPositionControl] @5.050000000: CarPositionIndicator displaying floor 6
+[CarPositionControl] @5.100000000: CarPositionIndicator displaying floor 6
+[CarPositionControl] @5.150000000: CarPositionIndicator displaying floor 6
+[CarPositionControl] @5.200000000: CarPositionIndicator displaying floor 6
+[CarPositionControl] @5.250000000: CarPositionIndicator displaying floor 6
+[CarPositionControl] @5.300000000: CarPositionIndicator displaying floor 6
+[CarPositionControl] @5.350000000: CarPositionIndicator displaying floor 6
+[CarPositionControl] @5.400000000: CarPositionIndicator displaying floor 6
+[CarPositionControl] @5.450000000: CarPositionIndicator displaying floor 6
+[AssertionMonitor] @5.500000000: ************************************************************************************************************************
+[AssertionMonitor] @5.500000000: PASSED simulator.payloads.CarPositionIndicatorPayload$ReadableCarPositionIndicatorPayload@3b8a9e64 :: floor ?== 6 PASSED
+[AssertionMonitor] @5.500000000: ************************************************************************************************************************
+[CarPositionControl] @5.500000000: CarPositionIndicator displaying floor 6
+[CarPositionControl] @5.550000000: CarPositionIndicator displaying floor 6
+[CarPositionControl] @5.600000000: CarPositionIndicator displaying floor 6
+[CarPositionControl] @5.650000000: CarPositionIndicator displaying floor 6
+[CarPositionControl] @5.700000000: CarPositionIndicator displaying floor 6
+[CarPositionControl] @5.750000000: CarPositionIndicator displaying floor 6
+[CarPositionControl] @5.800000000: CarPositionIndicator displaying floor 6
+[CarPositionControl] @5.850000000: CarPositionIndicator displaying floor 6
+[CarPositionControl] @5.900000000: CarPositionIndicator displaying floor 6
+[CarPositionControl] @5.950000000: CarPositionIndicator displaying floor 6
+[CarPositionControl] @6.000000000: CarPositionIndicator displaying floor 6
+[CarPositionControl] @6.050000000: CarPositionIndicator displaying floor 8
+[CarPositionControl] @6.100000000: CarPositionIndicator displaying floor 8
+[CarPositionControl] @6.150000000: CarPositionIndicator displaying floor 8
+[CarPositionControl] @6.200000000: CarPositionIndicator displaying floor 8
+[CarPositionControl] @6.250000000: CarPositionIndicator displaying floor 8
+[CarPositionControl] @6.300000000: CarPositionIndicator displaying floor 8
+[CarPositionControl] @6.350000000: CarPositionIndicator displaying floor 8
+[CarPositionControl] @6.400000000: CarPositionIndicator displaying floor 8
+[CarPositionControl] @6.450000000: CarPositionIndicator displaying floor 8
+[AssertionMonitor] @6.500000000: ************************************************************************************************************************
+[AssertionMonitor] @6.500000000: PASSED simulator.payloads.CarPositionIndicatorPayload$ReadableCarPositionIndicatorPayload@24cebf1c :: floor ?== 8 PASSED
+[AssertionMonitor] @6.500000000: ************************************************************************************************************************
+[CarPositionControl] @6.500000000: CarPositionIndicator displaying floor 8
+[CarPositionControl] @6.550000000: CarPositionIndicator displaying floor 8
+[CarPositionControl] @6.600000000: CarPositionIndicator displaying floor 8
+[CarPositionControl] @6.650000000: CarPositionIndicator displaying floor 8
+[CarPositionControl] @6.700000000: CarPositionIndicator displaying floor 8
+[CarPositionControl] @6.750000000: CarPositionIndicator displaying floor 8
+[CarPositionControl] @6.800000000: CarPositionIndicator displaying floor 8
+[CarPositionControl] @6.850000000: CarPositionIndicator displaying floor 8
+[CarPositionControl] @6.900000000: CarPositionIndicator displaying floor 8
+[CarPositionControl] @6.950000000: CarPositionIndicator displaying floor 8
+[CarPositionControl] @7.000000000: CarPositionIndicator displaying floor 8
+[CarPositionControl] @7.050000000: CarPositionIndicator displaying floor 3
+[CarPositionControl] @7.100000000: CarPositionIndicator displaying floor 3
+[CarPositionControl] @7.150000000: CarPositionIndicator displaying floor 3
+[CarPositionControl] @7.200000000: CarPositionIndicator displaying floor 3
+[CarPositionControl] @7.250000000: CarPositionIndicator displaying floor 3
+[CarPositionControl] @7.300000000: CarPositionIndicator displaying floor 3
+[CarPositionControl] @7.350000000: CarPositionIndicator displaying floor 3
+[CarPositionControl] @7.400000000: CarPositionIndicator displaying floor 3
+[CarPositionControl] @7.450000000: CarPositionIndicator displaying floor 3
+[AssertionMonitor] @7.500000000: ***********************************************************************************************************************
+[AssertionMonitor] @7.500000000: PASSED simulator.payloads.CarPositionIndicatorPayload$ReadableCarPositionIndicatorPayload@42db3da :: floor ?== 3 PASSED
+[AssertionMonitor] @7.500000000: ***********************************************************************************************************************
+[CarPositionControl] @7.500000000: CarPositionIndicator displaying floor 3
+[CarPositionControl] @7.550000000: CarPositionIndicator displaying floor 3
+[CarPositionControl] @7.600000000: CarPositionIndicator displaying floor 3
+[CarPositionControl] @7.650000000: CarPositionIndicator displaying floor 3
+[CarPositionControl] @7.700000000: CarPositionIndicator displaying floor 3
+[CarPositionControl] @7.750000000: CarPositionIndicator displaying floor 3
+[CarPositionControl] @7.800000000: CarPositionIndicator displaying floor 3
+[CarPositionControl] @7.850000000: CarPositionIndicator displaying floor 3
+[CarPositionControl] @7.900000000: CarPositionIndicator displaying floor 3
+[CarPositionControl] @7.950000000: CarPositionIndicator displaying floor 3
+[CarPositionControl] @8.000000000: CarPositionIndicator displaying floor 3
+[CarPositionControl] @8.050000000: CarPositionIndicator displaying floor 3
+[CarPositionControl] @8.100000000: CarPositionIndicator displaying floor 3
+[CarPositionControl] @8.150000000: CarPositionIndicator displaying floor 3
+[CarPositionControl] @8.200000000: CarPositionIndicator displaying floor 3
+[CarPositionControl] @8.250000000: CarPositionIndicator displaying floor 3
+[CarPositionControl] @8.300000000: CarPositionIndicator displaying floor 3
+[CarPositionControl] @8.350000000: CarPositionIndicator displaying floor 3
+[CarPositionControl] @8.400000000: CarPositionIndicator displaying floor 3
+[CarPositionControl] @8.450000000: CarPositionIndicator displaying floor 3
+[CarPositionControl] @8.500000000: CarPositionIndicator displaying floor 3
+[CarPositionControl] @8.550000000: CarPositionIndicator displaying floor 3
+[CarPositionControl] @8.600000000: CarPositionIndicator displaying floor 3
+[CarPositionControl] @8.650000000: CarPositionIndicator displaying floor 3
+[CarPositionControl] @8.700000000: CarPositionIndicator displaying floor 3
+[CarPositionControl] @8.750000000: CarPositionIndicator displaying floor 3
+[CarPositionControl] @8.800000000: CarPositionIndicator displaying floor 3
+[CarPositionControl] @8.850000000: CarPositionIndicator displaying floor 3
+[CarPositionControl] @8.900000000: CarPositionIndicator displaying floor 3
+[CarPositionControl] @8.950000000: CarPositionIndicator displaying floor 3
+[CarPositionControl] @9.000000000: CarPositionIndicator displaying floor 3
+[CarPositionControl] @9.050000000: CarPositionIndicator displaying floor 3
+[CarPositionControl] @9.100000000: CarPositionIndicator displaying floor 3
+[CarPositionControl] @9.150000000: CarPositionIndicator displaying floor 3
+[CarPositionControl] @9.200000000: CarPositionIndicator displaying floor 3
+[CarPositionControl] @9.250000000: CarPositionIndicator displaying floor 3
+[CarPositionControl] @9.300000000: CarPositionIndicator displaying floor 3
+[CarPositionControl] @9.350000000: CarPositionIndicator displaying floor 3
+[CarPositionControl] @9.400000000: CarPositionIndicator displaying floor 3
+[CarPositionControl] @9.450000000: CarPositionIndicator displaying floor 3
+[CarPositionControl] @9.500000000: CarPositionIndicator displaying floor 3
+[CarPositionControl] @9.550000000: CarPositionIndicator displaying floor 3
+[CarPositionControl] @9.600000000: CarPositionIndicator displaying floor 3
+[CarPositionControl] @9.650000000: CarPositionIndicator displaying floor 3
+[CarPositionControl] @9.700000000: CarPositionIndicator displaying floor 3
+[CarPositionControl] @9.750000000: CarPositionIndicator displaying floor 3
+[CarPositionControl] @9.800000000: CarPositionIndicator displaying floor 3
+[CarPositionControl] @9.850000000: CarPositionIndicator displaying floor 3
+[CarPositionControl] @9.900000000: CarPositionIndicator displaying floor 3
+[CarPositionControl] @9.950000000: CarPositionIndicator displaying floor 3
+[CarPositionControl] @10.000000000: CarPositionIndicator displaying floor 3
+[CarPositionControl] @10.050000000: CarPositionIndicator displaying floor 3
+[CarPositionControl] @10.100000000: CarPositionIndicator displaying floor 3
+[CarPositionControl] @10.150000000: CarPositionIndicator displaying floor 3
+[CarPositionControl] @10.200000000: CarPositionIndicator displaying floor 3
+[CarPositionControl] @10.250000000: CarPositionIndicator displaying floor 3
+[CarPositionControl] @10.300000000: CarPositionIndicator displaying floor 3
+[CarPositionControl] @10.350000000: CarPositionIndicator displaying floor 3
+[CarPositionControl] @10.400000000: CarPositionIndicator displaying floor 3
+[CarPositionControl] @10.450000000: CarPositionIndicator displaying floor 3
+[CarPositionControl] @10.500000000: CarPositionIndicator displaying floor 3
+[CarPositionControl] @10.550000000: CarPositionIndicator displaying floor 3
+[CarPositionControl] @10.600000000: CarPositionIndicator displaying floor 3
+[CarPositionControl] @10.650000000: CarPositionIndicator displaying floor 3
+[CarPositionControl] @10.700000000: CarPositionIndicator displaying floor 3
+[CarPositionControl] @10.750000000: CarPositionIndicator displaying floor 3
+[CarPositionControl] @10.800000000: CarPositionIndicator displaying floor 3
+[CarPositionControl] @10.850000000: CarPositionIndicator displaying floor 3
+[CarPositionControl] @10.900000000: CarPositionIndicator displaying floor 3
+[CarPositionControl] @10.950000000: CarPositionIndicator displaying floor 3
+[CarPositionControl] @11.000000000: CarPositionIndicator displaying floor 3
+[CarPositionControl] @11.050000000: CarPositionIndicator displaying floor 3
+[CarPositionControl] @11.100000000: CarPositionIndicator displaying floor 3
+[CarPositionControl] @11.150000000: CarPositionIndicator displaying floor 3
+[CarPositionControl] @11.200000000: CarPositionIndicator displaying floor 3
+[CarPositionControl] @11.250000000: CarPositionIndicator displaying floor 3
+[CarPositionControl] @11.300000000: CarPositionIndicator displaying floor 3
+[CarPositionControl] @11.350000000: CarPositionIndicator displaying floor 3
+[CarPositionControl] @11.400000000: CarPositionIndicator displaying floor 3
+[CarPositionControl] @11.450000000: CarPositionIndicator displaying floor 3
+[CarPositionControl] @11.500000000: CarPositionIndicator displaying floor 3
+[CarPositionControl] @11.550000000: CarPositionIndicator displaying floor 3
+[CarPositionControl] @11.600000000: CarPositionIndicator displaying floor 3
+[CarPositionControl] @11.650000000: CarPositionIndicator displaying floor 3
+[CarPositionControl] @11.700000000: CarPositionIndicator displaying floor 3
+[CarPositionControl] @11.750000000: CarPositionIndicator displaying floor 3
+[CarPositionControl] @11.800000000: CarPositionIndicator displaying floor 3
+[CarPositionControl] @11.850000000: CarPositionIndicator displaying floor 3
+[CarPositionControl] @11.900000000: CarPositionIndicator displaying floor 3
+[CarPositionControl] @11.950000000: CarPositionIndicator displaying floor 3
+[CarPositionControl] @12.000000000: CarPositionIndicator displaying floor 3
+[CarPositionControl] @12.050000000: CarPositionIndicator displaying floor 3
+[CarPositionControl] @12.100000000: CarPositionIndicator displaying floor 3
+[CarPositionControl] @12.150000000: CarPositionIndicator displaying floor 3
+[CarPositionControl] @12.200000000: CarPositionIndicator displaying floor 3
+[CarPositionControl] @12.250000000: CarPositionIndicator displaying floor 3
+[CarPositionControl] @12.300000000: CarPositionIndicator displaying floor 3
+[CarPositionControl] @12.350000000: CarPositionIndicator displaying floor 3
+[CarPositionControl] @12.400000000: CarPositionIndicator displaying floor 3
+[CarPositionControl] @12.450000000: CarPositionIndicator displaying floor 3
+[CarPositionControl] @12.500000000: CarPositionIndicator displaying floor 3
+[Elevator] @12.500000000: Simulation Finished ***
+******************Summary******************
+Passed:  8
+Failed:  0
+Total :  8
+

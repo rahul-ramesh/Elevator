@@ -1,0 +1,32 @@
+; sd9d_0.stats
+; 18-649 Distributed Embedded Systems
+; Group 11
+; Rahul Ramesh // rahulram. Daniel Santoro // ddsantor. David Thompson // davidtho. Jialiang Tan // jialiant
+; !@
+
+Simulator Parameters:
+Command line = -cf ../../portfolio_grp11/integration_test/sd9d.cf -mf ../../portfolio_grp11/integration_test/sd9d.mf -head ../../portfolio_grp11/scripts/grp11.head
+RandomSeed = 1450147650145
+CanNetworkBitTime = 0 ns
+Effective Can Bitrate = Infinity
+Run Time = null
+Real time rate = null
+Message File = ../../portfolio_grp11/integration_test/sd9d.mf
+Controller File = ../../portfolio_grp11/integration_test/sd9d.cf
+
+Assertion Results:
+@0.02s:  PASSED simulator.payloads.DrivePayload$ReadableDrivePayload@46c04fc1 :: speed ?== STOP PASSED
+@0.02s:  PASSED simulator.payloads.DrivePayload$ReadableDrivePayload@71c142c2 :: direction ?== STOP PASSED
+@0.12s:  PASSED simulator.payloads.CanMailbox$ReadableCanMailbox@5d325877 :: getSpeed ?== 0 PASSED
+@0.12s:  PASSED simulator.payloads.CanMailbox$ReadableCanMailbox@142c842c :: getDirection ?== STOP PASSED
+@0.23s:  PASSED simulator.payloads.DrivePayload$ReadableDrivePayload@5349b9a8 :: speed ?== LEVEL PASSED
+@0.23s:  PASSED simulator.payloads.DrivePayload$ReadableDrivePayload@59dc73f9 :: direction ?== DOWN PASSED
+@0.44s:  PASSED simulator.payloads.DrivePayload$ReadableDrivePayload@18c78bdb :: speed ?== STOP PASSED
+@0.44s:  PASSED simulator.payloads.DrivePayload$ReadableDrivePayload@25deb1ad :: direction ?== STOP PASSED
+
+
+******************Summary******************
+Passed:  8
+Failed:  0
+Total :  8
+

@@ -1,0 +1,51 @@
+; it_test/unit_test_traceability.txt
+; 18-649 Distributed Embedded Systems
+; Group 11
+; Rahul Ramesh // rahulram. Daniel Santoro // ddsantor. David Thompson // davidtho. Jialiang Tan // jialiant
+; !@
+CarButtonControl.mf
+<b>States:</b><br>
+CALL_OFF, INTERMEDIATE_ON, CALL_ON<br><br>
+<b>Transitions:</b><br>
+PT1, PT3, PT2<br>
+
+CarPositionControl.mf
+<b>States:</b><br>
+2. AT_FLOOR, 1. NOT_AT_FLOOR<br><br>
+<b>Transitions:</b><br>
+PT1, PT2<br>
+
+defines.mf
+<b>States:</b><br<br><br>
+<b>Transitions:</b><br<br>
+
+Dispatcher.mf
+<b>States:</b><br>
+1.INIT, 2.SET_DESIRED_DOOR, 3.COMPUTE_NEXT_FLOOR, 4.WAIT<br><br>
+<b>Transitions:</b><br>
+PT1, PT2, PT3, PT4, PT5<br>
+
+DoorControl.mf
+<b>States:</b><br>
+1. CLOSED, 2. OPEN, 3. OPENED_COUNTDOWN, 4. CLOSE, 5. NUDGE, 6. OVERWEIGHT, 7. OVERWEIGHT_OPENED,  8. REVERSAL<br><br>
+<b>Transitions:</b><br>
+PT1, PT2, PT3, PT10, PT11, PT12, PT14, PT8, PT6, PT7, PT4, PT5, PT15, PT13, PT9<br>
+
+DriveControl.mf
+<b>States:</b><br>
+1. WAIT, 3. LEVEL, 2. MOVE<br><br>
+<b>Transitions:</b><br>
+PT5, PT4, PT1, PT2, PT3<br>
+
+HallButtonControl.mf
+<b>States:</b><br>
+1. OFF, 2. ON<br><br>
+<b>Transitions:</b><br>
+PT1, PT2<br>
+
+LanternControl.mf
+<b>States:</b><br>
+State1. DOORS_CLOSED, State2. LANTERN_ON<br><br>
+<b>Transitions:</b><br>
+PT.1, PT.2<br>
+

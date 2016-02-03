@@ -1,0 +1,74 @@
+; sd4a.mf
+; 18-649 Distributed Embedded Systems
+; Group 11
+; Rahul Ramesh // rahulram. Daniel Santoro // ddsantor. David Thompson // davidtho. Jialiang Tan // jialiant
+; !@
+
+
+
+#INCLUDE defines.mf
+
+;PRE-CONDITION 1 : Passenger is in the hallway and the car is at the same floor f and hallway b.
+0s I AT_FLOOR_PERIOD N AT_FLOOR_[5][FRONT]_CAN_ID AtFloor 5 FRONT = TRUE
+
+;PRE-CONDITION 2 : Car is level.
++0.5s I LEVEL_SENSOR_PERIOD N LEVEL_SENSOR_[UP]_CAN_ID Leveling UP = TRUE
++0.5s I LEVEL_SENSOR_PERIOD N LEVEL_SENSOR_[DOWN]_CAN_ID Leveling DOWN = TRUE
+
+;PRE-CONDITION 3 : Car is stopped.
++0.5s I DRIVE_PERIOD N DRIVE_SPEED_CAN_ID DriveSpeed = 0 STOP
+
+;PRE-CONDITION 4 : All doors are closed
++0.5s I DOOR_CLOSED_SENSOR_PERIOD N DOOR_CLOSED_SENSOR_[FRONT][LEFT]_CAN_ID DoorClosed FRONT LEFT = TRUE
++0s I DOOR_CLOSED_SENSOR_PERIOD N DOOR_CLOSED_SENSOR_[FRONT][RIGHT]_CAN_ID DoorClosed FRONT RIGHT = TRUE
++0s I DOOR_CLOSED_SENSOR_PERIOD N DOOR_CLOSED_SENSOR_[BACK][LEFT]_CAN_ID DoorClosed BACK LEFT = TRUE
++0s I DOOR_CLOSED_SENSOR_PERIOD N DOOR_CLOSED_SENSOR_[BACK][RIGHT]_CAN_ID DoorClosed BACK RIGHT = TRUE
+
+;PRE-CONDITION doors initial state setting up
++0.5s I DRIVE_CONTROL_PERIOD N DRIVE_SPEED_CAN_ID DriveSpeed = 0 STOP
++0.5s I DISPATCHER_PERIOD N DESIRED_FLOOR_CAN_ID DesiredFloor = 5 FRONT STOP
+
+
+
+;#arc '4A/1a'
++0.5s A N DOOR_MOTOR_COMMAND_[FRONT][LEFT]_CAN_ID DoorMotorCommand FRONT LEFT : getValue == MDOOR_OPEN
++0s A N DOOR_MOTOR_COMMAND_[FRONT][RIGHT]_CAN_ID DoorMotorCommand FRONT RIGHT : getValue == MDOOR_OPEN
+
+
+
+;#arc '4A/1b'
++0.5s I DOOR_OPENED_SENSOR_PERIOD N DOOR_OPEN_SENSOR_[FRONT][LEFT]_CAN_ID DoorOpened FRONT LEFT = TRUE
++0s I DOOR_OPENED_SENSOR_PERIOD N DOOR_OPEN_SENSOR_[FRONT][RIGHT]_CAN_ID DoorOpened FRONT RIGHT = TRUE
+
+
+
+;#arc '4A/1c'
++0.5s A N DOOR_MOTOR_COMMAND_[FRONT][LEFT]_CAN_ID DoorMotorCommand FRONT LEFT : getValue == MDOOR_STOP
++0s A N DOOR_MOTOR_COMMAND_[FRONT][RIGHT]_CAN_ID DoorMotorCommand FRONT RIGHT : getValue == MDOOR_STOP
+
+;#arc '4A/2' Passenger enters
+
+;#arc '4A/3a'
++0.5s I LEVEL_SENSOR_PERIOD N LEVEL_SENSOR_[DOWN]_CAN_ID Leveling DOWN = FALSE
++0s I LEVEL_SENSOR_PERIOD N LEVEL_SENSOR_[UP]_CAN_ID Leveling UP = TRUE
+
+;#arc '4A/3b;
++1s A F Drive : speed == LEVEL
++0s A F Drive : direction == DOWN
+
+;#arc '4A/3c'
++0.5s I LEVEL_SENSOR_PERIOD N LEVEL_SENSOR_[DOWN]_CAN_ID Leveling DOWN = TRUE
++0.5s I LEVEL_SENSOR_PERIOD N LEVEL_SENSOR_[UP]_CAN_ID Leveling UP = TRUE
+
+;#arc '4A/3d'
++0.5s A F Drive : speed == STOP
++0s A F Drive : direction == STOP
+
+
+
+;POST-CONDITIONS
++0.5s A N AT_FLOOR_[5][FRONT]_CAN_ID AtFloor 5 FRONT : getValue == TRUE
++0s A N LEVEL_SENSOR_[UP]_CAN_ID Leveling UP : getValue == TRUE
++0s A N LEVEL_SENSOR_[DOWN]_CAN_ID Leveling DOWN : getValue == TRUE
++0s A N DOOR_OPEN_SENSOR_[FRONT][LEFT]_CAN_ID DoorOpened FRONT LEFT : getValue == TRUE
++0s A N DOOR_OPEN_SENSOR_[FRONT][RIGHT]_CAN_ID DoorOpened FRONT RIGHT : getValue == TRUE

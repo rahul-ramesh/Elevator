@@ -1,0 +1,35 @@
+; sd7a_0.stats
+; 18-649 Distributed Embedded Systems
+; Group 11
+; Rahul Ramesh // rahulram. Daniel Santoro // ddsantor. David Thompson // davidtho. Jialiang Tan // jialiant
+; !@
+
+Simulator Parameters:
+Command line = -cf ../../portfolio_grp11/integration_test/sd7a.cf -mf ../../portfolio_grp11/integration_test/sd7a.mf -head ../../portfolio_grp11/scripts/grp11.head
+RandomSeed = 1450147635442
+CanNetworkBitTime = 0 ns
+Effective Can Bitrate = Infinity
+Run Time = null
+Real time rate = null
+Message File = ../../portfolio_grp11/integration_test/sd7a.mf
+Controller File = ../../portfolio_grp11/integration_test/sd7a.cf
+
+Assertion Results:
+@0.06s:  PASSED simulator.payloads.DrivePayload$ReadableDrivePayload@5d3f57b3 :: speed ?== STOP PASSED
+@0.06s:  PASSED simulator.payloads.DrivePayload$ReadableDrivePayload@2e661950 :: direction ?== STOP PASSED
+@0.06s:  PASSED simulator.payloads.CanMailbox$ReadableCanMailbox@7ed45f89 :: getSpeed ?== 0 PASSED
+@0.06s:  PASSED simulator.payloads.CanMailbox$ReadableCanMailbox@c7cb61 :: getDirection ?== STOP PASSED
+@0.56s:  PASSED simulator.payloads.CarPositionIndicatorPayload$ReadableCarPositionIndicatorPayload@135ab821 :: floor ?== 1 PASSED
+@0.78s:  PASSED simulator.payloads.DrivePayload$ReadableDrivePayload@69d30fe7 :: speed ?== SLOW PASSED
+@0.78s:  PASSED simulator.payloads.DrivePayload$ReadableDrivePayload@3a51ce0d :: direction ?== UP PASSED
+@1.79s:  PASSED simulator.payloads.CarPositionIndicatorPayload$ReadableCarPositionIndicatorPayload@3d246f44 :: floor ?== 2 PASSED
+@1.99s:  PASSED simulator.payloads.DrivePayload$ReadableDrivePayload@1b6509fe :: speed ?== SLOW PASSED
+@1.99s:  PASSED simulator.payloads.DrivePayload$ReadableDrivePayload@6c506ee7 :: direction ?== UP PASSED
+@3.01s:  PASSED simulator.payloads.CarPositionIndicatorPayload$ReadableCarPositionIndicatorPayload@643213ad :: floor ?== 3 PASSED
+
+
+******************Summary******************
+Passed:  11
+Failed:  0
+Total :  11
+

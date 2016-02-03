@@ -1,0 +1,49 @@
+; LanternControl.mf
+; 18-649 Distributed Embedded Systems
+; Group 11
+; Rahul Ramesh // rahulram. Daniel Santoro // ddsantor. David Thompson // davidtho. Jialiang Tan // jialiant
+; !@
+
+#INCLUDE defines.mf
+
+;#state 'DOORS_CLOSED'
+0s A F CarLantern UP : lighted == false
+0s A N CAR_LANTERN_[UP]_CAN_ID Boolean : getValue == false
+
+;#transition 'PT1'
+0.25s I DISPATCHER_PERIOD N DESIRED_FLOOR_CAN_ID DesiredFloor = 1 UP FRONT
++0.1s I DOOR_CLOSED_SENSOR_PERIOD N DOOR_CLOSED_SENSOR_[FRONT][LEFT]_CAN_ID DoorClosed FRONT LEFT = false
++0.15s I DOOR_CLOSED_SENSOR_PERIOD N DOOR_CLOSED_SENSOR_[FRONT][RIGHT]_CAN_ID DoorClosed FRONT RIGHT = false
++0.2s I DOOR_CLOSED_SENSOR_PERIOD N DOOR_CLOSED_SENSOR_[BACK][LEFT]_CAN_ID DoorClosed BACK LEFT = false
++0.25s I DOOR_CLOSED_SENSOR_PERIOD N DOOR_CLOSED_SENSOR_[BACK][RIGHT]_CAN_ID DoorClosed BACK RIGHT = false
+
+;#state 'LANTERN_ON'
++1s A F CarLantern UP : lighted == true
++0s A N CAR_LANTERN_[UP]_CAN_ID Boolean : getValue == false
+
+;#transition 'PT2'
++500ms I DOOR_CLOSED_SENSOR_PERIOD N DOOR_CLOSED_SENSOR_[FRONT][LEFT]_CAN_ID DoorClosed FRONT LEFT = true
++0s I DOOR_CLOSED_SENSOR_PERIOD N DOOR_CLOSED_SENSOR_[FRONT][RIGHT]_CAN_ID DoorClosed FRONT RIGHT = true
++0s I DOOR_CLOSED_SENSOR_PERIOD N DOOR_CLOSED_SENSOR_[BACK][LEFT]_CAN_ID DoorClosed BACK LEFT = true
++0s I DOOR_CLOSED_SENSOR_PERIOD N DOOR_CLOSED_SENSOR_[BACK][RIGHT]_CAN_ID DoorClosed BACK RIGHT = true
+
+;#state 'DOORS_CLOSED'
++1s A F CarLantern UP : lighted == false
++0s A N CAR_LANTERN_[UP]_CAN_ID Boolean : getValue == false
+
+;#transition 'PT1'
++0.1s I DOOR_CLOSED_SENSOR_PERIOD N DOOR_CLOSED_SENSOR_[FRONT][LEFT]_CAN_ID DoorClosed FRONT LEFT = false
++0.15s I DOOR_CLOSED_SENSOR_PERIOD N DOOR_CLOSED_SENSOR_[FRONT][RIGHT]_CAN_ID DoorClosed FRONT RIGHT = false
++0.2s I DOOR_CLOSED_SENSOR_PERIOD N DOOR_CLOSED_SENSOR_[BACK][LEFT]_CAN_ID DoorClosed BACK LEFT = false
++0.25s I DOOR_CLOSED_SENSOR_PERIOD N DOOR_CLOSED_SENSOR_[BACK][RIGHT]_CAN_ID DoorClosed BACK RIGHT = false
+
+;#state 'LANTERN_ON'
++1s A F CarLantern UP : lighted == true
++0s A N CAR_LANTERN_[UP]_CAN_ID Boolean : getValue == false
+
+;#transition 'PT2'
++500ms I DISPATCHER_PERIOD N DESIRED_FLOOR_CAN_ID DesiredFloor = 8 DOWN FRONT
+
+;#state 'DOORS_CLOSED'
++1s A F CarLantern UP : lighted == false
++0s A N CAR_LANTERN_[UP]_CAN_ID Boolean : getValue == false

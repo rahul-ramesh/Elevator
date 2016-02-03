@@ -1,0 +1,46 @@
+; sd8a.mf
+; 18-649 Distributed Embedded Systems
+; Group 11
+; Rahul Ramesh // rahulram. Daniel Santoro // ddsantor. David Thompson // davidtho. Jialiang Tan // jialiant
+; !@
+
+;Note:  Assertions must be inserted more than two periods after a message or physical
+;value has been inserted to be sure that the change propagates through the system
+
+;this test file demonstrates network and framework message injections
+;and network, framework, and controller state assertions.
+
+#INCLUDE defines.mf 
+
+;PRE-CONDITIONS
+; doors closed
+0ms I DOOR_CLOSED_SENSOR_PERIOD N DOOR_CLOSED_SENSOR_[FRONT][LEFT]_CAN_ID DoorClosed FRONT LEFT = TRUE
+0ms I DOOR_CLOSED_SENSOR_PERIOD N DOOR_CLOSED_SENSOR_[FRONT][RIGHT]_CAN_ID DoorClosed FRONT RIGHT = TRUE
+0ms I DOOR_CLOSED_SENSOR_PERIOD N DOOR_CLOSED_SENSOR_[BACK][LEFT]_CAN_ID DoorClosed BACK LEFT = TRUE
+0ms I DOOR_CLOSED_SENSOR_PERIOD N DOOR_CLOSED_SENSOR_[BACK][RIGHT]_CAN_ID DoorClosed BACK RIGHT = TRUE
+
+; Drive stopped, Dispatcher's desired direction is UP
++50ms I WEIGHT_PERIOD N CAR_WEIGHT_CAN_ID CarWeight = 500
++0ms I DRIVE_PERIOD N DRIVE_SPEED_CAN_ID DriveSpeed = 0 STOP
++0ms I DISPATCHER_PERIOD N DESIRED_FLOOR_CAN_ID DesiredFloor = 1 UP FRONT
+
+; Lanterns are off
++1s A F CarLantern UP : lighted == FALSE
+
+; At Floor 1
++0ms I AT_FLOOR_PERIOD N AT_FLOOR_[1][FRONT]_CAN_ID AtFloor 1 FRONT = TRUE
++0ms I AT_FLOOR_PERIOD N AT_FLOOR_[1][BACK]_CAN_ID AtFloor 1 BACK = TRUE
+
+; SCENARIO
+; Doors open
+; #arc '8A/1a' 
++500ms A F DoorMotor FRONT LEFT : command == OPEN
+
+;#arc '8A/1b'
++500ms I DOOR_CLOSED_SENSOR_PERIOD N DOOR_CLOSED_SENSOR_[FRONT][LEFT]_CAN_ID DoorClosed FRONT LEFT = FALSE
++0ms I DOOR_CLOSED_SENSOR_PERIOD N DOOR_CLOSED_SENSOR_[FRONT][RIGHT]_CAN_ID DoorClosed FRONT RIGHT = FALSE
+
+; Lantern turns on
+; #arc '8A/2a'
+; #arc '8A/2b'
++1s A F CarLantern UP : lighted == TRUE

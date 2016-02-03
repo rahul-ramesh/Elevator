@@ -1,0 +1,155 @@
+; sd9c.mf
+; 18-649 Distributed Embedded Systems
+; Group 11
+; Rahul Ramesh // rahulram. Daniel Santoro // ddsantor. David Thompson // davidtho. Jialiang Tan // jialiant
+; !@
+
+; Unit test for DriveControl - STATE_FAST_UP
+; Daniel Santoro
+; Last modified 2015-10-05
+
+#INCLUDE defines.mf 
+
+; PRECONDITION 1a: Drive moving from floor 1 to 8
+; check Drive initial conditions
+0s I DRIVE_PERIOD F DriveSpeed = STOP 0
+;+0ms I CAR_LEVEL_POSITION_PERIOD N CAR_LEVEL_POSITION_CAN_ID CarLevelPosition = 0
+
+; Drive in 'STOP'
++50ms A F Drive : speed == STOP 
++0ms A F Drive : direction == STOP
++0ms A N DRIVE_SPEED_CAN_ID DriveSpeed : getSpeed == 0 
++0ms A N DRIVE_SPEED_CAN_ID DriveSpeed : getDirection == STOP
+
+; set all network messages
++10ms I AT_FLOOR_PERIOD N AT_FLOOR_[1][FRONT]_CAN_ID AtFloor 1 FRONT = TRUE
++0ms I AT_FLOOR_PERIOD N AT_FLOOR_[1][BACK]_CAN_ID AtFloor 1 BACK = TRUE
++0ms I LEVEL_SENSOR_PERIOD N LEVEL_SENSOR_[UP]_CAN_ID Leveling UP = TRUE
++0ms I LEVEL_SENSOR_PERIOD N LEVEL_SENSOR_[DOWN]_CAN_ID Leveling DOWN = TRUE
++0ms I 0s N EMERGENCY_BRAKE_CAN_ID SafetySensor = FALSE
++0ms I DOOR_CLOSED_SENSOR_PERIOD N DOOR_CLOSED_SENSOR_[BACK][LEFT]_CAN_ID DoorClosed BACK LEFT = TRUE
++0ms I DOOR_CLOSED_SENSOR_PERIOD N DOOR_CLOSED_SENSOR_[BACK][RIGHT]_CAN_ID DoorClosed BACK RIGHT = TRUE
++0ms I DOOR_CLOSED_SENSOR_PERIOD N DOOR_CLOSED_SENSOR_[FRONT][LEFT]_CAN_ID DoorClosed FRONT LEFT = TRUE
++0ms I DOOR_CLOSED_SENSOR_PERIOD N DOOR_CLOSED_SENSOR_[FRONT][RIGHT]_CAN_ID DoorClosed FRONT RIGHT = TRUE
++0ms I DOOR_CONTROL_PERIOD N DOOR_MOTOR_COMMAND_[BACK][LEFT]_CAN_ID DoorMotorCommand BACK LEFT = MDOOR_STOP
++0ms I DOOR_CONTROL_PERIOD N DOOR_MOTOR_COMMAND_[BACK][RIGHT]_CAN_ID DoorMotorCommand BACK RIGHT = MDOOR_STOP
++0ms I DOOR_CONTROL_PERIOD N DOOR_MOTOR_COMMAND_[FRONT][LEFT]_CAN_ID DoorMotorCommand FRONT LEFT = MDOOR_STOP
++0ms I DOOR_CONTROL_PERIOD N DOOR_MOTOR_COMMAND_[FRONT][RIGHT]_CAN_ID DoorMotorCommand FRONT RIGHT = MDOOR_STOP
++0ms I WEIGHT_PERIOD N CAR_WEIGHT_CAN_ID CarWeight = 500
+
+; Drive still in 'STOP'
++50ms A F Drive : speed == STOP 
++0ms A F Drive : direction == STOP
++0ms A N DRIVE_SPEED_CAN_ID DriveSpeed : getSpeed == 0 
++0ms A N DRIVE_SPEED_CAN_ID DriveSpeed : getDirection == STOP
+
+; get new desired floor - 8 FRONT
++10ms I DISPATCHER_PERIOD N DESIRED_FLOOR_CAN_ID DesiredFloor = 8 STOP FRONT
+
+; Drive moves to 'SLOW_UP'
++200ms A F Drive : speed == SLOW 
++0ms A F Drive : direction == UP
++200ms A N DRIVE_SPEED_CAN_ID DriveSpeed : getSpeed == 0 
++0ms A N DRIVE_SPEED_CAN_ID DriveSpeed : getDirection == STOP
+
+; leave floor, speed up
++10ms I AT_FLOOR_PERIOD N AT_FLOOR_[1][FRONT]_CAN_ID AtFloor 1 FRONT = FALSE
++0ms I AT_FLOOR_PERIOD N AT_FLOOR_[1][BACK]_CAN_ID AtFloor 1 BACK = FALSE
++0ms I LEVEL_SENSOR_PERIOD N LEVEL_SENSOR_[UP]_CAN_ID Leveling UP = FALSE
++0ms I LEVEL_SENSOR_PERIOD N LEVEL_SENSOR_[DOWN]_CAN_ID Leveling DOWN = FALSE
++0ms I CAR_LEVEL_POSITION_PERIOD N CAR_LEVEL_POSITION_CAN_ID CarLevelPosition = 500
++100ms I DRIVE_PERIOD F DriveSpeed = UP 0.2
++100ms I CAR_LEVEL_POSITION_PERIOD N CAR_LEVEL_POSITION_CAN_ID CarLevelPosition = 5000
++0ms I AT_FLOOR_PERIOD N AT_FLOOR_[2][BACK]_CAN_ID AtFloor 2 BACK = TRUE
++100ms I CAR_LEVEL_POSITION_PERIOD N CAR_LEVEL_POSITION_CAN_ID CarLevelPosition = 5500
++0ms I AT_FLOOR_PERIOD N AT_FLOOR_[2][BACK]_CAN_ID AtFloor 2 BACK = FALSE
+
+
+; Drive still in 'SLOW_UP'
++200ms A F Drive : speed == SLOW 
++0ms A F Drive : direction == UP
++0ms A N DRIVE_SPEED_CAN_ID DriveSpeed : getSpeed == 200
++0ms A N DRIVE_SPEED_CAN_ID DriveSpeed : getDirection == UP
+
+; Transition to Fast Speed
++100ms I DRIVE_PERIOD F DriveSpeed = UP 0.25
++0ms I CAR_LEVEL_POSITION_PERIOD N CAR_LEVEL_POSITION_CAN_ID CarLevelPosition = 6000
+
+; Drive in 'FAST_UP'
++200ms A F Drive : speed == FAST 
++0ms A F Drive : direction == UP
++0ms A N DRIVE_SPEED_CAN_ID DriveSpeed : getSpeed == 250
++0ms A N DRIVE_SPEED_CAN_ID DriveSpeed : getDirection == UP
+
+; PRECONDITION 1b: Drive gets new DesiredFloor - 6 FRONT
++10ms I DISPATCHER_PERIOD N DESIRED_FLOOR_CAN_ID DesiredFloor = 6 STOP FRONT
+
+; SCENARIO
+;STEP 1: Read speed, position and caluclate commit point
+
+;#arc '9C/1a'
++100ms I DRIVE_PERIOD F DriveSpeed = UP 5.0
+
+;sudo arc '9C/1b' -- see later instance
++0ms I CAR_LEVEL_POSITION_PERIOD N CAR_LEVEL_POSITION_CAN_ID CarLevelPosition = 6500
+
+; calculate commit point - implicit
+; sudo arc '9C/1c' -- see later instance
+
+; Have not reached commit point yet - don't decelerate yet
++600ms A F Drive : speed == FAST 
++0ms A F Drive : direction == UP
++0ms A N DRIVE_SPEED_CAN_ID DriveSpeed : getSpeed == 5000
++0ms A N DRIVE_SPEED_CAN_ID DriveSpeed : getDirection == UP
+
+; get new position
+;#arc '9C/1b'
++100ms I CAR_LEVEL_POSITION_PERIOD N CAR_LEVEL_POSITION_CAN_ID CarLevelPosition = 10000
++0ms I AT_FLOOR_PERIOD N AT_FLOOR_[3][FRONT]_CAN_ID AtFloor 3 FRONT = TRUE
++100ms I CAR_LEVEL_POSITION_PERIOD N CAR_LEVEL_POSITION_CAN_ID CarLevelPosition = 12500
++0ms I AT_FLOOR_PERIOD N AT_FLOOR_[3][FRONT]_CAN_ID AtFloor 3 FRONT = FALSE
+
+
+; calculate commit point - implicit
+;#arc '9C/1c'
+
+; start deceleration
+;#arc '9C/2'
++600ms A F Drive : speed == SLOW 
++0ms A F Drive : direction == UP
++0ms A N DRIVE_SPEED_CAN_ID DriveSpeed : getSpeed == 5000
++0ms A N DRIVE_SPEED_CAN_ID DriveSpeed : getDirection == UP
+
+; Drive has slowed down
++100ms I DRIVE_PERIOD F DriveSpeed = UP 0.25
++100ms I AT_FLOOR_PERIOD N AT_FLOOR_[4][FRONT]_CAN_ID AtFloor 4 FRONT = TRUE
++0ms I AT_FLOOR_PERIOD N AT_FLOOR_[4][FRONT]_CAN_ID AtFloor 4 FRONT = FALSE
++100ms I AT_FLOOR_PERIOD N AT_FLOOR_[5][FRONT]_CAN_ID AtFloor 5 FRONT = TRUE
++0ms I AT_FLOOR_PERIOD N AT_FLOOR_[5][FRONT]_CAN_ID AtFloor 5 FRONT = FALSE
++100ms I CAR_LEVEL_POSITION_PERIOD N CAR_LEVEL_POSITION_CAN_ID CarLevelPosition = 24000
+
+; Drive is still in 'SLOW_UP'
++600ms A F Drive : speed == SLOW 
++0ms A F Drive : direction == UP
++0ms A N DRIVE_SPEED_CAN_ID DriveSpeed : getSpeed == 250
++0ms A N DRIVE_SPEED_CAN_ID DriveSpeed : getDirection == UP
+
+; Arrive at floor
+;#arc '9C/3'
++10ms I AT_FLOOR_PERIOD N AT_FLOOR_[6][FRONT]_CAN_ID AtFloor 6 FRONT = TRUE
+
+; Stop at floor
+;#arc '9C/4'
++50ms A F Drive : speed == STOP 
++0ms A F Drive : direction == STOP
+
+
+;; POSTCONDITIONS 
+; POSTCONDITION 1: At new floor
++500ms A N AT_FLOOR_[6][FRONT]_CAN_ID AtFloor 6 FRONT : getValue == TRUE
+
+; POSTCONDITION 2: Doors are closed
++50ms A N DOOR_CLOSED_SENSOR_[BACK][LEFT]_CAN_ID DoorClosed BACK LEFT : getValue == TRUE
++0ms A  N DOOR_CLOSED_SENSOR_[BACK][RIGHT]_CAN_ID DoorClosed BACK RIGHT : getValue == TRUE
++0ms A  N DOOR_CLOSED_SENSOR_[FRONT][LEFT]_CAN_ID DoorClosed FRONT LEFT : getValue == TRUE
++0ms A  N DOOR_CLOSED_SENSOR_[FRONT][RIGHT]_CAN_ID DoorClosed FRONT RIGHT : getValue == TRUE

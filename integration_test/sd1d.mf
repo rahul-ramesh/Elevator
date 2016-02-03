@@ -1,0 +1,86 @@
+; sd1d.mf
+; 18-649 Distributed Embedded Systems
+; Group 11
+; Rahul Ramesh // rahulram. Daniel Santoro // ddsantor. David Thompson // davidtho. Jialiang Tan // jialiant
+; !@
+
+#INCLUDE defines.mf
+
+; PRE-CONDITIONS
+
+; Doors are closed
+0ms I DOOR_CLOSED_SENSOR_PERIOD N DOOR_CLOSED_SENSOR_[BACK][LEFT]_CAN_ID DoorClosed BACK LEFT = TRUE
+0ms I DOOR_CLOSED_SENSOR_PERIOD N DOOR_CLOSED_SENSOR_[BACK][RIGHT]_CAN_ID DoorClosed BACK RIGHT = TRUE
+0ms I DOOR_CLOSED_SENSOR_PERIOD N DOOR_CLOSED_SENSOR_[FRONT][LEFT]_CAN_ID DoorClosed FRONT LEFT = TRUE
+0ms I DOOR_CLOSED_SENSOR_PERIOD N DOOR_CLOSED_SENSOR_[FRONT][RIGHT]_CAN_ID DoorClosed FRONT RIGHT = TRUE
++0ms I DOOR_CONTROL_PERIOD N DOOR_MOTOR_COMMAND_[FRONT][LEFT]_CAN_ID DoorMotorCommand FRONT LEFT = MDOOR_STOP
++0ms I DOOR_CONTROL_PERIOD N DOOR_MOTOR_COMMAND_[FRONT][RIGHT]_CAN_ID DoorMotorCommand FRONT RIGHT = MDOOR_STOP
++0ms I DOOR_CONTROL_PERIOD N DOOR_MOTOR_COMMAND_[BACK][LEFT]_CAN_ID DoorMotorCommand BACK LEFT = MDOOR_STOP
++0ms I DOOR_CONTROL_PERIOD N DOOR_MOTOR_COMMAND_[BACK][RIGHT]_CAN_ID DoorMotorCommand BACK RIGHT = MDOOR_STOP
+
+; Stopped at floor 1
++0ms I AT_FLOOR_PERIOD N AT_FLOOR_[1][FRONT]_CAN_ID AtFloor 1 FRONT = TRUE
++0ms I DRIVE_PERIOD N DRIVE_SPEED_CAN_ID DriveSpeed = 0 STOP
+
+; Inject hall call at floor 1; doors open
++500ms I 0s F HallCall 1 FRONT UP = true
++200ms I 0s F HallCall 1 FRONT UP = false
+
+
+; Doors are closing
++1000ms I DOOR_CLOSED_SENSOR_PERIOD N DOOR_CLOSED_SENSOR_[FRONT][LEFT]_CAN_ID DoorClosed FRONT LEFT = FALSE
++0ms I DOOR_CLOSED_SENSOR_PERIOD N DOOR_CLOSED_SENSOR_[FRONT][RIGHT]_CAN_ID DoorClosed FRONT RIGHT = FALSE
+
+; Inject a car calls for floor 4 and 7 to get desiredDirection UP
++500ms I CAR_BUTTON_CONTROL_PERIOD N CAR_CALL_[4][FRONT]_CAN_ID CarCall 4 FRONT = true
++500ms I CAR_BUTTON_CONTROL_PERIOD N CAR_CALL_[7][FRONT]_CAN_ID CarCall 7 FRONT = true
+
+; Check initial hallButton state'OFF'
++700ms A F HallLight 4 FRONT DOWN : lighted == false
++0ms A N HALL_CALL_[4][FRONT][DOWN]_CAN_ID HallCall 4 FRONT DOWN : getValue == false
+
+
+; Door state '1. CLOSED'
++1000ms I DOOR_CLOSED_SENSOR_PERIOD N DOOR_CLOSED_SENSOR_[FRONT][LEFT]_CAN_ID DoorClosed FRONT LEFT = TRUE
++0ms I DOOR_CLOSED_SENSOR_PERIOD N DOOR_CLOSED_SENSOR_[FRONT][RIGHT]_CAN_ID DoorClosed FRONT RIGHT = TRUE
+
+; Stopped at floor 4
++500ms I AT_FLOOR_PERIOD N AT_FLOOR_[1][FRONT]_CAN_ID AtFloor 1 FRONT = FALSE
++100ms I AT_FLOOR_PERIOD N AT_FLOOR_[4][FRONT]_CAN_ID AtFloor 4 FRONT = TRUE
+
++0ms I DRIVE_PERIOD N DRIVE_SPEED_CAN_ID DriveSpeed = 0 STOP
+
+; Doors open / are closing
+; Door transition 'PT2'
++1000ms I DOOR_CLOSED_SENSOR_PERIOD N DOOR_CLOSED_SENSOR_[FRONT][LEFT]_CAN_ID DoorClosed FRONT LEFT = FALSE
++0ms I DOOR_CLOSED_SENSOR_PERIOD N DOOR_CLOSED_SENSOR_[FRONT][RIGHT]_CAN_ID DoorClosed FRONT RIGHT = FALSE
+
+; Floor 4 has been serviced
++500ms I CAR_BUTTON_CONTROL_PERIOD N CAR_CALL_[4][FRONT]_CAN_ID CarCall 4 FRONT = false
+
+; SCENARIO
+
+;; Passenger presses the hall call in opposite direction while doors are closing
+;#arc '1D/1'
+;#arc '1D/2a' 
+;#arc '1D/2b'
++500ms I 0s F HallCall 4 FRONT DOWN = true
+
+;Check that HallLight has turned on:
+;#arc '1D/3a'
+;#arc '1D/3b'
++500ms A F HallLight 4 FRONT DOWN : lighted == true
+
+;; Passenger releases the hall call button
+;#arc '1D/4a'
+;#arc '1D/4b'
++500ms I 0s F HallCall 4 FRONT DOWN = false
+
+; Check HallCall message sent
+;#arc '1D/4c'
++500ms A N HALL_CALL_[4][FRONT][DOWN]_CAN_ID HallCall 4 FRONT DOWN : getValue == true
+
+; check Dispatcher updated:
+;#arc '1D/5'
++1000ms A N DESIRED_FLOOR_CAN_ID DesiredFloor : getFloor == 7
++0s A N DESIRED_FLOOR_CAN_ID DesiredFloor : getHallway == FRONT 

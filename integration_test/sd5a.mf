@@ -1,0 +1,79 @@
+; sd5a.mf
+; 18-649 Distributed Embedded Systems
+; Group 11
+; Rahul Ramesh // rahulram. Daniel Santoro // ddsantor. David Thompson // davidtho. Jialiang Tan // jialiant
+; !@
+
+#INCLUDE defines.mf 
+
+;PRE-CONDITIONS
+;PRE-CONDITION 1: Passenger in car, car is at floor 1 hallway FRONT
++500ms I AT_FLOOR_PERIOD N AT_FLOOR_[1][FRONT]_CAN_ID AtFloor 1 FRONT = TRUE
++10ms I DISPATCHER_PERIOD N DESIRED_FLOOR_CAN_ID DesiredFloor = 1 STOP FRONT
+
+;PRE-CONDITION 2: Car is level
++50ms I LEVEL_SENSOR_PERIOD N LEVEL_SENSOR_[UP]_CAN_ID Leveling UP = TRUE
++10ms I LEVEL_SENSOR_PERIOD N LEVEL_SENSOR_[DOWN]_CAN_ID Leveling DOWN = TRUE
+
+;PRE-CONDITION 3: Car is stopped
+;Assert that the car is in the stopped position
++0ms I WEIGHT_PERIOD N CAR_WEIGHT_CAN_ID CarWeight = 1000
+
++50ms A F Drive : speed == STOP 
++0s A F Drive : direction == STOP
++0s A N DRIVE_COMMAND_CAN_ID DriveCommand : getSpeed == STOP 
+
+;PRE-CONDITION 4: Doors are closed
++50ms I DISPATCHER_PERIOD N DESIRED_DWELL_[FRONT]_CAN_ID Integer = 5
++50ms I DOOR_CLOSED_SENSOR_PERIOD N DOOR_CLOSED_SENSOR_[FRONT][LEFT]_CAN_ID DoorClosed FRONT LEFT = TRUE
++50ms I DOOR_CLOSED_SENSOR_PERIOD N DOOR_CLOSED_SENSOR_[FRONT][RIGHT]_CAN_ID DoorClosed FRONT RIGHT = TRUE
+
+;SCENARIO
+;STEP 1: Doors Open
+;#arc '5A/1a'
+;Check that we've moved to STATE_AT_FLOOR -> Doors start opening
++50ms A F DoorMotor FRONT LEFT : command == OPEN
++0s A F DoorMotor FRONT RIGHT : command == OPEN
+
+;Doors fully open
+;#arc '5A/1b'
++250ms I DOOR_OPENED_SENSOR_PERIOD N DOOR_OPEN_SENSOR_[FRONT][LEFT]_CAN_ID DoorOpened FRONT LEFT = TRUE
++10ms I DOOR_OPENED_SENSOR_PERIOD N DOOR_OPEN_SENSOR_[FRONT][RIGHT]_CAN_ID DoorOpened FRONT RIGHT = TRUE
+
+;Check doors have stopped opening -> passenger can get on
+;#arc '5A/1c'
++500ms A F DoorMotor FRONT LEFT : command == STOP
++0s A F DoorMotor FRONT RIGHT : command == STOP
+
+
+;Step 2: Passenger Exits
+;#arc '5A/2'
++500ms I WEIGHT_PERIOD N CAR_WEIGHT_CAN_ID CarWeight = 700
+
+;#arc '5A/3a'
++10ms I LEVEL_SENSOR_PERIOD N LEVEL_SENSOR_[UP]_CAN_ID Leveling UP = TRUE
++10ms I LEVEL_SENSOR_PERIOD N LEVEL_SENSOR_[DOWN]_CAN_ID Leveling DOWN = FALSE
+
+;Step 3; Car Re-levels
+;#arc '5A/3b'
+;check leveling state outputs - direction should be DOWN, speed should be LEVEL
++50ms A F Drive : speed == LEVEL 
++0s A F Drive : direction == DOWN
+
+;reached back to level
+;#arc '5A/3c'
++50ms I LEVEL_SENSOR_PERIOD N LEVEL_SENSOR_[UP]_CAN_ID Leveling UP = TRUE
++10ms I LEVEL_SENSOR_PERIOD N LEVEL_SENSOR_[DOWN]_CAN_ID Leveling DOWN = TRUE
+
+;assert that the car is in the stopped position
+;#arc '5A/3d'
++50ms A F Drive : speed == STOP 
++0s A F Drive : direction == STOP
+
+;POST CONDITIONS
+;Post Condition 1: Car is at floor 1 hallway FRONT
++500ms A N AT_FLOOR_[1][FRONT]_CAN_ID AtFloor 1 FRONT : getValue == TRUE
+
+;Post Condition 2: Doors are open (given in scenario):
+
+;Post Condition 3: Passenger has exited the car (given by scenario)

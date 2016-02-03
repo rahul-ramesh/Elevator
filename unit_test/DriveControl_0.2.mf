@@ -1,0 +1,218 @@
+; DriveControl_0.2.mf
+; 18-649 Distributed Embedded Systems
+; Group 11
+; Rahul Ramesh // rahulram. Daniel Santoro // ddsantor. David Thompson // davidtho. Jialiang Tan // jialiant
+; !@
+
+; Unit test for DriveControl - STATE_SLOW_UP
+; Daniel Santoro
+; Last modified 2015-10-05
+
+#INCLUDE defines.mf 
+
+;; CHECK INITIAL CONDITIONS
+
+0s I DRIVE_PERIOD F DriveSpeed = STOP 0
++0s I CAR_LEVEL_POSITION_PERIOD F CarLevelPosition = 0
+
+;#state 'STOP'
++50ms A F Drive : speed == STOP 
++0s A F Drive : direction == STOP
++0s A N DRIVE_SPEED_CAN_ID DriveSpeed : getSpeed == 0 
++0s A N DRIVE_SPEED_CAN_ID DriveSpeed : getDirection == STOP
+
+;; SET ALL NETWORK MESSAGES
+
++10ms I AT_FLOOR_PERIOD N AT_FLOOR_[1][FRONT]_CAN_ID AtFloor 1 FRONT = TRUE
++0ms I AT_FLOOR_PERIOD N AT_FLOOR_[1][BACK]_CAN_ID AtFloor 1 BACK = TRUE
++0ms I LEVEL_SENSOR_PERIOD N LEVEL_SENSOR_[UP]_CAN_ID Leveling UP = TRUE
++0ms I LEVEL_SENSOR_PERIOD N LEVEL_SENSOR_[DOWN]_CAN_ID Leveling DOWN = TRUE
++0ms I 0s N EMERGENCY_BRAKE_CAN_ID SafetySensor = FALSE
++0ms I DOOR_CLOSED_SENSOR_PERIOD N DOOR_CLOSED_SENSOR_[BACK][LEFT]_CAN_ID DoorClosed BACK LEFT = TRUE
++0ms I DOOR_CLOSED_SENSOR_PERIOD N DOOR_CLOSED_SENSOR_[BACK][RIGHT]_CAN_ID DoorClosed BACK RIGHT = TRUE
++0ms I DOOR_CLOSED_SENSOR_PERIOD N DOOR_CLOSED_SENSOR_[FRONT][LEFT]_CAN_ID DoorClosed FRONT LEFT = TRUE
++0ms I DOOR_CLOSED_SENSOR_PERIOD N DOOR_CLOSED_SENSOR_[FRONT][RIGHT]_CAN_ID DoorClosed FRONT RIGHT = TRUE
++0ms I DOOR_CONTROL_PERIOD N DOOR_MOTOR_COMMAND_[BACK][LEFT]_CAN_ID DoorMotorCommand BACK LEFT = MDOOR_STOP
++0ms I DOOR_CONTROL_PERIOD N DOOR_MOTOR_COMMAND_[BACK][RIGHT]_CAN_ID DoorMotorCommand BACK RIGHT = MDOOR_STOP
++0ms I DOOR_CONTROL_PERIOD N DOOR_MOTOR_COMMAND_[FRONT][LEFT]_CAN_ID DoorMotorCommand FRONT LEFT = MDOOR_STOP
++0ms I DOOR_CONTROL_PERIOD N DOOR_MOTOR_COMMAND_[FRONT][RIGHT]_CAN_ID DoorMotorCommand FRONT RIGHT = MDOOR_STOP
++0ms I WEIGHT_PERIOD N CAR_WEIGHT_CAN_ID CarWeight = 500
+
+;#state 'STOP'
++50ms A F Drive : speed == STOP 
++0s A F Drive : direction == STOP
++0s A N DRIVE_SPEED_CAN_ID DriveSpeed : getSpeed == 0 
++0s A N DRIVE_SPEED_CAN_ID DriveSpeed : getDirection == STOP
+
+;; MOVE TO FLOOR 2
+
+;#transition 'PT2'
++10ms I DISPATCHER_PERIOD N DESIRED_FLOOR_CAN_ID DesiredFloor = 2 STOP BACK
+
+;#state 'SLOW_UP'
++200ms A F Drive : speed == SLOW 
++0s A F Drive : direction == UP
++0s A N DRIVE_SPEED_CAN_ID DriveSpeed : getSpeed == 0 
++0s A N DRIVE_SPEED_CAN_ID DriveSpeed : getDirection == STOP
+
+; leave floor, speed up
++10ms I AT_FLOOR_PERIOD N AT_FLOOR_[1][FRONT]_CAN_ID AtFloor 1 FRONT = FALSE
++0ms I AT_FLOOR_PERIOD N AT_FLOOR_[1][BACK]_CAN_ID AtFloor 1 BACK = FALSE
++0ms I LEVEL_SENSOR_PERIOD N LEVEL_SENSOR_[UP]_CAN_ID Leveling UP = FALSE
++0ms I LEVEL_SENSOR_PERIOD N LEVEL_SENSOR_[DOWN]_CAN_ID Leveling DOWN = FALSE
++100ms I DRIVE_PERIOD F DriveSpeed = UP 0.2
++0s I CAR_LEVEL_POSITION_PERIOD F CarLevelPosition = 1000
+
+
+;#state 'SLOW_UP'
++200ms A F Drive : speed == SLOW 
++0s A F Drive : direction == UP
++0s A N DRIVE_SPEED_CAN_ID DriveSpeed : getSpeed == 200
++0s A N DRIVE_SPEED_CAN_ID DriveSpeed : getDirection == UP
+
+;; STOP AT FLOOR 2
+
+; transition back to STOP state, arrive at floor 2
+;#transition 'PT4'
++10ms I AT_FLOOR_PERIOD N AT_FLOOR_[2][BACK]_CAN_ID AtFloor 2 BACK = TRUE
++0s I CAR_LEVEL_POSITION_PERIOD F CarLevelPosition = 5000
+
+
+;#state 'STOP'
++200ms A F Drive : speed == STOP 
++0s A F Drive : direction == STOP
++0s A N DRIVE_SPEED_CAN_ID DriveSpeed : getSpeed == 200
++0s A N DRIVE_SPEED_CAN_ID DriveSpeed : getDirection == UP
+
+; slow down
++10ms I DRIVE_PERIOD F DriveSpeed = STOP 0
+
++100ms A N DRIVE_SPEED_CAN_ID DriveSpeed : getSpeed == 0
++0s A N DRIVE_SPEED_CAN_ID DriveSpeed : getDirection == STOP
+
+;; MOVE TO FLOOR 3
+
+;#transition 'PT2'
++10ms I DISPATCHER_PERIOD N DESIRED_FLOOR_CAN_ID DesiredFloor = 3 STOP FRONT
+
+;#state 'SLOW_UP'
++200ms A F Drive : speed == SLOW 
++0s A F Drive : direction == UP
++0s A N DRIVE_SPEED_CAN_ID DriveSpeed : getSpeed == 0 
++0s A N DRIVE_SPEED_CAN_ID DriveSpeed : getDirection == STOP
+
+;; ENVOKE ESTOP -> DOORS NOT CLOSED
+
+;#transition 'PT20'
++10ms I DOOR_CLOSED_SENSOR_PERIOD N DOOR_CLOSED_SENSOR_[BACK][LEFT]_CAN_ID DoorClosed BACK LEFT = FALSE
+
+;#state 'STOP'
++200ms A F Drive : speed == STOP 
++0s A F Drive : direction == STOP
++0s A N DRIVE_SPEED_CAN_ID DriveSpeed : getSpeed == 0 
++0s A N DRIVE_SPEED_CAN_ID DriveSpeed : getDirection == STOP
+
+;; MOVE TO FLOOR 3
+
+;#transition 'PT2'
++10ms I DOOR_CLOSED_SENSOR_PERIOD N DOOR_CLOSED_SENSOR_[BACK][LEFT]_CAN_ID DoorClosed BACK LEFT = TRUE
+
+;#state 'SLOW_UP'
++200ms A F Drive : speed == SLOW 
++0s A F Drive : direction == UP
++0s A N DRIVE_SPEED_CAN_ID DriveSpeed : getSpeed == 0 
++0s A N DRIVE_SPEED_CAN_ID DriveSpeed : getDirection == STOP
+
+
+;; ENVOKE ESTOP -> DOOR MOTOR OPENING
+
+;#transition 'PT20'
++10ms I DOOR_CONTROL_PERIOD N DOOR_MOTOR_COMMAND_[BACK][LEFT]_CAN_ID DoorMotorCommand BACK LEFT = MDOOR_OPEN
+
+;#state 'STOP'
++200ms A F Drive : speed == STOP 
++0s A F Drive : direction == STOP
++0s A N DRIVE_SPEED_CAN_ID DriveSpeed : getSpeed == 0 
++0s A N DRIVE_SPEED_CAN_ID DriveSpeed : getDirection == STOP
+
+;; MOVE TO FLOOR 3
+
+;#transition 'PT2'
++10ms I DOOR_CONTROL_PERIOD N DOOR_MOTOR_COMMAND_[BACK][LEFT]_CAN_ID DoorMotorCommand BACK LEFT = MDOOR_STOP
+
+;#state 'SLOW_UP'
++200ms A F Drive : speed == SLOW 
++0s A F Drive : direction == UP
++0s A N DRIVE_SPEED_CAN_ID DriveSpeed : getSpeed == 0 
++0s A N DRIVE_SPEED_CAN_ID DriveSpeed : getDirection == STOP
+
+;; ENVOKE ESTOP -> OVERWEIGHT
+
+;#transition 'PT20'
++10ms I WEIGHT_PERIOD N CAR_WEIGHT_CAN_ID CarWeight = 15000
+
+;#state 'STOP'
++200ms A F Drive : speed == STOP 
++0s A F Drive : direction == STOP
++0s A N DRIVE_SPEED_CAN_ID DriveSpeed : getSpeed == 0 
++0s A N DRIVE_SPEED_CAN_ID DriveSpeed : getDirection == STOP
+
+;; MOVE TO FLOOR 3
+
+;#transition 'PT2'
++10ms I WEIGHT_PERIOD N CAR_WEIGHT_CAN_ID CarWeight = 500
+
+;#state 'SLOW_UP'
++200ms A F Drive : speed == SLOW 
++0s A F Drive : direction == UP
++0s A N DRIVE_SPEED_CAN_ID DriveSpeed : getSpeed == 0 
++0s A N DRIVE_SPEED_CAN_ID DriveSpeed : getDirection == STOP
+
+;; ENVOKE ESTOP -> EMERGENCY BRAKE
+
+;#transition 'PT20'
++10ms I 0s N EMERGENCY_BRAKE_CAN_ID SafetySensor = TRUE
+
+;#state 'STOP'
++200ms A F Drive : speed == STOP 
++0s A F Drive : direction == STOP
++0s A N DRIVE_SPEED_CAN_ID DriveSpeed : getSpeed == 0 
++0s A N DRIVE_SPEED_CAN_ID DriveSpeed : getDirection == STOP
+
+;; MOVE TO FLOOR 3
+
+;#transition 'PT2'
++10ms I 0s N EMERGENCY_BRAKE_CAN_ID SafetySensor = FALSE
+
+;#state 'SLOW_UP'
++200ms A F Drive : speed == SLOW 
++0s A F Drive : direction == UP
++0s A N DRIVE_SPEED_CAN_ID DriveSpeed : getSpeed == 0 
++0s A N DRIVE_SPEED_CAN_ID DriveSpeed : getDirection == STOP
+
+; leave floor, speed up
++0ms I AT_FLOOR_PERIOD N AT_FLOOR_[2][BACK]_CAN_ID AtFloor 2 BACK = FALSE
++0ms I LEVEL_SENSOR_PERIOD N LEVEL_SENSOR_[UP]_CAN_ID Leveling UP = FALSE
++0ms I LEVEL_SENSOR_PERIOD N LEVEL_SENSOR_[DOWN]_CAN_ID Leveling DOWN = FALSE
++100ms I DRIVE_PERIOD F DriveSpeed = UP 0.2
++0s I CAR_LEVEL_POSITION_PERIOD F CarLevelPosition = 5500
+
+
+;#state 'SLOW_UP'
++200ms A F Drive : speed == SLOW 
++0s A F Drive : direction == UP
++0s A N DRIVE_SPEED_CAN_ID DriveSpeed : getSpeed == 200
++0s A N DRIVE_SPEED_CAN_ID DriveSpeed : getDirection == UP
+
+;#transition 'PT6'
++100ms I DRIVE_PERIOD F DriveSpeed = UP 0.25
++0s I CAR_LEVEL_POSITION_PERIOD F CarLevelPosition = 6000
+
+
+;#state 'FAST_UP'
++200ms A F Drive : speed == FAST 
++0s A F Drive : direction == UP
++0s A N DRIVE_SPEED_CAN_ID DriveSpeed : getSpeed == 250
++0s A N DRIVE_SPEED_CAN_ID DriveSpeed : getDirection == UP
+
+

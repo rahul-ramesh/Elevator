@@ -1,0 +1,13 @@
+; sd4a.cf
+; 18-649 Distributed Embedded Systems
+; Group 11
+; Rahul Ramesh // rahulram. Daniel Santoro // ddsantor. David Thompson // davidtho. Jialiang Tan // jialiant
+; !@
+
+
+
+DriveControl 10ms true
+DoorControl FRONT LEFT 10ms true
+DoorControl FRONT RIGHT 10ms true
+DoorControl BACK LEFT 10ms true
+DoorControl BACK RIGHT 10ms true

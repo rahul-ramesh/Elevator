@@ -1,0 +1,36 @@
+; sd5a_0.stats
+; 18-649 Distributed Embedded Systems
+; Group 11
+; Rahul Ramesh // rahulram. Daniel Santoro // ddsantor. David Thompson // davidtho. Jialiang Tan // jialiant
+; !@
+
+Simulator Parameters:
+Command line = -cf ../../portfolio_grp11/integration_test/sd5a.cf -mf ../../portfolio_grp11/integration_test/sd5a.mf -head ../../portfolio_grp11/scripts/grp11.head
+RandomSeed = 1450147627360
+CanNetworkBitTime = 0 ns
+Effective Can Bitrate = Infinity
+Run Time = null
+Real time rate = null
+Message File = ../../portfolio_grp11/integration_test/sd5a.mf
+Controller File = ../../portfolio_grp11/integration_test/sd5a.cf
+
+Assertion Results:
+@0.62s:  PASSED simulator.payloads.DrivePayload$ReadableDrivePayload@71aefd7b :: speed ?== STOP PASSED
+@0.62s:  PASSED simulator.payloads.DrivePayload$ReadableDrivePayload@4ef0a363 :: direction ?== STOP PASSED
+@0.62s:  PASSED simulator.payloads.CanMailbox$ReadableCanMailbox@24b2714a :: getSpeed ?== STOP PASSED
+@0.82s:  PASSED simulator.payloads.DoorMotorPayload$ReadableDoorMotorPayload@5257240e :: command ?== OPEN PASSED
+@0.82s:  PASSED simulator.payloads.DoorMotorPayload$ReadableDoorMotorPayload@50bcd14a :: command ?== OPEN PASSED
+@1.58s:  PASSED simulator.payloads.DoorMotorPayload$ReadableDoorMotorPayload@659297ab :: command ?== STOP PASSED
+@1.58s:  PASSED simulator.payloads.DoorMotorPayload$ReadableDoorMotorPayload@5babd8cb :: command ?== STOP PASSED
+@2.15s:  PASSED simulator.payloads.DrivePayload$ReadableDrivePayload@31a5fdb9 :: speed ?== LEVEL PASSED
+@2.15s:  PASSED simulator.payloads.DrivePayload$ReadableDrivePayload@7ed9d41 :: direction ?== DOWN PASSED
+@2.26s:  PASSED simulator.payloads.DrivePayload$ReadableDrivePayload@51b2bcc2 :: speed ?== STOP PASSED
+@2.26s:  PASSED simulator.payloads.DrivePayload$ReadableDrivePayload@5cf2baac :: direction ?== STOP PASSED
+@2.76s:  PASSED simulator.payloads.CanMailbox$ReadableCanMailbox@56ce9bde :: getValue ?== true PASSED
+
+
+******************Summary******************
+Passed:  12
+Failed:  0
+Total :  12
+

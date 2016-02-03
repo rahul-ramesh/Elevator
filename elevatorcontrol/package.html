@@ -1,0 +1,58 @@
+<!-- package.html -->
+<!-- 18-649 Distributed Embedded Systems -->
+<!-- Group 11 -->
+<!-- Rahul Ramesh // rahulram. Daniel Santoro // ddsantor. David Thompson // davidtho. Jialiang Tan // jialiant -->
+<!-- !@ -->
+
+<!-- Initialization -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <meta content="text/html;charset=ISO-8859-1" http-equiv="Content-Type">
+  <title>18649 Elevatorcontrol Package</title>
+</head>
+
+<!-- Title -->
+<body>
+<h1 style="text-align: center;">18649 - Elevator Control Package<br></h1>
+<hr style="width: 100%; height: 2px;">18649 Fall 2015<br>
+Group 11 - Rahul Ramesh // rahulram. Daniel Santoro // ddsantor. David Thompson // davidtho. Jialiang Tan // jialiant.&nbsp;<br>
+
+<hr style="width: 100%; height: 2px;">This page lists and describes the java files in this elevatorcontrol package.&nbsp; 
+This document is updated to reflect the current implementation.<br>
+
+<!-- CONTROLLER FILES -->
+<h2>Controller files</h2>
+<ul>
+  <li><a href="CarPositionControl.java">CarPositionControl.java</a> - implements CarPositionIndicatorControl</li>
+  <li><a href="CarButtonControl.java">CarButtonControl.java</a> - implements CarButtonControl</li>
+  <li><a href="Dispatcher.java">Dispatcher.java</a> - implements Dispatcher</li>
+  <li><a href="DoorControl.java">DoorControl.java</a> - implements DoorControl</li>
+  <li><a href="DriveControl.java">DriveControl.java</a> - implements DriveControl</li>
+  <li><a href="HallButtonControl.java">HallButtonControl.java</a> - implements HallButtonControl</li>
+  <li><a href="LanternControl.java">LanternControl.java</a> - implements LanternControl</li>
+
+</ul>
+
+<!-- TRANSLATOR FILES -->
+<h2>Translator files</h2>
+<ul>
+  <li><a href="CarCallCanPayloadTranslator.java">CarCallCanPayloadTranslator.java</a> - implements an efficient boolean CAN translator for mCarCall</li>
+  <li><a href="DesiredFloorCanPayloadTranslator.java">DesiredFloorCanPayloadTranslator.java</a> - implements an efficient CAN translator for mDesiredFloor</li>
+  <li><a href="DoorMotorCommandCanPayloadTranslator.java">DoorMotorCommandCanPayloadTranslator.java</a> - implements an efficient CAN translator for mDoorMotor</li>
+  <li><a href="DriveSpeedCanPayloadTranslator.java">DriveSpeedCanPaylodTranslator.java</a> - implements an efficient CAN translator for mDriveSpeed</li>
+  <li><a href="HallCallCanPayloadTranslator.java">HallCallCanPayloadTranslator.java</a> - implements an efficient boolean CAN translator for mHallCall</li>
+</ul>
+<h2>Runtime Monitors</h2>
+<ul>
+  <li><a href="Proj7RuntimeMonitor.java">Proj7RuntimeMonitor.java</a> - implements required runtime monitor for Project 7.</li>
+  <li><a href="RuntimeRequirementsMonitor.java">RuntimeRequirementsMonitor.java</a> - implements runtime monitor.</li>  
+</ul>
+<h2>Utility files</h2>
+<ul>
+  <li><a href="Utility.java">Utility.java</a> - implements AtFloor, DoorClosed, DoorOpened, Door Motor, Level, HallCall and CarCall utility functions.</li>
+  <li><a href="MessageDictionary.java">MessageDictionary.java</a> - Defines the messages and priorites for the CAN network.</li>
+</ul>
+<br>
+</body>
+</html>

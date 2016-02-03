@@ -1,0 +1,80 @@
+; sd2c.mf
+; 18-649 Distributed Embedded Systems
+; Group 11
+; Rahul Ramesh // rahulram. Daniel Santoro // ddsantor. David Thompson // davidtho. Jialiang Tan // jialiant
+; !@
+
+
+
+#INCLUDE defines.mf
+
+; PRE-CONDITIONS
+
+; Doors are closed
+0ms I DOOR_CLOSED_SENSOR_PERIOD N DOOR_CLOSED_SENSOR_[BACK][LEFT]_CAN_ID DoorClosed BACK LEFT = TRUE
+0ms I DOOR_CLOSED_SENSOR_PERIOD N DOOR_CLOSED_SENSOR_[BACK][RIGHT]_CAN_ID DoorClosed BACK RIGHT = TRUE
+0ms I DOOR_CLOSED_SENSOR_PERIOD N DOOR_CLOSED_SENSOR_[FRONT][LEFT]_CAN_ID DoorClosed FRONT LEFT = TRUE
+0ms I DOOR_CLOSED_SENSOR_PERIOD N DOOR_CLOSED_SENSOR_[FRONT][RIGHT]_CAN_ID DoorClosed FRONT RIGHT = TRUE
++0ms I DOOR_CONTROL_PERIOD N DOOR_MOTOR_COMMAND_[FRONT][LEFT]_CAN_ID DoorMotorCommand FRONT LEFT = MDOOR_STOP
++0ms I DOOR_CONTROL_PERIOD N DOOR_MOTOR_COMMAND_[FRONT][RIGHT]_CAN_ID DoorMotorCommand FRONT RIGHT = MDOOR_STOP
++0ms I DOOR_CONTROL_PERIOD N DOOR_MOTOR_COMMAND_[BACK][LEFT]_CAN_ID DoorMotorCommand BACK LEFT = MDOOR_STOP
++0ms I DOOR_CONTROL_PERIOD N DOOR_MOTOR_COMMAND_[BACK][RIGHT]_CAN_ID DoorMotorCommand BACK RIGHT = MDOOR_STOP
+
+; Stopped at floor 1
++0ms I AT_FLOOR_PERIOD N AT_FLOOR_[1][FRONT]_CAN_ID AtFloor 1 FRONT = TRUE
++0ms I DRIVE_PERIOD N DRIVE_SPEED_CAN_ID DriveSpeed = 0 STOP
+
+; Inject Car call at floor 1; doors open
++500ms I 0s F CarCall 1 FRONT = true
++200ms I 0s F CarCall 1 FRONT = false
+
+; Front doors open / are closing
++1000ms I DOOR_CLOSED_SENSOR_PERIOD N DOOR_CLOSED_SENSOR_[FRONT][LEFT]_CAN_ID DoorClosed FRONT LEFT = FALSE
++0ms I DOOR_CLOSED_SENSOR_PERIOD N DOOR_CLOSED_SENSOR_[FRONT][RIGHT]_CAN_ID DoorClosed FRONT RIGHT = FALSE
+
+; Check initial carButton state'OFF'
++700ms A F CarLight 1 FRONT : lighted == false
++0ms A N CAR_CALL_[1][FRONT]_CAN_ID CarCall 1 FRONT : getValue == false
+
+;; Passenger presses the car call button while doors are closing
++500ms I 0s F CarCall 1 FRONT = true
+
+;Check that CarLight has turned on:
++500ms A F CarLight 1 FRONT : lighted == true
+
+;; Passenger releases the car call button
++500ms  I  0s F CarCall 1 FRONT = false
+
+; Check CarCall message sent, causing Dispatcer to update,
+;causing CarLight to turn off:
++1500ms A F CarLight 1 FRONT : lighted == false
+
+; This floor has now been reserviced once.
+
+
+; SCENARIO
+
+;; Passenger presses the car call button while doors are closing
+;#arc '2C/1'
+;#arc '2C/2a' 
+;#arc '2C/2b'
++500ms  I  0s F CarCall 1 FRONT = true
+
+;Check that CarLight has turned on:
+;#arc '2C/3a'
+;#arc '2C/3b'
++500ms A F CarLight 1 FRONT : lighted == true
+
+;; Passenger releases the car call button
+;#arc '2C/4a'
+;#arc '2C/4b'
++500ms  I  0s F CarCall 1 FRONT = false
+
+; Check CarCall message sent
+;#arc '2C/4c'
++500ms A N CAR_CALL_[1][FRONT]_CAN_ID CarCall 1 FRONT : getValue == true
+
+; check Dispatcher updated:
+;#arc '2C/5'
++1000ms A N DESIRED_FLOOR_CAN_ID DesiredFloor : getFloor == 0
++0s A N DESIRED_FLOOR_CAN_ID DesiredFloor : getHallway == NONE 

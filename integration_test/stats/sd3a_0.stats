@@ -1,0 +1,42 @@
+; sd3a_0.stats
+; 18-649 Distributed Embedded Systems
+; Group 11
+; Rahul Ramesh // rahulram. Daniel Santoro // ddsantor. David Thompson // davidtho. Jialiang Tan // jialiant
+; !@
+
+Simulator Parameters:
+Command line = -cf ../../portfolio_grp11/integration_test/sd3a.cf -mf ../../portfolio_grp11/integration_test/sd3a.mf -head ../../portfolio_grp11/scripts/grp11.head
+RandomSeed = 1450147615703
+CanNetworkBitTime = 0 ns
+Effective Can Bitrate = Infinity
+Run Time = null
+Real time rate = null
+Message File = ../../portfolio_grp11/integration_test/sd3a.mf
+Controller File = ../../portfolio_grp11/integration_test/sd3a.cf
+
+Assertion Results:
+@1.5s:  PASSED simulator.payloads.CarLightPayload$ReadableCarLightPayload@62300f65 :: lighted ?== true PASSED
+@3.5s:  PASSED simulator.payloads.HallLightPayload$ReadableHallLightPayload@3078d976 :: lighted ?== true PASSED
+@7.5s:  PASSED simulator.payloads.DoorMotorPayload$ReadableDoorMotorPayload@5071c1b2 :: command ?== OPEN PASSED
+@7.5s:  PASSED simulator.payloads.DoorMotorPayload$ReadableDoorMotorPayload@165a8803 :: command ?== OPEN PASSED
+@8.0s:  PASSED simulator.payloads.CanMailbox$ReadableCanMailbox@737d7379 :: getValue ?== 0 PASSED
+@8.0s:  PASSED simulator.payloads.CanMailbox$ReadableCanMailbox@4b9a1843 :: getValue ?== 0 PASSED
+@8.5s:  PASSED simulator.payloads.DoorMotorPayload$ReadableDoorMotorPayload@1783d08c :: command ?== OPEN PASSED
+@8.5s:  PASSED simulator.payloads.DoorMotorPayload$ReadableDoorMotorPayload@1876e112 :: command ?== OPEN PASSED
+@10.0s:  PASSED simulator.payloads.CanMailbox$ReadableCanMailbox@3f2bc418 :: getValue ?== false PASSED
+@11.0s:  PASSED simulator.payloads.CanMailbox$ReadableCanMailbox@57003d5d :: getValue ?== false PASSED
+@12.0s:  PASSED simulator.payloads.DoorMotorPayload$ReadableDoorMotorPayload@1c507aaf :: command ?== STOP PASSED
+@12.0s:  PASSED simulator.payloads.DoorMotorPayload$ReadableDoorMotorPayload@659297ab :: command ?== STOP PASSED
+@18.0s:  PASSED simulator.payloads.DoorMotorPayload$ReadableDoorMotorPayload@6f262671 :: command ?== CLOSE PASSED
+@18.0s:  PASSED simulator.payloads.DoorMotorPayload$ReadableDoorMotorPayload@8b49626 :: command ?== CLOSE PASSED
+@18.5s:  PASSED simulator.payloads.CarLightPayload$ReadableCarLightPayload@ef1a78 :: lighted ?== false PASSED
+@19.0s:  PASSED simulator.payloads.HallLightPayload$ReadableHallLightPayload@2d868e75 :: lighted ?== false PASSED
+@19.5s:  PASSED simulator.payloads.DoorMotorPayload$ReadableDoorMotorPayload@43bda1e0 :: command ?== CLOSE PASSED
+@19.5s:  PASSED simulator.payloads.DoorMotorPayload$ReadableDoorMotorPayload@165b3858 :: command ?== CLOSE PASSED
+
+
+******************Summary******************
+Passed:  18
+Failed:  0
+Total :  18
+

@@ -1,0 +1,52 @@
+; sd2a.mf
+; 18-649 Distributed Embedded Systems
+; Group 11
+; Rahul Ramesh // rahulram. Daniel Santoro // ddsantor. David Thompson // davidtho. Jialiang Tan // jialiant
+; !@
+
+#INCLUDE defines.mf
+
+;PRE-CONDITIONS
+
+; doors are closed
++500ms I DOOR_CLOSED_SENSOR_PERIOD N DOOR_CLOSED_SENSOR_[FRONT][LEFT]_CAN_ID DoorClosed FRONT LEFT = true
++0ms I DOOR_CLOSED_SENSOR_PERIOD N DOOR_CLOSED_SENSOR_[FRONT][RIGHT]_CAN_ID DoorClosed FRONT RIGHT = true
++0ms I DOOR_CLOSED_SENSOR_PERIOD N DOOR_CLOSED_SENSOR_[BACK][LEFT]_CAN_ID DoorClosed BACK LEFT = true
++0ms I DOOR_CLOSED_SENSOR_PERIOD N DOOR_CLOSED_SENSOR_[BACK][RIGHT]_CAN_ID DoorClosed BACK RIGHT = true
++0ms I DOOR_CONTROL_PERIOD N DOOR_MOTOR_COMMAND_[FRONT][LEFT]_CAN_ID DoorMotorCommand FRONT LEFT = MDOOR_STOP
++0ms I DOOR_CONTROL_PERIOD N DOOR_MOTOR_COMMAND_[FRONT][RIGHT]_CAN_ID DoorMotorCommand FRONT RIGHT = MDOOR_STOP
++0ms I DOOR_CONTROL_PERIOD N DOOR_MOTOR_COMMAND_[BACK][LEFT]_CAN_ID DoorMotorCommand BACK LEFT = MDOOR_STOP
++0ms I DOOR_CONTROL_PERIOD N DOOR_MOTOR_COMMAND_[BACK][RIGHT]_CAN_ID DoorMotorCommand BACK RIGHT = MDOOR_STOP
+
+; Stopped at floor 1
++0ms I AT_FLOOR_PERIOD N AT_FLOOR_[1][FRONT]_CAN_ID AtFloor 1 FRONT = TRUE
++0ms I DRIVE_PERIOD N DRIVE_SPEED_CAN_ID DriveSpeed = 0 STOP
+
+; check initial condition and state
++500ms A F CarLight 4 FRONT : lighted == false
++0ms A N CAR_CALL_[4][FRONT]_CAN_ID CarCall 4 FRONT : getValue == false
+
+;SCENARIO
+; injecting a Car call message: 
+;#arc '2A/1a'
+;#arc '2A/1b'
++500ms I 0s F CarCall 4 FRONT = true
+
+; check button lights up:
+;#arc '2A/2a'
+;#arc '2A/2b'
++500ms A F CarLight 4 FRONT : lighted == true
+
+; Passenger releases button
+;#arc '2A/3a'
+;#arc '2A/3b'
++100ms I 0s F CarCall 4 FRONT = false
+
+; check network message sent
+;#arc '1A/3c'
++500ms A N CAR_CALL_[4][FRONT]_CAN_ID CarCall 4 FRONT : getValue == true
+
+; check Dispatcher updated:
+;#arc '2A/4'
++500ms A N DESIRED_FLOOR_CAN_ID DesiredFloor : getFloor == 4 
++0s A N DESIRED_FLOOR_CAN_ID DesiredFloor : getHallway == FRONT 

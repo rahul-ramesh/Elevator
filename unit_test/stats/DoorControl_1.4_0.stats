@@ -1,0 +1,54 @@
+; DoorControl_1.4_0.stats
+; 18-649 Distributed Embedded Systems
+; Group 11
+; Rahul Ramesh // rahulram. Daniel Santoro // ddsantor. David Thompson // davidtho. Jialiang Tan // jialiant
+; !@
+
+Simulator Parameters:
+Command line = -cf ../../portfolio_grp11/unit_test/DoorControl.cf -mf ../../portfolio_grp11/unit_test/DoorControl_1.4.mf -head ../../portfolio_grp11/scripts/grp11.head
+RandomSeed = 1450147008394
+CanNetworkBitTime = 0 ns
+Effective Can Bitrate = Infinity
+Run Time = null
+Real time rate = null
+Message File = ../../portfolio_grp11/unit_test/DoorControl_1.4.mf
+Controller File = ../../portfolio_grp11/unit_test/DoorControl.cf
+
+Assertion Results:
+@0.1s:  PASSED simulator.payloads.DoorMotorPayload$ReadableDoorMotorPayload@111de95a :: command ?== STOP PASSED
+@0.1s:  PASSED simulator.payloads.CanMailbox$ReadableCanMailbox@178374c9 :: getValue ?== 2 PASSED
+@1.15s:  PASSED simulator.payloads.DoorMotorPayload$ReadableDoorMotorPayload@2bebde03 :: command ?== OPEN PASSED
+@1.15s:  PASSED simulator.payloads.CanMailbox$ReadableCanMailbox@15a1ad24 :: getValue ?== 0 PASSED
+@3.25s:  PASSED simulator.payloads.DoorMotorPayload$ReadableDoorMotorPayload@7d5e90cb :: command ?== STOP PASSED
+@3.25s:  PASSED simulator.payloads.CanMailbox$ReadableCanMailbox@3d03f309 :: getValue ?== 2 PASSED
+@8.35s:  PASSED simulator.payloads.DoorMotorPayload$ReadableDoorMotorPayload@2d6362fc :: command ?== CLOSE PASSED
+@8.35s:  PASSED simulator.payloads.CanMailbox$ReadableCanMailbox@439daaab :: getValue ?== 1 PASSED
+@19.54s:  PASSED simulator.payloads.DoorMotorPayload$ReadableDoorMotorPayload@12a4d5ac :: command ?== OPEN PASSED
+@19.54s:  PASSED simulator.payloads.CanMailbox$ReadableCanMailbox@45d1edcc :: getValue ?== 0 PASSED
+@31.54s:  PASSED simulator.payloads.DoorMotorPayload$ReadableDoorMotorPayload@5c382de5 :: command ?== STOP PASSED
+@31.54s:  PASSED simulator.payloads.CanMailbox$ReadableCanMailbox@44d874b5 :: getValue ?== 2 PASSED
+@37.84s:  PASSED simulator.payloads.DoorMotorPayload$ReadableDoorMotorPayload@42932892 :: command ?== CLOSE PASSED
+@37.84s:  PASSED simulator.payloads.CanMailbox$ReadableCanMailbox@16881734 :: getValue ?== 1 PASSED
+@39.52s:  PASSED simulator.payloads.DoorMotorPayload$ReadableDoorMotorPayload@33ce58c1 :: command ?== NUDGE PASSED
+@39.52s:  PASSED simulator.payloads.CanMailbox$ReadableCanMailbox@4d83c7a0 :: getValue ?== 3 PASSED
+@40.62s:  PASSED simulator.payloads.DoorMotorPayload$ReadableDoorMotorPayload@3e3b6297 :: command ?== CLOSE PASSED
+@40.62s:  PASSED simulator.payloads.CanMailbox$ReadableCanMailbox@6ca79a6a :: getValue ?== 1 PASSED
+@41.8s:  PASSED simulator.payloads.DoorMotorPayload$ReadableDoorMotorPayload@5ab2f56 :: command ?== NUDGE PASSED
+@41.8s:  PASSED simulator.payloads.CanMailbox$ReadableCanMailbox@1183eeb0 :: getValue ?== 3 PASSED
+@43.0s:  PASSED simulator.payloads.DoorMotorPayload$ReadableDoorMotorPayload@6ab56229 :: command ?== OPEN PASSED
+@43.0s:  PASSED simulator.payloads.CanMailbox$ReadableCanMailbox@394df741 :: getValue ?== 0 PASSED
+@44.5s:  PASSED simulator.payloads.DoorMotorPayload$ReadableDoorMotorPayload@644a25d5 :: command ?== STOP PASSED
+@44.5s:  PASSED simulator.payloads.CanMailbox$ReadableCanMailbox@339efe65 :: getValue ?== 2 PASSED
+@45.6s:  PASSED simulator.payloads.DoorMotorPayload$ReadableDoorMotorPayload@1d88a478 :: command ?== STOP PASSED
+@45.6s:  PASSED simulator.payloads.CanMailbox$ReadableCanMailbox@43188793 :: getValue ?== 2 PASSED
+@51.7s:  PASSED simulator.payloads.DoorMotorPayload$ReadableDoorMotorPayload@17a95cf6 :: command ?== CLOSE PASSED
+@51.7s:  PASSED simulator.payloads.CanMailbox$ReadableCanMailbox@3e410541 :: getValue ?== 1 PASSED
+@52.3s:  PASSED simulator.payloads.DoorMotorPayload$ReadableDoorMotorPayload@52ecfe38 :: command ?== STOP PASSED
+@52.3s:  PASSED simulator.payloads.CanMailbox$ReadableCanMailbox@506c6ce7 :: getValue ?== 2 PASSED
+
+
+******************Summary******************
+Passed:  30
+Failed:  0
+Total :  30
+

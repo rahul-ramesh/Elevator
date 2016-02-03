@@ -1,0 +1,994 @@
+; downpeak_final_0.stats
+; 18-649 Distributed Embedded Systems
+; Group 11
+; Rahul Ramesh // rahulram. Daniel Santoro // ddsantor. David Thompson // davidtho. Jialiang Tan // jialiant
+; !@
+
+Simulator Parameters:
+Command line = -pf ../../portfolio_grp11/acceptance_test/downpeak_final.pass -b 200 -fs 5.0 -monitor RuntimeRequirementsMonitor -head ../../portfolio_grp11/scripts/grp11.head
+RandomSeed = 1450162595634
+CanNetworkBitTime = 5000 ns
+Effective Can Bitrate = 199999.99999999997
+Run Time = null
+Real time rate = null
+Acceptance Test File = ../../portfolio_grp11/acceptance_test/downpeak_final.pass
+Monitors: RuntimeRequirementsMonitor  
+
+STATISTICS FOR ELEVATOR SIMULATION PASSENGER DELIVERY
+-----------------------------------------------------
+
+
+These passengers were delivered:
+Passenger 2: INJECTED AT 62.3s and DELIVERED in 94.812s
+  Satisfaction score: 100.0
+Passenger 9: INJECTED AT 106.8s and DELIVERED in 63.173s
+  Satisfaction score: 100.0
+Passenger 0: INJECTED AT 60.0s and DELIVERED in 110.601s
+  Satisfaction score: 100.0
+Passenger 7: INJECTED AT 95.1s and DELIVERED in 76.142s
+  Satisfaction score: 100.0
+Passenger 4: INJECTED AT 72.8s and DELIVERED in 99.758s
+  Satisfaction score: 100.0
+Passenger 8: INJECTED AT 102.8s and DELIVERED in 71.302s
+  Satisfaction score: 100.0
+Passenger 3: INJECTED AT 65.7s and DELIVERED in 110.019s
+  Satisfaction score: 100.0
+Passenger 1: INJECTED AT 60.6s and DELIVERED in 116.792s
+  Satisfaction score: 100.0
+Passenger 18: INJECTED AT 142.4s and DELIVERED in 82.845s
+  Satisfaction score: 100.0
+Passenger 6: INJECTED AT 90.4s and DELIVERED in 167.576s
+  Satisfaction score: 100.0
+Passenger 20: INJECTED AT 150.8s and DELIVERED in 120.985s
+  Satisfaction score: 100.0
+Passenger 5: INJECTED AT 81.9s and DELIVERED in 189.905s
+  Satisfaction score: 100.0
+Passenger 31: INJECTED AT 200.7s and DELIVERED in 74.476s
+  Satisfaction score: 100.0
+Passenger 39: INJECTED AT 239.2s and DELIVERED in 37.752s
+  Satisfaction score: 100.0
+Passenger 21: INJECTED AT 153.9s and DELIVERED in 133.176s
+  Satisfaction score: 100.0
+Passenger 47: INJECTED AT 274.7s and DELIVERED in 30.798s
+  Satisfaction score: 100.0
+Passenger 13: INJECTED AT 118.6s and DELIVERED in 297.527s
+  Satisfaction score: 100.0
+Passenger 41: INJECTED AT 247.4s and DELIVERED in 169.065s
+  Satisfaction score: 100.0
+Passenger 16: INJECTED AT 133.0s and DELIVERED in 284.33s
+  Satisfaction score: 100.0
+Passenger 43: INJECTED AT 250.0s and DELIVERED in 167.948s
+  Satisfaction score: 100.0
+Passenger 48: INJECTED AT 278.0s and DELIVERED in 140.733s
+  Satisfaction score: 100.0
+Passenger 44: INJECTED AT 259.399999999s and DELIVERED in 160.273000001s
+  Satisfaction score: 100.0
+Passenger 32: INJECTED AT 202.5s and DELIVERED in 218.062s
+  Satisfaction score: 100.0
+Passenger 49: INJECTED AT 283.4s and DELIVERED in 138.301s
+  Satisfaction score: 100.0
+Passenger 30: INJECTED AT 191.1s and DELIVERED in 230.976s
+  Satisfaction score: 100.0
+Passenger 45: INJECTED AT 264.7s and DELIVERED in 191.258s
+  Satisfaction score: 100.0
+Passenger 38: INJECTED AT 232.1s and DELIVERED in 258.655s
+  Satisfaction score: 100.0
+Passenger 67: INJECTED AT 369.9s and DELIVERED in 136.705s
+  Satisfaction score: 100.0
+Passenger 85: INJECTED AT 436.8s and DELIVERED in 69.952s
+  Satisfaction score: 100.0
+Passenger 77: INJECTED AT 389.6s and DELIVERED in 120.912s
+  Satisfaction score: 100.0
+Passenger 66: INJECTED AT 363.1s and DELIVERED in 159.591s
+  Satisfaction score: 100.0
+Passenger 56: INJECTED AT 316.5s and DELIVERED in 263.642s
+  Satisfaction score: 100.0
+Passenger 95: INJECTED AT 486.6s and DELIVERED in 152.88s
+  Satisfaction score: 100.0
+Passenger 17: INJECTED AT 135.5s and DELIVERED in 524.034s
+  Satisfaction score: 100.0
+Passenger 93: INJECTED AT 472.9s and DELIVERED in 187.181s
+  Satisfaction score: 100.0
+Passenger 74: INJECTED AT 382.9s and DELIVERED in 278.447s
+  Satisfaction score: 100.0
+Passenger 57: INJECTED AT 317.1s and DELIVERED in 344.288s
+  Satisfaction score: 100.0
+Passenger 72: INJECTED AT 380.2s and DELIVERED in 282.79s
+  Satisfaction score: 100.0
+Passenger 79: INJECTED AT 406.5s and DELIVERED in 256.861s
+  Satisfaction score: 100.0
+Passenger 60: INJECTED AT 332.9s and DELIVERED in 331.431s
+  Satisfaction score: 100.0
+Passenger 98: INJECTED AT 499.8s and DELIVERED in 164.872s
+  Satisfaction score: 100.0
+Passenger 73: INJECTED AT 381.7s and DELIVERED in 284.086s
+  Satisfaction score: 100.0
+Passenger 91: INJECTED AT 465.3s and DELIVERED in 205.17s
+  Satisfaction score: 100.0
+Passenger 130: INJECTED AT 662.9s and DELIVERED in 69.889s
+  Satisfaction score: 100.0
+Passenger 94: INJECTED AT 481.3s and DELIVERED in 266.48s
+  Satisfaction score: 100.0
+Passenger 116: INJECTED AT 595.8s and DELIVERED in 153.76s
+  Satisfaction score: 100.0
+Passenger 139: INJECTED AT 708.2s and DELIVERED in 43.222s
+  Satisfaction score: 100.0
+Passenger 110: INJECTED AT 565.1s and DELIVERED in 191.564s
+  Satisfaction score: 100.0
+Passenger 115: INJECTED AT 592.2s and DELIVERED in 180.289s
+  Satisfaction score: 100.0
+Passenger 118: INJECTED AT 600.0s and DELIVERED in 172.569s
+  Satisfaction score: 100.0
+Passenger 143: INJECTED AT 717.7s and DELIVERED in 69.998s
+  Satisfaction score: 100.0
+Passenger 105: INJECTED AT 542.6s and DELIVERED in 247.081s
+  Satisfaction score: 100.0
+Passenger 92: INJECTED AT 468.7s and DELIVERED in 361.844s
+  Satisfaction score: 100.0
+Passenger 53: INJECTED AT 309.2s and DELIVERED in 559.93s
+  Satisfaction score: 100.0
+Passenger 125: INJECTED AT 642.3s and DELIVERED in 248.553s
+  Satisfaction score: 100.0
+Passenger 148: INJECTED AT 741.3s and DELIVERED in 170.317s
+  Satisfaction score: 100.0
+Passenger 136: INJECTED AT 691.2s and DELIVERED in 222.413s
+  Satisfaction score: 100.0
+Passenger 42: INJECTED AT 249.3s and DELIVERED in 686.618s
+  Satisfaction score: 100.0
+Passenger 124: INJECTED AT 637.9s and DELIVERED in 298.788s
+  Satisfaction score: 100.0
+Passenger 101: INJECTED AT 517.7s and DELIVERED in 419.989s
+  Satisfaction score: 100.0
+Passenger 120: INJECTED AT 609.1s and DELIVERED in 328.765s
+  Satisfaction score: 100.0
+Passenger 127: INJECTED AT 649.1s and DELIVERED in 290.336s
+  Satisfaction score: 100.0
+Passenger 61: INJECTED AT 333.9s and DELIVERED in 605.92s
+  Satisfaction score: 100.0
+Passenger 22: INJECTED AT 162.4s and DELIVERED in 778.339s
+  Satisfaction score: 100.0
+Passenger 114: INJECTED AT 588.3s and DELIVERED in 353.726s
+  Satisfaction score: 100.0
+Passenger 173: INJECTED AT 882.3s and DELIVERED in 61.508s
+  Satisfaction score: 100.0
+Passenger 183: INJECTED AT 928.6s and DELIVERED in 17.496s
+  Satisfaction score: 100.0
+Passenger 137: INJECTED AT 700.4s and DELIVERED in 280.062s
+  Satisfaction score: 100.0
+Passenger 142: INJECTED AT 716.0s and DELIVERED in 291.842s
+  Satisfaction score: 100.0
+Passenger 186: INJECTED AT 946.5s and DELIVERED in 62.552s
+  Satisfaction score: 100.0
+Passenger 170: INJECTED AT 860.7s and DELIVERED in 150.203s
+  Satisfaction score: 100.0
+Passenger 144: INJECTED AT 721.0s and DELIVERED in 302.224s
+  Satisfaction score: 100.0
+Passenger 167: INJECTED AT 837.9s and DELIVERED in 186.347s
+  Satisfaction score: 100.0
+Passenger 165: INJECTED AT 821.4s and DELIVERED in 204.014s
+  Satisfaction score: 100.0
+Passenger 159: INJECTED AT 789.9s and DELIVERED in 237.798s
+  Satisfaction score: 100.0
+Passenger 166: INJECTED AT 831.1s and DELIVERED in 208.124s
+  Satisfaction score: 100.0
+Passenger 181: INJECTED AT 918.9s and DELIVERED in 124.346s
+  Satisfaction score: 100.0
+Passenger 141: INJECTED AT 713.8s and DELIVERED in 340.902s
+  Satisfaction score: 100.0
+Passenger 161: INJECTED AT 798.9s and DELIVERED in 257.613s
+  Satisfaction score: 100.0
+Passenger 174: INJECTED AT 882.5s and DELIVERED in 302.51s
+  Satisfaction score: 100.0
+Passenger 37: INJECTED AT 225.0s and DELIVERED in 960.839s
+  Satisfaction score: 100.0
+Passenger 107: INJECTED AT 548.5s and DELIVERED in 638.126s
+  Satisfaction score: 100.0
+Passenger 147: INJECTED AT 735.5s and DELIVERED in 451.433s
+  Satisfaction score: 100.0
+Passenger 58: INJECTED AT 326.0s and DELIVERED in 861.865s
+  Satisfaction score: 100.0
+Passenger 119: INJECTED AT 607.8s and DELIVERED in 580.583s
+  Satisfaction score: 100.0
+Passenger 150: INJECTED AT 744.0s and DELIVERED in 445.706s
+  Satisfaction score: 100.0
+Passenger 27: INJECTED AT 182.5s and DELIVERED in 1007.664s
+  Satisfaction score: 100.0
+Passenger 24: INJECTED AT 168.4s and DELIVERED in 1022.779s
+  Satisfaction score: 100.0
+Passenger 221: INJECTED AT 1107.5s and DELIVERED in 85.7s
+  Satisfaction score: 100.0
+Passenger 211: INJECTED AT 1062.3s and DELIVERED in 134.35s
+  Satisfaction score: 100.0
+Passenger 191: INJECTED AT 971.0s and DELIVERED in 227.7s
+  Satisfaction score: 100.0
+Passenger 220: INJECTED AT 1103.8s and DELIVERED in 137.743s
+  Satisfaction score: 100.0
+Passenger 218: INJECTED AT 1098.2s and DELIVERED in 149.506s
+  Satisfaction score: 100.0
+Passenger 205: INJECTED AT 1033.3s and DELIVERED in 232.032s
+  Satisfaction score: 100.0
+Passenger 231: INJECTED AT 1165.9s and DELIVERED in 118.542s
+  Satisfaction score: 100.0
+Passenger 223: INJECTED AT 1115.3s and DELIVERED in 169.597s
+  Satisfaction score: 100.0
+Passenger 200: INJECTED AT 1011.3s and DELIVERED in 274.923s
+  Satisfaction score: 100.0
+Passenger 201: INJECTED AT 1016.0s and DELIVERED in 270.73s
+  Satisfaction score: 100.0
+Passenger 202: INJECTED AT 1020.0s and DELIVERED in 268.137s
+  Satisfaction score: 100.0
+Passenger 214: INJECTED AT 1080.5s and DELIVERED in 208.877s
+  Satisfaction score: 100.0
+Passenger 209: INJECTED AT 1050.3s and DELIVERED in 239.596s
+  Satisfaction score: 100.0
+Passenger 19: INJECTED AT 145.3s and DELIVERED in 1222.629s
+  Satisfaction score: 50.0
+    @1245.769000000: 0.50 After the car came by 4 times without showing arrows compatible with DOWN, finally gave up and got on anyway.
+Passenger 132: INJECTED AT 673.2s and DELIVERED in 731.829s
+  Satisfaction score: 100.0
+Passenger 104: INJECTED AT 535.2s and DELIVERED in 870.563s
+  Satisfaction score: 100.0
+Passenger 208: INJECTED AT 1043.7s and DELIVERED in 362.452s
+  Satisfaction score: 100.0
+Passenger 99: INJECTED AT 508.3s and DELIVERED in 898.601s
+  Satisfaction score: 100.0
+Passenger 34: INJECTED AT 206.8s and DELIVERED in 1200.627s
+  Satisfaction score: 50.0
+    @1242.767000000: 0.50 After the car came by 4 times without showing arrows compatible with DOWN, finally gave up and got on anyway.
+Passenger 155: INJECTED AT 771.1s and DELIVERED in 637.021s
+  Satisfaction score: 100.0
+Passenger 23: INJECTED AT 165.9s and DELIVERED in 1243.636s
+  Satisfaction score: 50.0
+    @1221.436000000: 0.50 After the car came by 4 times without showing arrows compatible with DOWN, finally gave up and got on anyway.
+Passenger 190: INJECTED AT 968.9s and DELIVERED in 442.153s
+  Satisfaction score: 100.0
+Passenger 180: INJECTED AT 911.8s and DELIVERED in 500.591s
+  Satisfaction score: 100.0
+Passenger 242: INJECTED AT 1222.3s and DELIVERED in 222.096s
+  Satisfaction score: 100.0
+Passenger 246: INJECTED AT 1245.7s and DELIVERED in 214.254s
+  Satisfaction score: 100.0
+Passenger 262: INJECTED AT 1342.8s and DELIVERED in 156.08s
+  Satisfaction score: 100.0
+Passenger 258: INJECTED AT 1324.8s and DELIVERED in 179.375s
+  Satisfaction score: 100.0
+Passenger 276: INJECTED AT 1424.0s and DELIVERED in 90.595s
+  Satisfaction score: 100.0
+Passenger 281: INJECTED AT 1441.4s and DELIVERED in 73.679s
+  Satisfaction score: 100.0
+Passenger 249: INJECTED AT 1265.8s and DELIVERED in 250.627s
+  Satisfaction score: 100.0
+Passenger 284: INJECTED AT 1448.7s and DELIVERED in 69.699s
+  Satisfaction score: 100.0
+Passenger 266: INJECTED AT 1368.0s and DELIVERED in 153.372s
+  Satisfaction score: 100.0
+Passenger 272: INJECTED AT 1398.8s and DELIVERED in 123.85s
+  Satisfaction score: 100.0
+Passenger 68: INJECTED AT 370.2s and DELIVERED in 1181.35s
+  Satisfaction score: 100.0
+Passenger 265: INJECTED AT 1367.4s and DELIVERED in 221.262s
+  Satisfaction score: 100.0
+Passenger 84: INJECTED AT 427.2s and DELIVERED in 1182.116s
+  Satisfaction score: 50.0
+    @1464.716000000: 0.50 After the car came by 4 times without showing arrows compatible with DOWN, finally gave up and got on anyway.
+Passenger 177: INJECTED AT 897.3s and DELIVERED in 713.821s
+  Satisfaction score: 100.0
+Passenger 29: INJECTED AT 187.9s and DELIVERED in 1463.598s
+  Satisfaction score: 50.0
+    @1614.298000000: 0.50 After the car came by 5 times without showing arrows compatible with DOWN, finally gave up and got on anyway.
+Passenger 113: INJECTED AT 580.5s and DELIVERED in 1071.319s
+  Satisfaction score: 50.0
+    @1532.059000000: 0.50 After the car came by 4 times without showing arrows compatible with DOWN, finally gave up and got on anyway.
+Passenger 14: INJECTED AT 121.8s and DELIVERED in 1531.065s
+  Satisfaction score: 50.0
+    @1466.065000000: 0.50 After the car came by 5 times without showing arrows compatible with DOWN, finally gave up and got on anyway.
+Passenger 26: INJECTED AT 177.6s and DELIVERED in 1475.537s
+  Satisfaction score: 50.0
+    @1428.857000000: 0.50 After the car came by 5 times without showing arrows compatible with DOWN, finally gave up and got on anyway.
+Passenger 250: INJECTED AT 1271.9s and DELIVERED in 382.572s
+  Satisfaction score: 100.0
+Passenger 245: INJECTED AT 1237.9s and DELIVERED in 417.165s
+  Satisfaction score: 100.0
+Passenger 28: INJECTED AT 183.5s and DELIVERED in 1472.613s
+  Satisfaction score: 50.0
+    @1491.813000000: 0.50 After the car came by 4 times without showing arrows compatible with DOWN, finally gave up and got on anyway.
+Passenger 62: INJECTED AT 342.6s and DELIVERED in 1313.561s
+  Satisfaction score: 50.0
+    @1517.361000000: 0.50 After the car came by 4 times without showing arrows compatible with DOWN, finally gave up and got on anyway.
+Passenger 288: INJECTED AT 1462.0s and DELIVERED in 230.09s
+  Satisfaction score: 100.0
+Passenger 326: INJECTED AT 1644.7s and DELIVERED in 60.789s
+  Satisfaction score: 100.0
+Passenger 335: INJECTED AT 1698.2s and DELIVERED in 25.914s
+  Satisfaction score: 100.0
+Passenger 256: INJECTED AT 1315.0s and DELIVERED in 429.629s
+  Satisfaction score: 1.5625
+    @1543.150000000: 0.50 Expected to move UP but moved DOWN
+    @1562.550000000: 0.50 Expected to move UP but moved DOWN
+    @1579.750000000: 0.50 Expected to move UP but moved DOWN
+    @1600.150000000: 0.50 Expected to move UP but moved DOWN
+    @1623.950000000: 0.50 Expected to move UP but moved DOWN
+    @1642.550000000: 0.50 Expected to move UP but moved DOWN
+Passenger 290: INJECTED AT 1480.8s and DELIVERED in 265.089s
+  Satisfaction score: 100.0
+Passenger 255: INJECTED AT 1306.4s and DELIVERED in 472.782s
+  Satisfaction score: 100.0
+Passenger 89: INJECTED AT 457.4s and DELIVERED in 1396.477s
+  Satisfaction score: 50.0
+    @1690.817000000: 0.50 After the car came by 5 times without showing arrows compatible with DOWN, finally gave up and got on anyway.
+Passenger 140: INJECTED AT 710.7s and DELIVERED in 1162.871s
+  Satisfaction score: 50.0
+    @1855.071000000: 0.50 After the car came by 4 times without showing arrows compatible with DOWN, finally gave up and got on anyway.
+Passenger 25: INJECTED AT 175.0s and DELIVERED in 1698.575s
+  Satisfaction score: 50.0
+    @1668.675000000: 0.50 After the car came by 6 times without showing arrows compatible with DOWN, finally gave up and got on anyway.
+Passenger 102: INJECTED AT 526.5s and DELIVERED in 1348.538s
+  Satisfaction score: 100.0
+Passenger 117: INJECTED AT 595.9s and DELIVERED in 1279.594s
+  Satisfaction score: 50.0
+    @1687.834000000: 0.50 After the car came by 4 times without showing arrows compatible with DOWN, finally gave up and got on anyway.
+Passenger 96: INJECTED AT 494.3s and DELIVERED in 1382.527s
+  Satisfaction score: 50.0
+    @1685.967000000: 0.50 After the car came by 4 times without showing arrows compatible with DOWN, finally gave up and got on anyway.
+Passenger 123: INJECTED AT 633.1s and DELIVERED in 1243.915s
+  Satisfaction score: 50.0
+    @1671.815000000: 0.50 After the car came by 4 times without showing arrows compatible with DOWN, finally gave up and got on anyway.
+Passenger 36: INJECTED AT 220.6s and DELIVERED in 1658.142s
+  Satisfaction score: 50.0
+    @1725.942000000: 0.50 After the car came by 5 times without showing arrows compatible with DOWN, finally gave up and got on anyway.
+Passenger 54: INJECTED AT 314.9s and DELIVERED in 1564.012s
+  Satisfaction score: 50.0
+    @1722.812000000: 0.50 After the car came by 4 times without showing arrows compatible with DOWN, finally gave up and got on anyway.
+Passenger 237: INJECTED AT 1197.8s and DELIVERED in 682.037s
+  Satisfaction score: 100.0
+Passenger 328: INJECTED AT 1659.3s and DELIVERED in 256.838s
+  Satisfaction score: 100.0
+Passenger 338: INJECTED AT 1720.8s and DELIVERED in 197.354s
+  Satisfaction score: 100.0
+Passenger 345: INJECTED AT 1749.9s and DELIVERED in 245.528s
+  Satisfaction score: 100.0
+Passenger 287: INJECTED AT 1458.6s and DELIVERED in 587.267s
+  Satisfaction score: 100.0
+Passenger 65: INJECTED AT 362.2s and DELIVERED in 1739.067s
+  Satisfaction score: 50.0
+    @1922.967000000: 0.50 After the car came by 6 times without showing arrows compatible with DOWN, finally gave up and got on anyway.
+Passenger 78: INJECTED AT 399.0s and DELIVERED in 1722.238s
+  Satisfaction score: 50.0
+    @1901.878000000: 0.50 After the car came by 4 times without showing arrows compatible with DOWN, finally gave up and got on anyway.
+Passenger 238: INJECTED AT 1205.4s and DELIVERED in 916.101s
+  Satisfaction score: 100.0
+Passenger 310: INJECTED AT 1567.0s and DELIVERED in 555.874s
+  Satisfaction score: 100.0
+Passenger 50: INJECTED AT 286.3s and DELIVERED in 1836.576s
+  Satisfaction score: 50.0
+    @1940.776000000: 0.50 After the car came by 4 times without showing arrows compatible with DOWN, finally gave up and got on anyway.
+Passenger 192: INJECTED AT 973.5s and DELIVERED in 1150.805s
+  Satisfaction score: 50.0
+    @1926.205000000: 0.50 After the car came by 4 times without showing arrows compatible with DOWN, finally gave up and got on anyway.
+Passenger 52: INJECTED AT 302.0s and DELIVERED in 1822.383s
+  Satisfaction score: 50.0
+    @1919.683000000: 0.50 After the car came by 6 times without showing arrows compatible with DOWN, finally gave up and got on anyway.
+Passenger 152: INJECTED AT 750.0s and DELIVERED in 1376.024s
+  Satisfaction score: 50.0
+    @1924.724000000: 0.50 After the car came by 4 times without showing arrows compatible with DOWN, finally gave up and got on anyway.
+Passenger 59: INJECTED AT 328.5s and DELIVERED in 1797.804s
+  Satisfaction score: 50.0
+    @1900.644000000: 0.50 After the car came by 4 times without showing arrows compatible with DOWN, finally gave up and got on anyway.
+Passenger 63: INJECTED AT 348.6s and DELIVERED in 1779.217s
+  Satisfaction score: 50.0
+    @1939.517000000: 0.50 After the car came by 4 times without showing arrows compatible with DOWN, finally gave up and got on anyway.
+Passenger 331: INJECTED AT 1677.6s and DELIVERED in 451.404s
+  Satisfaction score: 90.0
+    @1890.520000000: 0.90 Repeated hall call press
+Passenger 387: INJECTED AT 1973.6s and DELIVERED in 190.549s
+  Satisfaction score: 100.0
+Passenger 353: INJECTED AT 1786.4s and DELIVERED in 404.794s
+  Satisfaction score: 100.0
+Passenger 70: INJECTED AT 375.6s and DELIVERED in 1931.613s
+  Satisfaction score: 25.0
+    @1942.213000000: 0.50 After the car came by 4 times without showing arrows compatible with DOWN, finally gave up and got on anyway.
+    @2187.413000000: 0.50 After the car came by 4 times without showing arrows compatible with DOWN, finally gave up and got on anyway.
+Passenger 189: INJECTED AT 966.8s and DELIVERED in 1378.38s
+  Satisfaction score: 50.0
+    @2170.780000000: 0.50 After the car came by 5 times without showing arrows compatible with DOWN, finally gave up and got on anyway.
+Passenger 348: INJECTED AT 1763.6s and DELIVERED in 581.995s
+  Satisfaction score: 100.0
+Passenger 156: INJECTED AT 771.5s and DELIVERED in 1574.821s
+  Satisfaction score: 50.0
+    @2168.121000000: 0.50 After the car came by 5 times without showing arrows compatible with DOWN, finally gave up and got on anyway.
+Passenger 235: INJECTED AT 1188.6s and DELIVERED in 1158.612s
+  Satisfaction score: 50.0
+    @2167.012000000: 0.50 After the car came by 4 times without showing arrows compatible with DOWN, finally gave up and got on anyway.
+Passenger 172: INJECTED AT 875.9s and DELIVERED in 1471.789s
+  Satisfaction score: 50.0
+    @2169.489000000: 0.50 After the car came by 5 times without showing arrows compatible with DOWN, finally gave up and got on anyway.
+Passenger 145: INJECTED AT 725.9s and DELIVERED in 1622.53s
+  Satisfaction score: 50.0
+    @2190.030000000: 0.50 After the car came by 4 times without showing arrows compatible with DOWN, finally gave up and got on anyway.
+Passenger 71: INJECTED AT 376.1s and DELIVERED in 1973.21s
+  Satisfaction score: 50.0
+    @2151.450000000: 0.50 After the car came by 5 times without showing arrows compatible with DOWN, finally gave up and got on anyway.
+Passenger 112: INJECTED AT 572.6s and DELIVERED in 1777.289s
+  Satisfaction score: 50.0
+    @2147.929000000: 0.50 After the car came by 4 times without showing arrows compatible with DOWN, finally gave up and got on anyway.
+Passenger 197: INJECTED AT 1002.2s and DELIVERED in 1348.272s
+  Satisfaction score: 50.0
+    @2165.372000000: 0.50 After the car came by 4 times without showing arrows compatible with DOWN, finally gave up and got on anyway.
+Passenger 382: INJECTED AT 1945.0s and DELIVERED in 429.488s
+  Satisfaction score: 100.0
+Passenger 373: INJECTED AT 1900.7s and DELIVERED in 513.381s
+  Satisfaction score: 100.0
+Passenger 371: INJECTED AT 1891.0s and DELIVERED in 528.444s
+  Satisfaction score: 100.0
+Passenger 381: INJECTED AT 1940.0s and DELIVERED in 486.853s
+  Satisfaction score: 100.0
+Passenger 360: INJECTED AT 1823.8s and DELIVERED in 625.116s
+  Satisfaction score: 100.0
+Passenger 340: INJECTED AT 1730.4s and DELIVERED in 719.77s
+  Satisfaction score: 100.0
+Passenger 352: INJECTED AT 1780.1s and DELIVERED in 671.511s
+  Satisfaction score: 100.0
+Passenger 126: INJECTED AT 645.7s and DELIVERED in 1907.457s
+  Satisfaction score: 50.0
+    @2367.637000000: 0.50 After the car came by 4 times without showing arrows compatible with DOWN, finally gave up and got on anyway.
+Passenger 10: INJECTED AT 115.1s and DELIVERED in 2459.82s
+  Satisfaction score: 50.0
+    @2369.100000000: 0.50 After the car came by 5 times without showing arrows compatible with DOWN, finally gave up and got on anyway.
+Passenger 133: INJECTED AT 681.3s and DELIVERED in 1894.278s
+  Satisfaction score: 50.0
+    @2428.998000000: 0.50 After the car came by 4 times without showing arrows compatible with DOWN, finally gave up and got on anyway.
+Passenger 128: INJECTED AT 658.8s and DELIVERED in 1917.326s
+  Satisfaction score: 100.0
+Passenger 11: INJECTED AT 117.0s and DELIVERED in 2459.879s
+  Satisfaction score: 25.0
+    @1571.079000000: 0.50 After the car came by 5 times without showing arrows compatible with DOWN, finally gave up and got on anyway.
+    @2373.059000000: 0.50 After the car came by 5 times without showing arrows compatible with DOWN, finally gave up and got on anyway.
+Passenger 15: INJECTED AT 127.1s and DELIVERED in 2450.376s
+  Satisfaction score: 25.0
+    @1959.376000000: 0.50 After the car came by 5 times without showing arrows compatible with DOWN, finally gave up and got on anyway.
+    @2393.476000000: 0.50 After the car came by 5 times without showing arrows compatible with DOWN, finally gave up and got on anyway.
+Passenger 103: INJECTED AT 526.799999999s and DELIVERED in 2052.081000001s
+  Satisfaction score: 50.0
+    @2555.181000000: 0.50 After the car came by 5 times without showing arrows compatible with DOWN, finally gave up and got on anyway.
+Passenger 278: INJECTED AT 1432.3s and DELIVERED in 1146.874s
+  Satisfaction score: 100.0
+Passenger 12: INJECTED AT 117.5s and DELIVERED in 2463.245s
+  Satisfaction score: 25.0
+    @2207.545000000: 0.50 After the car came by 5 times without showing arrows compatible with DOWN, finally gave up and got on anyway.
+    @2392.145000000: 0.50 After the car came by 5 times without showing arrows compatible with DOWN, finally gave up and got on anyway.
+Passenger 343: INJECTED AT 1744.0s and DELIVERED in 838.024s
+  Satisfaction score: 100.0
+Passenger 389: INJECTED AT 1978.0s and DELIVERED in 660.028s
+  Satisfaction score: 100.0
+Passenger 349: INJECTED AT 1766.2s and DELIVERED in 873.062s
+  Satisfaction score: 100.0
+Passenger 327: INJECTED AT 1651.5s and DELIVERED in 989.138s
+  Satisfaction score: 100.0
+Passenger 337: INJECTED AT 1717.1s and DELIVERED in 996.141s
+  Satisfaction score: 100.0
+Passenger 224: INJECTED AT 1118.2s and DELIVERED in 1652.027s
+  Satisfaction score: 100.0
+Passenger 301: INJECTED AT 1537.9s and DELIVERED in 1232.531s
+  Satisfaction score: 100.0
+Passenger 332: INJECTED AT 1686.9s and DELIVERED in 1084.712s
+  Satisfaction score: 100.0
+Passenger 164: INJECTED AT 813.2s and DELIVERED in 1958.725s
+  Satisfaction score: 100.0
+Passenger 122: INJECTED AT 625.2s and DELIVERED in 2148.152s
+  Satisfaction score: 100.0
+Passenger 168: INJECTED AT 847.6s and DELIVERED in 1926.011s
+  Satisfaction score: 100.0
+Passenger 131: INJECTED AT 664.0s and DELIVERED in 2111.451s
+  Satisfaction score: 100.0
+Passenger 176: INJECTED AT 890.8s and DELIVERED in 1886.47s
+  Satisfaction score: 100.0
+Passenger 75: INJECTED AT 388.3s and DELIVERED in 2391.008s
+  Satisfaction score: 50.0
+    @2607.848000000: 0.50 After the car came by 4 times without showing arrows compatible with DOWN, finally gave up and got on anyway.
+Passenger 391: INJECTED AT 1993.2s and DELIVERED in 880.846s
+  Satisfaction score: 100.0
+Passenger 367: INJECTED AT 1872.2s and DELIVERED in 1058.802s
+  Satisfaction score: 100.0
+Passenger 294: INJECTED AT 1501.0s and DELIVERED in 1430.325s
+  Satisfaction score: 100.0
+Passenger 106: INJECTED AT 547.0s and DELIVERED in 2385.683s
+  Satisfaction score: 50.0
+    @2815.723000000: 0.50 After the car came by 5 times without showing arrows compatible with DOWN, finally gave up and got on anyway.
+Passenger 111: INJECTED AT 568.9s and DELIVERED in 2364.409s
+  Satisfaction score: 50.0
+    @2817.649000000: 0.50 After the car came by 5 times without showing arrows compatible with DOWN, finally gave up and got on anyway.
+Passenger 312: INJECTED AT 1575.1s and DELIVERED in 1359.013s
+  Satisfaction score: 100.0
+Passenger 228: INJECTED AT 1147.5s and DELIVERED in 1787.485s
+  Satisfaction score: 100.0
+Passenger 129: INJECTED AT 662.1s and DELIVERED in 2273.836s
+  Satisfaction score: 12.5
+    @2430.856000000: 0.50 After the car came by 4 times without showing arrows compatible with DOWN, finally gave up and got on anyway.
+    @2660.936000000: 0.50 After the car came by 4 times without showing arrows compatible with DOWN, finally gave up and got on anyway.
+    @2805.036000000: 0.50 After the car came by 4 times without showing arrows compatible with DOWN, finally gave up and got on anyway.
+Passenger 347: INJECTED AT 1761.1s and DELIVERED in 1175.912s
+  Satisfaction score: 100.0
+Passenger 311: INJECTED AT 1572.5s and DELIVERED in 1364.591s
+  Satisfaction score: 100.0
+Passenger 277: INJECTED AT 1425.2s and DELIVERED in 1573.415s
+  Satisfaction score: 100.0
+Passenger 135: INJECTED AT 687.5s and DELIVERED in 2313.15s
+  Satisfaction score: 50.0
+    @2965.350000000: 0.50 After the car came by 5 times without showing arrows compatible with DOWN, finally gave up and got on anyway.
+Passenger 354: INJECTED AT 1791.3s and DELIVERED in 1211.047s
+  Satisfaction score: 100.0
+Passenger 376: INJECTED AT 1916.1s and DELIVERED in 1146.138s
+  Satisfaction score: 100.0
+Passenger 100: INJECTED AT 510.9s and DELIVERED in 2553.246s
+  Satisfaction score: 50.0
+    @2965.286000000: 0.50 After the car came by 5 times without showing arrows compatible with DOWN, finally gave up and got on anyway.
+Passenger 390: INJECTED AT 1984.3s and DELIVERED in 1081.776s
+  Satisfaction score: 100.0
+Passenger 270: INJECTED AT 1393.2s and DELIVERED in 1717.068s
+  Satisfaction score: 100.0
+Passenger 388: INJECTED AT 1977.3s and DELIVERED in 1133.108s
+  Satisfaction score: 100.0
+Passenger 257: INJECTED AT 1317.7s and DELIVERED in 1793.711s
+  Satisfaction score: 100.0
+Passenger 322: INJECTED AT 1628.2s and DELIVERED in 1483.755s
+  Satisfaction score: 100.0
+Passenger 69: INJECTED AT 372.5s and DELIVERED in 2739.996s
+  Satisfaction score: 50.0
+    @3007.096000000: 0.50 After the car came by 5 times without showing arrows compatible with DOWN, finally gave up and got on anyway.
+Passenger 359: INJECTED AT 1814.4s and DELIVERED in 1298.841s
+  Satisfaction score: 100.0
+Passenger 259: INJECTED AT 1328.4s and DELIVERED in 1785.41s
+  Satisfaction score: 100.0
+Passenger 46: INJECTED AT 266.5s and DELIVERED in 2848.262s
+  Satisfaction score: 100.0
+Passenger 275: INJECTED AT 1418.0s and DELIVERED in 1698.092s
+  Satisfaction score: 50.0
+    @2977.532000000: 0.50 After the car came by 4 times without showing arrows compatible with DOWN, finally gave up and got on anyway.
+Passenger 175: INJECTED AT 888.2s and DELIVERED in 2298.357s
+  Satisfaction score: 50.0
+    @3147.697000000: 0.50 After the car came by 6 times without showing arrows compatible with DOWN, finally gave up and got on anyway.
+Passenger 171: INJECTED AT 869.7s and DELIVERED in 2318.757s
+  Satisfaction score: 50.0
+    @3136.797000000: 0.50 After the car came by 5 times without showing arrows compatible with DOWN, finally gave up and got on anyway.
+Passenger 293: INJECTED AT 1496.6s and DELIVERED in 1713.421s
+  Satisfaction score: 100.0
+Passenger 253: INJECTED AT 1293.1s and DELIVERED in 1972.102s
+  Satisfaction score: 100.0
+Passenger 233: INJECTED AT 1173.5s and DELIVERED in 2091.738s
+  Satisfaction score: 50.0
+    @3136.158000000: 0.50 After the car came by 5 times without showing arrows compatible with DOWN, finally gave up and got on anyway.
+Passenger 222: INJECTED AT 1108.4s and DELIVERED in 2158.73s
+  Satisfaction score: 25.0
+    @3043.710000000: 0.50 After the car came by 5 times without showing arrows compatible with DOWN, finally gave up and got on anyway.
+    @3211.850000000: 0.50 After the car came by 5 times without showing arrows compatible with DOWN, finally gave up and got on anyway.
+Passenger 364: INJECTED AT 1852.6s and DELIVERED in 1415.981s
+  Satisfaction score: 100.0
+Passenger 370: INJECTED AT 1891.0s and DELIVERED in 1378.962s
+  Satisfaction score: 100.0
+Passenger 279: INJECTED AT 1435.6s and DELIVERED in 1836.317s
+  Satisfaction score: 100.0
+Passenger 339: INJECTED AT 1723.9s and DELIVERED in 1549.911s
+  Satisfaction score: 100.0
+Passenger 325: INJECTED AT 1641.6s and DELIVERED in 1633.796s
+  Satisfaction score: 50.0
+    @3146.216000000: 0.50 After the car came by 4 times without showing arrows compatible with DOWN, finally gave up and got on anyway.
+Passenger 212: INJECTED AT 1069.3s and DELIVERED in 2207.716s
+  Satisfaction score: 100.0
+Passenger 206: INJECTED AT 1033.599999999s and DELIVERED in 2383.729000001s
+  Satisfaction score: 25.0
+    @3151.169000000: 0.50 After the car came by 6 times without showing arrows compatible with DOWN, finally gave up and got on anyway.
+    @3299.669000000: 0.50 After the car came by 6 times without showing arrows compatible with DOWN, finally gave up and got on anyway.
+Passenger 268: INJECTED AT 1379.4s and DELIVERED in 2038.016s
+  Satisfaction score: 50.0
+    @3301.256000000: 0.50 After the car came by 5 times without showing arrows compatible with DOWN, finally gave up and got on anyway.
+Passenger 299: INJECTED AT 1523.9s and DELIVERED in 1894.613s
+  Satisfaction score: 100.0
+Passenger 362: INJECTED AT 1838.5s and DELIVERED in 1580.222s
+  Satisfaction score: 100.0
+Passenger 365: INJECTED AT 1859.3s and DELIVERED in 1560.623s
+  Satisfaction score: 50.0
+    @3302.363000000: 0.50 After the car came by 4 times without showing arrows compatible with DOWN, finally gave up and got on anyway.
+Passenger 285: INJECTED AT 1455.4s and DELIVERED in 1964.804s
+  Satisfaction score: 50.0
+    @3299.844000000: 0.50 After the car came by 4 times without showing arrows compatible with DOWN, finally gave up and got on anyway.
+Passenger 358: INJECTED AT 1809.4s and DELIVERED in 1611.965s
+  Satisfaction score: 100.0
+Passenger 386: INJECTED AT 1971.1s and DELIVERED in 1450.62s
+  Satisfaction score: 50.0
+    @3303.960000000: 0.50 After the car came by 4 times without showing arrows compatible with DOWN, finally gave up and got on anyway.
+Passenger 341: INJECTED AT 1735.1s and DELIVERED in 1688.584s
+  Satisfaction score: 100.0
+Passenger 350: INJECTED AT 1772.3s and DELIVERED in 1715.677s
+  Satisfaction score: 50.0
+    @3457.337000000: 0.50 After the car came by 4 times without showing arrows compatible with DOWN, finally gave up and got on anyway.
+Passenger 244: INJECTED AT 1229.4s and DELIVERED in 2260.249s
+  Satisfaction score: 50.0
+    @3459.009000000: 0.50 After the car came by 6 times without showing arrows compatible with DOWN, finally gave up and got on anyway.
+Passenger 375: INJECTED AT 1911.3s and DELIVERED in 1579.503s
+  Satisfaction score: 100.0
+Passenger 351: INJECTED AT 1772.9s and DELIVERED in 1793.784s
+  Satisfaction score: 50.0
+    @3454.984000000: 0.50 After the car came by 4 times without showing arrows compatible with DOWN, finally gave up and got on anyway.
+Passenger 226: INJECTED AT 1133.8s and DELIVERED in 2454.38s
+  Satisfaction score: 25.0
+    @3313.820000000: 0.50 After the car came by 6 times without showing arrows compatible with DOWN, finally gave up and got on anyway.
+    @3456.180000000: 0.50 After the car came by 6 times without showing arrows compatible with DOWN, finally gave up and got on anyway.
+Passenger 306: INJECTED AT 1546.7s and DELIVERED in 2041.989s
+  Satisfaction score: 50.0
+    @3451.489000000: 0.50 After the car came by 4 times without showing arrows compatible with DOWN, finally gave up and got on anyway.
+Passenger 378: INJECTED AT 1924.3s and DELIVERED in 1665.047s
+  Satisfaction score: 100.0
+Passenger 308: INJECTED AT 1552.2s and DELIVERED in 2038.32s
+  Satisfaction score: 50.0
+    @3453.320000000: 0.50 After the car came by 4 times without showing arrows compatible with DOWN, finally gave up and got on anyway.
+Passenger 97: INJECTED AT 496.2s and DELIVERED in 3094.781s
+  Satisfaction score: 50.0
+    @3494.321000000: 0.50 After the car came by 4 times without showing arrows compatible with DOWN, finally gave up and got on anyway.
+Passenger 239: INJECTED AT 1209.4s and DELIVERED in 2382.514s
+  Satisfaction score: 50.0
+    @3460.314000000: 0.50 After the car came by 6 times without showing arrows compatible with DOWN, finally gave up and got on anyway.
+Passenger 274: INJECTED AT 1411.9s and DELIVERED in 2180.968s
+  Satisfaction score: 100.0
+Passenger 330: INJECTED AT 1669.2s and DELIVERED in 1924.609s
+  Satisfaction score: 100.0
+Passenger 309: INJECTED AT 1557.7s and DELIVERED in 2036.404s
+  Satisfaction score: 100.0
+Passenger 368: INJECTED AT 1879.3s and DELIVERED in 1841.493s
+  Satisfaction score: 100.0
+Passenger 88: INJECTED AT 456.0s and DELIVERED in 3266.151s
+  Satisfaction score: 100.0
+Passenger 264: INJECTED AT 1359.4s and DELIVERED in 2384.829s
+  Satisfaction score: 100.0
+Passenger 217: INJECTED AT 1095.5s and DELIVERED in 2649.298s
+  Satisfaction score: 100.0
+Passenger 318: INJECTED AT 1607.8s and DELIVERED in 2138.3s
+  Satisfaction score: 50.0
+    @3623.840000000: 0.50 After the car came by 6 times without showing arrows compatible with DOWN, finally gave up and got on anyway.
+Passenger 204: INJECTED AT 1027.9s and DELIVERED in 2718.36s
+  Satisfaction score: 100.0
+Passenger 182: INJECTED AT 920.7s and DELIVERED in 2827.074s
+  Satisfaction score: 25.0
+    @2913.194000000: 0.50 After the car came by 4 times without showing arrows compatible with DOWN, finally gave up and got on anyway.
+    @3723.674000000: 0.50 After the car came by 4 times without showing arrows compatible with DOWN, finally gave up and got on anyway.
+Passenger 196: INJECTED AT 999.2s and DELIVERED in 2748.843s
+  Satisfaction score: 100.0
+Passenger 316: INJECTED AT 1599.1s and DELIVERED in 2150.516s
+  Satisfaction score: 50.0
+    @3625.656000000: 0.50 After the car came by 6 times without showing arrows compatible with DOWN, finally gave up and got on anyway.
+Passenger 40: INJECTED AT 244.7s and DELIVERED in 3505.217s
+  Satisfaction score: 50.0
+    @3643.017000000: 0.50 After the car came by 6 times without showing arrows compatible with DOWN, finally gave up and got on anyway.
+Passenger 86: INJECTED AT 440.3s and DELIVERED in 3311.01s
+  Satisfaction score: 25.0
+    @3092.550000000: 0.50 After the car came by 5 times without showing arrows compatible with DOWN, finally gave up and got on anyway.
+    @3725.410000000: 0.50 After the car came by 5 times without showing arrows compatible with DOWN, finally gave up and got on anyway.
+Passenger 203: INJECTED AT 1020.3s and DELIVERED in 2845.696s
+  Satisfaction score: 100.0
+Passenger 51: INJECTED AT 295.2s and DELIVERED in 3590.388s
+  Satisfaction score: 50.0
+    @3780.608000000: 0.50 After the car came by 5 times without showing arrows compatible with DOWN, finally gave up and got on anyway.
+Passenger 179: INJECTED AT 904.1s and DELIVERED in 2981.556s
+  Satisfaction score: 100.0
+Passenger 379: INJECTED AT 1929.9s and DELIVERED in 1957.355s
+  Satisfaction score: 100.0
+Passenger 55: INJECTED AT 315.3s and DELIVERED in 3572.098s
+  Satisfaction score: 25.0
+    @3650.298000000: 0.50 After the car came by 5 times without showing arrows compatible with DOWN, finally gave up and got on anyway.
+    @3777.718000000: 0.50 After the car came by 5 times without showing arrows compatible with DOWN, finally gave up and got on anyway.
+Passenger 260: INJECTED AT 1330.4s and DELIVERED in 2558.498s
+  Satisfaction score: 100.0
+Passenger 248: INJECTED AT 1258.2s and DELIVERED in 2630.802s
+  Satisfaction score: 100.0
+Passenger 154: INJECTED AT 765.5s and DELIVERED in 3124.956s
+  Satisfaction score: 100.0
+Passenger 35: INJECTED AT 210.7s and DELIVERED in 3680.005s
+  Satisfaction score: 50.0
+    @3779.525000000: 0.50 After the car came by 6 times without showing arrows compatible with DOWN, finally gave up and got on anyway.
+Passenger 210: INJECTED AT 1057.5s and DELIVERED in 2834.793s
+  Satisfaction score: 100.0
+Passenger 241: INJECTED AT 1219.3s and DELIVERED in 2727.199s
+  Satisfaction score: 50.0
+    @3923.639000000: 0.50 After the car came by 4 times without showing arrows compatible with DOWN, finally gave up and got on anyway.
+Passenger 108: INJECTED AT 552.0s and DELIVERED in 3468.14s
+  Satisfaction score: 50.0
+    @3947.940000000: 0.50 After the car came by 5 times without showing arrows compatible with DOWN, finally gave up and got on anyway.
+Passenger 121: INJECTED AT 618.8s and DELIVERED in 3401.406s
+  Satisfaction score: 50.0
+    @3910.926000000: 0.50 After the car came by 5 times without showing arrows compatible with DOWN, finally gave up and got on anyway.
+Passenger 158: INJECTED AT 782.9s and DELIVERED in 3238.681s
+  Satisfaction score: 50.0
+    @3925.021000000: 0.50 After the car came by 5 times without showing arrows compatible with DOWN, finally gave up and got on anyway.
+Passenger 153: INJECTED AT 759.1s and DELIVERED in 3263.054s
+  Satisfaction score: 50.0
+    @3926.994000000: 0.50 After the car came by 5 times without showing arrows compatible with DOWN, finally gave up and got on anyway.
+Passenger 138: INJECTED AT 703.9s and DELIVERED in 3319.46s
+  Satisfaction score: 50.0
+    @3920.100000000: 0.50 After the car came by 6 times without showing arrows compatible with DOWN, finally gave up and got on anyway.
+Passenger 385: INJECTED AT 1961.4s and DELIVERED in 2062.134s
+  Satisfaction score: 100.0
+Passenger 232: INJECTED AT 1170.1s and DELIVERED in 2854.33s
+  Satisfaction score: 50.0
+    @3921.170000000: 0.50 After the car came by 4 times without showing arrows compatible with DOWN, finally gave up and got on anyway.
+Passenger 76: INJECTED AT 389.0s and DELIVERED in 3636.261s
+  Satisfaction score: 50.0
+    @3912.581000000: 0.50 After the car came by 6 times without showing arrows compatible with DOWN, finally gave up and got on anyway.
+Passenger 356: INJECTED AT 1807.8s and DELIVERED in 2217.929s
+  Satisfaction score: 100.0
+Passenger 184: INJECTED AT 930.1s and DELIVERED in 3139.215s
+  Satisfaction score: 50.0
+    @4053.455000000: 0.50 After the car came by 6 times without showing arrows compatible with DOWN, finally gave up and got on anyway.
+Passenger 317: INJECTED AT 1601.0s and DELIVERED in 2469.454s
+  Satisfaction score: 25.0
+    @3929.794000000: 0.50 After the car came by 4 times without showing arrows compatible with DOWN, finally gave up and got on anyway.
+    @4046.074000000: 0.50 After the car came by 4 times without showing arrows compatible with DOWN, finally gave up and got on anyway.
+Passenger 169: INJECTED AT 851.2s and DELIVERED in 3241.954s
+  Satisfaction score: 50.0
+    @4055.994000000: 0.50 After the car came by 6 times without showing arrows compatible with DOWN, finally gave up and got on anyway.
+Passenger 163: INJECTED AT 810.7s and DELIVERED in 3283.877s
+  Satisfaction score: 100.0
+Passenger 185: INJECTED AT 937.4s and DELIVERED in 3180.619s
+  Satisfaction score: 50.0
+    @4049.339000000: 0.50 After the car came by 5 times without showing arrows compatible with DOWN, finally gave up and got on anyway.
+Passenger 227: INJECTED AT 1141.4s and DELIVERED in 3014.857s
+  Satisfaction score: 50.0
+    @4044.937000000: 0.50 After the car came by 4 times without showing arrows compatible with DOWN, finally gave up and got on anyway.
+Passenger 236: INJECTED AT 1196.3s and DELIVERED in 2959.963s
+  Satisfaction score: 100.0
+Passenger 346: INJECTED AT 1758.3s and DELIVERED in 2399.248s
+  Satisfaction score: 100.0
+Passenger 230: INJECTED AT 1160.8s and DELIVERED in 2996.893s
+  Satisfaction score: 50.0
+    @4095.953000000: 0.50 After the car came by 5 times without showing arrows compatible with DOWN, finally gave up and got on anyway.
+Passenger 109: INJECTED AT 556.1s and DELIVERED in 3603.034s
+  Satisfaction score: 50.0
+    @4047.714000000: 0.50 After the car came by 6 times without showing arrows compatible with DOWN, finally gave up and got on anyway.
+Passenger 372: INJECTED AT 1891.1s and DELIVERED in 2268.061s
+  Satisfaction score: 100.0
+Passenger 321: INJECTED AT 1621.1s and DELIVERED in 2539.742s
+  Satisfaction score: 100.0
+Passenger 361: INJECTED AT 1831.6s and DELIVERED in 2330.883s
+  Satisfaction score: 100.0
+Passenger 90: INJECTED AT 459.8s and DELIVERED in 3704.497s
+  Satisfaction score: 100.0
+Passenger 80: INJECTED AT 408.2s and DELIVERED in 3870.945s
+  Satisfaction score: 50.0
+    @4199.985000000: 0.50 After the car came by 6 times without showing arrows compatible with DOWN, finally gave up and got on anyway.
+Passenger 33: INJECTED AT 203.6s and DELIVERED in 4075.808s
+  Satisfaction score: 50.0
+    @4187.288000000: 0.50 After the car came by 6 times without showing arrows compatible with DOWN, finally gave up and got on anyway.
+Passenger 225: INJECTED AT 1127.9s and DELIVERED in 3152.53s
+  Satisfaction score: 100.0
+Passenger 333: INJECTED AT 1689.0s and DELIVERED in 2591.848s
+  Satisfaction score: 100.0
+Passenger 320: INJECTED AT 1619.0s and DELIVERED in 2662.824s
+  Satisfaction score: 100.0
+Passenger 273: INJECTED AT 1404.4s and DELIVERED in 2878.183s
+  Satisfaction score: 100.0
+Passenger 64: INJECTED AT 354.3s and DELIVERED in 3929.312s
+  Satisfaction score: 50.0
+    @4188.992000000: 0.50 After the car came by 5 times without showing arrows compatible with DOWN, finally gave up and got on anyway.
+Passenger 336: INJECTED AT 1708.0s and DELIVERED in 2576.176s
+  Satisfaction score: 100.0
+Passenger 363: INJECTED AT 1843.8s and DELIVERED in 2442.41s
+  Satisfaction score: 100.0
+Passenger 207: INJECTED AT 1041.9s and DELIVERED in 3355.371s
+  Satisfaction score: 100.0
+Passenger 213: INJECTED AT 1076.0s and DELIVERED in 3321.318s
+  Satisfaction score: 50.0
+    @4312.298000000: 0.50 After the car came by 4 times without showing arrows compatible with DOWN, finally gave up and got on anyway.
+Passenger 319: INJECTED AT 1610.8s and DELIVERED in 2787.684s
+  Satisfaction score: 100.0
+Passenger 187: INJECTED AT 955.5s and DELIVERED in 3442.995s
+  Satisfaction score: 50.0
+    @4309.375000000: 0.50 After the car came by 5 times without showing arrows compatible with DOWN, finally gave up and got on anyway.
+Passenger 219: INJECTED AT 1103.1s and DELIVERED in 3296.815s
+  Satisfaction score: 50.0
+    @4319.155000000: 0.50 After the car came by 5 times without showing arrows compatible with DOWN, finally gave up and got on anyway.
+Passenger 366: INJECTED AT 1868.8s and DELIVERED in 2531.528s
+  Satisfaction score: 100.0
+Passenger 384: INJECTED AT 1956.0s and DELIVERED in 2445.028s
+  Satisfaction score: 100.0
+Passenger 162: INJECTED AT 806.5s and DELIVERED in 3595.546s
+  Satisfaction score: 25.0
+    @4207.486000000: 0.50 After the car came by 5 times without showing arrows compatible with DOWN, finally gave up and got on anyway.
+    @4311.026000000: 0.50 After the car came by 5 times without showing arrows compatible with DOWN, finally gave up and got on anyway.
+Passenger 377: INJECTED AT 1918.3s and DELIVERED in 2484.625s
+  Satisfaction score: 100.0
+Passenger 198: INJECTED AT 1006.6s and DELIVERED in 3467.554s
+  Satisfaction score: 50.0
+    @4434.694000000: 0.50 After the car came by 6 times without showing arrows compatible with DOWN, finally gave up and got on anyway.
+Passenger 380: INJECTED AT 1936.2s and DELIVERED in 2557.662s
+  Satisfaction score: 100.0
+Passenger 261: INJECTED AT 1339.8s and DELIVERED in 3173.93s
+  Satisfaction score: 100.0
+Passenger 81: INJECTED AT 415.8s and DELIVERED in 4098.453s
+  Satisfaction score: 12.5
+    @3570.413000000: 0.50 After the car came by 6 times without showing arrows compatible with DOWN, finally gave up and got on anyway.
+    @4138.453000000: 0.50 After the car came by 6 times without showing arrows compatible with DOWN, finally gave up and got on anyway.
+    @4495.713000000: 0.50 After the car came by 6 times without showing arrows compatible with DOWN, finally gave up and got on anyway.
+Passenger 283: INJECTED AT 1446.6s and DELIVERED in 3068.314s
+  Satisfaction score: 100.0
+Passenger 369: INJECTED AT 1882.5s and DELIVERED in 2632.882s
+  Satisfaction score: 100.0
+Passenger 280: INJECTED AT 1441.3s and DELIVERED in 3074.872s
+  Satisfaction score: 100.0
+Passenger 315: INJECTED AT 1591.0s and DELIVERED in 2926.146s
+  Satisfaction score: 100.0
+Passenger 302: INJECTED AT 1539.4s and DELIVERED in 2979.723s
+  Satisfaction score: 50.0
+    @4432.823000000: 0.50 After the car came by 4 times without showing arrows compatible with DOWN, finally gave up and got on anyway.
+Passenger 300: INJECTED AT 1532.9s and DELIVERED in 2987.882s
+  Satisfaction score: 100.0
+Passenger 188: INJECTED AT 962.1s and DELIVERED in 3560.238s
+  Satisfaction score: 25.0
+    @4327.938000000: 0.50 After the car came by 6 times without showing arrows compatible with DOWN, finally gave up and got on anyway.
+    @4420.078000000: 0.50 After the car came by 6 times without showing arrows compatible with DOWN, finally gave up and got on anyway.
+Passenger 303: INJECTED AT 1539.7s and DELIVERED in 3084.618s
+  Satisfaction score: 100.0
+Passenger 355: INJECTED AT 1800.0s and DELIVERED in 2824.583s
+  Satisfaction score: 100.0
+Passenger 263: INJECTED AT 1352.6s and DELIVERED in 3273.167s
+  Satisfaction score: 50.0
+    @4558.387000000: 0.50 After the car came by 5 times without showing arrows compatible with DOWN, finally gave up and got on anyway.
+Passenger 374: INJECTED AT 1903.7s and DELIVERED in 2722.883s
+  Satisfaction score: 100.0
+Passenger 149: INJECTED AT 743.0s and DELIVERED in 3883.899s
+  Satisfaction score: 50.0
+    @4542.619000000: 0.50 After the car came by 6 times without showing arrows compatible with DOWN, finally gave up and got on anyway.
+Passenger 329: INJECTED AT 1661.2s and DELIVERED in 2967.062s
+  Satisfaction score: 50.0
+    @4565.682000000: 0.50 After the car came by 4 times without showing arrows compatible with DOWN, finally gave up and got on anyway.
+Passenger 251: INJECTED AT 1276.4s and DELIVERED in 3352.434s
+  Satisfaction score: 100.0
+Passenger 304: INJECTED AT 1545.0s and DELIVERED in 3084.944s
+  Satisfaction score: 50.0
+    @4561.864000000: 0.50 After the car came by 4 times without showing arrows compatible with DOWN, finally gave up and got on anyway.
+Passenger 282: INJECTED AT 1445.4s and DELIVERED in 3185.401s
+  Satisfaction score: 50.0
+    @4564.021000000: 0.50 After the car came by 5 times without showing arrows compatible with DOWN, finally gave up and got on anyway.
+Passenger 291: INJECTED AT 1482.5s and DELIVERED in 3239.131s
+  Satisfaction score: 100.0
+Passenger 269: INJECTED AT 1389.4s and DELIVERED in 3332.285s
+  Satisfaction score: 40.0
+    @4576.905000000: 0.80 Failed to enter car
+    @4653.305000000: 0.50 After the car came by 6 times without showing arrows compatible with DOWN, finally gave up and got on anyway.
+Passenger 178: INJECTED AT 902.3s and DELIVERED in 3820.706s
+  Satisfaction score: 50.0
+    @4677.806000000: 0.50 After the car came by 4 times without showing arrows compatible with DOWN, finally gave up and got on anyway.
+Passenger 334: INJECTED AT 1695.5s and DELIVERED in 3028.108s
+  Satisfaction score: 100.0
+Passenger 254: INJECTED AT 1296.7s and DELIVERED in 3428.1s
+  Satisfaction score: 100.0
+Passenger 313: INJECTED AT 1581.9s and DELIVERED in 3143.419s
+  Satisfaction score: 40.0
+    @4571.439000000: 0.80 Failed to enter car
+    @4665.759000000: 0.50 After the car came by 5 times without showing arrows compatible with DOWN, finally gave up and got on anyway.
+Passenger 324: INJECTED AT 1636.6s and DELIVERED in 3089.317s
+  Satisfaction score: 100.0
+Passenger 342: INJECTED AT 1735.2s and DELIVERED in 2991.866s
+  Satisfaction score: 80.0
+    @4567.686000000: 0.80 Failed to enter car
+Passenger 286: INJECTED AT 1457.8s and DELIVERED in 3269.383s
+  Satisfaction score: 45.0
+    @4590.840000000: 0.90 Repeated hall call press
+    @4662.223000000: 0.50 After the car came by 6 times without showing arrows compatible with DOWN, finally gave up and got on anyway.
+Passenger 199: INJECTED AT 1008.0s and DELIVERED in 3788.359s
+  Satisfaction score: 50.0
+    @4756.699000000: 0.50 After the car came by 4 times without showing arrows compatible with DOWN, finally gave up and got on anyway.
+Passenger 216: INJECTED AT 1092.0s and DELIVERED in 3704.519s
+  Satisfaction score: 100.0
+Passenger 357: INJECTED AT 1808.9s and DELIVERED in 2989.007s
+  Satisfaction score: 100.0
+Passenger 82: INJECTED AT 419.7s and DELIVERED in 4378.562s
+  Satisfaction score: 25.0
+    @4589.702000000: 0.50 After the car came by 6 times without showing arrows compatible with DOWN, finally gave up and got on anyway.
+    @4740.542000000: 0.50 After the car came by 6 times without showing arrows compatible with DOWN, finally gave up and got on anyway.
+Passenger 305: INJECTED AT 1545.6s and DELIVERED in 3253.709s
+  Satisfaction score: 100.0
+Passenger 297: INJECTED AT 1513.4s and DELIVERED in 3286.075s
+  Satisfaction score: 100.0
+Passenger 383: INJECTED AT 1949.2s and DELIVERED in 2851.493s
+  Satisfaction score: 100.0
+Passenger 234: INJECTED AT 1183.3s and DELIVERED in 3619.025s
+  Satisfaction score: 100.0
+Passenger 252: INJECTED AT 1284.9s and DELIVERED in 3518.95s
+  Satisfaction score: 100.0
+Passenger 271: INJECTED AT 1394.7s and DELIVERED in 3484.522s
+  Satisfaction score: 50.0
+    @4822.542000000: 0.50 After the car came by 4 times without showing arrows compatible with DOWN, finally gave up and got on anyway.
+Passenger 307: INJECTED AT 1550.5s and DELIVERED in 3329.146s
+  Satisfaction score: 50.0
+    @4842.266000000: 0.50 After the car came by 4 times without showing arrows compatible with DOWN, finally gave up and got on anyway.
+Passenger 267: INJECTED AT 1376.8s and DELIVERED in 3504.085s
+  Satisfaction score: 50.0
+    @4840.205000000: 0.50 After the car came by 5 times without showing arrows compatible with DOWN, finally gave up and got on anyway.
+Passenger 344: INJECTED AT 1748.1s and DELIVERED in 3132.792s
+  Satisfaction score: 50.0
+    @4832.812000000: 0.50 After the car came by 4 times without showing arrows compatible with DOWN, finally gave up and got on anyway.
+Passenger 240: INJECTED AT 1216.3s and DELIVERED in 3665.98s
+  Satisfaction score: 100.0
+Passenger 215: INJECTED AT 1086.3s and DELIVERED in 3797.703s
+  Satisfaction score: 100.0
+Passenger 194: INJECTED AT 984.5s and DELIVERED in 3900.653s
+  Satisfaction score: 50.0
+    @4833.973000000: 0.50 After the car came by 5 times without showing arrows compatible with DOWN, finally gave up and got on anyway.
+Passenger 314: INJECTED AT 1590.1s and DELIVERED in 3296.346s
+  Satisfaction score: 100.0
+Passenger 243: INJECTED AT 1225.6s and DELIVERED in 3662.357s
+  Satisfaction score: 100.0
+Passenger 151: INJECTED AT 747.7s and DELIVERED in 4211.032s
+  Satisfaction score: 12.5
+    @3868.832000000: 0.50 After the car came by 4 times without showing arrows compatible with DOWN, finally gave up and got on anyway.
+    @4496.832000000: 0.50 After the car came by 4 times without showing arrows compatible with DOWN, finally gave up and got on anyway.
+    @4933.732000000: 0.50 After the car came by 4 times without showing arrows compatible with DOWN, finally gave up and got on anyway.
+Passenger 195: INJECTED AT 991.2s and DELIVERED in 3967.732s
+  Satisfaction score: 100.0
+Passenger 247: INJECTED AT 1254.8s and DELIVERED in 3705.551s
+  Satisfaction score: 40.0
+    @3067.611000000: 0.80 Failed to enter car
+    @4915.591000000: 0.50 After the car came by 6 times without showing arrows compatible with DOWN, finally gave up and got on anyway.
+Passenger 292: INJECTED AT 1492.3s and DELIVERED in 3468.591s
+  Satisfaction score: 100.0
+Passenger 289: INJECTED AT 1471.0s and DELIVERED in 3491.175s
+  Satisfaction score: 100.0
+Passenger 134: INJECTED AT 685.4s and DELIVERED in 4277.447s
+  Satisfaction score: 100.0
+Passenger 160: INJECTED AT 798.6s and DELIVERED in 4164.805s
+  Satisfaction score: 100.0
+Passenger 146: INJECTED AT 734.8s and DELIVERED in 4229.665s
+  Satisfaction score: 25.0
+    @4843.905000000: 0.50 After the car came by 6 times without showing arrows compatible with DOWN, finally gave up and got on anyway.
+    @4906.005000000: 0.50 After the car came by 6 times without showing arrows compatible with DOWN, finally gave up and got on anyway.
+Passenger 296: INJECTED AT 1506.6s and DELIVERED in 3459.65s
+  Satisfaction score: 100.0
+Passenger 87: INJECTED AT 449.0s and DELIVERED in 4566.573s
+  Satisfaction score: 25.0
+    @1856.373000000: 0.50 After the car came by 5 times without showing arrows compatible with DOWN, finally gave up and got on anyway.
+    @4982.573000000: 0.50 After the car came by 5 times without showing arrows compatible with DOWN, finally gave up and got on anyway.
+Passenger 323: INJECTED AT 1635.1s and DELIVERED in 3380.979s
+  Satisfaction score: 100.0
+Passenger 157: INJECTED AT 775.6s and DELIVERED in 4241.125s
+  Satisfaction score: 50.0
+    @4994.665000000: 0.50 After the car came by 5 times without showing arrows compatible with DOWN, finally gave up and got on anyway.
+Passenger 83: INJECTED AT 420.4s and DELIVERED in 4597.305s
+  Satisfaction score: 6.25
+    @2327.845000000: 0.50 After the car came by 6 times without showing arrows compatible with DOWN, finally gave up and got on anyway.
+    @3727.005000000: 0.50 After the car came by 6 times without showing arrows compatible with DOWN, finally gave up and got on anyway.
+    @4861.405000000: 0.50 After the car came by 6 times without showing arrows compatible with DOWN, finally gave up and got on anyway.
+    @4984.205000000: 0.50 After the car came by 6 times without showing arrows compatible with DOWN, finally gave up and got on anyway.
+Passenger 295: INJECTED AT 1505.8s and DELIVERED in 3512.513s
+  Satisfaction score: 100.0
+Passenger 193: INJECTED AT 976.4s and DELIVERED in 4042.363s
+  Satisfaction score: 100.0
+Passenger 298: INJECTED AT 1516.3s and DELIVERED in 3504.481s
+  Satisfaction score: 100.0
+Passenger 229: INJECTED AT 1156.1s and DELIVERED in 3866.207s
+  Satisfaction score: 100.0
+
+Passenger Delivery Summary
+Delivered: 392
+Stranded: 0
+Total: 392
+
+Deliver Stats (lower is better):
+Average_delivery_time: 1670.103
+Maximum_delivery_time:  4597.305
+Delivery_performance_score:  11277.718
+
+Satisfaction Stats (higher is better):
+Average_satisfaction_score: 82.348
+Min_satisfaction_score:  1.563
+Satisfaction_performance_score:  330.953
+
+
+
+
+Network Utilization Summary:
+Recent: 70.22 % Max: 70.22 %  Overall:  70.22 %
+
+Monitors Warning Results: 
+RuntimeMonitor generated 0 warnings.
+
+Monitors Summmary Results: 
+No summary implemented yet
+

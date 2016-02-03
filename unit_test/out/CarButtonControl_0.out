@@ -1,0 +1,329 @@
+; CarButtonControl_0.out
+; 18-649 Distributed Embedded Systems
+; Group 11
+; Rahul Ramesh // rahulram. Daniel Santoro // ddsantor. David Thompson // davidtho. Jialiang Tan // jialiant
+; !@
+
+
+Simulator Parameters:
+Command line = -cf ../../portfolio_grp11/unit_test/CarButtonControl.cf -mf ../../portfolio_grp11/unit_test/CarButtonControl.mf -head ../../portfolio_grp11/scripts/grp11.head
+RandomSeed = 1450146971127
+CanNetworkBitTime = 0 ns
+Effective Can Bitrate = Infinity
+Run Time = null
+Real time rate = null
+Message File = ../../portfolio_grp11/unit_test/CarButtonControl.mf
+Controller File = ../../portfolio_grp11/unit_test/CarButtonControl.cf
+
+
+[CarButtonControl[4][FRONT]] @0.000000000: Created CarButtonControl [4][FRONT] with period = 0.1s
+[Elevator] @0.000000000: Starting Simulation ***
+[CarButtonControl[4][FRONT]] @0.100000000: desiredFloor 0
+[CarButtonControl[4][FRONT]] @0.100000000: desiredHallway FRONT
+[CarButtonControl[4][FRONT]] @0.100000000: State stored: STATE<-STATE_OFF
+[CarButtonControl[4][FRONT]] @0.200000000: desiredFloor 0
+[CarButtonControl[4][FRONT]] @0.200000000: desiredHallway FRONT
+[CarButtonControl[4][FRONT]] @0.200000000: State stored: STATE<-STATE_OFF
+[CarButtonControl[4][FRONT]] @0.300000000: desiredFloor 0
+[CarButtonControl[4][FRONT]] @0.300000000: desiredHallway FRONT
+[CarButtonControl[4][FRONT]] @0.300000000: State stored: STATE<-STATE_OFF
+[AssertionMonitor] @0.400000000: *****************************************************************************************************
+[AssertionMonitor] @0.400000000: PASSED simulator.payloads.CarLightPayload$ReadableCarLightPayload@9a4d5c6 :: lighted ?== false PASSED
+[AssertionMonitor] @0.400000000: *****************************************************************************************************
+[AssertionMonitor] @0.400000000: ********************************************************************************************
+[AssertionMonitor] @0.400000000: PASSED simulator.payloads.CanMailbox$ReadableCanMailbox@164da25 :: getValue ?== false PASSED
+[AssertionMonitor] @0.400000000: ********************************************************************************************
+[CarButtonControl[4][FRONT]] @0.400000000: desiredFloor 1
+[CarButtonControl[4][FRONT]] @0.400000000: desiredHallway BACK
+[CarButtonControl[4][FRONT]] @0.400000000: State stored: STATE<-STATE_OFF
+[CarButtonControl[4][FRONT]] @0.500000000: desiredFloor 1
+[CarButtonControl[4][FRONT]] @0.500000000: desiredHallway BACK
+[CarButtonControl[4][FRONT]] @0.500000000: State stored: STATE<-STATE_OFF
+[CarButtonControl[4][FRONT]] @0.600000000: desiredFloor 1
+[CarButtonControl[4][FRONT]] @0.600000000: desiredHallway BACK
+[CarButtonControl[4][FRONT]] @0.600000000: State stored: STATE<-STATE_OFF
+[CarButtonControl[4][FRONT]] @0.700000000: desiredFloor 1
+[CarButtonControl[4][FRONT]] @0.700000000: desiredHallway BACK
+[CarButtonControl[4][FRONT]] @0.700000000: State stored: STATE<-STATE_OFF
+[CarButtonControl[4][FRONT]] @0.800000000: desiredFloor 1
+[CarButtonControl[4][FRONT]] @0.800000000: desiredHallway BACK
+[CarButtonControl[4][FRONT]] @0.800000000: Transition:STATE_OFF->STATE_PRESSED
+[CarButtonControl[4][FRONT]] @0.800000000: State stored: STATE<-STATE_PRESSED
+[CarButtonControl[4][FRONT]] @0.900000000: desiredFloor 1
+[CarButtonControl[4][FRONT]] @0.900000000: desiredHallway BACK
+[CarButtonControl[4][FRONT]] @0.900000000: AtFloor false
+[CarButtonControl[4][FRONT]] @0.900000000: AreDoorsClosed true
+[CarButtonControl[4][FRONT]] @0.900000000: thisIsDesired false
+[CarButtonControl[4][FRONT]] @0.900000000: State stored: STATE<-STATE_PRESSED
+[CarButtonControl[4][FRONT]] @1.000000000: desiredFloor 1
+[CarButtonControl[4][FRONT]] @1.000000000: desiredHallway BACK
+[CarButtonControl[4][FRONT]] @1.000000000: AtFloor false
+[CarButtonControl[4][FRONT]] @1.000000000: AreDoorsClosed true
+[CarButtonControl[4][FRONT]] @1.000000000: thisIsDesired false
+[CarButtonControl[4][FRONT]] @1.000000000: State stored: STATE<-STATE_PRESSED
+[CarButtonControl[4][FRONT]] @1.100000000: desiredFloor 1
+[CarButtonControl[4][FRONT]] @1.100000000: desiredHallway BACK
+[CarButtonControl[4][FRONT]] @1.100000000: AtFloor false
+[CarButtonControl[4][FRONT]] @1.100000000: AreDoorsClosed true
+[CarButtonControl[4][FRONT]] @1.100000000: thisIsDesired false
+[CarButtonControl[4][FRONT]] @1.100000000: State stored: STATE<-STATE_PRESSED
+[AssertionMonitor] @1.200000000: *****************************************************************************************************
+[AssertionMonitor] @1.200000000: PASSED simulator.payloads.CarLightPayload$ReadableCarLightPayload@547aaf5a :: lighted ?== true PASSED
+[AssertionMonitor] @1.200000000: *****************************************************************************************************
+[AssertionMonitor] @1.200000000: *********************************************************************************************
+[AssertionMonitor] @1.200000000: PASSED simulator.payloads.CanMailbox$ReadableCanMailbox@139231a9 :: getValue ?== false PASSED
+[AssertionMonitor] @1.200000000: *********************************************************************************************
+[CarButtonControl[4][FRONT]] @1.200000000: desiredFloor 1
+[CarButtonControl[4][FRONT]] @1.200000000: desiredHallway BACK
+[CarButtonControl[4][FRONT]] @1.200000000: AtFloor false
+[CarButtonControl[4][FRONT]] @1.200000000: AreDoorsClosed true
+[CarButtonControl[4][FRONT]] @1.200000000: thisIsDesired false
+[CarButtonControl[4][FRONT]] @1.200000000: State stored: STATE<-STATE_PRESSED
+[CarButtonControl[4][FRONT]] @1.300000000: desiredFloor 1
+[CarButtonControl[4][FRONT]] @1.300000000: desiredHallway BACK
+[CarButtonControl[4][FRONT]] @1.300000000: AtFloor false
+[CarButtonControl[4][FRONT]] @1.300000000: AreDoorsClosed true
+[CarButtonControl[4][FRONT]] @1.300000000: thisIsDesired false
+[CarButtonControl[4][FRONT]] @1.300000000: State stored: STATE<-STATE_PRESSED
+[CarButtonControl[4][FRONT]] @1.400000000: desiredFloor 1
+[CarButtonControl[4][FRONT]] @1.400000000: desiredHallway BACK
+[CarButtonControl[4][FRONT]] @1.400000000: AtFloor false
+[CarButtonControl[4][FRONT]] @1.400000000: AreDoorsClosed true
+[CarButtonControl[4][FRONT]] @1.400000000: thisIsDesired false
+[CarButtonControl[4][FRONT]] @1.400000000: State stored: STATE<-STATE_PRESSED
+[CarButtonControl[4][FRONT]] @1.500000000: desiredFloor 1
+[CarButtonControl[4][FRONT]] @1.500000000: desiredHallway BACK
+[CarButtonControl[4][FRONT]] @1.500000000: AtFloor false
+[CarButtonControl[4][FRONT]] @1.500000000: AreDoorsClosed true
+[CarButtonControl[4][FRONT]] @1.500000000: thisIsDesired false
+[CarButtonControl[4][FRONT]] @1.500000000: Transition:STATE_PRESSED->STATE_CALLED
+[CarButtonControl[4][FRONT]] @1.500000000: State stored: STATE<-STATE_CALLED
+[CarButtonControl[4][FRONT]] @1.600000000: desiredFloor 1
+[CarButtonControl[4][FRONT]] @1.600000000: desiredHallway BACK
+[CarButtonControl[4][FRONT]] @1.600000000: AtFloor false
+[CarButtonControl[4][FRONT]] @1.600000000: AreDoorsClosed true
+[CarButtonControl[4][FRONT]] @1.600000000: thisIsDesired false
+[CarButtonControl[4][FRONT]] @1.600000000: State stored: STATE<-STATE_CALLED
+[CarButtonControl[4][FRONT]] @1.700000000: desiredFloor 1
+[CarButtonControl[4][FRONT]] @1.700000000: desiredHallway BACK
+[CarButtonControl[4][FRONT]] @1.700000000: AtFloor false
+[CarButtonControl[4][FRONT]] @1.700000000: AreDoorsClosed true
+[CarButtonControl[4][FRONT]] @1.700000000: thisIsDesired false
+[CarButtonControl[4][FRONT]] @1.700000000: State stored: STATE<-STATE_CALLED
+[CarButtonControl[4][FRONT]] @1.800000000: desiredFloor 1
+[CarButtonControl[4][FRONT]] @1.800000000: desiredHallway BACK
+[CarButtonControl[4][FRONT]] @1.800000000: AtFloor false
+[CarButtonControl[4][FRONT]] @1.800000000: AreDoorsClosed true
+[CarButtonControl[4][FRONT]] @1.800000000: thisIsDesired false
+[CarButtonControl[4][FRONT]] @1.800000000: State stored: STATE<-STATE_CALLED
+[AssertionMonitor] @1.900000000: *****************************************************************************************************
+[AssertionMonitor] @1.900000000: PASSED simulator.payloads.CarLightPayload$ReadableCarLightPayload@21ba11bc :: lighted ?== true PASSED
+[AssertionMonitor] @1.900000000: *****************************************************************************************************
+[AssertionMonitor] @1.900000000: ********************************************************************************************
+[AssertionMonitor] @1.900000000: PASSED simulator.payloads.CanMailbox$ReadableCanMailbox@7fc6fed0 :: getValue ?== true PASSED
+[AssertionMonitor] @1.900000000: ********************************************************************************************
+[CarButtonControl[4][FRONT]] @1.900000000: desiredFloor 1
+[CarButtonControl[4][FRONT]] @1.900000000: desiredHallway BACK
+[CarButtonControl[4][FRONT]] @1.900000000: AtFloor false
+[CarButtonControl[4][FRONT]] @1.900000000: AreDoorsClosed true
+[CarButtonControl[4][FRONT]] @1.900000000: thisIsDesired false
+[CarButtonControl[4][FRONT]] @1.900000000: State stored: STATE<-STATE_CALLED
+[CarButtonControl[4][FRONT]] @2.000000000: desiredFloor 1
+[CarButtonControl[4][FRONT]] @2.000000000: desiredHallway BACK
+[CarButtonControl[4][FRONT]] @2.000000000: AtFloor false
+[CarButtonControl[4][FRONT]] @2.000000000: AreDoorsClosed true
+[CarButtonControl[4][FRONT]] @2.000000000: thisIsDesired false
+[CarButtonControl[4][FRONT]] @2.000000000: State stored: STATE<-STATE_CALLED
+[CarButtonControl[4][FRONT]] @2.100000000: desiredFloor 1
+[CarButtonControl[4][FRONT]] @2.100000000: desiredHallway BACK
+[CarButtonControl[4][FRONT]] @2.100000000: AtFloor false
+[CarButtonControl[4][FRONT]] @2.100000000: AreDoorsClosed true
+[CarButtonControl[4][FRONT]] @2.100000000: thisIsDesired false
+[CarButtonControl[4][FRONT]] @2.100000000: State stored: STATE<-STATE_CALLED
+[CarButtonControl[4][FRONT]] @2.200000000: desiredFloor 1
+[CarButtonControl[4][FRONT]] @2.200000000: desiredHallway BACK
+[CarButtonControl[4][FRONT]] @2.200000000: AtFloor false
+[CarButtonControl[4][FRONT]] @2.200000000: AreDoorsClosed true
+[CarButtonControl[4][FRONT]] @2.200000000: thisIsDesired false
+[CarButtonControl[4][FRONT]] @2.200000000: State stored: STATE<-STATE_CALLED
+[CarButtonControl[4][FRONT]] @2.300000000: desiredFloor 4
+[CarButtonControl[4][FRONT]] @2.300000000: desiredHallway FRONT
+[CarButtonControl[4][FRONT]] @2.300000000: AtFloor true
+[CarButtonControl[4][FRONT]] @2.300000000: AreDoorsClosed false
+[CarButtonControl[4][FRONT]] @2.300000000: thisIsDesired true
+[CarButtonControl[4][FRONT]] @2.300000000: Transition:STATE_CALLED->STATE_OFF
+[CarButtonControl[4][FRONT]] @2.300000000: State stored: STATE<-STATE_OFF
+[CarButtonControl[4][FRONT]] @2.400000000: desiredFloor 4
+[CarButtonControl[4][FRONT]] @2.400000000: desiredHallway FRONT
+[CarButtonControl[4][FRONT]] @2.400000000: State stored: STATE<-STATE_OFF
+[CarButtonControl[4][FRONT]] @2.500000000: desiredFloor 4
+[CarButtonControl[4][FRONT]] @2.500000000: desiredHallway FRONT
+[CarButtonControl[4][FRONT]] @2.500000000: State stored: STATE<-STATE_OFF
+[CarButtonControl[4][FRONT]] @2.600000000: desiredFloor 4
+[CarButtonControl[4][FRONT]] @2.600000000: desiredHallway FRONT
+[CarButtonControl[4][FRONT]] @2.600000000: State stored: STATE<-STATE_OFF
+[AssertionMonitor] @2.700000000: ******************************************************************************************************
+[AssertionMonitor] @2.700000000: PASSED simulator.payloads.CarLightPayload$ReadableCarLightPayload@72bfbd32 :: lighted ?== false PASSED
+[AssertionMonitor] @2.700000000: ******************************************************************************************************
+[AssertionMonitor] @2.700000000: *********************************************************************************************
+[AssertionMonitor] @2.700000000: PASSED simulator.payloads.CanMailbox$ReadableCanMailbox@4e42751f :: getValue ?== false PASSED
+[AssertionMonitor] @2.700000000: *********************************************************************************************
+[CarButtonControl[4][FRONT]] @2.700000000: desiredFloor 4
+[CarButtonControl[4][FRONT]] @2.700000000: desiredHallway FRONT
+[CarButtonControl[4][FRONT]] @2.700000000: State stored: STATE<-STATE_OFF
+[CarButtonControl[4][FRONT]] @2.800000000: desiredFloor 4
+[CarButtonControl[4][FRONT]] @2.800000000: desiredHallway FRONT
+[CarButtonControl[4][FRONT]] @2.800000000: State stored: STATE<-STATE_OFF
+[CarButtonControl[4][FRONT]] @2.900000000: desiredFloor 4
+[CarButtonControl[4][FRONT]] @2.900000000: desiredHallway FRONT
+[CarButtonControl[4][FRONT]] @2.900000000: State stored: STATE<-STATE_OFF
+[CarButtonControl[4][FRONT]] @3.000000000: desiredFloor 4
+[CarButtonControl[4][FRONT]] @3.000000000: desiredHallway FRONT
+[CarButtonControl[4][FRONT]] @3.000000000: State stored: STATE<-STATE_OFF
+[CarButtonControl[4][FRONT]] @3.100000000: desiredFloor 4
+[CarButtonControl[4][FRONT]] @3.100000000: desiredHallway FRONT
+[CarButtonControl[4][FRONT]] @3.100000000: State stored: STATE<-STATE_OFF
+[CarButtonControl[4][FRONT]] @3.200000000: desiredFloor 4
+[CarButtonControl[4][FRONT]] @3.200000000: desiredHallway FRONT
+[CarButtonControl[4][FRONT]] @3.200000000: State stored: STATE<-STATE_OFF
+[CarButtonControl[4][FRONT]] @3.300000000: desiredFloor 4
+[CarButtonControl[4][FRONT]] @3.300000000: desiredHallway FRONT
+[CarButtonControl[4][FRONT]] @3.300000000: State stored: STATE<-STATE_OFF
+[CarButtonControl[4][FRONT]] @3.400000000: desiredFloor 4
+[CarButtonControl[4][FRONT]] @3.400000000: desiredHallway FRONT
+[CarButtonControl[4][FRONT]] @3.400000000: State stored: STATE<-STATE_OFF
+[CarButtonControl[4][FRONT]] @3.500000000: desiredFloor 4
+[CarButtonControl[4][FRONT]] @3.500000000: desiredHallway FRONT
+[CarButtonControl[4][FRONT]] @3.500000000: State stored: STATE<-STATE_OFF
+[CarButtonControl[4][FRONT]] @3.600000000: desiredFloor 4
+[CarButtonControl[4][FRONT]] @3.600000000: desiredHallway FRONT
+[CarButtonControl[4][FRONT]] @3.600000000: State stored: STATE<-STATE_OFF
+[CarButtonControl[4][FRONT]] @3.700000000: desiredFloor 4
+[CarButtonControl[4][FRONT]] @3.700000000: desiredHallway FRONT
+[CarButtonControl[4][FRONT]] @3.700000000: State stored: STATE<-STATE_OFF
+[CarButtonControl[4][FRONT]] @3.800000000: desiredFloor 4
+[CarButtonControl[4][FRONT]] @3.800000000: desiredHallway FRONT
+[CarButtonControl[4][FRONT]] @3.800000000: State stored: STATE<-STATE_OFF
+[CarButtonControl[4][FRONT]] @3.900000000: desiredFloor 4
+[CarButtonControl[4][FRONT]] @3.900000000: desiredHallway FRONT
+[CarButtonControl[4][FRONT]] @3.900000000: State stored: STATE<-STATE_OFF
+[CarButtonControl[4][FRONT]] @4.000000000: desiredFloor 4
+[CarButtonControl[4][FRONT]] @4.000000000: desiredHallway FRONT
+[CarButtonControl[4][FRONT]] @4.000000000: State stored: STATE<-STATE_OFF
+[CarButtonControl[4][FRONT]] @4.100000000: desiredFloor 4
+[CarButtonControl[4][FRONT]] @4.100000000: desiredHallway FRONT
+[CarButtonControl[4][FRONT]] @4.100000000: State stored: STATE<-STATE_OFF
+[CarButtonControl[4][FRONT]] @4.200000000: desiredFloor 4
+[CarButtonControl[4][FRONT]] @4.200000000: desiredHallway FRONT
+[CarButtonControl[4][FRONT]] @4.200000000: State stored: STATE<-STATE_OFF
+[CarButtonControl[4][FRONT]] @4.300000000: desiredFloor 4
+[CarButtonControl[4][FRONT]] @4.300000000: desiredHallway FRONT
+[CarButtonControl[4][FRONT]] @4.300000000: State stored: STATE<-STATE_OFF
+[CarButtonControl[4][FRONT]] @4.400000000: desiredFloor 4
+[CarButtonControl[4][FRONT]] @4.400000000: desiredHallway FRONT
+[CarButtonControl[4][FRONT]] @4.400000000: State stored: STATE<-STATE_OFF
+[CarButtonControl[4][FRONT]] @4.500000000: desiredFloor 4
+[CarButtonControl[4][FRONT]] @4.500000000: desiredHallway FRONT
+[CarButtonControl[4][FRONT]] @4.500000000: State stored: STATE<-STATE_OFF
+[CarButtonControl[4][FRONT]] @4.600000000: desiredFloor 4
+[CarButtonControl[4][FRONT]] @4.600000000: desiredHallway FRONT
+[CarButtonControl[4][FRONT]] @4.600000000: State stored: STATE<-STATE_OFF
+[CarButtonControl[4][FRONT]] @4.700000000: desiredFloor 4
+[CarButtonControl[4][FRONT]] @4.700000000: desiredHallway FRONT
+[CarButtonControl[4][FRONT]] @4.700000000: State stored: STATE<-STATE_OFF
+[CarButtonControl[4][FRONT]] @4.800000000: desiredFloor 4
+[CarButtonControl[4][FRONT]] @4.800000000: desiredHallway FRONT
+[CarButtonControl[4][FRONT]] @4.800000000: State stored: STATE<-STATE_OFF
+[CarButtonControl[4][FRONT]] @4.900000000: desiredFloor 4
+[CarButtonControl[4][FRONT]] @4.900000000: desiredHallway FRONT
+[CarButtonControl[4][FRONT]] @4.900000000: State stored: STATE<-STATE_OFF
+[CarButtonControl[4][FRONT]] @5.000000000: desiredFloor 4
+[CarButtonControl[4][FRONT]] @5.000000000: desiredHallway FRONT
+[CarButtonControl[4][FRONT]] @5.000000000: State stored: STATE<-STATE_OFF
+[CarButtonControl[4][FRONT]] @5.100000000: desiredFloor 4
+[CarButtonControl[4][FRONT]] @5.100000000: desiredHallway FRONT
+[CarButtonControl[4][FRONT]] @5.100000000: State stored: STATE<-STATE_OFF
+[CarButtonControl[4][FRONT]] @5.200000000: desiredFloor 4
+[CarButtonControl[4][FRONT]] @5.200000000: desiredHallway FRONT
+[CarButtonControl[4][FRONT]] @5.200000000: State stored: STATE<-STATE_OFF
+[CarButtonControl[4][FRONT]] @5.300000000: desiredFloor 4
+[CarButtonControl[4][FRONT]] @5.300000000: desiredHallway FRONT
+[CarButtonControl[4][FRONT]] @5.300000000: State stored: STATE<-STATE_OFF
+[CarButtonControl[4][FRONT]] @5.400000000: desiredFloor 4
+[CarButtonControl[4][FRONT]] @5.400000000: desiredHallway FRONT
+[CarButtonControl[4][FRONT]] @5.400000000: State stored: STATE<-STATE_OFF
+[CarButtonControl[4][FRONT]] @5.500000000: desiredFloor 4
+[CarButtonControl[4][FRONT]] @5.500000000: desiredHallway FRONT
+[CarButtonControl[4][FRONT]] @5.500000000: State stored: STATE<-STATE_OFF
+[CarButtonControl[4][FRONT]] @5.600000000: desiredFloor 4
+[CarButtonControl[4][FRONT]] @5.600000000: desiredHallway FRONT
+[CarButtonControl[4][FRONT]] @5.600000000: State stored: STATE<-STATE_OFF
+[CarButtonControl[4][FRONT]] @5.700000000: desiredFloor 4
+[CarButtonControl[4][FRONT]] @5.700000000: desiredHallway FRONT
+[CarButtonControl[4][FRONT]] @5.700000000: State stored: STATE<-STATE_OFF
+[CarButtonControl[4][FRONT]] @5.800000000: desiredFloor 4
+[CarButtonControl[4][FRONT]] @5.800000000: desiredHallway FRONT
+[CarButtonControl[4][FRONT]] @5.800000000: State stored: STATE<-STATE_OFF
+[CarButtonControl[4][FRONT]] @5.900000000: desiredFloor 4
+[CarButtonControl[4][FRONT]] @5.900000000: desiredHallway FRONT
+[CarButtonControl[4][FRONT]] @5.900000000: State stored: STATE<-STATE_OFF
+[CarButtonControl[4][FRONT]] @6.000000000: desiredFloor 4
+[CarButtonControl[4][FRONT]] @6.000000000: desiredHallway FRONT
+[CarButtonControl[4][FRONT]] @6.000000000: State stored: STATE<-STATE_OFF
+[CarButtonControl[4][FRONT]] @6.100000000: desiredFloor 4
+[CarButtonControl[4][FRONT]] @6.100000000: desiredHallway FRONT
+[CarButtonControl[4][FRONT]] @6.100000000: State stored: STATE<-STATE_OFF
+[CarButtonControl[4][FRONT]] @6.200000000: desiredFloor 4
+[CarButtonControl[4][FRONT]] @6.200000000: desiredHallway FRONT
+[CarButtonControl[4][FRONT]] @6.200000000: State stored: STATE<-STATE_OFF
+[CarButtonControl[4][FRONT]] @6.300000000: desiredFloor 4
+[CarButtonControl[4][FRONT]] @6.300000000: desiredHallway FRONT
+[CarButtonControl[4][FRONT]] @6.300000000: State stored: STATE<-STATE_OFF
+[CarButtonControl[4][FRONT]] @6.400000000: desiredFloor 4
+[CarButtonControl[4][FRONT]] @6.400000000: desiredHallway FRONT
+[CarButtonControl[4][FRONT]] @6.400000000: State stored: STATE<-STATE_OFF
+[CarButtonControl[4][FRONT]] @6.500000000: desiredFloor 4
+[CarButtonControl[4][FRONT]] @6.500000000: desiredHallway FRONT
+[CarButtonControl[4][FRONT]] @6.500000000: State stored: STATE<-STATE_OFF
+[CarButtonControl[4][FRONT]] @6.600000000: desiredFloor 4
+[CarButtonControl[4][FRONT]] @6.600000000: desiredHallway FRONT
+[CarButtonControl[4][FRONT]] @6.600000000: State stored: STATE<-STATE_OFF
+[CarButtonControl[4][FRONT]] @6.700000000: desiredFloor 4
+[CarButtonControl[4][FRONT]] @6.700000000: desiredHallway FRONT
+[CarButtonControl[4][FRONT]] @6.700000000: State stored: STATE<-STATE_OFF
+[CarButtonControl[4][FRONT]] @6.800000000: desiredFloor 4
+[CarButtonControl[4][FRONT]] @6.800000000: desiredHallway FRONT
+[CarButtonControl[4][FRONT]] @6.800000000: State stored: STATE<-STATE_OFF
+[CarButtonControl[4][FRONT]] @6.900000000: desiredFloor 4
+[CarButtonControl[4][FRONT]] @6.900000000: desiredHallway FRONT
+[CarButtonControl[4][FRONT]] @6.900000000: State stored: STATE<-STATE_OFF
+[CarButtonControl[4][FRONT]] @7.000000000: desiredFloor 4
+[CarButtonControl[4][FRONT]] @7.000000000: desiredHallway FRONT
+[CarButtonControl[4][FRONT]] @7.000000000: State stored: STATE<-STATE_OFF
+[CarButtonControl[4][FRONT]] @7.100000000: desiredFloor 4
+[CarButtonControl[4][FRONT]] @7.100000000: desiredHallway FRONT
+[CarButtonControl[4][FRONT]] @7.100000000: State stored: STATE<-STATE_OFF
+[CarButtonControl[4][FRONT]] @7.200000000: desiredFloor 4
+[CarButtonControl[4][FRONT]] @7.200000000: desiredHallway FRONT
+[CarButtonControl[4][FRONT]] @7.200000000: State stored: STATE<-STATE_OFF
+[CarButtonControl[4][FRONT]] @7.300000000: desiredFloor 4
+[CarButtonControl[4][FRONT]] @7.300000000: desiredHallway FRONT
+[CarButtonControl[4][FRONT]] @7.300000000: State stored: STATE<-STATE_OFF
+[CarButtonControl[4][FRONT]] @7.400000000: desiredFloor 4
+[CarButtonControl[4][FRONT]] @7.400000000: desiredHallway FRONT
+[CarButtonControl[4][FRONT]] @7.400000000: State stored: STATE<-STATE_OFF
+[CarButtonControl[4][FRONT]] @7.500000000: desiredFloor 4
+[CarButtonControl[4][FRONT]] @7.500000000: desiredHallway FRONT
+[CarButtonControl[4][FRONT]] @7.500000000: State stored: STATE<-STATE_OFF
+[CarButtonControl[4][FRONT]] @7.600000000: desiredFloor 4
+[CarButtonControl[4][FRONT]] @7.600000000: desiredHallway FRONT
+[CarButtonControl[4][FRONT]] @7.600000000: State stored: STATE<-STATE_OFF
+[CarButtonControl[4][FRONT]] @7.700000000: desiredFloor 4
+[CarButtonControl[4][FRONT]] @7.700000000: desiredHallway FRONT
+[CarButtonControl[4][FRONT]] @7.700000000: State stored: STATE<-STATE_OFF
+[Elevator] @7.700000000: Simulation Finished ***
+******************Summary******************
+Passed:  8
+Failed:  0
+Total :  8
+

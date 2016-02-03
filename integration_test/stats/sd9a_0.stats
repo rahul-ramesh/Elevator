@@ -1,0 +1,39 @@
+; sd9a_0.stats
+; 18-649 Distributed Embedded Systems
+; Group 11
+; Rahul Ramesh // rahulram. Daniel Santoro // ddsantor. David Thompson // davidtho. Jialiang Tan // jialiant
+; !@
+
+Simulator Parameters:
+Command line = -cf ../../portfolio_grp11/integration_test/sd9a.cf -mf ../../portfolio_grp11/integration_test/sd9a.mf -head ../../portfolio_grp11/scripts/grp11.head
+RandomSeed = 1450147642347
+CanNetworkBitTime = 0 ns
+Effective Can Bitrate = Infinity
+Run Time = null
+Real time rate = null
+Message File = ../../portfolio_grp11/integration_test/sd9a.mf
+Controller File = ../../portfolio_grp11/integration_test/sd9a.cf
+
+Assertion Results:
+@0.2s:  PASSED simulator.payloads.CanMailbox$ReadableCanMailbox@59a2a780 :: getFloor ?== 1 PASSED
+@0.2s:  PASSED simulator.payloads.CanMailbox$ReadableCanMailbox@4cdd09a6 :: getHallway ?== NONE PASSED
+@0.2s:  PASSED simulator.payloads.CanMailbox$ReadableCanMailbox@6b25f76b :: getDirection ?== STOP PASSED
+@0.8s:  PASSED simulator.payloads.CanMailbox$ReadableCanMailbox@a563d79 :: getFloor ?== 0 PASSED
+@0.8s:  PASSED simulator.payloads.CanMailbox$ReadableCanMailbox@399f5d89 :: getHallway ?== NONE PASSED
+@0.8s:  PASSED simulator.payloads.CanMailbox$ReadableCanMailbox@225274a3 :: getDirection ?== STOP PASSED
+@1.4s:  PASSED simulator.payloads.CanMailbox$ReadableCanMailbox@32d27bb0 :: getFloor ?== 2 PASSED
+@1.4s:  PASSED simulator.payloads.CanMailbox$ReadableCanMailbox@73fbaf73 :: getHallway ?== BACK PASSED
+@1.4s:  PASSED simulator.payloads.CanMailbox$ReadableCanMailbox@1f13cd63 :: getDirection ?== UP PASSED
+@2.0s:  PASSED simulator.payloads.CanMailbox$ReadableCanMailbox@2305454a :: getFloor ?== 1 PASSED
+@2.0s:  PASSED simulator.payloads.CanMailbox$ReadableCanMailbox@3a204443 :: getHallway ?== NONE PASSED
+@2.0s:  PASSED simulator.payloads.CanMailbox$ReadableCanMailbox@4f7ec251 :: getDirection ?== STOP PASSED
+@2.3s:  PASSED simulator.payloads.CanMailbox$ReadableCanMailbox@18862d13 :: getFloor ?== 1 PASSED
+@2.3s:  PASSED simulator.payloads.CanMailbox$ReadableCanMailbox@5da28e23 :: getHallway ?== NONE PASSED
+@2.3s:  PASSED simulator.payloads.CanMailbox$ReadableCanMailbox@7cec59b :: getDirection ?== STOP PASSED
+
+
+******************Summary******************
+Passed:  15
+Failed:  0
+Total :  15
+

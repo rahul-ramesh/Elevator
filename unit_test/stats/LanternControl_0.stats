@@ -1,0 +1,34 @@
+; LanternControl_0.stats
+; 18-649 Distributed Embedded Systems
+; Group 11
+; Rahul Ramesh // rahulram. Daniel Santoro // ddsantor. David Thompson // davidtho. Jialiang Tan // jialiant
+; !@
+
+Simulator Parameters:
+Command line = -cf ../../portfolio_grp11/unit_test/LanternControl.cf -mf ../../portfolio_grp11/unit_test/LanternControl.mf -head ../../portfolio_grp11/scripts/grp11.head
+RandomSeed = 1450147025257
+CanNetworkBitTime = 0 ns
+Effective Can Bitrate = Infinity
+Run Time = null
+Real time rate = null
+Message File = ../../portfolio_grp11/unit_test/LanternControl.mf
+Controller File = ../../portfolio_grp11/unit_test/LanternControl.cf
+
+Assertion Results:
+@0.0s:  PASSED simulator.payloads.CarLanternPayload$ReadableCarLanternPayload@48cc87c1 :: lighted ?== false PASSED
+@0.0s:  PASSED simulator.payloads.CanMailbox$ReadableCanMailbox@428d9b22 :: getValue ?== false PASSED
+@1.95s:  PASSED simulator.payloads.CarLanternPayload$ReadableCarLanternPayload@2515272a :: lighted ?== true PASSED
+@1.95s:  PASSED simulator.payloads.CanMailbox$ReadableCanMailbox@15c617e0 :: getValue ?== false PASSED
+@3.45s:  PASSED simulator.payloads.CarLanternPayload$ReadableCarLanternPayload@59026e12 :: lighted ?== false PASSED
+@3.45s:  PASSED simulator.payloads.CanMailbox$ReadableCanMailbox@6faf9c1 :: getValue ?== false PASSED
+@5.15s:  PASSED simulator.payloads.CarLanternPayload$ReadableCarLanternPayload@471be6b9 :: lighted ?== true PASSED
+@5.15s:  PASSED simulator.payloads.CanMailbox$ReadableCanMailbox@3b8a9e64 :: getValue ?== false PASSED
+@6.65s:  PASSED simulator.payloads.CarLanternPayload$ReadableCarLanternPayload@24cebf1c :: lighted ?== false PASSED
+@6.65s:  PASSED simulator.payloads.CanMailbox$ReadableCanMailbox@42db3da :: getValue ?== false PASSED
+
+
+******************Summary******************
+Passed:  10
+Failed:  0
+Total :  10
+

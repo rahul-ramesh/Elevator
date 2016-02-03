@@ -1,0 +1,49 @@
+; HallButtonControl.mf
+; 18-649 Distributed Embedded Systems
+; Group 11
+; Rahul Ramesh // rahulram. Daniel Santoro // ddsantor. David Thompson // davidtho. Jialiang Tan // jialiant
+; !@
+
+#INCLUDE defines.mf
+
+; Initialize
+; Doors are closed, no hall call.
++300ms I DOOR_CLOSED_SENSOR_PERIOD N DOOR_CLOSED_SENSOR_[FRONT][LEFT]_CAN_ID DoorClosed FRONT LEFT = true
++0ms I DOOR_CLOSED_SENSOR_PERIOD N DOOR_CLOSED_SENSOR_[FRONT][RIGHT]_CAN_ID DoorClosed FRONT RIGHT = true
++0ms I DOOR_CLOSED_SENSOR_PERIOD N DOOR_CLOSED_SENSOR_[BACK][LEFT]_CAN_ID DoorClosed BACK LEFT = true
++0ms I DOOR_CLOSED_SENSOR_PERIOD N DOOR_CLOSED_SENSOR_[BACK][RIGHT]_CAN_ID DoorClosed BACK RIGHT = true
++0ms I AT_FLOOR_PERIOD N AT_FLOOR_[2][BACK]_CAN_ID AtFloor 2 BACK = TRUE
++0ms I DISPATCHER_PERIOD N DESIRED_FLOOR_CAN_ID DesiredFloor = 1 STOP BACK
+
+;#state 'OFF'
++500ms A F HallLight 4 FRONT UP : lighted == false
++0ms A N HALL_CALL_[4][FRONT][UP]_CAN_ID HallCall 4 FRONT UP : getValue == false
+
+;Passenger pushes hall call button.
+;#transition 'PT1'
++300ms I HALL_BUTTON_CONTROL_PERIOD F HallCall 4 FRONT UP = true
+
+;The hall light turns on.
+;#state 'PRESSED'
++500ms A F HallLight 4 FRONT UP : lighted == true
++0s A N HALL_CALL_[4][FRONT][UP]_CAN_ID HallCall 4 FRONT UP : getValue == false
+
+;Passenger releases hall call button
+;#transition 'PT3'
++300ms I HALL_BUTTON_CONTROL_PERIOD F HallCall 4 FRONT UP = false
+
+;The hall light stays on and network message is sent.
+;#state 'CALLED'
++500ms A F HallLight 4 FRONT UP : lighted == true
++0s A N HALL_CALL_[4][FRONT][UP]_CAN_ID HallCall 4 FRONT UP : getValue == true
+
+;Elevator arrives at floor, doors open.
+;#transition 'PT2'
++300ms I AT_FLOOR_PERIOD N AT_FLOOR_[4][FRONT]_CAN_ID AtFloor 4 FRONT = TRUE
++0ms I DISPATCHER_PERIOD N DESIRED_FLOOR_CAN_ID DesiredFloor = 4 UP FRONT
++0ms I DOOR_CLOSED_SENSOR_PERIOD N DOOR_CLOSED_SENSOR_[FRONT][LEFT]_CAN_ID DoorClosed FRONT LEFT = false
+
+;Hall light turns off.
+;#state 'OFF'
++500ms A F HallLight 4 FRONT UP : lighted == false
++0s A N HALL_CALL_[4][FRONT][UP]_CAN_ID HallCall 4 FRONT UP : getValue == false

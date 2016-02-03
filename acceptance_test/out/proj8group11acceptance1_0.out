@@ -1,0 +1,64 @@
+; proj8group11acceptance1_0.out
+; 18-649 Distributed Embedded Systems
+; Group 11
+; Rahul Ramesh // rahulram. Daniel Santoro // ddsantor. David Thompson // davidtho. Jialiang Tan // jialiant
+; !@
+
+
+Simulator Parameters:
+Command line = -pf ../../portfolio_grp11/acceptance_test/proj8group11acceptance1.pass -b 200 -fs 5.0 -monitor RuntimeRequirementsMonitor -head ../../portfolio_grp11/scripts/grp11.head
+RandomSeed = 1450162817723
+CanNetworkBitTime = 5000 ns
+Effective Can Bitrate = 199999.99999999997
+Run Time = null
+Real time rate = null
+Acceptance Test File = ../../portfolio_grp11/acceptance_test/proj8group11acceptance1.pass
+Monitors: RuntimeRequirementsMonitor  
+
+
+[Elevator] @0.000000000: Starting Simulation
+[Elevator] @60.000000000: Progress indicator
+[Elevator] @120.000000000: Progress indicator
+[Elevator] @180.000000000: Progress indicator
+[Elevator] @240.000000000: Progress indicator
+[Elevator] @300.000000000: Progress indicator
+[Elevator] @360.000000000: Progress indicator
+[Elevator] @420.000000000: Progress indicator
+[Elevator] @480.000000000: Progress indicator
+[Elevator] @540.000000000: Progress indicator
+[Elevator] @600.000000000: Progress indicator
+[Elevator] @629.912000000: Simulation Finished
+
+Network Utilization Summary:
+Recent: 70.22 % Max: 70.22 %  Overall:  70.22 %
+
+Monitors Warning Results: 
+RuntimeMonitor generated 0 warnings.
+
+Monitors Summmary Results: 
+No summary implemented yet
+
+STATISTICS FOR ELEVATOR SIMULATION PASSENGER DELIVERY
+-----------------------------------------------------
+
+
+Passenger Delivery Summary
+Delivered: 58
+Stranded: 0
+Total: 58
+
+Deliver Stats (lower is better):
+Average_delivery_time: 308.896
+Maximum_delivery_time:  575.565
+Delivery_performance_score:  1811.151
+
+Satisfaction Stats (higher is better):
+Average_satisfaction_score: 98.966
+Min_satisfaction_score:  80.000
+Satisfaction_performance_score:  475.862
+
+
+
+629.912s simulation seconds
+ 5.231 real seconds
+ effective rate 120.42

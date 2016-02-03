@@ -1,0 +1,172 @@
+; LanternControl_0.out
+; 18-649 Distributed Embedded Systems
+; Group 11
+; Rahul Ramesh // rahulram. Daniel Santoro // ddsantor. David Thompson // davidtho. Jialiang Tan // jialiant
+; !@
+
+
+Simulator Parameters:
+Command line = -cf ../../portfolio_grp11/unit_test/LanternControl.cf -mf ../../portfolio_grp11/unit_test/LanternControl.mf -head ../../portfolio_grp11/scripts/grp11.head
+RandomSeed = 1450147025257
+CanNetworkBitTime = 0 ns
+Effective Can Bitrate = Infinity
+Run Time = null
+Real time rate = null
+Message File = ../../portfolio_grp11/unit_test/LanternControl.mf
+Controller File = ../../portfolio_grp11/unit_test/LanternControl.cf
+
+
+[LanternControl_UP] @0.000000000: Created LanternControl with period = 0.2s
+[Elevator] @0.000000000: Starting Simulation ***
+[AssertionMonitor] @0.000000000: **********************************************************************************************************
+[AssertionMonitor] @0.000000000: PASSED simulator.payloads.CarLanternPayload$ReadableCarLanternPayload@48cc87c1 :: lighted ?== false PASSED
+[AssertionMonitor] @0.000000000: **********************************************************************************************************
+[AssertionMonitor] @0.000000000: *********************************************************************************************
+[AssertionMonitor] @0.000000000: PASSED simulator.payloads.CanMailbox$ReadableCanMailbox@428d9b22 :: getValue ?== false PASSED
+[AssertionMonitor] @0.000000000: *********************************************************************************************
+[LanternControl_UP] @0.200000000: Transition:STATE_DOORS_CLOSED->STATE_LANTERN_ON
+[LanternControl_UP] @0.200000000: State stored: STATE<-STATE_LANTERN_ON
+[LanternControl_UP] @0.400000000: remains in state: STATE_LANTERN_ON
+[LanternControl_UP] @0.400000000: State stored: STATE<-STATE_LANTERN_ON
+[LanternControl_UP] @0.600000000: remains in state: STATE_LANTERN_ON
+[LanternControl_UP] @0.600000000: State stored: STATE<-STATE_LANTERN_ON
+[LanternControl_UP] @0.800000000: remains in state: STATE_LANTERN_ON
+[LanternControl_UP] @0.800000000: State stored: STATE<-STATE_LANTERN_ON
+[LanternControl_UP] @1.000000000: remains in state: STATE_LANTERN_ON
+[LanternControl_UP] @1.000000000: State stored: STATE<-STATE_LANTERN_ON
+[LanternControl_UP] @1.200000000: remains in state: STATE_LANTERN_ON
+[LanternControl_UP] @1.200000000: State stored: STATE<-STATE_LANTERN_ON
+[LanternControl_UP] @1.400000000: remains in state: STATE_LANTERN_ON
+[LanternControl_UP] @1.400000000: State stored: STATE<-STATE_LANTERN_ON
+[LanternControl_UP] @1.600000000: remains in state: STATE_LANTERN_ON
+[LanternControl_UP] @1.600000000: State stored: STATE<-STATE_LANTERN_ON
+[LanternControl_UP] @1.800000000: remains in state: STATE_LANTERN_ON
+[LanternControl_UP] @1.800000000: State stored: STATE<-STATE_LANTERN_ON
+[AssertionMonitor] @1.950000000: *********************************************************************************************************
+[AssertionMonitor] @1.950000000: PASSED simulator.payloads.CarLanternPayload$ReadableCarLanternPayload@2515272a :: lighted ?== true PASSED
+[AssertionMonitor] @1.950000000: *********************************************************************************************************
+[AssertionMonitor] @1.950000000: *********************************************************************************************
+[AssertionMonitor] @1.950000000: PASSED simulator.payloads.CanMailbox$ReadableCanMailbox@15c617e0 :: getValue ?== false PASSED
+[AssertionMonitor] @1.950000000: *********************************************************************************************
+[LanternControl_UP] @2.000000000: remains in state: STATE_LANTERN_ON
+[LanternControl_UP] @2.000000000: State stored: STATE<-STATE_LANTERN_ON
+[LanternControl_UP] @2.200000000: remains in state: STATE_LANTERN_ON
+[LanternControl_UP] @2.200000000: State stored: STATE<-STATE_LANTERN_ON
+[LanternControl_UP] @2.400000000: remains in state: STATE_LANTERN_ON
+[LanternControl_UP] @2.400000000: State stored: STATE<-STATE_LANTERN_ON
+[LanternControl_UP] @2.600000000: Transition:STATE_LANTERN_ON->STATE_DOORS_CLOSED
+[LanternControl_UP] @2.600000000: State stored: STATE<-STATE_DOORS_CLOSED
+[LanternControl_UP] @2.800000000: remains in state: STATE_DOORS_CLOSED
+[LanternControl_UP] @2.800000000: State stored: STATE<-STATE_DOORS_CLOSED
+[LanternControl_UP] @3.000000000: remains in state: STATE_DOORS_CLOSED
+[LanternControl_UP] @3.000000000: State stored: STATE<-STATE_DOORS_CLOSED
+[LanternControl_UP] @3.200000000: remains in state: STATE_DOORS_CLOSED
+[LanternControl_UP] @3.200000000: State stored: STATE<-STATE_DOORS_CLOSED
+[LanternControl_UP] @3.400000000: remains in state: STATE_DOORS_CLOSED
+[LanternControl_UP] @3.400000000: State stored: STATE<-STATE_DOORS_CLOSED
+[AssertionMonitor] @3.450000000: **********************************************************************************************************
+[AssertionMonitor] @3.450000000: PASSED simulator.payloads.CarLanternPayload$ReadableCarLanternPayload@59026e12 :: lighted ?== false PASSED
+[AssertionMonitor] @3.450000000: **********************************************************************************************************
+[AssertionMonitor] @3.450000000: ********************************************************************************************
+[AssertionMonitor] @3.450000000: PASSED simulator.payloads.CanMailbox$ReadableCanMailbox@6faf9c1 :: getValue ?== false PASSED
+[AssertionMonitor] @3.450000000: ********************************************************************************************
+[LanternControl_UP] @3.600000000: Transition:STATE_DOORS_CLOSED->STATE_LANTERN_ON
+[LanternControl_UP] @3.600000000: State stored: STATE<-STATE_LANTERN_ON
+[LanternControl_UP] @3.800000000: remains in state: STATE_LANTERN_ON
+[LanternControl_UP] @3.800000000: State stored: STATE<-STATE_LANTERN_ON
+[LanternControl_UP] @4.000000000: remains in state: STATE_LANTERN_ON
+[LanternControl_UP] @4.000000000: State stored: STATE<-STATE_LANTERN_ON
+[LanternControl_UP] @4.200000000: remains in state: STATE_LANTERN_ON
+[LanternControl_UP] @4.200000000: State stored: STATE<-STATE_LANTERN_ON
+[LanternControl_UP] @4.400000000: remains in state: STATE_LANTERN_ON
+[LanternControl_UP] @4.400000000: State stored: STATE<-STATE_LANTERN_ON
+[LanternControl_UP] @4.600000000: remains in state: STATE_LANTERN_ON
+[LanternControl_UP] @4.600000000: State stored: STATE<-STATE_LANTERN_ON
+[LanternControl_UP] @4.800000000: remains in state: STATE_LANTERN_ON
+[LanternControl_UP] @4.800000000: State stored: STATE<-STATE_LANTERN_ON
+[LanternControl_UP] @5.000000000: remains in state: STATE_LANTERN_ON
+[LanternControl_UP] @5.000000000: State stored: STATE<-STATE_LANTERN_ON
+[AssertionMonitor] @5.150000000: *********************************************************************************************************
+[AssertionMonitor] @5.150000000: PASSED simulator.payloads.CarLanternPayload$ReadableCarLanternPayload@471be6b9 :: lighted ?== true PASSED
+[AssertionMonitor] @5.150000000: *********************************************************************************************************
+[AssertionMonitor] @5.150000000: *********************************************************************************************
+[AssertionMonitor] @5.150000000: PASSED simulator.payloads.CanMailbox$ReadableCanMailbox@3b8a9e64 :: getValue ?== false PASSED
+[AssertionMonitor] @5.150000000: *********************************************************************************************
+[LanternControl_UP] @5.200000000: remains in state: STATE_LANTERN_ON
+[LanternControl_UP] @5.200000000: State stored: STATE<-STATE_LANTERN_ON
+[LanternControl_UP] @5.400000000: remains in state: STATE_LANTERN_ON
+[LanternControl_UP] @5.400000000: State stored: STATE<-STATE_LANTERN_ON
+[LanternControl_UP] @5.600000000: remains in state: STATE_LANTERN_ON
+[LanternControl_UP] @5.600000000: State stored: STATE<-STATE_LANTERN_ON
+[LanternControl_UP] @5.800000000: Transition:STATE_LANTERN_ON->STATE_DOORS_CLOSED
+[LanternControl_UP] @5.800000000: State stored: STATE<-STATE_DOORS_CLOSED
+[LanternControl_UP] @6.000000000: remains in state: STATE_DOORS_CLOSED
+[LanternControl_UP] @6.000000000: State stored: STATE<-STATE_DOORS_CLOSED
+[LanternControl_UP] @6.200000000: remains in state: STATE_DOORS_CLOSED
+[LanternControl_UP] @6.200000000: State stored: STATE<-STATE_DOORS_CLOSED
+[LanternControl_UP] @6.400000000: remains in state: STATE_DOORS_CLOSED
+[LanternControl_UP] @6.400000000: State stored: STATE<-STATE_DOORS_CLOSED
+[LanternControl_UP] @6.600000000: remains in state: STATE_DOORS_CLOSED
+[LanternControl_UP] @6.600000000: State stored: STATE<-STATE_DOORS_CLOSED
+[AssertionMonitor] @6.650000000: **********************************************************************************************************
+[AssertionMonitor] @6.650000000: PASSED simulator.payloads.CarLanternPayload$ReadableCarLanternPayload@24cebf1c :: lighted ?== false PASSED
+[AssertionMonitor] @6.650000000: **********************************************************************************************************
+[AssertionMonitor] @6.650000000: ********************************************************************************************
+[AssertionMonitor] @6.650000000: PASSED simulator.payloads.CanMailbox$ReadableCanMailbox@42db3da :: getValue ?== false PASSED
+[AssertionMonitor] @6.650000000: ********************************************************************************************
+[LanternControl_UP] @6.800000000: remains in state: STATE_DOORS_CLOSED
+[LanternControl_UP] @6.800000000: State stored: STATE<-STATE_DOORS_CLOSED
+[LanternControl_UP] @7.000000000: remains in state: STATE_DOORS_CLOSED
+[LanternControl_UP] @7.000000000: State stored: STATE<-STATE_DOORS_CLOSED
+[LanternControl_UP] @7.200000000: remains in state: STATE_DOORS_CLOSED
+[LanternControl_UP] @7.200000000: State stored: STATE<-STATE_DOORS_CLOSED
+[LanternControl_UP] @7.400000000: remains in state: STATE_DOORS_CLOSED
+[LanternControl_UP] @7.400000000: State stored: STATE<-STATE_DOORS_CLOSED
+[LanternControl_UP] @7.600000000: remains in state: STATE_DOORS_CLOSED
+[LanternControl_UP] @7.600000000: State stored: STATE<-STATE_DOORS_CLOSED
+[LanternControl_UP] @7.800000000: remains in state: STATE_DOORS_CLOSED
+[LanternControl_UP] @7.800000000: State stored: STATE<-STATE_DOORS_CLOSED
+[LanternControl_UP] @8.000000000: remains in state: STATE_DOORS_CLOSED
+[LanternControl_UP] @8.000000000: State stored: STATE<-STATE_DOORS_CLOSED
+[LanternControl_UP] @8.200000000: remains in state: STATE_DOORS_CLOSED
+[LanternControl_UP] @8.200000000: State stored: STATE<-STATE_DOORS_CLOSED
+[LanternControl_UP] @8.400000000: remains in state: STATE_DOORS_CLOSED
+[LanternControl_UP] @8.400000000: State stored: STATE<-STATE_DOORS_CLOSED
+[LanternControl_UP] @8.600000000: remains in state: STATE_DOORS_CLOSED
+[LanternControl_UP] @8.600000000: State stored: STATE<-STATE_DOORS_CLOSED
+[LanternControl_UP] @8.800000000: remains in state: STATE_DOORS_CLOSED
+[LanternControl_UP] @8.800000000: State stored: STATE<-STATE_DOORS_CLOSED
+[LanternControl_UP] @9.000000000: remains in state: STATE_DOORS_CLOSED
+[LanternControl_UP] @9.000000000: State stored: STATE<-STATE_DOORS_CLOSED
+[LanternControl_UP] @9.200000000: remains in state: STATE_DOORS_CLOSED
+[LanternControl_UP] @9.200000000: State stored: STATE<-STATE_DOORS_CLOSED
+[LanternControl_UP] @9.400000000: remains in state: STATE_DOORS_CLOSED
+[LanternControl_UP] @9.400000000: State stored: STATE<-STATE_DOORS_CLOSED
+[LanternControl_UP] @9.600000000: remains in state: STATE_DOORS_CLOSED
+[LanternControl_UP] @9.600000000: State stored: STATE<-STATE_DOORS_CLOSED
+[LanternControl_UP] @9.800000000: remains in state: STATE_DOORS_CLOSED
+[LanternControl_UP] @9.800000000: State stored: STATE<-STATE_DOORS_CLOSED
+[LanternControl_UP] @10.000000000: remains in state: STATE_DOORS_CLOSED
+[LanternControl_UP] @10.000000000: State stored: STATE<-STATE_DOORS_CLOSED
+[LanternControl_UP] @10.200000000: remains in state: STATE_DOORS_CLOSED
+[LanternControl_UP] @10.200000000: State stored: STATE<-STATE_DOORS_CLOSED
+[LanternControl_UP] @10.400000000: remains in state: STATE_DOORS_CLOSED
+[LanternControl_UP] @10.400000000: State stored: STATE<-STATE_DOORS_CLOSED
+[LanternControl_UP] @10.600000000: remains in state: STATE_DOORS_CLOSED
+[LanternControl_UP] @10.600000000: State stored: STATE<-STATE_DOORS_CLOSED
+[LanternControl_UP] @10.800000000: remains in state: STATE_DOORS_CLOSED
+[LanternControl_UP] @10.800000000: State stored: STATE<-STATE_DOORS_CLOSED
+[LanternControl_UP] @11.000000000: remains in state: STATE_DOORS_CLOSED
+[LanternControl_UP] @11.000000000: State stored: STATE<-STATE_DOORS_CLOSED
+[LanternControl_UP] @11.200000000: remains in state: STATE_DOORS_CLOSED
+[LanternControl_UP] @11.200000000: State stored: STATE<-STATE_DOORS_CLOSED
+[LanternControl_UP] @11.400000000: remains in state: STATE_DOORS_CLOSED
+[LanternControl_UP] @11.400000000: State stored: STATE<-STATE_DOORS_CLOSED
+[LanternControl_UP] @11.600000000: remains in state: STATE_DOORS_CLOSED
+[LanternControl_UP] @11.600000000: State stored: STATE<-STATE_DOORS_CLOSED
+[Elevator] @11.650000000: Simulation Finished ***
+******************Summary******************
+Passed:  10
+Failed:  0
+Total :  10
+

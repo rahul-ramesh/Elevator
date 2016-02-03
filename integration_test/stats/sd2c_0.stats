@@ -1,0 +1,32 @@
+; sd2c_0.stats
+; 18-649 Distributed Embedded Systems
+; Group 11
+; Rahul Ramesh // rahulram. Daniel Santoro // ddsantor. David Thompson // davidtho. Jialiang Tan // jialiant
+; !@
+
+Simulator Parameters:
+Command line = -cf ../../portfolio_grp11/integration_test/sd2c.cf -mf ../../portfolio_grp11/integration_test/sd2c.mf -head ../../portfolio_grp11/scripts/grp11.head
+RandomSeed = 1450147614181
+CanNetworkBitTime = 0 ns
+Effective Can Bitrate = Infinity
+Run Time = null
+Real time rate = null
+Message File = ../../portfolio_grp11/integration_test/sd2c.mf
+Controller File = ../../portfolio_grp11/integration_test/sd2c.cf
+
+Assertion Results:
+@2.4s:  PASSED simulator.payloads.CarLightPayload$ReadableCarLightPayload@37e79b10 :: lighted ?== false PASSED
+@2.4s:  PASSED simulator.payloads.CanMailbox$ReadableCanMailbox@40e51e67 :: getValue ?== false PASSED
+@3.4s:  PASSED simulator.payloads.CarLightPayload$ReadableCarLightPayload@633835b4 :: lighted ?== true PASSED
+@5.4s:  PASSED simulator.payloads.CarLightPayload$ReadableCarLightPayload@559a6cd4 :: lighted ?== false PASSED
+@6.4s:  PASSED simulator.payloads.CarLightPayload$ReadableCarLightPayload@5d3f57b3 :: lighted ?== true PASSED
+@7.4s:  PASSED simulator.payloads.CanMailbox$ReadableCanMailbox@2e661950 :: getValue ?== true PASSED
+@8.4s:  PASSED simulator.payloads.CanMailbox$ReadableCanMailbox@7ed45f89 :: getFloor ?== 0 PASSED
+@8.4s:  PASSED simulator.payloads.CanMailbox$ReadableCanMailbox@c7cb61 :: getHallway ?== NONE PASSED
+
+
+******************Summary******************
+Passed:  8
+Failed:  0
+Total :  8
+

@@ -1,0 +1,56 @@
+; DriveControl_0.1_0.stats
+; 18-649 Distributed Embedded Systems
+; Group 11
+; Rahul Ramesh // rahulram. Daniel Santoro // ddsantor. David Thompson // davidtho. Jialiang Tan // jialiant
+; !@
+
+Simulator Parameters:
+Command line = -cf ../../portfolio_grp11/unit_test/DriveControl.cf -mf ../../portfolio_grp11/unit_test/DriveControl_0.1.mf -head ../../portfolio_grp11/scripts/grp11.head
+RandomSeed = 1450147011775
+CanNetworkBitTime = 0 ns
+Effective Can Bitrate = Infinity
+Run Time = null
+Real time rate = null
+Message File = ../../portfolio_grp11/unit_test/DriveControl_0.1.mf
+Controller File = ../../portfolio_grp11/unit_test/DriveControl.cf
+
+Assertion Results:
+@0.05s:  PASSED simulator.payloads.DrivePayload$ReadableDrivePayload@e026aee :: speed ?== STOP PASSED
+@0.05s:  PASSED simulator.payloads.DrivePayload$ReadableDrivePayload@14c55ea :: direction ?== STOP PASSED
+@0.15s:  PASSED simulator.payloads.CanMailbox$ReadableCanMailbox@761b9c3f :: getSpeed ?== 0 PASSED
+@0.15s:  PASSED simulator.payloads.CanMailbox$ReadableCanMailbox@d977d63 :: getDirection ?== STOP PASSED
+@0.33s:  PASSED simulator.payloads.DrivePayload$ReadableDrivePayload@20912767 :: speed ?== LEVEL PASSED
+@0.33s:  PASSED simulator.payloads.DrivePayload$ReadableDrivePayload@6ff61490 :: direction ?== DOWN PASSED
+@0.43s:  PASSED simulator.payloads.CanMailbox$ReadableCanMailbox@666c211a :: getSpeed ?== 1000 PASSED
+@0.43s:  PASSED simulator.payloads.CanMailbox$ReadableCanMailbox@447ffd8e :: getDirection ?== DOWN PASSED
+@0.5s:  PASSED simulator.payloads.DrivePayload$ReadableDrivePayload@59a683e6 :: speed ?== STOP PASSED
+@0.5s:  PASSED simulator.payloads.DrivePayload$ReadableDrivePayload@4db323af :: direction ?== STOP PASSED
+@0.6s:  PASSED simulator.payloads.CanMailbox$ReadableCanMailbox@15a1ad24 :: getSpeed ?== 0 PASSED
+@0.6s:  PASSED simulator.payloads.CanMailbox$ReadableCanMailbox@7d5e90cb :: getDirection ?== STOP PASSED
+@0.66s:  PASSED simulator.payloads.DrivePayload$ReadableDrivePayload@3d03f309 :: speed ?== LEVEL PASSED
+@0.66s:  PASSED simulator.payloads.DrivePayload$ReadableDrivePayload@1754728d :: direction ?== UP PASSED
+@0.76s:  PASSED simulator.payloads.CanMailbox$ReadableCanMailbox@2d6362fc :: getSpeed ?== 1000 PASSED
+@0.76s:  PASSED simulator.payloads.CanMailbox$ReadableCanMailbox@439daaab :: getDirection ?== UP PASSED
+@0.83s:  PASSED simulator.payloads.DrivePayload$ReadableDrivePayload@43ef490c :: speed ?== STOP PASSED
+@0.83s:  PASSED simulator.payloads.DrivePayload$ReadableDrivePayload@3c818c4 :: direction ?== STOP PASSED
+@0.93s:  PASSED simulator.payloads.CanMailbox$ReadableCanMailbox@59530fe3 :: getSpeed ?== 0 PASSED
+@0.93s:  PASSED simulator.payloads.CanMailbox$ReadableCanMailbox@6c4d44af :: getDirection ?== STOP PASSED
+@1.11s:  PASSED simulator.payloads.DrivePayload$ReadableDrivePayload@42932892 :: speed ?== LEVEL PASSED
+@1.11s:  PASSED simulator.payloads.DrivePayload$ReadableDrivePayload@16881734 :: direction ?== DOWN PASSED
+@1.72s:  PASSED simulator.payloads.DrivePayload$ReadableDrivePayload@33ce58c1 :: speed ?== LEVEL PASSED
+@1.72s:  PASSED simulator.payloads.DrivePayload$ReadableDrivePayload@4d83c7a0 :: direction ?== DOWN PASSED
+@2.33s:  PASSED simulator.payloads.DrivePayload$ReadableDrivePayload@3e3b6297 :: speed ?== LEVEL PASSED
+@2.33s:  PASSED simulator.payloads.DrivePayload$ReadableDrivePayload@6ca79a6a :: direction ?== DOWN PASSED
+@2.94s:  PASSED simulator.payloads.DrivePayload$ReadableDrivePayload@5ab2f56 :: speed ?== LEVEL PASSED
+@2.94s:  PASSED simulator.payloads.DrivePayload$ReadableDrivePayload@1183eeb0 :: direction ?== DOWN PASSED
+@3.55s:  PASSED simulator.payloads.DrivePayload$ReadableDrivePayload@6ab56229 :: speed ?== STOP PASSED
+@3.55s:  PASSED simulator.payloads.DrivePayload$ReadableDrivePayload@394df741 :: direction ?== STOP PASSED
+@3.65s:  PASSED simulator.payloads.CanMailbox$ReadableCanMailbox@644a25d5 :: getSpeed ?== 0 PASSED
+@3.65s:  PASSED simulator.payloads.CanMailbox$ReadableCanMailbox@339efe65 :: getDirection ?== STOP PASSED
+
+
+******************Summary******************
+Passed:  32
+Failed:  0
+Total :  32
+

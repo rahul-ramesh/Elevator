@@ -1,0 +1,130 @@
+; Dispatcher_0.4.mf
+; 18-649 Distributed Embedded Systems
+; Group 11
+; Rahul Ramesh // rahulram. Daniel Santoro // ddsantor. David Thompson // davidtho. Jialiang Tan // jialiant
+; !@
+
+; Unit test for Dispatcher - STATE_MOVE_HALL_CALL
+; Daniel Santoro
+
+;Note:  Assertions must be inserted more than two periods after a message or physical
+;value has been inserted to be sure that the change propagates through the system
+
+;this test file demonstrates network and framework message injections
+;and network, framework, and controller state assertions.
+
+#INCLUDE defines.mf 
+
+;; INITIAL RUN THROUGH LOGIC
+
+;check initial conditions
+;#state 'SAFETY'
+200ms A N DESIRED_FLOOR_CAN_ID DesiredFloor : getFloor == 1 
++0s A N DESIRED_FLOOR_CAN_ID DesiredFloor : getHallway == NONE 
++0s A N DESIRED_FLOOR_CAN_ID DesiredFloor : getDirection == STOP
+
+; move to STOP state
+;#transition 'PT0'
++300ms I AT_FLOOR_PERIOD N AT_FLOOR_[1][FRONT]_CAN_ID AtFloor 1 FRONT = TRUE
++0ms I AT_FLOOR_PERIOD N AT_FLOOR_[1][BACK]_CAN_ID AtFloor 1 BACK = TRUE
++0ms I DRIVE_PERIOD N DRIVE_SPEED_CAN_ID DriveSpeed = 0 STOP
++0ms I DOOR_CONTROL_PERIOD N DOOR_MOTOR_COMMAND_[FRONT][LEFT]_CAN_ID DoorMotorCommand FRONT LEFT = MDOOR_STOP
++0ms I DOOR_CONTROL_PERIOD N DOOR_MOTOR_COMMAND_[FRONT][RIGHT]_CAN_ID DoorMotorCommand FRONT RIGHT = MDOOR_STOP
++0ms I DOOR_CONTROL_PERIOD N DOOR_MOTOR_COMMAND_[BACK][LEFT]_CAN_ID DoorMotorCommand BACK LEFT = MDOOR_STOP
++0ms I DOOR_CONTROL_PERIOD N DOOR_MOTOR_COMMAND_[BACK][RIGHT]_CAN_ID DoorMotorCommand BACK RIGHT = MDOOR_STOP
++0ms I CAR_LEVEL_POSITION_PERIOD N CAR_LEVEL_POSITION_CAN_ID CarLevelPosition = 0
++0ms I DOOR_CLOSED_SENSOR_PERIOD N DOOR_CLOSED_SENSOR_[FRONT][LEFT]_CAN_ID DoorClosed FRONT LEFT = TRUE
++0ms I DOOR_CLOSED_SENSOR_PERIOD N DOOR_CLOSED_SENSOR_[FRONT][RIGHT]_CAN_ID DoorClosed FRONT RIGHT = TRUE
++0ms I DOOR_CLOSED_SENSOR_PERIOD N DOOR_CLOSED_SENSOR_[BACK][LEFT]_CAN_ID DoorClosed BACK LEFT = TRUE
++0ms I DOOR_CLOSED_SENSOR_PERIOD N DOOR_CLOSED_SENSOR_[BACK][RIGHT]_CAN_ID DoorClosed BACK RIGHT = TRUE
+
+;#state 'STOP'
++300ms A N DESIRED_FLOOR_CAN_ID DesiredFloor : getFloor == 0 
++0s A N DESIRED_FLOOR_CAN_ID DesiredFloor : getHallway == NONE 
++0s A N DESIRED_FLOOR_CAN_ID DesiredFloor : getDirection == STOP
+
+; transition to state MOVE_HALL_CALL due to a Hall call at floor 5 FRONT DOWN
+;#transition 'PT3'
++300ms I HALL_BUTTON_CONTROL_PERIOD N HALL_CALL_[5][FRONT][DOWN]_CAN_ID HallCall 5 FRONT DOWN = TRUE
+
+;#state 'MOVE_HALL_CALL'
++300ms A N DESIRED_FLOOR_CAN_ID DesiredFloor : getFloor == 5 
++0s A N DESIRED_FLOOR_CAN_ID DesiredFloor : getHallway == FRONT 
++0s A N DESIRED_FLOOR_CAN_ID DesiredFloor : getDirection == UP
+
+;; ENSURE ROBUSTNESS TO CARCALLS/HALL CALLS THAT SHOULD NOT BE CONSIDERED
+
+; Ensure that calls that should not matter in fact do not matter
++300ms I HALL_BUTTON_CONTROL_PERIOD N HALL_CALL_[2][BACK][UP]_CAN_ID HallCall 2 BACK UP = TRUE
+
+;#state 'MOVE_HALL_CALL'
++300ms A N DESIRED_FLOOR_CAN_ID DesiredFloor : getFloor == 5 
++0s A N DESIRED_FLOOR_CAN_ID DesiredFloor : getHallway == FRONT 
++0s A N DESIRED_FLOOR_CAN_ID DesiredFloor : getDirection == UP
+
+; Ensure that calls that should not matter in fact do not matter
++300ms I HALL_BUTTON_CONTROL_PERIOD N HALL_CALL_[6][FRONT][DOWN]_CAN_ID HallCall 6 FRONT DOWN = TRUE
+
+;#state 'MOVE_HALL_CALL'
++300ms A N DESIRED_FLOOR_CAN_ID DesiredFloor : getFloor == 5 
++0s A N DESIRED_FLOOR_CAN_ID DesiredFloor : getHallway == FRONT 
++0s A N DESIRED_FLOOR_CAN_ID DesiredFloor : getDirection == UP
+
+; Ensure that calls that should not matter in fact do not matter
++300ms I HALL_BUTTON_CONTROL_PERIOD N HALL_CALL_[3][FRONT][DOWN]_CAN_ID HallCall 3 FRONT DOWN = TRUE
+
+;#state 'MOVE_HALL_CALL'
++300ms A N DESIRED_FLOOR_CAN_ID DesiredFloor : getFloor == 5 
++0s A N DESIRED_FLOOR_CAN_ID DesiredFloor : getHallway == FRONT 
++0s A N DESIRED_FLOOR_CAN_ID DesiredFloor : getDirection == UP
+
+; Ensure that calls that should not matter in fact do not matter
++300ms I HALL_BUTTON_CONTROL_PERIOD N HALL_CALL_[7][BACK][UP]_CAN_ID HallCall 7 BACK UP = TRUE
+
+;#state 'MOVE_HALL_CALL'
++300ms A N DESIRED_FLOOR_CAN_ID DesiredFloor : getFloor == 5 
++0s A N DESIRED_FLOOR_CAN_ID DesiredFloor : getHallway == FRONT 
++0s A N DESIRED_FLOOR_CAN_ID DesiredFloor : getDirection == UP
+
+; Ensure that calls that should not matter in fact do not matter
++300ms I CAR_BUTTON_CONTROL_PERIOD  N CAR_CALL_[8][FRONT]_CAN_ID CarCall 8 FRONT = TRUE
+
+;#state 'MOVE_HALL_CALL'
++300ms A N DESIRED_FLOOR_CAN_ID DesiredFloor : getFloor == 5 
++0s A N DESIRED_FLOOR_CAN_ID DesiredFloor : getHallway == FRONT 
++0s A N DESIRED_FLOOR_CAN_ID DesiredFloor : getDirection == UP
+
+; Ensure that calls that should not matter in fact do not matter
++300ms I CAR_BUTTON_CONTROL_PERIOD  N CAR_CALL_[3][FRONT]_CAN_ID CarCall 3 FRONT = TRUE
+
+;#state 'MOVE_HALL_CALL'
++300ms A N DESIRED_FLOOR_CAN_ID DesiredFloor : getFloor == 5 
++0s A N DESIRED_FLOOR_CAN_ID DesiredFloor : getHallway == FRONT 
++0s A N DESIRED_FLOOR_CAN_ID DesiredFloor : getDirection == UP
+
+;; CLEANUP EXTRA CALLS
++0ms I HALL_BUTTON_CONTROL_PERIOD N HALL_CALL_[2][BACK][UP]_CAN_ID HallCall 2 BACK UP = FALSE
++0ms I HALL_BUTTON_CONTROL_PERIOD N HALL_CALL_[6][FRONT][DOWN]_CAN_ID HallCall 6 FRONT DOWN = FALSE
++0ms I HALL_BUTTON_CONTROL_PERIOD N HALL_CALL_[3][FRONT][DOWN]_CAN_ID HallCall 3 FRONT DOWN = FALSE
++0ms I HALL_BUTTON_CONTROL_PERIOD N HALL_CALL_[7][BACK][UP]_CAN_ID HallCall 7 BACK UP = FALSE
++0ms I CAR_BUTTON_CONTROL_PERIOD  N CAR_CALL_[8][FRONT]_CAN_ID CarCall 8 FRONT = FALSE
++0ms I CAR_BUTTON_CONTROL_PERIOD  N CAR_CALL_[3][FRONT]_CAN_ID CarCall 3 FRONT = FALSE
+
+;; TRANSITION TO FLOOR_SERVICED
+
+; leave floor 1
++300ms I AT_FLOOR_PERIOD N AT_FLOOR_[1][FRONT]_CAN_ID AtFloor 1 FRONT = FALSE
++0ms I AT_FLOOR_PERIOD N AT_FLOOR_[1][BACK]_CAN_ID AtFloor 1 BACK = FALSE
+
+; move to FLOOR_SERVICED state
+;#transition 'PT6'
++300ms I AT_FLOOR_PERIOD N AT_FLOOR_[5][FRONT]_CAN_ID AtFloor 5 FRONT = TRUE
++0ms I DOOR_CLOSED_SENSOR_PERIOD N DOOR_CLOSED_SENSOR_[FRONT][LEFT]_CAN_ID DoorClosed FRONT LEFT = FALSE
++0ms I DOOR_CLOSED_SENSOR_PERIOD N DOOR_CLOSED_SENSOR_[FRONT][RIGHT]_CAN_ID DoorClosed FRONT RIGHT = FALSE
++0ms I HALL_BUTTON_CONTROL_PERIOD N HALL_CALL_[5][FRONT][DOWN]_CAN_ID HallCall 5 FRONT DOWN = FALSE
+
+; moved to state FLOOR_SERVICED with no other calls pending
+;#state 'FLOOR_SERVICED'
++500ms A N DESIRED_FLOOR_CAN_ID DesiredFloor : getFloor == 0 
++0s A N DESIRED_FLOOR_CAN_ID DesiredFloor : getHallway == NONE 
++0s A N DESIRED_FLOOR_CAN_ID DesiredFloor : getDirection == UP

@@ -1,0 +1,38 @@
+; sd6a_0.stats
+; 18-649 Distributed Embedded Systems
+; Group 11
+; Rahul Ramesh // rahulram. Daniel Santoro // ddsantor. David Thompson // davidtho. Jialiang Tan // jialiant
+; !@
+
+Simulator Parameters:
+Command line = -cf ../../portfolio_grp11/integration_test/sd6a.cf -mf ../../portfolio_grp11/integration_test/sd6a.mf -head ../../portfolio_grp11/scripts/grp11.head
+RandomSeed = 1450147629777
+CanNetworkBitTime = 0 ns
+Effective Can Bitrate = Infinity
+Run Time = null
+Real time rate = null
+Message File = ../../portfolio_grp11/integration_test/sd6a.mf
+Controller File = ../../portfolio_grp11/integration_test/sd6a.cf
+
+Assertion Results:
+@0.1s:  PASSED simulator.payloads.DoorMotorPayload$ReadableDoorMotorPayload@18420e86 :: command ?== STOP PASSED
+@0.1s:  PASSED simulator.payloads.DoorMotorPayload$ReadableDoorMotorPayload@54aee392 :: command ?== STOP PASSED
+@1.2s:  PASSED simulator.payloads.DoorMotorPayload$ReadableDoorMotorPayload@5e46b372 :: command ?== OPEN PASSED
+@1.2s:  PASSED simulator.payloads.DoorMotorPayload$ReadableDoorMotorPayload@72e9625d :: command ?== OPEN PASSED
+@3.8s:  PASSED simulator.payloads.DoorMotorPayload$ReadableDoorMotorPayload@3d39cb72 :: command ?== STOP PASSED
+@3.8s:  PASSED simulator.payloads.DoorMotorPayload$ReadableDoorMotorPayload@74da0c91 :: command ?== STOP PASSED
+@9.8s:  PASSED simulator.payloads.DoorMotorPayload$ReadableDoorMotorPayload@8b3826f :: command ?== CLOSE PASSED
+@9.8s:  PASSED simulator.payloads.DoorMotorPayload$ReadableDoorMotorPayload@5679f0ec :: command ?== CLOSE PASSED
+@11.58s:  PASSED simulator.payloads.DoorMotorPayload$ReadableDoorMotorPayload@3a093ffa :: command ?== OPEN PASSED
+@11.58s:  PASSED simulator.payloads.DoorMotorPayload$ReadableDoorMotorPayload@5dd22889 :: command ?== OPEN PASSED
+@13.08s:  PASSED simulator.payloads.DoorMotorPayload$ReadableDoorMotorPayload@6ee47e99 :: command ?== STOP PASSED
+@13.08s:  PASSED simulator.payloads.DoorMotorPayload$ReadableDoorMotorPayload@1c4600f0 :: command ?== STOP PASSED
+@19.08s:  PASSED simulator.payloads.DoorMotorPayload$ReadableDoorMotorPayload@40e51e67 :: command ?== CLOSE PASSED
+@19.08s:  PASSED simulator.payloads.DoorMotorPayload$ReadableDoorMotorPayload@633835b4 :: command ?== CLOSE PASSED
+
+
+******************Summary******************
+Passed:  14
+Failed:  0
+Total :  14
+

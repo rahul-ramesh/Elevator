@@ -1,0 +1,32 @@
+; HallButtonControl_0.stats
+; 18-649 Distributed Embedded Systems
+; Group 11
+; Rahul Ramesh // rahulram. Daniel Santoro // ddsantor. David Thompson // davidtho. Jialiang Tan // jialiant
+; !@
+
+Simulator Parameters:
+Command line = -cf ../../portfolio_grp11/unit_test/HallButtonControl.cf -mf ../../portfolio_grp11/unit_test/HallButtonControl.mf -head ../../portfolio_grp11/scripts/grp11.head
+RandomSeed = 1450147024638
+CanNetworkBitTime = 0 ns
+Effective Can Bitrate = Infinity
+Run Time = null
+Real time rate = null
+Message File = ../../portfolio_grp11/unit_test/HallButtonControl.mf
+Controller File = ../../portfolio_grp11/unit_test/HallButtonControl.cf
+
+Assertion Results:
+@0.8s:  PASSED simulator.payloads.HallLightPayload$ReadableHallLightPayload@4e42751f :: lighted ?== false PASSED
+@0.8s:  PASSED simulator.payloads.CanMailbox$ReadableCanMailbox@1d4e91f8 :: getValue ?== false PASSED
+@1.6s:  PASSED simulator.payloads.HallLightPayload$ReadableHallLightPayload@6d347991 :: lighted ?== true PASSED
+@1.6s:  PASSED simulator.payloads.CanMailbox$ReadableCanMailbox@6f84a0b7 :: getValue ?== false PASSED
+@2.4s:  PASSED simulator.payloads.HallLightPayload$ReadableHallLightPayload@5fe9fb74 :: lighted ?== true PASSED
+@2.4s:  PASSED simulator.payloads.CanMailbox$ReadableCanMailbox@4dd3c6fd :: getValue ?== true PASSED
+@3.2s:  PASSED simulator.payloads.HallLightPayload$ReadableHallLightPayload@712e60f3 :: lighted ?== false PASSED
+@3.2s:  PASSED simulator.payloads.CanMailbox$ReadableCanMailbox@58a58c89 :: getValue ?== false PASSED
+
+
+******************Summary******************
+Passed:  8
+Failed:  0
+Total :  8
+

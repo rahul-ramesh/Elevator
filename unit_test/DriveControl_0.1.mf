@@ -1,0 +1,122 @@
+; DriveControl_0.1.mf
+; 18-649 Distributed Embedded Systems
+; Group 11
+; Rahul Ramesh // rahulram. Daniel Santoro // ddsantor. David Thompson // davidtho. Jialiang Tan // jialiant
+; !@
+
+; Unit test for DriveControl - STATE_LEVEL
+; Daniel Santoro
+; Last modified 2015-10-05
+
+#INCLUDE defines.mf 
+
+;check initial conditions
+;#state 'STOP'
+0s I DRIVE_PERIOD F DriveSpeed = STOP 0
++50ms A F Drive : speed == STOP 
++0s A F Drive : direction == STOP
++100ms A N DRIVE_SPEED_CAN_ID DriveSpeed : getSpeed == 0 
++0s A N DRIVE_SPEED_CAN_ID DriveSpeed : getDirection == STOP
+
+;move to level state - DOWN
+;#transition 'PT11'
++10ms I AT_FLOOR_PERIOD N AT_FLOOR_[1][FRONT]_CAN_ID AtFloor 1 FRONT = TRUE
++10ms I AT_FLOOR_PERIOD N AT_FLOOR_[1][BACK]_CAN_ID AtFloor 1 BACK = TRUE
++10ms I LEVEL_SENSOR_PERIOD N LEVEL_SENSOR_[UP]_CAN_ID Leveling UP = TRUE
++100ms I LEVEL_SENSOR_PERIOD N LEVEL_SENSOR_[DOWN]_CAN_ID Leveling DOWN = FALSE
+
+;check leveling state outputs
+;#state 'LEVEL'
++50ms A F Drive : speed == LEVEL 
++0s A F Drive : direction == DOWN
+
+; inject drive speed value
++50ms I DRIVE_PERIOD F DriveSpeed = DOWN 1
+
+; assert drive speed values
++50ms A N DRIVE_SPEED_CAN_ID DriveSpeed : getSpeed == 1000 
++0s A N DRIVE_SPEED_CAN_ID DriveSpeed : getDirection == DOWN
+
+;move back to STOP state
+;#transition 'PT12'
++10ms I LEVEL_SENSOR_PERIOD N LEVEL_SENSOR_[DOWN]_CAN_ID Leveling DOWN = TRUE
++10ms I DRIVE_PERIOD F DriveSpeed = STOP 0
+
+;#state 'STOP'
++50ms A F Drive : speed == STOP 
++0s A F Drive : direction == STOP
++100ms A N DRIVE_SPEED_CAN_ID DriveSpeed : getSpeed == 0 
++0s A N DRIVE_SPEED_CAN_ID DriveSpeed : getDirection == STOP
+
+;move to level state - UP
+;#transition 'PT11'
++10ms I LEVEL_SENSOR_PERIOD N LEVEL_SENSOR_[UP]_CAN_ID Leveling UP = FALSE
+
+;check leveling state outputs
+;#state 'LEVEL'
++50ms A F Drive : speed == LEVEL 
++0s A F Drive : direction == UP
+
+; inject drive speed value
++50ms I DRIVE_PERIOD F DriveSpeed = UP 1
+
+; assert drive speed value
++50ms A N DRIVE_SPEED_CAN_ID DriveSpeed : getSpeed == 1000 
++0s A N DRIVE_SPEED_CAN_ID DriveSpeed : getDirection == UP
+
+;move back to WAIT state
+;#transition 'PT12'
++10ms I LEVEL_SENSOR_PERIOD N LEVEL_SENSOR_[UP]_CAN_ID Leveling UP = TRUE
++10ms I DRIVE_PERIOD F DriveSpeed = STOP 0
+
+;#state 'STOP'
++50ms A F Drive : speed == STOP 
++0s A F Drive : direction == STOP
++100ms A N DRIVE_SPEED_CAN_ID DriveSpeed : getSpeed == 0 
++0s A N DRIVE_SPEED_CAN_ID DriveSpeed : getDirection == STOP
+
+;move to level state - DOWN
+;#transition 'PT11'
++10ms I AT_FLOOR_PERIOD N AT_FLOOR_[1][FRONT]_CAN_ID AtFloor 1 FRONT = TRUE
++10ms I AT_FLOOR_PERIOD N AT_FLOOR_[1][BACK]_CAN_ID AtFloor 1 BACK = TRUE
++10ms I LEVEL_SENSOR_PERIOD N LEVEL_SENSOR_[UP]_CAN_ID Leveling UP = TRUE
++100ms I LEVEL_SENSOR_PERIOD N LEVEL_SENSOR_[DOWN]_CAN_ID Leveling DOWN = FALSE
+
+;check leveling state outputs
+;#state 'LEVEL'
++50ms A F Drive : speed == LEVEL 
++0s A F Drive : direction == DOWN
+
+
+; ensure we don't move to stop state for something we shouldn't
+
+; overweight
++10ms I WEIGHT_PERIOD N CAR_WEIGHT_CAN_ID CarWeight = 15000
+
+;#state 'LEVEL'
++600ms A F Drive : speed == LEVEL 
++0s A F Drive : direction == DOWN
+
+; door motor commanded to open
++10ms I DOOR_CONTROL_PERIOD N DOOR_MOTOR_COMMAND_[BACK][LEFT]_CAN_ID DoorMotorCommand BACK LEFT = MDOOR_OPEN
+
+;#state 'LEVEL'
++600ms A F Drive : speed == LEVEL 
++0s A F Drive : direction == DOWN
+
+; door not closed
++10ms I DOOR_CLOSED_SENSOR_PERIOD N DOOR_CLOSED_SENSOR_[BACK][LEFT]_CAN_ID DoorClosed BACK LEFT = FALSE
+
+;#state 'LEVEL'
++600ms A F Drive : speed == LEVEL 
++0s A F Drive : direction == DOWN
+
+; move back to STOP state via emergency brake
+;#transition 'PT24'
++10ms I 0s N EMERGENCY_BRAKE_CAN_ID SafetySensor = TRUE
+
+;#state 'STOP'
++600ms A F Drive : speed == STOP 
++0s A F Drive : direction == STOP
++100ms A N DRIVE_SPEED_CAN_ID DriveSpeed : getSpeed == 0 
++0s A N DRIVE_SPEED_CAN_ID DriveSpeed : getDirection == STOP

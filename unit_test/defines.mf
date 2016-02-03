@@ -1,0 +1,132 @@
+; defines.mf
+; 18-649 Distributed Embedded Systems
+; Group 11
+; Rahul Ramesh // rahulram. Daniel Santoro // ddsantor. David Thompson // davidtho. Jialiang Tan // jialiant
+; !@
+
+;The following lines are automatically generated and designed to be compatible with the .mf #DEFINE directive.
+;controller periods
+#DEFINE HALL_BUTTON_CONTROL_PERIOD                    100.0ms
+#DEFINE CAR_BUTTON_CONTROL_PERIOD                     100.0ms
+#DEFINE LANTERN_CONTROL_PERIOD                        200.0ms
+#DEFINE CAR_POSITION_CONTROL_PERIOD                   50.0ms
+#DEFINE DISPATCHER_PERIOD                             50.0ms
+#DEFINE DOOR_CONTROL_PERIOD                           10.0ms
+#DEFINE DRIVE_CONTROL_PERIOD                          10.0ms
+
+;module periods
+#DEFINE AT_FLOOR_PERIOD                               50.0ms
+#DEFINE WEIGHT_PERIOD                                 200.0ms
+#DEFINE CAR_LEVEL_POSITION_PERIOD                     50.0ms
+#DEFINE DOOR_OPENED_SENSOR_PERIOD                     200.0ms
+#DEFINE DOOR_CLOSED_SENSOR_PERIOD                     100.0ms
+#DEFINE DOOR_REVERSAL_NETWORK_PERIOD                  10.0ms
+#DEFINE DRIVE_PERIOD                                  10.0ms
+#DEFINE HOISTWAY_LIMIT_PERIOD                         200.0ms
+#DEFINE LEVEL_SENSOR_PERIOD                           10.0ms
+
+;Controller CAN Ids
+;NOTE:  These IDs assume you use the ReplicationComputer offsets and MessageDictionary base values
+#DEFINE DRIVE_SPEED_CAN_ID                             0x8100000
+#DEFINE DRIVE_COMMAND_CAN_ID                           0x8FF0000
+#DEFINE DESIRED_FLOOR_CAN_ID                           0x8605000
+#DEFINE CAR_POSITION_CAN_ID                            0x8FFE000
+#DEFINE DOOR_MOTOR_COMMAND_[FRONT][LEFT]_CAN_ID        0x8201000
+#DEFINE DOOR_MOTOR_COMMAND_[FRONT][RIGHT]_CAN_ID       0x8201001
+#DEFINE DOOR_MOTOR_COMMAND_[BACK][LEFT]_CAN_ID         0x8201002
+#DEFINE DOOR_MOTOR_COMMAND_[BACK][RIGHT]_CAN_ID        0x8201003
+#DEFINE HALL_CALL_[1][FRONT][UP]_CAN_ID                0x8A09000
+#DEFINE HALL_LIGHT_[1][FRONT][UP]_CAN_ID               0x8FF9000
+#DEFINE HALL_CALL_[1][BACK][UP]_CAN_ID                 0x8A09002
+#DEFINE HALL_LIGHT_[1][BACK][UP]_CAN_ID                0x8FF9002
+#DEFINE HALL_CALL_[2][BACK][UP]_CAN_ID                 0x8A09006
+#DEFINE HALL_LIGHT_[2][BACK][UP]_CAN_ID                0x8FF9006
+#DEFINE HALL_CALL_[2][BACK][DOWN]_CAN_ID               0x8A09007
+#DEFINE HALL_LIGHT_[2][BACK][DOWN]_CAN_ID              0x8FF9007
+#DEFINE HALL_CALL_[3][FRONT][UP]_CAN_ID                0x8A09008
+#DEFINE HALL_LIGHT_[3][FRONT][UP]_CAN_ID               0x8FF9008
+#DEFINE HALL_CALL_[3][FRONT][DOWN]_CAN_ID              0x8A09009
+#DEFINE HALL_LIGHT_[3][FRONT][DOWN]_CAN_ID             0x8FF9009
+#DEFINE HALL_CALL_[4][FRONT][UP]_CAN_ID                0x8A0900C
+#DEFINE HALL_LIGHT_[4][FRONT][UP]_CAN_ID               0x8FF900C
+#DEFINE HALL_CALL_[4][FRONT][DOWN]_CAN_ID              0x8A0900D
+#DEFINE HALL_LIGHT_[4][FRONT][DOWN]_CAN_ID             0x8FF900D
+#DEFINE HALL_CALL_[5][FRONT][UP]_CAN_ID                0x8A09010
+#DEFINE HALL_LIGHT_[5][FRONT][UP]_CAN_ID               0x8FF9010
+#DEFINE HALL_CALL_[5][FRONT][DOWN]_CAN_ID              0x8A09011
+#DEFINE HALL_LIGHT_[5][FRONT][DOWN]_CAN_ID             0x8FF9011
+#DEFINE HALL_CALL_[6][FRONT][UP]_CAN_ID                0x8A09014
+#DEFINE HALL_LIGHT_[6][FRONT][UP]_CAN_ID               0x8FF9014
+#DEFINE HALL_CALL_[6][FRONT][DOWN]_CAN_ID              0x8A09015
+#DEFINE HALL_LIGHT_[6][FRONT][DOWN]_CAN_ID             0x8FF9015
+#DEFINE HALL_CALL_[7][FRONT][UP]_CAN_ID                0x8A09018
+#DEFINE HALL_LIGHT_[7][FRONT][UP]_CAN_ID               0x8FF9018
+#DEFINE HALL_CALL_[7][FRONT][DOWN]_CAN_ID              0x8A09019
+#DEFINE HALL_LIGHT_[7][FRONT][DOWN]_CAN_ID             0x8FF9019
+#DEFINE HALL_CALL_[7][BACK][UP]_CAN_ID                 0x8A0901A
+#DEFINE HALL_LIGHT_[7][BACK][UP]_CAN_ID                0x8FF901A
+#DEFINE HALL_CALL_[7][BACK][DOWN]_CAN_ID               0x8A0901B
+#DEFINE HALL_LIGHT_[7][BACK][DOWN]_CAN_ID              0x8FF901B
+#DEFINE HALL_CALL_[8][FRONT][DOWN]_CAN_ID              0x8A0901D
+#DEFINE HALL_LIGHT_[8][FRONT][DOWN]_CAN_ID             0x8FF901D
+#DEFINE CAR_CALL_[1][FRONT]_CAN_ID                     0x8B0A000
+#DEFINE CAR_LIGHT_[1][FRONT]_CAN_ID                    0x8FFA000
+#DEFINE CAR_CALL_[1][BACK]_CAN_ID                      0x8B0A001
+#DEFINE CAR_LIGHT_[1][BACK]_CAN_ID                     0x8FFA001
+#DEFINE CAR_CALL_[2][BACK]_CAN_ID                      0x8B0A003
+#DEFINE CAR_LIGHT_[2][BACK]_CAN_ID                     0x8FFA003
+#DEFINE CAR_CALL_[3][FRONT]_CAN_ID                     0x8B0A004
+#DEFINE CAR_LIGHT_[3][FRONT]_CAN_ID                    0x8FFA004
+#DEFINE CAR_CALL_[4][FRONT]_CAN_ID                     0x8B0A006
+#DEFINE CAR_LIGHT_[4][FRONT]_CAN_ID                    0x8FFA006
+#DEFINE CAR_CALL_[5][FRONT]_CAN_ID                     0x8B0A008
+#DEFINE CAR_LIGHT_[5][FRONT]_CAN_ID                    0x8FFA008
+#DEFINE CAR_CALL_[6][FRONT]_CAN_ID                     0x8B0A00A
+#DEFINE CAR_LIGHT_[6][FRONT]_CAN_ID                    0x8FFA00A
+#DEFINE CAR_CALL_[7][FRONT]_CAN_ID                     0x8B0A00C
+#DEFINE CAR_LIGHT_[7][FRONT]_CAN_ID                    0x8FFA00C
+#DEFINE CAR_CALL_[7][BACK]_CAN_ID                      0x8B0A00D
+#DEFINE CAR_LIGHT_[7][BACK]_CAN_ID                     0x8FFA00D
+#DEFINE CAR_CALL_[8][FRONT]_CAN_ID                     0x8B0A00E
+#DEFINE CAR_LIGHT_[8][FRONT]_CAN_ID                    0x8FFA00E
+#DEFINE CAR_LANTERN_[UP]_CAN_ID                        0x8FFF000
+#DEFINE CAR_LANTERN_[DOWN]_CAN_ID                      0x8FFF001
+
+;Module CAN Ids
+;NOTE:  These IDs assume you use the ReplicationComputer offsets and MessageDictionary base values
+#DEFINE LEVEL_SENSOR_[UP]_CAN_ID                       0x8403000
+#DEFINE LEVEL_SENSOR_[DOWN]_CAN_ID                     0x8403001
+#DEFINE AT_FLOOR_[1][FRONT]_CAN_ID                     0x8706000
+#DEFINE AT_FLOOR_[1][BACK]_CAN_ID                      0x8706001
+#DEFINE AT_FLOOR_[2][BACK]_CAN_ID                      0x8706003
+#DEFINE AT_FLOOR_[3][FRONT]_CAN_ID                     0x8706004
+#DEFINE AT_FLOOR_[4][FRONT]_CAN_ID                     0x8706006
+#DEFINE AT_FLOOR_[5][FRONT]_CAN_ID                     0x8706008
+#DEFINE AT_FLOOR_[6][FRONT]_CAN_ID                     0x870600A
+#DEFINE AT_FLOOR_[7][FRONT]_CAN_ID                     0x870600C
+#DEFINE AT_FLOOR_[7][BACK]_CAN_ID                      0x870600D
+#DEFINE AT_FLOOR_[8][FRONT]_CAN_ID                     0x870600E
+#DEFINE CAR_LEVEL_POSITION_CAN_ID                      0x8807000
+#DEFINE CAR_WEIGHT_CAN_ID                              0x8C0C000
+#DEFINE CAR_WEIGHT_ALARM_CAN_ID                        0x8E0C000
+#DEFINE DOOR_CLOSED_SENSOR_[FRONT][LEFT]_CAN_ID        0x8908000
+#DEFINE DOOR_OPEN_SENSOR_[FRONT][LEFT]_CAN_ID          0x8D0B000
+#DEFINE DOOR_REVERSAL_SENSOR_[FRONT][LEFT]_CAN_ID      0x8302000
+#DEFINE DOOR_CLOSED_SENSOR_[FRONT][RIGHT]_CAN_ID       0x8908001
+#DEFINE DOOR_OPEN_SENSOR_[FRONT][RIGHT]_CAN_ID         0x8D0B001
+#DEFINE DOOR_REVERSAL_SENSOR_[FRONT][RIGHT]_CAN_ID     0x8302001
+#DEFINE DOOR_CLOSED_SENSOR_[BACK][LEFT]_CAN_ID         0x8908002
+#DEFINE DOOR_OPEN_SENSOR_[BACK][LEFT]_CAN_ID           0x8D0B002
+#DEFINE DOOR_REVERSAL_SENSOR_[BACK][LEFT]_CAN_ID       0x8302002
+#DEFINE DOOR_CLOSED_SENSOR_[BACK][RIGHT]_CAN_ID        0x8908003
+#DEFINE DOOR_OPEN_SENSOR_[BACK][RIGHT]_CAN_ID          0x8D0B003
+#DEFINE DOOR_REVERSAL_SENSOR_[BACK][RIGHT]_CAN_ID      0x8302003
+#DEFINE HOISTWAY_LIMIT_[UP]_CAN_ID                     0x8F0D000
+#DEFINE HOISTWAY_LIMIT_[DOWN]_CAN_ID                   0x8F0D001
+#DEFINE EMERGENCY_BRAKE_CAN_ID                         0x8504000
+
+;
+#DEFINE MDOOR_OPEN 0
+#DEFINE MDOOR_CLOSE 1
+#DEFINE MDOOR_STOP 2
+#DEFINE MDOOR_NUDGE 3

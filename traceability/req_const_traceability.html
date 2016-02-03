@@ -1,0 +1,548 @@
+<!-- req_const_traceability.html -->
+<!-- 18-649 Distributed Embedded Systems -->
+<!-- Group 11 -->
+<!-- Rahul Ramesh // rahulram. Daniel Santoro // ddsantor. David Thompson // davidtho. Jialiang Tan // jialiant -->
+<!-- !@ -->
+
+<!DOCTYPE HTML PUBLIC "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  <meta name="Author" content="Nicholas H. Zamora">
+  <title>18-649 Requirements to Constraints Traceability</title>
+</head>
+<body>
+<center>
+<center>
+
+<!-- Title -->
+<h1> 18649 - Requirements to Constraints Traceability<br></h1>
+</center>
+<hr style="width: 100%; height: 2px;">
+<div style="text-align: left;"> 18649 Fall 2015<br>
+Group 11 - Rahul Ramesh // rahulram. Daniel Santoro // ddsantor. David Thompson // davidtho. Jialiang Tan // jialiant.&nbsp; <br>
+</div>
+
+<!-- Description -->
+<hr style="width: 100%; height: 2px;"></center>
+<p>This table maintains traceability between the requirements behaviors and the constraints given for each module.<br> </p>
+<p><u> There is a row in this table for every behavioral requirement in the elevator control system, Sections 5 through 11.</u> You do not need to create
+table rows for the environmental objects, Sections 1 through 4.&nbsp; There constraints are already given in the columns.<br>
+</p>
+<p>Modifications in the the given behaviors for the DoorControl, CarPositionControl and Dispatcher, this traceability table
+are reflected. This involved changing some of the given answers in the table.<br>
+</p>
+The name of each team member who did the
+traceability for each object is noted.<br>
+<br>
+
+<!-- Actual Traceability Table -->
+<hr width="100%">&nbsp;&nbsp; <br>
+<table style="width: 1535px; height: 1624px;" border="1" cellpadding="3" frame="border">
+  <tbody>
+    <!-- DOOR CONTROL -->
+    <tr>
+      <td colspan="6" rowspan="1" style="vertical-align: top; background-color: rgb(221, 221, 221);"><b>DoorControl</b> - Completed by David Thompson // davidtho<br></td>
+    </tr>
+    <!-- Door Control Contraints -->
+    <tr>
+      <td><u><b>Behavioral Requirements/Constraints</b></u></td>
+      <td style="vertical-align: top;">5.1 Doors closed when not at floor<br></td>
+      <td style="vertical-align: top;">5.2 Door reversal -&gt; doors open<br></td>
+      <td style="vertical-align: top;">5.3 Doors keep moving<br></td>
+      <td style="vertical-align: top;">5.4 Identical commands<br></td>
+      <td>5.5 Overweight -&gt; doors open<br></td>
+    </tr>
+    <!-- Door Control Reqirements -->
+    <!-- 5.6.1a -->
+    <tr>
+      <td>5.6.1a At new floor -> Doors open<br></td>
+      <td style="vertical-align: top;">~<br></td>
+      <td style="vertical-align: top;">~<br></td>
+      <td style="vertical-align: top;">~<br></td>
+      <td style="vertical-align: top;">X<br></td>
+      <td style="vertical-align: top;">~<br></td>
+    </tr>
+    <!-- 5.6.1b -->
+    <tr>
+      <td style="vertical-align: top;">5.6.1b	At new floor -> Set Countdown<br></td>
+      <td style="vertical-align: top;">~<br></td>
+      <td style="vertical-align: top;">~<br></td>
+      <td style="vertical-align: top;">~<br></td>
+      <td style="vertical-align: top;">X<br></td>
+      <td style="vertical-align: top;">~<br></td>
+    </tr>
+    <!-- 5.7.1 -->
+    <tr>
+      <td>5.7.1	Door opened -> DoorMotor Stop<br></td>
+      <td style="vertical-align: top;">~<br></td>
+      <td style="vertical-align: top;">~<br></td>
+      <td style="vertical-align: top;">~<br></td>
+      <td style="vertical-align: top;">X<br></td>
+      <td style="vertical-align: top;">~<br></td>
+    </tr>
+    <!-- 5.7.2 -->
+    <tr>
+      <td style="vertical-align: top;">5.7.2 door open --&gt; decrement Counter<br></td>
+      <td style="vertical-align: top;">~<br></td>
+      <td style="vertical-align: top;">~<br></td>
+      <td style="vertical-align: top;">~<br></td>
+      <td style="vertical-align: top;">X<br></td>
+      <td style="vertical-align: top;">~<br></td>
+    </tr>
+    <!-- 5.8.1 -->
+    <tr>
+      <td>5.8.1 door close --&gt; stop door<br></td>
+      <td style="vertical-align: top;">~<br></td>
+      <td style="vertical-align: top;">~<br></td>
+      <td style="vertical-align: top;">X<br></td>
+      <td style="vertical-align: top;">X<br></td>
+      <td style="vertical-align: top;">~<br>
+      </td>
+    </tr>
+    <!-- 5.8.2 -->
+    <tr>
+      <td>5.8.2	Door closed -> AlreadyReversed reset</td>
+      <td style="vertical-align: top;">~<br></td>
+      <td style="vertical-align: top;">~<br></td>
+      <td style="vertical-align: top;">X<br></td>
+      <td style="vertical-align: top;">~<br></td>
+      <td style="vertical-align: top;">~<br></td>
+    </tr>
+    <!-- 5.9 -->
+    <tr>
+      <td> 5.9	CountDown <= 0 -> DoorMotor Close<br></td>
+      <td style="vertical-align: top;">X<br></td>
+      <td style="vertical-align: top;">~<br></td>
+      <td style="vertical-align: top;">~<br></td>
+      <td style="vertical-align: top;">X<br></td>
+      <td style="vertical-align: top;">~<br></td>
+    </tr>
+    <!-- 5.12 -->
+    <tr>
+      <td>5.10	Overweight -> Doors Open<br></td>
+      <td style="vertical-align: top;">~<br></td>
+      <td style="vertical-align: top;">~<br></td>
+      <td style="vertical-align: top;">~<br></td>
+      <td style="vertical-align: top;">X<br></td>
+      <td style="vertical-align: top;">X<br></td>
+    </tr>
+    <!-- 5.12 -->
+    <tr>
+      <td> 5.11	Set Dwell<br></td>
+      <td style="vertical-align: top;">~<br></td>
+      <td style="vertical-align: top;">~<br></td>
+      <td style="vertical-align: top;">~<br></td>
+      <td style="vertical-align: top;">~<br></td>
+      <td style="vertical-align: top;">~<br></td>
+    </tr>
+    <!-- 5.12 -->
+    <tr>
+      <td> 5.12	Set mDoorMotor<br></td>
+      <td style="vertical-align: top;">~<br></td>
+      <td style="vertical-align: top;">~<br></td>
+      <td style="vertical-align: top;">~<br></td>
+      <td style="vertical-align: top;">~<br></td>
+      <td style="vertical-align: top;">~<br></td>
+    </tr>
+    <!-- 5.13.1a -->
+    <tr>
+      <td> 5.13.1a	First time doorReversal -> DoorMotor Open<br></td>
+      <td style="vertical-align: top;">~<br></td>
+      <td style="vertical-align: top;">X<br></td>
+      <td style="vertical-align: top;">~<br></td>
+      <td style="vertical-align: top;">X<br></td>
+      <td style="vertical-align: top;">~<br></td>
+    </tr>
+    <!-- 5.13.1b -->
+    <tr>
+      <td> 5.13.1b	First time doorReversal -> Set AlreadyrReversed<br></td>
+      <td style="vertical-align: top;">~<br></td>
+      <td style="vertical-align: top;">~<br></td>
+      <td style="vertical-align: top;">~<br></td>
+      <td style="vertical-align: top;">~<br></td>
+      <td style="vertical-align: top;">~<br></td>
+    </tr>
+    <!-- 5.13.1c -->
+    <tr>
+      <td> 5.13.1c	First time doorReversal -> Set Countdown<br></td>
+      <td style="vertical-align: top;">~<br></td>
+      <td style="vertical-align: top;">~<br></td>
+      <td style="vertical-align: top;">~<br></td>
+      <td style="vertical-align: top;">~<br></td>
+      <td style="vertical-align: top;">~<br></td>
+    </tr>
+    <!-- 5.13.2 -->
+    <tr>
+      <td> 5.13.2	Additional doorReversal -> DoorMotor Nudge<br></td>
+      <td style="vertical-align: top;">~<br></td>
+      <td style="vertical-align: top;">X<br></td>
+      <td style="vertical-align: top;">~<br></td>
+      <td style="vertical-align: top;">X<br></td>
+      <td style="vertical-align: top;">~<br></td>
+    </tr>
+    <tr>
+      <td colspan="6" rowspan="1" style="vertical-align: top;"></td>
+    </tr>
+
+    <!-- DRIVE CONTROL -->
+    <tr>
+      <td colspan="6" rowspan="1" style="vertical-align: top; background-color: rgb(221, 221, 221);"><b>DriveControl</b> - Completed by Daniel Santoro, ddsantor</td>
+    </tr>
+    <!-- Drive Control Constraints -->
+    <tr>
+      <td style="vertical-align: top;"> <u><b>Behavioral Requirements/Constraints</b></u></td>
+      <td style="vertical-align: top;">6.1 Any door not shut -&gt; Stop<br></td>
+      <td style="vertical-align: top;">6.2 Any door motor open -&gt;Stop<br></td>
+      <td style="vertical-align: top;">6.3, 6.3.1&nbsp; Adjacent value<br></td>
+      <td style="vertical-align: top;">6.4 EmergencyBrake -&gt; Stop<br></td>
+      <td style="vertical-align: top;">6.5 Overweight -&gt; Stop<br></td>
+    </tr>
+    <!-- Drive Control Requirements -->
+    <!-- 6.6 -->
+    <tr>
+      <td style="vertical-align: top;">6.6 mDriveSpeed = {CurrentSpeed, CurrentDirection}</td>
+      <td style="vertical-align: top;"><br>~</td>
+      <td style="vertical-align: top;">~</td>
+      <td style="vertical-align: top;">~</td>
+      <td style="vertical-align: top;">~</td>
+      <td style="vertical-align: top;">~</td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">6.7 CommitPoint Calculation</td>
+      <td style="vertical-align: top;">~</td>
+      <td style="vertical-align: top;">~</td>
+      <td style="vertical-align: top;">~</td>
+      <td style="vertical-align: top;">~</td>
+      <td style="vertical-align: top;">~</td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">6.8 CommitPoint verification</td>
+      <td style="vertical-align: top;">~</td>
+      <td style="vertical-align: top;">~</td>
+      <td style="vertical-align: top;">~</td>
+      <td style="vertical-align: top;">~</td>
+      <td style="vertical-align: top;">~</td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">6.9.1 Drive -> {Stop, Stop}</td>
+      <td style="vertical-align: top;">~</td>
+      <td style="vertical-align: top;">~</td>
+      <td style="vertical-align: top;">~</td>
+      <td style="vertical-align: top;">~</td>
+      <td style="vertical-align: top;">~</td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">6.9.2 mDrive -> {STOP, STOP}</td>
+      <td style="vertical-align: top;">~</td>
+      <td style="vertical-align: top;">~</td>
+      <td style="vertical-align: top;">~</td>
+      <td style="vertical-align: top;">~</td>
+      <td style="vertical-align: top;">~</td>
+    </tr>    
+    <tr>
+      <td style="vertical-align: top;">6.10.1 Drive -> {Slow, DesiredDirection}</td>
+      <td style="vertical-align: top;">~</td>
+      <td style="vertical-align: top;">~</td>
+      <td style="vertical-align: top;">X</td>
+      <td style="vertical-align: top;">~</td>
+      <td style="vertical-align: top;">~</td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">6.10.2 mDrive -> {SLOW, DesiredDirection}</td>
+      <td style="vertical-align: top;">~</td>
+      <td style="vertical-align: top;">~</td>
+      <td style="vertical-align: top;">X</td>
+      <td style="vertical-align: top;">~</td>
+      <td style="vertical-align: top;">~</td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">6.11.1 Drive -> {Fast, DesiredDirection}</td>
+      <td style="vertical-align: top;">~</td>
+      <td style="vertical-align: top;">~</td>
+      <td style="vertical-align: top;">X</td>
+      <td style="vertical-align: top;">~</td>
+      <td style="vertical-align: top;">~</td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">6.11.2 mDrive -> {FAST, DesiredDirection}</td>
+      <td style="vertical-align: top;">~</td>
+      <td style="vertical-align: top;">~</td>
+      <td style="vertical-align: top;">X</td>
+      <td style="vertical-align: top;">~</td>
+      <td style="vertical-align: top;">~</td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">6.12.1 Commit point reached: Drive -> {Slow, DesiredDirection}</td>
+      <td style="vertical-align: top;">~</td>
+      <td style="vertical-align: top;">~</td>
+      <td style="vertical-align: top;">X</td>
+      <td style="vertical-align: top;">~</td>
+      <td style="vertical-align: top;">~</td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">6.12.2 Commit point reached: mDrive -> {SLOW, DesiredDirection}</td>
+      <td style="vertical-align: top;">~</td>
+      <td style="vertical-align: top;">~</td>
+      <td style="vertical-align: top;">X</td>
+      <td style="vertical-align: top;">~</td>
+      <td style="vertical-align: top;">~</td>
+    </tr>    
+    <tr>
+      <td style="vertical-align: top;">6.13.1 Drive -> {Level, LevelDirection}</td>
+      <td style="vertical-align: top;">~</td>
+      <td style="vertical-align: top;">~</td>
+      <td style="vertical-align: top;">X</td>
+      <td style="vertical-align: top;">~</td>
+      <td style="vertical-align: top;">~</td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">6.13.2 mDrive -> {LEVEL, LevelDirection}</td>
+      <td style="vertical-align: top;">~</td>
+      <td style="vertical-align: top;">~</td>
+      <td style="vertical-align: top;">X</td>
+      <td style="vertical-align: top;">~</td>
+      <td style="vertical-align: top;">~</td>
+    </tr>
+    <tr>
+      <td colspan="6" rowspan="1" style="vertical-align: top;"></td>
+    </tr>
+
+    <!-- LANTERN CONTROL -->
+    <tr>
+      <td colspan="6" rowspan="1" style="vertical-align: top; background-color: rgb(221, 221, 221);"><b>LanternControl</b> - Completed by Jialiang Tan // jialiant</td>
+    </tr>
+    <!-- LaternControl Constraints -->
+    <tr>
+      <td style="vertical-align: top;"><u><b>Behavioral Requirements/Constraints</b></u></td>
+      <td style="vertical-align: top;">7.1 Both lanterns not on at same time<br></td>
+      <td style="vertical-align: top;"><br></td>
+      <td style="vertical-align: top;"><br></td>
+      <td style="vertical-align: top;"><br></td>
+      <td style="vertical-align: top;"><br></td>
+    </tr>
+    <!-- LaternControl Requirements -->
+    <!-- 7.2 -->
+    <tr>
+      <td style="vertical-align: top;">7.2 door close -> lantern turns off </td>
+      <td style="vertical-align: top;">X<br></td>
+      <td style="vertical-align: top;"><br></td>
+      <td style="vertical-align: top;"><br></td>
+      <td style="vertical-align: top;"><br></td>
+      <td style="vertical-align: top;"><br></td>
+    </tr>
+    <!-- 7.3 -->
+    <tr>
+      <td style="vertical-align: top;">7.3 car to move -> lantern turns on<br></td>
+      <td style="vertical-align: top;">X<br></td>
+      <td style="vertical-align: top;"><br></td>
+      <td style="vertical-align: top;"><br></td>
+      <td style="vertical-align: top;"><br></td>
+      <td style="vertical-align: top;"><br></td>
+    </tr>
+
+    <!-- HALL BUTTON CONTROL and CAR BUTTON CONTROL - No Constraints -->
+    <tr>
+      <td colspan="6" rowspan="1" style="vertical-align: top;"></td>
+    </tr>
+    <tr>
+      <td colspan="6" rowspan="1" style="vertical-align: top; background-color: rgb(221, 221, 221);">No constraints for <b>HallButtonContol</b> and <b>CarButtonControl</b><u><b><br></b></u></td>
+    </tr>
+    <tr>
+      <td colspan="6" rowspan="1" style="vertical-align: top;"></td>
+    </tr>
+
+    <!-- CAR POSITION CONTROL -->
+    <tr>
+      <td colspan="6" rowspan="1" style="vertical-align: top; background-color: rgb(221, 221, 221);"><b>CarPositionControl</b> - Completed by Rahul Ramesh // rahulram</td>
+    </tr>
+    <!-- Car Position Control Constraints -->
+    <tr>
+      <td style="vertical-align: top;"><u><b>Behavioral Requirements/Constraints</b></u></td>
+      <td style="vertical-align: top;">10.1 One position at a time<br></td>
+      <td style="vertical-align: top;">10.2 Any doors open -&gt; Display floor<br></td>
+      <td style="vertical-align: top;">10.3 Reflect actual floor, direction<br></td>
+      <td style="vertical-align: top;"><br></td>
+      <td style="vertical-align: top;"><br></td>
+    </tr>
+    <!-- Car Position Control Requirements -->
+    <!-- 10.4 -->
+    <tr>
+      <td style="vertical-align: top;">10.4 display CommitFloor
+</td>
+      <td style="vertical-align: top;"><br>X</td>;
+      <td style="vertical-align: top;"><br>X</td>;
+      <td style="vertical-align: top;"><br>X</td>;
+      <td style="vertical-align: top;"><br></td>;
+      <td style="vertical-align: top;"><br></td>;
+    <tr>
+    <!-- DISPATCHER -->
+    <tr>
+      <td colspan="6" rowspan="1" style="vertical-align: top; background-color: rgb(221, 221, 221);"><b>Dispatcher</b> - Completed by Daniel Santoro // ddssantor</td>
+    </tr>
+    <!-- Dispatcher Constraints -->
+    <tr>
+      <td style="vertical-align: top;"><u><b>Behavioral Requirements/Constraints</b></u></td>
+      <td style="vertical-align: top;">11.1 TargetF valid<br></td>
+      <td style="vertical-align: top;">11.2 Can't go up from MaxFloor<br></td>
+      <td style="vertical-align: top;">11.3 Can't go Down from MinFloor<br></td>
+      <td style="vertical-align: top;"><br></td>
+      <td style="vertical-align: top;"><br></td>
+    </tr>
+    <!-- Dispatcher Requirements -->
+    <!-- 11.4 -->
+    <tr>
+      <td style="vertical-align: top;">11.4 set mDesiredFloor.f </td>
+      <td style="vertical-align: top;">X<br></td>
+      <td style="vertical-align: top;">X<br></td>
+      <td style="vertical-align: top;">X<br></td>
+      <td style="vertical-align: top;"><br></td>
+      <td style="vertical-align: top;"><br></td>
+    </tr>
+    <!-- 11.5 -->
+    <tr>
+      <td style="vertical-align: top;">11.5 set mDesiredFloor.b<br></td>
+      <td style="vertical-align: top;">~<br></td>
+      <td style="vertical-align: top;">~<br></td>
+      <td style="vertical-align: top;">~<br></td>
+      <td style="vertical-align: top;"><br></td>
+      <td style="vertical-align: top;"><br></td>
+    </tr>
+    <!-- 11.6 -->
+    <tr>
+      <td style="vertical-align: top;">11.6 set mDesiredFloor.d<br></td>
+      <td style="vertical-align: top;">~<br></td>
+      <td style="vertical-align: top;">~<br></td>
+      <td style="vertical-align: top;">~<br></td>
+      <td style="vertical-align: top;"><br></td>
+      <td style="vertical-align: top;"><br></td>
+    </tr>
+    <!-- 11.7.1 -->
+    <tr>
+      <td style="vertical-align: top;">11.7.1 new call --> set TargetF<br></td>
+      <td style="vertical-align: top;">X<br></td>
+      <td style="vertical-align: top;">X<br></td>
+      <td style="vertical-align: top;">X<br></td>
+      <td style="vertical-align: top;"><br></td>
+      <td style="vertical-align: top;"><br></td>
+    </tr>
+    <!-- 11.7.2 -->
+    <tr>
+      <td style="vertical-align: top;">11.7.2 new call --> set TargetB<br></td>
+      <td style="vertical-align: top;">~<br></td>
+      <td style="vertical-align: top;">~<br></td>
+      <td style="vertical-align: top;">~<br></td>
+      <td style="vertical-align: top;"><br></td>
+      <td style="vertical-align: top;"><br></td>
+    </tr>
+    <!-- 11.7.3 -->
+    <tr>
+      <td style="vertical-align: top;">11.7.3 new call --> set DesiredDirection<br></td>
+      <td style="vertical-align: top;">~<br></td>
+      <td style="vertical-align: top;">X<br></td>
+      <td style="vertical-align: top;">X<br></td>
+      <td style="vertical-align: top;"><br></td>
+      <td style="vertical-align: top;"><br></td>
+    </tr>
+    <!-- 11.8.1 -->
+    <tr>
+      <td style="vertical-align: top;">11.8.1 valid call --> valid TargetF<br></td>
+      <td style="vertical-align: top;">X<br></td>
+      <td style="vertical-align: top;">X<br></td>
+      <td style="vertical-align: top;">X<br></td>
+      <td style="vertical-align: top;"><br></td>
+      <td style="vertical-align: top;"><br></td>
+    </tr>
+    <!-- 11.8.2 -->
+    <tr>
+      <td style="vertical-align: top;">11.8.2 valid call --> valid TargetB<br></td>
+      <td style="vertical-align: top;">~<br></td>
+      <td style="vertical-align: top;">~<br></td>
+      <td style="vertical-align: top;">~<br></td>
+      <td style="vertical-align: top;"><br></td>
+      <td style="vertical-align: top;"><br></td>
+    </tr>
+    <!-- 11.8.3 -->
+    <tr>
+      <td style="vertical-align: top;">11.8.3 valid call --> valid DesiredDirection<br></td>
+      <td style="vertical-align: top;">~<br></td>
+      <td style="vertical-align: top;">X<br></td>
+      <td style="vertical-align: top;">X<br></td>
+      <td style="vertical-align: top;"><br></td>
+      <td style="vertical-align: top;"><br></td>
+    </tr>
+    <!-- 11.9.1 -->
+    <tr>
+      <td style="vertical-align: top;">11.9.1 No calls -> TargetF = 0<br></td>
+      <td style="vertical-align: top;">X<br></td>
+      <td style="vertical-align: top;">~<br></td>
+      <td style="vertical-align: top;">~<br></td>
+      <td style="vertical-align: top;"><br></td>
+      <td style="vertical-align: top;"><br></td>
+    </tr>
+    <!-- 11.9.2 -->
+    <tr>
+      <td style="vertical-align: top;">11.9.2 No calls -> TargetB = NONE<br></td>
+      <td style="vertical-align: top;">~<br></td>
+      <td style="vertical-align: top;">~<br></td>
+      <td style="vertical-align: top;">~<br></td>
+      <td style="vertical-align: top;"><br></td>
+      <td style="vertical-align: top;"><br></td>
+    </tr>
+    <!-- 11.9.3 -->
+    <tr>
+      <td style="vertical-align: top;">11.9.3 No calls -> DesiredDirection = STOP<br></td>
+      <td style="vertical-align: top;">~<br></td>
+      <td style="vertical-align: top;">X<br></td>
+      <td style="vertical-align: top;">X<br></td>
+      <td style="vertical-align: top;"><br></td>
+      <td style="vertical-align: top;"><br></td>
+    </tr>
+    <!-- 11.10 -->
+    <tr>
+      <td style="vertical-align: top;">11.10 Reservice once<br></td>
+      <td style="vertical-align: top;">X<br></td>
+      <td style="vertical-align: top;">~<br></td>
+      <td style="vertical-align: top;">~<br></td>
+      <td style="vertical-align: top;"><br></td>
+      <td style="vertical-align: top;"><br></td>
+    </tr>
+    <!-- 11.11.1 -->
+    <tr>
+      <td style="vertical-align: top;">11.11.1 Safety -> TargetF = 1<br></td>
+      <td style="vertical-align: top;">X<br></td>
+      <td style="vertical-align: top;">X<br></td>
+      <td style="vertical-align: top;">X<br></td>
+      <td style="vertical-align: top;"><br></td>
+      <td style="vertical-align: top;"><br></td>
+    </tr>
+    <!-- 11.11.2 -->
+    <tr>
+      <td style="vertical-align: top;">11.11.2 Safety -> TargetB = NONE<br></td>
+      <td style="vertical-align: top;">~<br></td>
+      <td style="vertical-align: top;">~<br></td>
+      <td style="vertical-align: top;">~<br></td>
+      <td style="vertical-align: top;"><br></td>
+      <td style="vertical-align: top;"><br></td>
+    </tr>
+    <!-- 11.11.3 -->
+    <tr>
+      <td style="vertical-align: top;">11.11.3 Safety -> DesiredDirection = STOP<br></td>
+      <td style="vertical-align: top;">~<br></td>
+      <td style="vertical-align: top;">X<br></td>
+      <td style="vertical-align: top;">X<br></td>
+      <td style="vertical-align: top;"><br></td>
+      <td style="vertical-align: top;"><br></td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">11.12 mDesiredDwell == 5<br></td>
+      <td style="vertical-align: top;">~<br></td>
+      <td style="vertical-align: top;">~<br></td>
+      <td style="vertical-align: top;">~<br></td>
+      <td style="vertical-align: top;"><br></td>
+      <td style="vertical-align: top;"><br></td>
+    </tr>
+  </tbody>
+</table>
+</body>
+</html>

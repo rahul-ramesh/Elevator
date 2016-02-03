@@ -1,0 +1,27 @@
+; tegration_test/integration_tests.txt
+; 18-649 Distributed Embedded Systems
+; Group 11
+; Rahul Ramesh // rahulram. Daniel Santoro // ddsantor. David Thompson // davidtho. Jialiang Tan // jialiant
+; !@
+
+sd1a sd1a.cf sd1a.mf
+sd1b sd1b.cf sd1b.mf
+sd1c sd1c.cf sd1c.mf
+sd1d sd1d.cf sd1d.mf
+sd2a sd2a.cf sd2a.mf
+sd2b sd2b.cf sd2b.mf
+sd2c sd2c.cf sd2c.mf
+sd3a sd3a.cf sd3a.mf
+sd3b sd3b.cf sd3b.mf
+sd4a sd4a.cf sd4a.mf
+sd4b sd4b.cf sd4b.mf
+sd5a sd5a.cf sd5a.mf
+sd6a sd6a.cf sd6a.mf
+sd6b sd6b.cf sd6b.mf
+sd7a sd7a.cf sd7a.mf
+sd8a sd8a.cf sd8a.mf
+sd8b sd8b.cf sd8b.mf
+sd9a sd9a.cf sd9a.mf
+sd9b sd9b.cf sd9b.mf
+sd9c sd9c.cf sd9c.mf
+sd9d sd9d.cf sd9d.mf

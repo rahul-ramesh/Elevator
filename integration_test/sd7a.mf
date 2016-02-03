@@ -1,0 +1,65 @@
+; sd7a.mf
+; 18-649 Distributed Embedded Systems
+; Group 11
+; Rahul Ramesh // rahulram. Daniel Santoro // ddsantor. David Thompson // davidtho. Jialiang Tan // jialiant
+; !@
+
+#INCLUDE defines.mf
+
+;; INITIAL CONDITIONS
+
++10ms I AT_FLOOR_PERIOD N AT_FLOOR_[1][FRONT]_CAN_ID AtFloor 1 FRONT = TRUE
+;+0ms I AT_FLOOR_PERIOD N AT_FLOOR_[1][BACK]_CAN_ID AtFloor 1 BACK = TRUE
++0ms I LEVEL_SENSOR_PERIOD N LEVEL_SENSOR_[UP]_CAN_ID Leveling UP = TRUE
++0ms I LEVEL_SENSOR_PERIOD N LEVEL_SENSOR_[DOWN]_CAN_ID Leveling DOWN = TRUE
++0ms I 0s N EMERGENCY_BRAKE_CAN_ID SafetySensor = FALSE
+
+; pre-condition 2: Doors are closed
++0ms I DOOR_CLOSED_SENSOR_PERIOD N DOOR_CLOSED_SENSOR_[BACK][LEFT]_CAN_ID DoorClosed BACK LEFT = TRUE
++0ms I DOOR_CLOSED_SENSOR_PERIOD N DOOR_CLOSED_SENSOR_[BACK][RIGHT]_CAN_ID DoorClosed BACK RIGHT = TRUE
++0ms I DOOR_CLOSED_SENSOR_PERIOD N DOOR_CLOSED_SENSOR_[FRONT][LEFT]_CAN_ID DoorClosed FRONT LEFT = TRUE
++0ms I DOOR_CLOSED_SENSOR_PERIOD N DOOR_CLOSED_SENSOR_[FRONT][RIGHT]_CAN_ID DoorClosed FRONT RIGHT = TRUE
++0ms I DOOR_CONTROL_PERIOD N DOOR_MOTOR_COMMAND_[BACK][LEFT]_CAN_ID DoorMotorCommand BACK LEFT = MDOOR_STOP
++0ms I DOOR_CONTROL_PERIOD N DOOR_MOTOR_COMMAND_[BACK][RIGHT]_CAN_ID DoorMotorCommand BACK RIGHT = MDOOR_STOP
++0ms I DOOR_CONTROL_PERIOD N DOOR_MOTOR_COMMAND_[FRONT][LEFT]_CAN_ID DoorMotorCommand FRONT LEFT = MDOOR_STOP
++0ms I DOOR_CONTROL_PERIOD N DOOR_MOTOR_COMMAND_[FRONT][RIGHT]_CAN_ID DoorMotorCommand FRONT RIGHT = MDOOR_STOP
++0ms I WEIGHT_PERIOD N CAR_WEIGHT_CAN_ID CarWeight = 500
+
+; Precondition 3: Car is not moving
++50ms A F Drive : speed == STOP 
++0s A F Drive : direction == STOP
++0s A N DRIVE_SPEED_CAN_ID DriveSpeed : getSpeed == 0 
++0s A N DRIVE_SPEED_CAN_ID DriveSpeed : getDirection == STOP
+
+; assert that 1 is displayed
+; pre-condition 1
++500ms A F CarPositionIndicator : floor == 1
+
+;; MOVE TO FLOOR 2
++10ms I DISPATCHER_PERIOD N DESIRED_FLOOR_CAN_ID DesiredFloor = 3 UP FRONT
++10ms I AT_FLOOR_PERIOD N AT_FLOOR_[1][FRONT]_CAN_ID AtFloor 1 FRONT = FALSE
+
+;#arc '7A/1'
++200ms A F Drive : speed == SLOW 
++0s A F Drive : direction == UP
+
+;#arc '7A/2'
++500ms I CAR_LEVEL_POSITION_PERIOD N CAR_LEVEL_POSITION_CAN_ID CarLevelPosition = 1000
++10ms I AT_FLOOR_PERIOD N AT_FLOOR_[2][BACK]_CAN_ID AtFloor 2 BACK = TRUE
+
+; assert that 2 is displayed
+;#arc '7A/3'
++500ms A F CarPositionIndicator : floor == 2
+
+;#arc '7A/4'
++200ms A F Drive : speed == SLOW 
++0s A F Drive : direction == UP
+
+;#arc '7A/5'
++10ms I AT_FLOOR_PERIOD N AT_FLOOR_[2][BACK]_CAN_ID AtFloor 2 BACK = FALSE
++500ms I CAR_LEVEL_POSITION_PERIOD N CAR_LEVEL_POSITION_CAN_ID CarLevelPosition = 2000
++10ms I AT_FLOOR_PERIOD N AT_FLOOR_[3][FRONT]_CAN_ID AtFloor 3 FRONT = TRUE
+
+; assert that 2 is displayed
+;#arc '7A/6'
++500ms A F CarPositionIndicator : floor == 3

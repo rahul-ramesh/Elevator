@@ -1,0 +1,754 @@
+<!-- scen_sd.html -->
+<!-- 18-649 Distributed Embedded Systems -->
+<!-- Group 11 -->
+<!-- Rahul Ramesh // rahulram. Daniel Santoro // ddsantor. David Thompson // davidtho. Jialiang Tan // jialiant -->
+<!-- !@ -->
+
+<!-- Initialization -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!-- saved from url=(0088)http://www.ece.cmu.edu/~ece649/project/portfolio/portfolio_template/scen_sd/scen_sd.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  <meta name="generator" content="HTML Tidy for Windows (vers 15 August 2007), see www.w3.org">
+  <link rel="Edit-Time-Data" href="http://www.ece.cmu.edu/~ece649/project/portfolio/portfolio_template/scen_sd/proj2_scenarios_files/editdata.mso">
+  <title>18-649 Scenarios and Sequence Diagrams</title>
+<style type="text/css"></style></head>
+<body link="blue" vlink="blue">
+<div class="Section1">
+<h1 align="center"> 18-649 Scenarios and Sequence Diagrams </h1>
+<div align="center">
+
+<!--  Title -->
+<hr size="2" width="100%" align="center"> </div>
+<p>18-649 Fall 2015<br>
+Group 11 - Rahul Ramesh // rahulram. Daniel Santoro // ddsantor. David Thompson // davidtho. Jialiang Tan // jialiant.&nbsp; <br>
+</p>
+<hr style="width: 100%; height: 2px;">
+<p> </p>
+
+<!-- TALBLE OF CONTENTS -->
+<h2> Scenarios: </h2>
+<ul>
+  <li><a href="#usecase1">1. Passenger Makes a Hall Call</a> </li>
+  <ul>
+    <li><a href="#scenario1a">Scenario 1A</a> </li>
+    <li><a href="#scenario1b">Scenario 1B</a> </li>
+    <li><a href="#scenario1c">Scenario 1C</a></li>
+    <li><a href="#scenario1d">Scenario 1D</a></li>
+  </ul>
+  <li><a href="#usecase2">2. Passenger Makes a Car Call</a> </li>
+  <ul>
+    <li><a href="#scenario2a">Scenario 2A</a> </li>
+    <li><a href="#scenario2b">Scenario 2B</a></li>
+    <li><a href="#scenario2c">Scenario 2C</a></li>
+  </ul>
+  <li><a href="#usecase3">3. Elevator Stops at Floor f</a> </li>
+  <ul>
+    <li><a href="#scenario3a">Scenario 3A</a>&nbsp;-&nbsp;<a href="../reqs/requirements1.html#topreq">RT6</a>, <a href="../reqs/requirements1.html#topreq">RT7</a></li>
+    <li><a href="#scenario3b">Scenario 3B</a>&nbsp;-&nbsp;<a href="../reqs/requirements1.html#topreq">RT6</a>, <a href="../reqs/requirements1.html#topreq">RT7</a></li>
+  </ul>
+  <li><a href="#usecase4">4. Passenger Enters Car</a> </li>
+    <ul>
+    <li><a href="#scenario4a">Scenario 4A</a> </li>
+    <li><a href="#scenario4b">Scenario 4B</a></li>
+  </ul>
+  <li><a href="#usecase5">5. Passenger Exits Car</a> </li>
+  <li><a href="#usecase6">6. Passenger Triggers Door Reversal</a> </li>
+  <ul>
+    <li><a href="#scenario6a">Scenario 6A</a> </li>
+    <li><a href="#scenario6b">Scenario 6B</a>&nbsp;-&nbsp;<a href="../reqs/requirements1.html#topreq">RT10</a></li>
+  </ul>
+  <li><a href="#usecase7">7. Passenger Reads Car Position</a> </li>
+  <li><a href="#usecase8">8. Passenger Reads Car Direction</a> </li>
+  <ul>
+    <li><a href="#scenario8a">Scenario 8A</a>&nbsp;-&nbsp;<a href="../reqs/requirements1.html#topreq">RT8.1</a>, <a href="../reqs/requirements1.html#topreq">RT8.2</a>, <a href="../reqs/requirements1.html#topreq">RT8.3</a></li>
+    <li><a href="#scenario8b">Scenario 8B</a> </li>
+  </ul>
+  <li><a href="#usecase9">9. Dispatcher Moves Car to Next Floor</a> </li>
+  <ul>
+    <li><a href="#scenario9a">Scenario 9A</a> </li>
+    <li><a href="#scenario9b">Scenario 9B</a>&nbsp;-&nbsp;<a href="../reqs/requirements1.html#topreq">RT9</a></li>
+    <li><a href="#scenario9c">Scenario 9C</a> </li>
+    <li><a href="#scenario9d">Scenario 9D</a> </li>
+  </ul>
+</ul>
+<div align="center">
+<hr size="2" width="100%" align="center"> </div>
+
+<!-- USE CASE 1: PASSENGER MAKES A HALL CALL -->
+<h2> <a name="usecase1" id="usecase1"></a>Use Case 1: Passenger Makes A Hall Call </h2>
+
+<!-- Scenario 1A -->
+<h3> <a name="scenario1a" id="scenario1a"></a>Scenario 1A: Passenger arrives at a hallway while elevator doors are closed. </h3>
+<h3> Author name: David Thompson // davidtho</h3>
+<h3> Pre-Conditions: </h3>
+<ul type="disc">
+  <li>All doors are closed. </li>
+  <li>Passenger has already arrived at a hallway to use the elevator. </li>
+  <li>Dispatcher has desired floor and direction. </li>
+</ul>
+<h3> Scenario: </h3>
+<ol start="1" type="1">
+  <li>Passenger pushes hall call (up or down) button for passenger's desired direction d. </li>
+  <li>Passenger sees that corresponding hall button light turns on. </li>
+  <li>Passenger releases hall call button</li>
+  <li>Dispatcher recomputes desired floor</li>
+  </ol>
+<h3> Post-Conditions: </h3>
+<ul type="disc">
+  <li>All doors are closed. </li>
+  <li>Hall button light for passenger's desired direction is on. </li>
+  <li>Dispatcher has desired floor and direction. </li>
+</ul>
+<h3> Sequence Diagram: </h3>
+<!-- SD1A arcs: 1a 1b 2a 2b 3a 3b 3c 4 -->
+<p> <a href="./sd1a.png"><img src="./sd1a.png"></a> </p>
+<div align="center">
+<hr size="2" width="100%" align="center"> </div>
+
+<!-- Scenario 1B -->
+<h3> <a name="scenario1b" id="scenario1b"></a>Scenario 1B: Passenger arrives at a hallway when elevator is already there and the car is traveling in the same direction as desired by passenger, but the doors have begun closing for the first time. </h3>
+<h3> Author name: David Thompson // davidtho</h3>
+<h3> Pre-Conditions: </h3>
+<ul type="disc">
+  <li>Car is at same floor as passenger. </li>
+  <li>Car is traveling in same direction <b>d</b> as desired by passenger. </li>
+  <li>At least one door is open. </li>
+  <li>HallLight[<b>f</b>,<b>b</b>,<b>d</b>] for passenger's desired direction is off. </li>
+</ul>
+<h3> Scenario: </h3>
+<ol start="1" type="1">
+  <li>Doors at hallway <b>b</b> starts closing for the first time. </li>
+  <li>Passenger arrives at floor <b>f</b> hallway <b>b</b> to use the elevator, with intent to travel in direction <b>d</b>. </li>
+  <li>Passenger presses hall call button before doors are fully closed. </li>
+  <li>HallLight[<b>f</b>,<b>b</b>,<b>d</b>] turns on. </li>
+  <li>Passenger releases hall call button.</li>
+  <li>Dispatcher recomputes desired floor f, hallway b.
+  <li>Passenger observes HallLight[<b>f</b>,<b>b</b>,<b>d</b>] turn off. </li>  
+  <li>Doors are commanded to open.</li>
+  <li>CountDown is set to Dwell</li>
+</ol>
+<h3> Post-Conditions: </h3>
+<ul type="disc">
+  <li>Elevator is at the passenger's floor. </li>
+  <li>Doors at hallway <b>b</b> are opening. </li>
+  <li>Hall button light for passenger's desired direction is off. </li>
+</ul>
+<!-- SD1B arcs: 1 2 3a 3b 4a 4b 5a 5b 5c 6a 6b 7a 7b 8 9 -->
+<h3> Sequence Diagram: </h3>
+<p> <a href="./sd1b.png"><img src="./sd1b.png"></a> </p>
+<div align="center">
+<hr size="2" width="100%" align="center"> </div>
+
+<!-- Scenario 1C -->
+<h3> <a name="scenario1c" id="scenario1c"></a>Scenario 1C: Passenger arrives at a hallway when elevator is already there and the car is traveling in the same direction as desired by passenger, but the doors have begun closing for the second time. </h3>
+<h3> Author name: David Thompson // davidtho</h3>
+<h3> Pre-Conditions: </h3>
+<ul type="disc">
+  <li>Car is at same floor <b>f</b> as passenger. </li>
+  <li>Car is traveling in the same direction as direction <b>d</b> desired by passenger. </li>
+  <li>At least one door is open. </li>
+  <li>Doors have already been commanded to close once on this floor. </li>
+  <li>Hall button light for passenger's desired direction is off. </li>
+  <li>Dispatcher has desired floor and direction. </li> 
+  <li>Door at hallway <b>b</b> has begun closing for the second time. </li>
+</ul>
+<h3> Scenario: </h3>
+<ol start="1" type="1">
+  <li>Passenger arrives at floor <b>f</b> hallway <b>b</b> to use the elevator going in direction <b>d</b>. </li>
+  <li>Passenger presses hall call button before doors are fully closed. </li>
+  <li>Hall button light turns on. </li>
+  <li>Passenger releases hall call button.</li>
+  <li>Dispatcher recomputes desired floor and direction. </li>
+</ol>
+<h3> Post-Conditions: </h3>
+<ul type="disc">
+  <li>Elevator is at the passenger's floor. </li>
+  <li>Doors are closing. </li>
+  <li>Hall button light for passenger's desired direction is on. </li>
+  <li>Dispatcher has desired floor and direction. </li>  
+</ul>
+<!-- SD1C arcs: 1 2a 2b 3a 3b 4a 4b 4c 5 -->
+<h3> Sequence Diagram: </h3>
+<p> <a href="./sd1c.png"><img src="./sd1c.png"></a> </p>
+<div align="center">
+<hr size="2" width="100%" align="center"> </div>
+
+
+<!-- Scenario 1D -->
+<h3> <a name="scenario1d" id="scenario1d"></a>Scenario 1D: Passenger arrives at a hallway when elevator is already there and the car is traveling in opposite direction as desired by passenger. </h3>
+<h3> Author name: David Thompson // davidtho</h3>
+<h3> Pre-Conditions: </h3>
+<ul type="disc">
+  <li>Car is at same floor <b>f</b> as passenger. </li>
+  <li>Car is traveling in opposite direction <b>~d</b> than direction <b>d</b> desired by passenger. </li>
+  <li>At least one door is open. </li>
+  <li>Hall button light for passenger's desired direction is off. </li>
+  <li>Doors at hallway <b>b</b> have begun closing.</li>
+</ul>
+<h3> Scenario: </h3>
+<ol start="1" type = "1">
+  <li>Passenger arrives at floor <b>f</b> hallway <b>b</b> to use the elevator going in direction <b>d</b>.</li>
+  <li>Passenger presses hall call button before doors are fully closed.</li>
+  <li>Hall button light turns on.</li>
+  <li>Passenger releases hall call button</li>
+  <li>Dispatcher recomputes desired floor.</li>
+</ol>
+<h3> Post-Conditions: </h3>
+<ul type="disc">
+  <li>Elevator is at the passenger's floor. </li>
+  <li>All doors are closing. </li>
+  <li>Hall button light for passenger's desired direction is on. </li>
+</ul>
+<h3> Sequence Diagram: </h3>
+<!-- SD1D arcs: 1 2a 2b 3a 3b 4a 4b 5 -->
+<p> <a href="./sd1d.png"><img src="./sd1d.png"></a> </p>
+<div align="center">
+<hr size="2" width="100%" align="center"> </div>
+
+<!-- USE CASE 2: PASSENGER MAKES A CAR CALL -->
+<h2> <a name="usecase2" id="usecase2"></a>Use Case 2: Passenger Makes A Car Call </h2>
+
+<!-- Scenario 2A -->
+<h3> <a name="scenario2a" id="scenario2a"></a>Scenario 2A: Passenger is in the car and elevator is not at the desired destination floor. </h3>
+<h3> Author name: David Thompson // davidtho</h3>
+<h3> Pre-Conditions: </h3>
+<ul type="disc">
+  <li>Passenger is in the car and wants to go to destination floor <b>f</b> and hallway <b>b</b>; Elevator's desiredFloor != {<b>f</b>,<b>b</b>,<b>*</b>}.</li>
+  <li>Car call button for the passenger's desired destination is not lit. </li>
+  <li>mDriveSpeed was last received as {<b>s</b>,<b>d</b>}</li>
+  <li>mDoorCommand for all doors was last received as Stop</li>  
+</ul>
+<h3> Scenario: </h3>
+  <ol start="1" type="1">
+    <li>Passenger presses CarCall[<b>f</b>,<b>b</b>] for their destination.</li>
+    <li>Passenger observes that the button for their destination has lit up.</li>
+    <li>Passenger releases car call button</li>
+    <li>Dispatcher computes the desired floor.</li>
+  </ol>
+<h3> Post-Conditions: </h3>
+<ul type="disc">
+  <li>Passenger is in the car and wants to go to destination floor <b>f</b> and hallway <b>b</b>; Elevator's desiredFloor has been recomputed.</li>
+  <li>Car call button for the passenger's desired destination is lit. </li>
+  <li>mDriveSpeed was last received as {<b>s</b>,<b>d</b>}</li>
+  <li>mDoorCommand for all doors was last received as Stop</li>  
+</ul>
+<h3> Sequence Diagram: </h3>
+<!-- SD2A arcs: 1a 1b 2a 2b 3a 3b 3c 4 -->
+<p> <a href="./sd2a.png"><img src="./sd2a.png"></a> </p>
+
+<div align="center">
+<hr size="2" width="100%" align="center"> </div>
+
+<!-- Scenario 2B -->
+<h3> <a name="scenario2b" id="scenario2b"></a>Scenario 2B: Passenger is in the car and the elevator has arrived at the passenger's desired floor, but passenger has not yet exited the car as the doors begin to close for the first time. </h3>
+<h3> Author name: David Thompson // davidtho</h3>
+<h3> Pre-Conditions: </h3>
+<ul type="disc">
+  <li>Passenger is in the car. </li>
+  <li>Elevator has arrived at the desired floor <b>f</b> and hallway <b>b</b>, but the passenger has not yet exited the car. </li>
+  <li>At least one door is open. </li>
+  <li>The car light for the passenger's floor is off.</li>
+</ul>
+<h3> Scenario: </h3>
+<ol start="1" type="1">
+  <li>Doors start to close.</li>
+  <li>Passenger presses car call button before doors are fully closed.</li>
+  <li>Passenger observes car light turn on.</li>
+  <li>Passenger releases car call button.</li>
+  <li>Dispatcher recomputes desired floor f and hallway b.</li> 
+  <li>Passenger observes car light turn off.</li>
+  <li>Doors are commanded to open.</li>
+  <li>CountDown is set to Dwell</li>
+</ol>
+<h3> Post-Conditions: </h3>
+  <li>The passenger is still in the elevator at his destination floor.</li>
+  <li>The doors are opening.</li>
+  <li>The car light for the passenger's floor is off.</li>
+
+<h3> Sequence Diagram: </h3>
+<!-- SD2B arcs: 1 2a 2b 3a 3b 4a 4b 4c 5a 5b 6a 6b 7 8 -->
+<p> <a href="./sd2b.png"><img src="./sd2b.png"></a> </p>
+
+<div align="center">
+<hr size="2" width="100%" align="center"> </div>
+<p> &nbsp; </p>
+
+<!-- Scenario 2C -->
+<h3> <a name="scenario2c" id="scenario2c"></a>Scenario 2C: Passenger is in the car and the elevator has arrived at the passenger's desired floor, but passenger has not yet exited the car as the doors begin to close the second time.</h3>
+<h3> Author name: David Thompson // davidtho</h3>
+<h3> Pre-Conditions: </h3>
+<ul type="disc">
+  <li>Passenger is in the car. </li>
+  <li>Elevator has arrived at the desired floor <b>f</b> and hallway <b>b</b>, but the passenger has not yet exited the car. </li>
+  <li>At least one door is open. </li>
+  <li>The car light for the passenger's floor is off.</li>
+  <li>Doors have already been commanded to close once on this floor. </li>
+  <li>Doors at hallway <b>b</b> have begun closing for the second time. </li>
+</ul>
+<h3> Scenario: </h3>
+<ol start="1" type="1">
+  <li>Passenger presses car call button before doors are fully closed.</li>
+  <li>Passenger observes car light turn on.</li>
+  <li>Passenger releases car call button.</li>
+  <li>Dispatcher recomputes desired floor and hallway.</li> 
+</ol>
+<h3> Post-Conditions: </h3>
+<ul type="disc">
+  <li>The passenger is still in the elevator at his destination floor.</li>
+  <li>The doors are closing.</li>
+  <li>The car light for the passenger's floor is on.</li>
+</ul>
+<h3> Sequence Diagram: </h3>
+<!-- SD2C arcs: 1a 1b 2a 2b 3a 3b 3c 4 -->
+<p> <a href="./sd2c.png"><img src="./sd2c.png"></a> </p>
+<div align="center">
+<hr size="2" width="100%" align="center"> </div>
+
+
+<!-- USE CASE 3: ELEVATOR STOPS AT FLOOR -->
+<h2> <a name="usecase3" id="usecase3"></a>Use Case 3: Elevator Stops at Floor f with DesiredDirection d</h2>
+
+<!-- Scenario 3A -->
+<h3> <a name="scenario3a" id="scenario3a">Scenario 3A: Elevator stops at floor f, CarLight[f,b] and HallLight[f,b,d] turn off </h3>
+<h3> Author name: Daniel Santoro // ddsantor</h3>
+<h3> Pre-Conditions: </h3>
+<ul type="disc">
+  <li>Car is moving towards floor <b>f</b> and hallway <b>b</b>.</li>
+  <li>The mAtFloor[<b>f</b>,<b>b</b>] was last received as False.</li>
+  <li>CarLight[<b>f</b>,<b>b</b>] is on.</li>
+  <li>HallLight[<b>f</b>,<b>b</b>,<b>d</b>] is on.</li>
+  <li>Doors at hallway <b>b</b> are closed.</li>
+  <li>Dispatcher has sent mDesiredFloor[<b>f</b>, <b>b</b>, <b>d</b>].</li>
+  <li>Car has arrived at floor</li>
+</ul>
+<h3> Scenario: </h3>
+<ol start="1" type="1">
+  <li>Countdown for doors is set to Dwell.</li>
+  <li>Doors at hallway <b>b</b> are commanded to open.</li>
+  <li>CarLight[<b>f</b>,<b>b</b>] turns off.</li>
+  <li>HallLight[<b>f</b>,<b>b</b>,<b>d</b>] turns off.</li>
+  <li>Doors at hallway <b>b</b> finish opening. </li>
+  <li>Countdown decrements to zero.</li>
+  <li>Doors at hallway <b>b</b> are commanded to Close</li>
+</ol>
+<h3> Post-Conditions: </h3>
+<ul type="disc">
+  <li>Car at floor <b>f</b> and hallway <b>b</b>.</li>
+  <li>CarLight[<b>f</b>,<b>b</b>] is off.</li>
+  <li>HallLight[<b>f</b>,<b>b</b>,<b>d</b>] is off.</li>
+  <li>Doors at hallway <b>b</b> are Closing. </li>
+</ul>
+<h3> Sequence Diagram: </h3>
+<!-- SD3A arcs: 1 2a 2b 3 4 5a 5b 6 7 -->
+<p> <a href="./sd3a.png"><img src="./sd3a.png"></a> </p>
+
+<div align="center">
+<hr size="2" width="100%" align="center"> </div>
+<p> &nbsp; </p>
+
+<!-- Scenario 3B -->
+<h3> <a name="scenario3b" id="scenario3b">Scenario 3B: Elevator stops at floor f, CarLight[f,b] turns off, HallLight[f,b,~d] stays on</h3>
+<h3> Author name: Daniel Santoro // ddsantor</h3>
+<h3> Pre-Conditions: </h3>
+<ul type="disc">
+  <li>Car is moving towards floor <b>f</b> and hallway <b>b</b>.</li>
+  <li>The mAtFloor[<b>f</b>,<b>b</b>] was last received as False.</li>
+  <li>CarLight[<b>f</b>,<b>b</b>] is on.</li>
+  <li>HallLight[<b>f</b>,<b>b</b>,<b>~d</b>] is on.</li>
+  <li>Doors at hallway <b>b</b> are closed.</li>
+  <li>Dispatcher has sent mDesiredFloor[<b>f</b>, <b>b</b>, <b>d</b>].</li>
+  <li>Car has arrived at floor.</li>
+</ul>
+<h3> Scenario: </h3>
+<ol start="1" type="1">
+  <li>Countdown for doors is set to Dwell.</li>
+  <li>Doors at hallway <b>b</b> are commanded to open.</li>
+  <li>CarLight[<b>f</b>,<b>b</b>] turns off.</li>
+  <li>HallLight[<b>f</b>,<b>b</b>,<b>~d</b>] stays on.</li>
+  <li>Doors at hallway <b>b</b> finish opening. </li>
+  <li>Countdown decrements to zero.</li>
+  <li>Doors at hallway <b>b</b> are commanded to Close</li>
+</ol>
+<h3> Post-Conditions: </h3>
+<ul type="disc">
+  <li>Car at floor <b>f</b> and hallway <b>b</b>.</li>
+  <li>CarLight[<b>f</b>,<b>b</b>] is off.</li>
+  <li>HallLight[<b>f</b>,<b>b</b>,<b>~d</b>] is on.</li>
+  <li>Doors at hallway <b>b</b> are Closing. </li>
+</ul>
+<h3> Sequence Diagram: </h3>
+<!-- SD3B arcs: 1 2a 2b 3 4 5a 5b 6 7 -->
+<p> <a href="./sd3b.png"><img src="./sd3b.png"></a> </p>
+
+<div align="center">
+<hr size="2" width="100%" align="center"> </div>
+<p> &nbsp; </p>
+
+<!-- USE CASE 4: PASSENGER ENTERS -->
+<h2> <a name="usecase4" id="usecase4"></a>Use Case 4: Passenger Enters
+Elevator </h2>
+
+<!-- Scenario 4A -->
+<h3> <a name="scenario4a" id="scenario4a">Scenario 4A: Passenger is waiting at a hallway for the elevator and has already pressed the hall call button. </h3>
+<h3> Author name: Rahul Ramesh // rahulram</h3>
+<h3> Pre-Conditions: </h3>
+<ul type="disc">
+  <li>Passenger is in the hallway and the car is at the same floor <b>f</b> and hallway <b>b</b>. </li>
+  <li>Car is level.</li>
+  <li>Car is stopped.</li>
+  <li>All doors are closed. </li>
+</ul>
+<h3> Scenario: </h3>
+<ol start="1" type="1">
+  <li>Doors open to hallway <b>b</b>.</li>
+  <li>Passenger enters.</li>
+  <li>Drive re-levels the car at floor <b>f</b>.</li>
+</ol>
+<h3> Post-Conditions: </h3>
+<ul type="disc">
+  <li>Car at floor <b>f</b>.</li>
+  <li>Car is level.</li>
+  <li>Doors are open to hallway <b>b</b>.</li>
+  <li>Passenger has entered the car.</li>
+</ul>
+<h3> Sequence Diagram: </h3>
+<!-- SD4A arcs: 1a 1b 1c 2 3a 3b 3c 3d -->
+<p> <a href="./sd4a.png"><img src="./sd4a.png"></a> </p>
+
+<div align="center">
+<hr size="2" width="100%" align="center"> </div>
+<p> &nbsp; </p>
+
+<!-- Scenario 4B -->
+<h3> <a name="scenario4b" id="scenario4b">Scenario 4B: Passenger enters the car and exceeds the weight limit </h3>
+<h3> Author name: David Thompson // davidtho</h3>
+<h3> Pre-Conditions: </h3>
+<ul type="disc">
+  <li>Passenger is in the hallway and the car is at the same floor <b>f</b> and hallway <b>b</b>. </li>
+  <li>Car is stopped.</li>
+  <li>At least one door [b,r] is not closed. </li>
+  <li>Car weight sensor detects car is within weight limit.</li>
+</ul>
+<h3> Scenario: </h3>
+<ol start="1" type="1">
+  <li>Passenger enters.</li>
+  <li>Car weight sensor detects overweight car.</li>
+  <li>Doors [<b>b</b>, <b>*</b>] open.</li>
+  <li>Passenger exits.</li>
+</ol>
+<h3> Post-Conditions: </h3>
+<ul type="disc">
+  <li>Car at floor <b>f</b>.</li>
+  <li>Car is stopped.</li>
+  <li>Doors are open to hallway <b>b</b>.</li>
+  <li>Car weight sensor detects car is within weight limit.</li>  
+</ul>
+<h3> Sequence Diagram: </h3>
+<!-- SD4B arcs: 1 2a 2b 3a 3b 4 -->
+<p> <a href="./sd4b.png"><img src="./sd4b.png"></a> </p>
+
+<div align="center">
+<hr size="2" width="100%" align="center"> </div>
+<p> &nbsp; </p>
+
+<!-- USE CASE 5: PASSENGER EXITS -->
+<h2> <a name="usecase5" id="usecase5"></a>Use Case 5: Passenger Exits
+Elevator </h2>
+
+<!-- Scenario 5A --> 
+<h3> <a name="scenario5a" id="scenario5a">Scenario 5A: Passenger is in the elevator at the passenger's desired hallway. </h3>
+<h3> Author name: Daniel Santoro // ddsantor</h3>
+<h3> Pre-Conditions: </h3>
+<ul type="disc">
+  <li>Passenger is inside the car, at desired floor <b>f</b> and hallway <b>b</b>. </li>
+  <li>Car is level.</li>
+  <li>Car is stopped.</li>
+  <li>All doors are closed. </li>
+</ul>
+<h3> Scenario: </h3>
+<ol start="1" type="1">
+  <li>Doors  open to hallway <b>b</b>.</li>
+  <li>Passenger exits.</li>
+  <li>Drive re-levels the car at floor <b>f</b>.</li>
+</ol>
+<h3> Post-Conditions: </h3>
+<ul type="disc">
+  <li>Car at floor <b>f</b>.</li>
+  <li>Doors are open to hallway <b>b</b>.</li>
+  <li>Passenger has arrived at desired floor <b>f</b> and hallway <b>b</b>.</li>
+</ul>
+<h3> Sequence Diagram: </h3>
+<!--SD5A arcs: 1a 1b 1c 2 3a 3b 3c 3d -->
+<p> <a href="./sd5a.png"><img src="./sd5a.png"></a> </p>
+</a> </p>
+
+<div align="center">
+<hr size="2" width="100%" align="center"> </div>
+<p> &nbsp; </p>
+
+<!-- USE CASE 6: PASSENGER TRIGGERS DOOR REVERSAL -->
+<h2> <a name="usecase6" id="usecase6"></a>Use Case 6: Passenger Triggers Door Reversal </h2>
+
+<!-- Scenario 6A -->
+<h3> <a name="scenario6a" id="scenario6a"></a>Scenario 6A: Passenger obstructs the doorway for the first time while doors are closing </h3>
+<h3> Author name: David Thompson // davidtho</h3>
+<h3> Pre-Conditions: </h3>
+<ul type="disc">
+  <li>Passenger is at floor <b>f</b>.</li>
+  <li>Car is stopped at floor <b>f</b> and hallway <b>b</b>.</li>
+  <li>At least one door[<b>b</b>,<b>r</b>] is open. </li>
+  <li>There has not yet been a door reversal on this floor for this stop. </li>
+</ul>
+<h3> Scenario: </h3>
+<ol start="1" type="1">
+  <li>Door[<b>b</b>,<b>r</b>] begins closing. </li>
+  <li>Passenger moves into Door [<b>b</b>,<b>r</b>]'s threshold and triggers its reversal sensor  </li>
+  <li>Doors[<b>b</b>,<b>*</b>] are commanded to open. </li>
+  <li>CountDown is set to Dwell </li>
+  <li>Doors[<b>b</b>,<b>*</b>] complete opening. </li>
+  <li>CountDown decrements to zero </li>
+  <li>Doors[<b>b</b>,<b>*</b>] begin to close </li>  
+</ol>
+<h3> Post-Conditions: </h3>
+<ul type="disc">
+  <li>Elevator is at floor f. </li>
+  <li>Doors [<b>b</b>,<b>*</b>] are closing. </li>
+</ul>
+<h3> Sequence Diagram: </h3>
+<!-- SD6A arcs: 1 2a 2b 3 4 5a 5b 6 7 -->
+<p> <a href="./sd6a.png"><img src="./sd6a.png"></a> </p>
+<div align="center">
+<hr size="2" width="100%" align="center"> </div>
+
+<!-- Scenario 6B -->
+<h3> <a name="scenario6b" id="scenario6b"></a>Scenario 6B: Passenger obstructs the doorway for the second time while doors are closing </h3>
+<h3> Author name: David Thompson // davidtho</h3>
+<h3> Pre-Conditions: </h3>
+<ul type="disc">
+  <li>Passenger is at floor <b>f</b>.</li>
+  <li>Car is stopped at floor <b>f</b> and hallway <b>b</b>.</li>
+  <li>At least one door[<b>b</b>,<b>r</b>] is open. </li>
+  <li>Dispatcher has desired floor <b>g</b></li>
+</ul>
+<h3> Scenario: </h3>
+<ol start="1" type="1">
+  <li>Doors[<b>b</b>,<b>r</b>] begin closing. </li>
+  <li>Passenger moves into Door <b>b</b>'s threshold and triggers its reversal sensor  </li>
+  <li>Doors[<b>b</b>,<b>*</b>] are commanded to nudge. </li>
+  <li>Dispatcher has desired floor [<b>f</b>, <b>b</b>, <b>d</b>]</li>
+  <li>Doors continue to nudge.</li>
+  <li>Doors finish closing.</li>
+</ol>
+<h3> Post-Conditions: </h3>
+<ul type="disc">
+  <li>Elevator is at floor <b>f</b>. </li>
+  <li>Doors [<b>b</b>,<b>*</b>] are nudging. </li>
+</ul>
+<h3> Sequence Diagram: </h3>
+<!-- SD6B arcs: 1 2a 2b 3 4 5a 5b --> 
+<p> <a href="./sd6b.png"><img src="./sd6b.png"></a> </p>
+<div align="center">
+<hr size="2" width="100%" align="center"> </div>
+<p> &nbsp; </p>
+
+<!-- USE CASE 7: PASSENGER READS CAR POSITION -->
+<h2> <a name="usecase7" id="usecase7"></a>Use Case 7: Passenger Reads Car Position </h2>
+
+<!-- Scenario 7A -->
+<h3> <a name="scenario7a" id="scenario7a">Scenario 7A: Passenger is in the car, which is moving from floor f towards floor g (the next floor in the direction of travel) </h3>
+<h3> Author name: David Thompson // davidtho</h3>
+<h3> Pre-Conditions: </h3>
+<ul type="disc">
+  <li>Passenger last read floor <b>f</b> on the Car Position Indicator. </li>
+  <li>All elevator doors are closed. </li>
+  <li>Car is moving in the direction <b>d</b> equal to the direction from floor <b>f</b> towards floor <b>g</b>. </li>
+  <li>mDriveSpeed was last received as [<b>s</b>, <b>d</b>].</li>
+</ul>
+<h3> Scenario: </h3>
+<ol start="1" type="1">
+  <li>Car Position Controller receives Drive Speed message mDriveSpeed = [<b>s'</b>, <b>d</b>].</li>
+  <li>Car Position Controller receives Car Level Position message.</li>
+  <li>Passenger observes car position indicator change from displaying floor <b>f</b> to floor <b>g</b>. </li>
+  <li>Car Position Controller receives Car Level Position message for slow speed.</li>
+  <li>Car arrives at floor <b>g</b> moving at slow speed</li>
+  <li>Passenger observes car position indicator value of <b>g</b></li>
+</ol>
+<h3> Post-Conditions: </h3>
+<ul type="disc">
+  <li>Passenger last read floor <b>g</b> on the Car Position Indicator. </li>
+  <li>All elevator doors are closed. </li>
+  <li>Car is moving in the direction <b>d</b> equal to the direction from floor <b>f</b> towards floor <b>g</b>. </li>
+</ul>
+<h3> Sequence Diagram: </h3>
+<!-- SD7A arcs: 1 2 3a 3b 3c 4 5 6a 6b -->
+<p> <a href="./sd7a.png"><img src="./sd7a.png"></a> </p>
+<div align="center">
+<hr size="2" width="100%" align="center"> </div>
+<p> &nbsp; </p>
+
+<!-- USE CASE 8: PASSENGER READS CAR DIRECTION -->
+<h2> <a name="usecase8" id="usecase8"></a>Use Case 8: Passenger Reads Car Direction </h2>
+
+<!-- Scenario 8A -->
+<h3> <a name="scenario8a" id="scenario8a"></a>Scenario 8A: Passenger is in the hallway when the elevator arrives. Elevator opens doors when Dispatcher's intended direction d is Up or Down. </h3>
+<h3> Author name: Jialiang Tan // jialiant</h3>
+<h3> Pre-Conditions: </h3>
+<ul type="disc">
+  <li>Passenger is in hallway <b>b</b> on floor <b>f</b></li>
+  <li>Elevator is stopped at floor <b>f</b> </li>
+  <li>Dispatcher intends direction <b>d</b> and is enabling pickup in hallway <b>b</b>. </li>
+  <li>All doors are closed. </li>
+  <li>Both Car Lanterns are off. </li>
+</ul>
+<h3> Scenario: </h3>
+<ol start="1" type="1">
+  <li>Doors[<b>d</b>, <b>r</b>] start to open.</li>
+  <li>Passenger sees car lantern of the dispatcher's desired direction <b>d</b> turn on.</li>
+</ol>
+<h3> Post-Conditions: </h3>
+<ul>
+  <li>Both doors at the passenger's side <b>b</b> are open.</li>
+  <li>Car lantern in direction <b>d</b> is on.</li>
+</ul>
+<h3> Sequence Diagram: </h3>
+<!-- SD8A arcs: 1a 1b 2a 2b -->
+<p> <a href="./sd8a.png"><img src="./sd8a.png" alt="1A" name="_x0000_i1027" style="border: 0px solid"></a> </p>
+<div align="center">
+<hr size="2" width="100%" align="center"> </div>
+
+<!-- Scenario 8B -->
+<h3> <a name="scenario8b" id="scenario8b"></a>Scenario 8B: Elevator doors close on a hallway. </h3>
+<h3> Author name: Jialiang Tan // jialiant</h3>
+<h3> Pre-Conditions: </h3>
+<ul type="disc">
+  <li>At least one Door[<b>b</b>,<b>r</b>] is open. </li>
+  <li>Car lantern of the desired direction is on. </li>
+</ul>
+<h3> Scenario: </h3>
+  <ol start="1" type="1">
+    <li>All open doors close.</li>
+    <li>Car lantern turns off.
+  </ol>
+<h3> Post-Conditions: </h3>
+  <ul>
+    <li>Car lantern of the desired direction <b>d</b> is off.</li>
+    <li>All Door[<b>d</b>, <b>r</b>] is closed.</li>
+  </ul>
+<h3> Sequence Diagram: </h3>
+<!-- SD8B arcs: 1a 1b 1c 2a 2b -->
+<p> <a href="./sd8b.png"><img src="./sd8b.png" alt="1A" name="_x0000_i1027" style="border: 0px solid"></a> </p>
+<div align="center">
+<hr size="2" width="100%" align="center"> </div>
+
+<!-- USE CASE 9: DRIVE MOVES CAR TO NEXT FLOOR -->
+<h2> <a name="usecase9" id="usecase9"></a>Use Case 9: Drive Moves Car to Next Floor </h2>
+
+<!-- Scenario 9A -->
+<h3> <a name="scenario9a" id="scenario9a">Scenario 9A: Car is moving from floor <b>f</b> to floor <b>g</b> and the Doors open..</h3>
+<h3> Author name: Daniel Santoro // ddsantor</h3>
+<h3> Pre-Conditions: </h3>
+<ul type="disc">
+  <li>Elevator is moving in the hoistway.</li>
+</ul>
+<h3> Scenario: </h3>
+<ol start="1" type="1">
+  <li>Doors are read as open.</li>
+  <li>Dispatcher sets mDesiredFloor to {1, NONE, STOP}</li>
+</ol>
+<h3> Post-Conditions: </h3>
+<ul type="disc">
+  <li>Dispatcher has set mDesiredFloor to {1, NONE, STOP}</li>
+</ul>
+<h3> Sequence Diagram: </h3>
+<!-- SD9A arcs: 1 2 -->
+<p> <a href="./sd9a.png"><img src="./sd9a.png"></a> </p>
+
+<div align="center">
+<hr size="2" width="100%" align="center"> </div>
+
+<!-- Scenario 9B -->
+<h3> <a name="scenario9b" id="scenario9b">Scenario 9B: Drive moves the elevator from {floor f, hallway b} to {floor g, hallway c} in direction d using fast speed.</h3>
+<h3> Author name: Daniel Santoro // ddsantor</h3>
+<h3> Pre-Conditions: </h3>
+<ul type="disc">
+  <li>Elevator is at floor <b>f</b>, with at least one Door[<b>b</b>,<b>r</b>] open.</li>
+  <li>Car is level.</li>
+  <li>Dispatcher has computed desired floor <b>g</b> and hallway <b>c</b>.
+  <li>Drive is stopped. </li>
+</ul>
+<h3> Scenario: </h3>
+<ol start="1" type="1">
+  <li>All doors close.</li>
+  <li>Drive is commanded accelerate car in direction <b>d</b> at speed <b>Slow</b>, then to <b>Fast</b>.</li>
+  <li>Drive reads CarLevelPosition and DriveSpeed to calculate commit point.</li>
+  <li>Drive moves car in direction <b>d</b> at speed <b>Slow</b>.</li>
+  <li>Car arrives at desired floor <b>g</b>.</li>
+  <li>Drive is commanded to stop.</li>
+</ol>
+<h3> Post-Conditions: </h3>
+<ul type="disc">
+  <li>Car at desired floor <b>g</b>.</li>
+  <li>All doors are closed.</li>
+</ul>
+<h3> Sequence Diagram: </h3>
+<!-- SD9B arcs: 1a 1b 1c 1d 2a 2b 2c 3a 3b 3c 4 5 6 -->
+<p> <a href="./sd9b.png"><img src="./sd9b.png"></a> </p>
+<hr size="2" width="100%" align="center"> </div>
+
+<!-- Scenario 9C -->
+<h3> <a name="scenario9c" id="scenario9c">Scenario 9C: Drive moves the elevator from {floor f, hallway b} to {floor g, hallway c} in direction d as Dispatcher changes DesiredFloor to {floor h, hallway e}.</h3>
+<h3> Author name: Daniel Santoro // ddsantor</h3>
+<h3> Pre-Conditions: </h3>
+<ul type="disc">
+  <li>Elevator is in the hoistway moving from <b>f</b> to <b>g</b> and has received a new DesiredFloor = {h, e, d}.</li>
+</ul>
+<h3> Scenario: </h3>
+<ol start="1" type="1">
+  <li>Drive reads CarLevelPosition and DriveSpeed to calculate commit point.</li>
+  <li>Drive moves car in direction <b>d</b> at speed <b>Slow</b>.</li>
+  <li>Car arrives at desired floor <b>h</b>.</li>
+  <li>Drive is commanded to stop.</li>
+</ol>
+<h3> Post-Conditions: </h3>
+<ul type="disc">
+  <li>Car at desired floor <b>g</b>.</li>
+  <li>All doors are closed.</li>
+</ul>
+<h3> Sequence Diagram: </h3>
+<!-- SD9C arcs: 1a 1b 1c 2 3 4 -->
+<p> <a href="./sd9c.png"><img src="./sd9c.png"></a> </p>
+<hr size="2" width="100%" align="center"> </div>
+
+<!-- Scenario 9D -->
+<h3> <a name="scenario9d" id="scenario9d">Scenario 9D: Car arrives at {floor <b>g</b>, hallway <b>c</b>} and leveling is required.</h3>
+<h3> Author name: Daniel Santoro // ddsantor</h3>
+<h3> Pre-Conditions: </h3>
+<ul type="disc">
+  <li>Elevator is at floor <b>g</b>.</li>
+  <li>Drive is stopped.</li>
+  <li>Drive speed direction is last received as stop.</li>
+</ul>
+<h3> Scenario: </h3>
+<ol start="1" type="1">
+  <li>mLevel[d] is false.</li>
+  <li>Drive levels car at floor <b>g</b> in direction <b>d</b> .</li>
+  <li>mLevel[d] is true.</li>
+  <li>Drive is commanded to <b>Stop</b></li>
+</ol>
+<h3> Post-Conditions: </h3>
+<ul type="disc">
+  <li>Car at desired floor <b>g</b>.</li>
+  <li>Car is level.</li>
+  <li>All doors are closed.</li>
+</ul>
+<h3> Sequence Diagram: </h3>
+<!-- SD9D arcs: 1 2 3 4 -->
+<p> <a href="./sd9d.png"><img src="./sd9d.png"></a> </p>
+
+<div align="center">
+<hr size="2" width="100%" align="center"> </div>
+
+
+<p> &nbsp; </p>
+
+</body></html>

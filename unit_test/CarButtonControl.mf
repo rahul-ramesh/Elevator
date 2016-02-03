@@ -1,0 +1,57 @@
+; CarButtonControl.mf
+; 18-649 Distributed Embedded Systems
+; Group 11
+; Rahul Ramesh // rahulram. Daniel Santoro // ddsantor. David Thompson // davidtho. Jialiang Tan // jialiant
+; !@
+; 18-649 Distributed Embedded Systems
+; CarButtonControl.mf
+; Group 11
+; Rahul Ramesh // rahulram. Daniel Santoro // ddsantor. David Thompson // davidtho. Jialiang Tan // jialiant
+; Last Modified 2015-12-05
+
+
+#INCLUDE defines.mf
+
+; Initialize
+; Doors are closed, no car call.
++300ms I DOOR_CLOSED_SENSOR_PERIOD N DOOR_CLOSED_SENSOR_[FRONT][LEFT]_CAN_ID DoorClosed FRONT LEFT = true
++0ms I DOOR_CLOSED_SENSOR_PERIOD N DOOR_CLOSED_SENSOR_[FRONT][RIGHT]_CAN_ID DoorClosed FRONT RIGHT = true
++0ms I DOOR_CLOSED_SENSOR_PERIOD N DOOR_CLOSED_SENSOR_[BACK][LEFT]_CAN_ID DoorClosed BACK LEFT = true
++0ms I DOOR_CLOSED_SENSOR_PERIOD N DOOR_CLOSED_SENSOR_[BACK][RIGHT]_CAN_ID DoorClosed BACK RIGHT = true
++0ms I AT_FLOOR_PERIOD N AT_FLOOR_[2][BACK]_CAN_ID AtFloor 2 BACK = TRUE
++0ms I DISPATCHER_PERIOD N DESIRED_FLOOR_CAN_ID DesiredFloor = 1 STOP BACK
+
+; check the initial condition and state
+;#state 'OFF'
++100ms A F CarLight 4 FRONT : lighted == false
++0ms A N CAR_CALL_[4][FRONT]_CAN_ID CarCall 4 FRONT : getValue == false
+
+; Passenger pushes car call button.
+;#transition 'PT1'
++300ms I 0s F CarCall 4 FRONT = true
+
+; Car button light turns on.
+;#state 'PRESSED'
++500ms A F CarLight 4 FRONT : lighted == true
++0ms A N CAR_CALL_[4][FRONT]_CAN_ID CarCall 4 FRONT : getValue == false
+
+; Passenger releases car call button
+;#transition 'PT3'
++200ms I 0s F CarCall 4 FRONT = false
+
+; Car button light stays on and message is sent.
+;#state 'CALLED'
++500ms A F CarLight 4 FRONT : lighted == true
++0ms A N CAR_CALL_[4][FRONT]_CAN_ID CarCall 4 FRONT : getValue == true
+
+; Elevator arrives at destination and doors open.
+;#transition 'PT2'
++300ms I AT_FLOOR_PERIOD N AT_FLOOR_[4][FRONT]_CAN_ID AtFloor 4 FRONT = true
++0ms I DISPATCHER_PERIOD N DESIRED_FLOOR_CAN_ID DesiredFloor = 4 UP FRONT
++0ms I DOOR_CLOSED_SENSOR_PERIOD N DOOR_CLOSED_SENSOR_[FRONT][LEFT]_CAN_ID DoorClosed FRONT LEFT = false
+
+; Car button light turns off.
+;#state 'CALL_OFF'
+; check the states after second transition
++500ms A F CarLight 4 FRONT : lighted == false
++0ms A N CAR_CALL_[4][FRONT]_CAN_ID CarCall 4 FRONT : getValue == false

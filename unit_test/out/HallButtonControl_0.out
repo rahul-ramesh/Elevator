@@ -1,0 +1,215 @@
+; HallButtonControl_0.out
+; 18-649 Distributed Embedded Systems
+; Group 11
+; Rahul Ramesh // rahulram. Daniel Santoro // ddsantor. David Thompson // davidtho. Jialiang Tan // jialiant
+; !@
+
+
+Simulator Parameters:
+Command line = -cf ../../portfolio_grp11/unit_test/HallButtonControl.cf -mf ../../portfolio_grp11/unit_test/HallButtonControl.mf -head ../../portfolio_grp11/scripts/grp11.head
+RandomSeed = 1450147024638
+CanNetworkBitTime = 0 ns
+Effective Can Bitrate = Infinity
+Run Time = null
+Real time rate = null
+Message File = ../../portfolio_grp11/unit_test/HallButtonControl.mf
+Controller File = ../../portfolio_grp11/unit_test/HallButtonControl.cf
+
+
+[HallButtonControl[4][FRONT][UP]] @0.000000000: Created HallButtonControl [4][FRONT][UP] with period = 0.1s
+[Elevator] @0.000000000: Starting Simulation ***
+[HallButtonControl[4][FRONT][UP]] @0.100000000: remains in state: STATE_OFF
+[HallButtonControl[4][FRONT][UP]] @0.100000000: State stored: STATE<-STATE_OFF
+[HallButtonControl[4][FRONT][UP]] @0.200000000: remains in state: STATE_OFF
+[HallButtonControl[4][FRONT][UP]] @0.200000000: State stored: STATE<-STATE_OFF
+[HallButtonControl[4][FRONT][UP]] @0.300000000: remains in state: STATE_OFF
+[HallButtonControl[4][FRONT][UP]] @0.300000000: State stored: STATE<-STATE_OFF
+[HallButtonControl[4][FRONT][UP]] @0.400000000: remains in state: STATE_OFF
+[HallButtonControl[4][FRONT][UP]] @0.400000000: State stored: STATE<-STATE_OFF
+[HallButtonControl[4][FRONT][UP]] @0.500000000: remains in state: STATE_OFF
+[HallButtonControl[4][FRONT][UP]] @0.500000000: State stored: STATE<-STATE_OFF
+[HallButtonControl[4][FRONT][UP]] @0.600000000: remains in state: STATE_OFF
+[HallButtonControl[4][FRONT][UP]] @0.600000000: State stored: STATE<-STATE_OFF
+[HallButtonControl[4][FRONT][UP]] @0.700000000: remains in state: STATE_OFF
+[HallButtonControl[4][FRONT][UP]] @0.700000000: State stored: STATE<-STATE_OFF
+[AssertionMonitor] @0.800000000: ********************************************************************************************************
+[AssertionMonitor] @0.800000000: PASSED simulator.payloads.HallLightPayload$ReadableHallLightPayload@4e42751f :: lighted ?== false PASSED
+[AssertionMonitor] @0.800000000: ********************************************************************************************************
+[AssertionMonitor] @0.800000000: *********************************************************************************************
+[AssertionMonitor] @0.800000000: PASSED simulator.payloads.CanMailbox$ReadableCanMailbox@1d4e91f8 :: getValue ?== false PASSED
+[AssertionMonitor] @0.800000000: *********************************************************************************************
+[HallButtonControl[4][FRONT][UP]] @0.800000000: remains in state: STATE_OFF
+[HallButtonControl[4][FRONT][UP]] @0.800000000: State stored: STATE<-STATE_OFF
+[HallButtonControl[4][FRONT][UP]] @0.900000000: remains in state: STATE_OFF
+[HallButtonControl[4][FRONT][UP]] @0.900000000: State stored: STATE<-STATE_OFF
+[HallButtonControl[4][FRONT][UP]] @1.000000000: remains in state: STATE_OFF
+[HallButtonControl[4][FRONT][UP]] @1.000000000: State stored: STATE<-STATE_OFF
+[HallButtonControl[4][FRONT][UP]] @1.100000000: Button pressed:4FRONTUP
+[HallButtonControl[4][FRONT][UP]] @1.100000000: Transition:STATE_OFF->STATE_PRESSED
+[HallButtonControl[4][FRONT][UP]] @1.100000000: State stored: STATE<-STATE_PRESSED
+[HallButtonControl[4][FRONT][UP]] @1.200000000: remains in state: STATE_PRESSED
+[HallButtonControl[4][FRONT][UP]] @1.200000000: State stored: STATE<-STATE_PRESSED
+[HallButtonControl[4][FRONT][UP]] @1.300000000: remains in state: STATE_PRESSED
+[HallButtonControl[4][FRONT][UP]] @1.300000000: State stored: STATE<-STATE_PRESSED
+[HallButtonControl[4][FRONT][UP]] @1.400000000: remains in state: STATE_PRESSED
+[HallButtonControl[4][FRONT][UP]] @1.400000000: State stored: STATE<-STATE_PRESSED
+[HallButtonControl[4][FRONT][UP]] @1.500000000: remains in state: STATE_PRESSED
+[HallButtonControl[4][FRONT][UP]] @1.500000000: State stored: STATE<-STATE_PRESSED
+[AssertionMonitor] @1.600000000: *******************************************************************************************************
+[AssertionMonitor] @1.600000000: PASSED simulator.payloads.HallLightPayload$ReadableHallLightPayload@6d347991 :: lighted ?== true PASSED
+[AssertionMonitor] @1.600000000: *******************************************************************************************************
+[AssertionMonitor] @1.600000000: *********************************************************************************************
+[AssertionMonitor] @1.600000000: PASSED simulator.payloads.CanMailbox$ReadableCanMailbox@6f84a0b7 :: getValue ?== false PASSED
+[AssertionMonitor] @1.600000000: *********************************************************************************************
+[HallButtonControl[4][FRONT][UP]] @1.600000000: remains in state: STATE_PRESSED
+[HallButtonControl[4][FRONT][UP]] @1.600000000: State stored: STATE<-STATE_PRESSED
+[HallButtonControl[4][FRONT][UP]] @1.700000000: remains in state: STATE_PRESSED
+[HallButtonControl[4][FRONT][UP]] @1.700000000: State stored: STATE<-STATE_PRESSED
+[HallButtonControl[4][FRONT][UP]] @1.800000000: remains in state: STATE_PRESSED
+[HallButtonControl[4][FRONT][UP]] @1.800000000: State stored: STATE<-STATE_PRESSED
+[HallButtonControl[4][FRONT][UP]] @1.900000000: remains in state: STATE_PRESSED
+[HallButtonControl[4][FRONT][UP]] @1.900000000: State stored: STATE<-STATE_PRESSED
+[HallButtonControl[4][FRONT][UP]] @2.000000000: Transition:STATE_PRESSED->STATE_CALLED
+[HallButtonControl[4][FRONT][UP]] @2.000000000: State stored: STATE<-STATE_CALLED
+[HallButtonControl[4][FRONT][UP]] @2.100000000: remains in state: STATE_CALLED
+[HallButtonControl[4][FRONT][UP]] @2.100000000: State stored: STATE<-STATE_CALLED
+[HallButtonControl[4][FRONT][UP]] @2.200000000: remains in state: STATE_CALLED
+[HallButtonControl[4][FRONT][UP]] @2.200000000: State stored: STATE<-STATE_CALLED
+[HallButtonControl[4][FRONT][UP]] @2.300000000: remains in state: STATE_CALLED
+[HallButtonControl[4][FRONT][UP]] @2.300000000: State stored: STATE<-STATE_CALLED
+[AssertionMonitor] @2.400000000: *******************************************************************************************************
+[AssertionMonitor] @2.400000000: PASSED simulator.payloads.HallLightPayload$ReadableHallLightPayload@5fe9fb74 :: lighted ?== true PASSED
+[AssertionMonitor] @2.400000000: *******************************************************************************************************
+[AssertionMonitor] @2.400000000: ********************************************************************************************
+[AssertionMonitor] @2.400000000: PASSED simulator.payloads.CanMailbox$ReadableCanMailbox@4dd3c6fd :: getValue ?== true PASSED
+[AssertionMonitor] @2.400000000: ********************************************************************************************
+[HallButtonControl[4][FRONT][UP]] @2.400000000: remains in state: STATE_CALLED
+[HallButtonControl[4][FRONT][UP]] @2.400000000: State stored: STATE<-STATE_CALLED
+[HallButtonControl[4][FRONT][UP]] @2.500000000: remains in state: STATE_CALLED
+[HallButtonControl[4][FRONT][UP]] @2.500000000: State stored: STATE<-STATE_CALLED
+[HallButtonControl[4][FRONT][UP]] @2.600000000: remains in state: STATE_CALLED
+[HallButtonControl[4][FRONT][UP]] @2.600000000: State stored: STATE<-STATE_CALLED
+[HallButtonControl[4][FRONT][UP]] @2.700000000: remains in state: STATE_CALLED
+[HallButtonControl[4][FRONT][UP]] @2.700000000: State stored: STATE<-STATE_CALLED
+[HallButtonControl[4][FRONT][UP]] @2.800000000: Transition:STATE_CALLED->STATE_OFF
+[HallButtonControl[4][FRONT][UP]] @2.800000000: State stored: STATE<-STATE_OFF
+[HallButtonControl[4][FRONT][UP]] @2.900000000: remains in state: STATE_OFF
+[HallButtonControl[4][FRONT][UP]] @2.900000000: State stored: STATE<-STATE_OFF
+[HallButtonControl[4][FRONT][UP]] @3.000000000: remains in state: STATE_OFF
+[HallButtonControl[4][FRONT][UP]] @3.000000000: State stored: STATE<-STATE_OFF
+[HallButtonControl[4][FRONT][UP]] @3.100000000: remains in state: STATE_OFF
+[HallButtonControl[4][FRONT][UP]] @3.100000000: State stored: STATE<-STATE_OFF
+[AssertionMonitor] @3.200000000: ********************************************************************************************************
+[AssertionMonitor] @3.200000000: PASSED simulator.payloads.HallLightPayload$ReadableHallLightPayload@712e60f3 :: lighted ?== false PASSED
+[AssertionMonitor] @3.200000000: ********************************************************************************************************
+[AssertionMonitor] @3.200000000: *********************************************************************************************
+[AssertionMonitor] @3.200000000: PASSED simulator.payloads.CanMailbox$ReadableCanMailbox@58a58c89 :: getValue ?== false PASSED
+[AssertionMonitor] @3.200000000: *********************************************************************************************
+[HallButtonControl[4][FRONT][UP]] @3.200000000: remains in state: STATE_OFF
+[HallButtonControl[4][FRONT][UP]] @3.200000000: State stored: STATE<-STATE_OFF
+[HallButtonControl[4][FRONT][UP]] @3.300000000: remains in state: STATE_OFF
+[HallButtonControl[4][FRONT][UP]] @3.300000000: State stored: STATE<-STATE_OFF
+[HallButtonControl[4][FRONT][UP]] @3.400000000: remains in state: STATE_OFF
+[HallButtonControl[4][FRONT][UP]] @3.400000000: State stored: STATE<-STATE_OFF
+[HallButtonControl[4][FRONT][UP]] @3.500000000: remains in state: STATE_OFF
+[HallButtonControl[4][FRONT][UP]] @3.500000000: State stored: STATE<-STATE_OFF
+[HallButtonControl[4][FRONT][UP]] @3.600000000: remains in state: STATE_OFF
+[HallButtonControl[4][FRONT][UP]] @3.600000000: State stored: STATE<-STATE_OFF
+[HallButtonControl[4][FRONT][UP]] @3.700000000: remains in state: STATE_OFF
+[HallButtonControl[4][FRONT][UP]] @3.700000000: State stored: STATE<-STATE_OFF
+[HallButtonControl[4][FRONT][UP]] @3.800000000: remains in state: STATE_OFF
+[HallButtonControl[4][FRONT][UP]] @3.800000000: State stored: STATE<-STATE_OFF
+[HallButtonControl[4][FRONT][UP]] @3.900000000: remains in state: STATE_OFF
+[HallButtonControl[4][FRONT][UP]] @3.900000000: State stored: STATE<-STATE_OFF
+[HallButtonControl[4][FRONT][UP]] @4.000000000: remains in state: STATE_OFF
+[HallButtonControl[4][FRONT][UP]] @4.000000000: State stored: STATE<-STATE_OFF
+[HallButtonControl[4][FRONT][UP]] @4.100000000: remains in state: STATE_OFF
+[HallButtonControl[4][FRONT][UP]] @4.100000000: State stored: STATE<-STATE_OFF
+[HallButtonControl[4][FRONT][UP]] @4.200000000: remains in state: STATE_OFF
+[HallButtonControl[4][FRONT][UP]] @4.200000000: State stored: STATE<-STATE_OFF
+[HallButtonControl[4][FRONT][UP]] @4.300000000: remains in state: STATE_OFF
+[HallButtonControl[4][FRONT][UP]] @4.300000000: State stored: STATE<-STATE_OFF
+[HallButtonControl[4][FRONT][UP]] @4.400000000: remains in state: STATE_OFF
+[HallButtonControl[4][FRONT][UP]] @4.400000000: State stored: STATE<-STATE_OFF
+[HallButtonControl[4][FRONT][UP]] @4.500000000: remains in state: STATE_OFF
+[HallButtonControl[4][FRONT][UP]] @4.500000000: State stored: STATE<-STATE_OFF
+[HallButtonControl[4][FRONT][UP]] @4.600000000: remains in state: STATE_OFF
+[HallButtonControl[4][FRONT][UP]] @4.600000000: State stored: STATE<-STATE_OFF
+[HallButtonControl[4][FRONT][UP]] @4.700000000: remains in state: STATE_OFF
+[HallButtonControl[4][FRONT][UP]] @4.700000000: State stored: STATE<-STATE_OFF
+[HallButtonControl[4][FRONT][UP]] @4.800000000: remains in state: STATE_OFF
+[HallButtonControl[4][FRONT][UP]] @4.800000000: State stored: STATE<-STATE_OFF
+[HallButtonControl[4][FRONT][UP]] @4.900000000: remains in state: STATE_OFF
+[HallButtonControl[4][FRONT][UP]] @4.900000000: State stored: STATE<-STATE_OFF
+[HallButtonControl[4][FRONT][UP]] @5.000000000: remains in state: STATE_OFF
+[HallButtonControl[4][FRONT][UP]] @5.000000000: State stored: STATE<-STATE_OFF
+[HallButtonControl[4][FRONT][UP]] @5.100000000: remains in state: STATE_OFF
+[HallButtonControl[4][FRONT][UP]] @5.100000000: State stored: STATE<-STATE_OFF
+[HallButtonControl[4][FRONT][UP]] @5.200000000: remains in state: STATE_OFF
+[HallButtonControl[4][FRONT][UP]] @5.200000000: State stored: STATE<-STATE_OFF
+[HallButtonControl[4][FRONT][UP]] @5.300000000: remains in state: STATE_OFF
+[HallButtonControl[4][FRONT][UP]] @5.300000000: State stored: STATE<-STATE_OFF
+[HallButtonControl[4][FRONT][UP]] @5.400000000: remains in state: STATE_OFF
+[HallButtonControl[4][FRONT][UP]] @5.400000000: State stored: STATE<-STATE_OFF
+[HallButtonControl[4][FRONT][UP]] @5.500000000: remains in state: STATE_OFF
+[HallButtonControl[4][FRONT][UP]] @5.500000000: State stored: STATE<-STATE_OFF
+[HallButtonControl[4][FRONT][UP]] @5.600000000: remains in state: STATE_OFF
+[HallButtonControl[4][FRONT][UP]] @5.600000000: State stored: STATE<-STATE_OFF
+[HallButtonControl[4][FRONT][UP]] @5.700000000: remains in state: STATE_OFF
+[HallButtonControl[4][FRONT][UP]] @5.700000000: State stored: STATE<-STATE_OFF
+[HallButtonControl[4][FRONT][UP]] @5.800000000: remains in state: STATE_OFF
+[HallButtonControl[4][FRONT][UP]] @5.800000000: State stored: STATE<-STATE_OFF
+[HallButtonControl[4][FRONT][UP]] @5.900000000: remains in state: STATE_OFF
+[HallButtonControl[4][FRONT][UP]] @5.900000000: State stored: STATE<-STATE_OFF
+[HallButtonControl[4][FRONT][UP]] @6.000000000: remains in state: STATE_OFF
+[HallButtonControl[4][FRONT][UP]] @6.000000000: State stored: STATE<-STATE_OFF
+[HallButtonControl[4][FRONT][UP]] @6.100000000: remains in state: STATE_OFF
+[HallButtonControl[4][FRONT][UP]] @6.100000000: State stored: STATE<-STATE_OFF
+[HallButtonControl[4][FRONT][UP]] @6.200000000: remains in state: STATE_OFF
+[HallButtonControl[4][FRONT][UP]] @6.200000000: State stored: STATE<-STATE_OFF
+[HallButtonControl[4][FRONT][UP]] @6.300000000: remains in state: STATE_OFF
+[HallButtonControl[4][FRONT][UP]] @6.300000000: State stored: STATE<-STATE_OFF
+[HallButtonControl[4][FRONT][UP]] @6.400000000: remains in state: STATE_OFF
+[HallButtonControl[4][FRONT][UP]] @6.400000000: State stored: STATE<-STATE_OFF
+[HallButtonControl[4][FRONT][UP]] @6.500000000: remains in state: STATE_OFF
+[HallButtonControl[4][FRONT][UP]] @6.500000000: State stored: STATE<-STATE_OFF
+[HallButtonControl[4][FRONT][UP]] @6.600000000: remains in state: STATE_OFF
+[HallButtonControl[4][FRONT][UP]] @6.600000000: State stored: STATE<-STATE_OFF
+[HallButtonControl[4][FRONT][UP]] @6.700000000: remains in state: STATE_OFF
+[HallButtonControl[4][FRONT][UP]] @6.700000000: State stored: STATE<-STATE_OFF
+[HallButtonControl[4][FRONT][UP]] @6.800000000: remains in state: STATE_OFF
+[HallButtonControl[4][FRONT][UP]] @6.800000000: State stored: STATE<-STATE_OFF
+[HallButtonControl[4][FRONT][UP]] @6.900000000: remains in state: STATE_OFF
+[HallButtonControl[4][FRONT][UP]] @6.900000000: State stored: STATE<-STATE_OFF
+[HallButtonControl[4][FRONT][UP]] @7.000000000: remains in state: STATE_OFF
+[HallButtonControl[4][FRONT][UP]] @7.000000000: State stored: STATE<-STATE_OFF
+[HallButtonControl[4][FRONT][UP]] @7.100000000: remains in state: STATE_OFF
+[HallButtonControl[4][FRONT][UP]] @7.100000000: State stored: STATE<-STATE_OFF
+[HallButtonControl[4][FRONT][UP]] @7.200000000: remains in state: STATE_OFF
+[HallButtonControl[4][FRONT][UP]] @7.200000000: State stored: STATE<-STATE_OFF
+[HallButtonControl[4][FRONT][UP]] @7.300000000: remains in state: STATE_OFF
+[HallButtonControl[4][FRONT][UP]] @7.300000000: State stored: STATE<-STATE_OFF
+[HallButtonControl[4][FRONT][UP]] @7.400000000: remains in state: STATE_OFF
+[HallButtonControl[4][FRONT][UP]] @7.400000000: State stored: STATE<-STATE_OFF
+[HallButtonControl[4][FRONT][UP]] @7.500000000: remains in state: STATE_OFF
+[HallButtonControl[4][FRONT][UP]] @7.500000000: State stored: STATE<-STATE_OFF
+[HallButtonControl[4][FRONT][UP]] @7.600000000: remains in state: STATE_OFF
+[HallButtonControl[4][FRONT][UP]] @7.600000000: State stored: STATE<-STATE_OFF
+[HallButtonControl[4][FRONT][UP]] @7.700000000: remains in state: STATE_OFF
+[HallButtonControl[4][FRONT][UP]] @7.700000000: State stored: STATE<-STATE_OFF
+[HallButtonControl[4][FRONT][UP]] @7.800000000: remains in state: STATE_OFF
+[HallButtonControl[4][FRONT][UP]] @7.800000000: State stored: STATE<-STATE_OFF
+[HallButtonControl[4][FRONT][UP]] @7.900000000: remains in state: STATE_OFF
+[HallButtonControl[4][FRONT][UP]] @7.900000000: State stored: STATE<-STATE_OFF
+[HallButtonControl[4][FRONT][UP]] @8.000000000: remains in state: STATE_OFF
+[HallButtonControl[4][FRONT][UP]] @8.000000000: State stored: STATE<-STATE_OFF
+[HallButtonControl[4][FRONT][UP]] @8.100000000: remains in state: STATE_OFF
+[HallButtonControl[4][FRONT][UP]] @8.100000000: State stored: STATE<-STATE_OFF
+[HallButtonControl[4][FRONT][UP]] @8.200000000: remains in state: STATE_OFF
+[HallButtonControl[4][FRONT][UP]] @8.200000000: State stored: STATE<-STATE_OFF
+[Elevator] @8.200000000: Simulation Finished ***
+******************Summary******************
+Passed:  8
+Failed:  0
+Total :  8
+

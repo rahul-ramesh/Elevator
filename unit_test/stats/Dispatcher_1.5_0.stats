@@ -1,0 +1,34 @@
+; Dispatcher_1.5_0.stats
+; 18-649 Distributed Embedded Systems
+; Group 11
+; Rahul Ramesh // rahulram. Daniel Santoro // ddsantor. David Thompson // davidtho. Jialiang Tan // jialiant
+; !@
+
+Simulator Parameters:
+Command line = -cf ../../portfolio_grp11/unit_test/Dispatcher.cf -mf ../../portfolio_grp11/unit_test/Dispatcher_1.5.mf -head ../../portfolio_grp11/scripts/grp11.head
+RandomSeed = 1450146996931
+CanNetworkBitTime = 0 ns
+Effective Can Bitrate = Infinity
+Run Time = null
+Real time rate = null
+Message File = ../../portfolio_grp11/unit_test/Dispatcher_1.5.mf
+Controller File = ../../portfolio_grp11/unit_test/Dispatcher.cf
+
+Assertion Results:
+@0.5s:  PASSED simulator.payloads.CanMailbox$ReadableCanMailbox@23ddd83c :: getFloor ?== 1 PASSED
+@0.5s:  PASSED simulator.payloads.CanMailbox$ReadableCanMailbox@db5eaed :: getDirection ?== STOP PASSED
+@0.5s:  PASSED simulator.payloads.CanMailbox$ReadableCanMailbox@53678aef :: getHallway ?== NONE PASSED
+@1.5s:  PASSED simulator.payloads.CanMailbox$ReadableCanMailbox@18b679e1 :: getValue ?== true PASSED
+@1.5s:  PASSED simulator.payloads.CanMailbox$ReadableCanMailbox@10bbe282 :: getFloor ?== 0 PASSED
+@1.5s:  PASSED simulator.payloads.CanMailbox$ReadableCanMailbox@4d112e85 :: getDirection ?== STOP PASSED
+@1.5s:  PASSED simulator.payloads.CanMailbox$ReadableCanMailbox@2f080f3c :: getHallway ?== NONE PASSED
+@2.5s:  PASSED simulator.payloads.CanMailbox$ReadableCanMailbox@1c61a885 :: getFloor ?== 3 PASSED
+@2.5s:  PASSED simulator.payloads.CanMailbox$ReadableCanMailbox@b077c9d :: getDirection ?== UP PASSED
+@2.5s:  PASSED simulator.payloads.CanMailbox$ReadableCanMailbox@10f946f9 :: getHallway ?== FRONT PASSED
+
+
+******************Summary******************
+Passed:  10
+Failed:  0
+Total :  10
+

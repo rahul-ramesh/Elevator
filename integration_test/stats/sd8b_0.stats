@@ -1,0 +1,35 @@
+; sd8b_0.stats
+; 18-649 Distributed Embedded Systems
+; Group 11
+; Rahul Ramesh // rahulram. Daniel Santoro // ddsantor. David Thompson // davidtho. Jialiang Tan // jialiant
+; !@
+
+Simulator Parameters:
+Command line = -cf ../../portfolio_grp11/integration_test/sd8b.cf -mf ../../portfolio_grp11/integration_test/sd8b.mf -head ../../portfolio_grp11/scripts/grp11.head
+RandomSeed = 1450147639765
+CanNetworkBitTime = 0 ns
+Effective Can Bitrate = Infinity
+Run Time = null
+Real time rate = null
+Message File = ../../portfolio_grp11/integration_test/sd8b.mf
+Controller File = ../../portfolio_grp11/integration_test/sd8b.cf
+
+Assertion Results:
+@0.55s:  PASSED simulator.payloads.DoorMotorPayload$ReadableDoorMotorPayload@5b33a7af :: command ?== STOP PASSED
+@2.05s:  PASSED simulator.payloads.DoorMotorPayload$ReadableDoorMotorPayload@63bc19e :: command ?== OPEN PASSED
+@3.6s:  PASSED simulator.payloads.DoorMotorPayload$ReadableDoorMotorPayload@1b6509fe :: command ?== STOP PASSED
+@4.6s:  PASSED simulator.payloads.CarLanternPayload$ReadableCarLanternPayload@6c506ee7 :: lighted ?== true PASSED
+@11.6s:  PASSED simulator.payloads.DoorMotorPayload$ReadableDoorMotorPayload@13a9f63f :: command ?== CLOSE PASSED
+@12.11s:  PASSED simulator.payloads.DoorMotorPayload$ReadableDoorMotorPayload@500b3f4c :: command ?== STOP PASSED
+@12.11s:  PASSED simulator.payloads.DoorMotorPayload$ReadableDoorMotorPayload@1afd2e1f :: command ?== STOP PASSED
+@12.11s:  PASSED simulator.payloads.DoorMotorPayload$ReadableDoorMotorPayload@464242a9 :: command ?== STOP PASSED
+@12.11s:  PASSED simulator.payloads.DoorMotorPayload$ReadableDoorMotorPayload@79feea8f :: command ?== STOP PASSED
+@13.11s:  PASSED simulator.payloads.CarLanternPayload$ReadableCarLanternPayload@2db5424e :: lighted ?== false PASSED
+@13.11s:  PASSED simulator.payloads.CarLanternPayload$ReadableCarLanternPayload@6be03fce :: lighted ?== false PASSED
+
+
+******************Summary******************
+Passed:  11
+Failed:  0
+Total :  11
+

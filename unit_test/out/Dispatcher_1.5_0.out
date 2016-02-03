@@ -1,0 +1,1708 @@
+; Dispatcher_1.5_0.out
+; 18-649 Distributed Embedded Systems
+; Group 11
+; Rahul Ramesh // rahulram. Daniel Santoro // ddsantor. David Thompson // davidtho. Jialiang Tan // jialiant
+; !@
+
+
+Simulator Parameters:
+Command line = -cf ../../portfolio_grp11/unit_test/Dispatcher.cf -mf ../../portfolio_grp11/unit_test/Dispatcher_1.5.mf -head ../../portfolio_grp11/scripts/grp11.head
+RandomSeed = 1450146996931
+CanNetworkBitTime = 0 ns
+Effective Can Bitrate = Infinity
+Run Time = null
+Real time rate = null
+Message File = ../../portfolio_grp11/unit_test/Dispatcher_1.5.mf
+Controller File = ../../portfolio_grp11/unit_test/Dispatcher.cf
+
+
+[Dispatcher] @0.000000000: Created Dispatcher with period = 0.05s
+[Elevator] @0.000000000: Starting Simulation ***
+[Dispatcher] @0.050000000: 
+[Dispatcher] @0.050000000: DISPATCHER TIMER EXPIRED - EXECUTE
+[Dispatcher] @0.050000000: Current floor: 1
+[Dispatcher] @0.050000000: Current hallway: NONE
+[Dispatcher] @0.050000000: Call at current floor: false
+[Dispatcher] @0.050000000: All doors closed: false
+[Dispatcher] @0.050000000: targetF: 1
+[Dispatcher] @0.050000000: TargetB: NONE
+[Dispatcher] @0.050000000: Desired direction: STOP
+[Dispatcher] @0.050000000: remains in state: STATE_SAFETY
+[Dispatcher] @0.050000000: State stored: STATE<-STATE_SAFETY
+[Dispatcher] @0.100000000: 
+[Dispatcher] @0.100000000: DISPATCHER TIMER EXPIRED - EXECUTE
+[Dispatcher] @0.100000000: Current floor: 1
+[Dispatcher] @0.100000000: Current hallway: NONE
+[Dispatcher] @0.100000000: Call at current floor: false
+[Dispatcher] @0.100000000: All doors closed: false
+[Dispatcher] @0.100000000: targetF: 1
+[Dispatcher] @0.100000000: TargetB: NONE
+[Dispatcher] @0.100000000: Desired direction: STOP
+[Dispatcher] @0.100000000: remains in state: STATE_SAFETY
+[Dispatcher] @0.100000000: State stored: STATE<-STATE_SAFETY
+[Dispatcher] @0.150000000: 
+[Dispatcher] @0.150000000: DISPATCHER TIMER EXPIRED - EXECUTE
+[Dispatcher] @0.150000000: Current floor: 1
+[Dispatcher] @0.150000000: Current hallway: NONE
+[Dispatcher] @0.150000000: Call at current floor: false
+[Dispatcher] @0.150000000: All doors closed: false
+[Dispatcher] @0.150000000: targetF: 1
+[Dispatcher] @0.150000000: TargetB: NONE
+[Dispatcher] @0.150000000: Desired direction: STOP
+[Dispatcher] @0.150000000: remains in state: STATE_SAFETY
+[Dispatcher] @0.150000000: State stored: STATE<-STATE_SAFETY
+[Dispatcher] @0.200000000: 
+[Dispatcher] @0.200000000: DISPATCHER TIMER EXPIRED - EXECUTE
+[Dispatcher] @0.200000000: Current floor: 1
+[Dispatcher] @0.200000000: Current hallway: NONE
+[Dispatcher] @0.200000000: Call at current floor: false
+[Dispatcher] @0.200000000: All doors closed: false
+[Dispatcher] @0.200000000: targetF: 1
+[Dispatcher] @0.200000000: TargetB: NONE
+[Dispatcher] @0.200000000: Desired direction: STOP
+[Dispatcher] @0.200000000: remains in state: STATE_SAFETY
+[Dispatcher] @0.200000000: State stored: STATE<-STATE_SAFETY
+[Dispatcher] @0.250000000: 
+[Dispatcher] @0.250000000: DISPATCHER TIMER EXPIRED - EXECUTE
+[Dispatcher] @0.250000000: Current floor: 1
+[Dispatcher] @0.250000000: Current hallway: NONE
+[Dispatcher] @0.250000000: Call at current floor: false
+[Dispatcher] @0.250000000: All doors closed: false
+[Dispatcher] @0.250000000: targetF: 1
+[Dispatcher] @0.250000000: TargetB: NONE
+[Dispatcher] @0.250000000: Desired direction: STOP
+[Dispatcher] @0.250000000: remains in state: STATE_SAFETY
+[Dispatcher] @0.250000000: State stored: STATE<-STATE_SAFETY
+[Dispatcher] @0.300000000: 
+[Dispatcher] @0.300000000: DISPATCHER TIMER EXPIRED - EXECUTE
+[Dispatcher] @0.300000000: Current floor: 1
+[Dispatcher] @0.300000000: Current hallway: NONE
+[Dispatcher] @0.300000000: Call at current floor: false
+[Dispatcher] @0.300000000: All doors closed: false
+[Dispatcher] @0.300000000: targetF: 1
+[Dispatcher] @0.300000000: TargetB: NONE
+[Dispatcher] @0.300000000: Desired direction: STOP
+[Dispatcher] @0.300000000: remains in state: STATE_SAFETY
+[Dispatcher] @0.300000000: State stored: STATE<-STATE_SAFETY
+[Dispatcher] @0.350000000: 
+[Dispatcher] @0.350000000: DISPATCHER TIMER EXPIRED - EXECUTE
+[Dispatcher] @0.350000000: Current floor: 1
+[Dispatcher] @0.350000000: Current hallway: NONE
+[Dispatcher] @0.350000000: Call at current floor: false
+[Dispatcher] @0.350000000: All doors closed: false
+[Dispatcher] @0.350000000: targetF: 1
+[Dispatcher] @0.350000000: TargetB: NONE
+[Dispatcher] @0.350000000: Desired direction: STOP
+[Dispatcher] @0.350000000: remains in state: STATE_SAFETY
+[Dispatcher] @0.350000000: State stored: STATE<-STATE_SAFETY
+[Dispatcher] @0.400000000: 
+[Dispatcher] @0.400000000: DISPATCHER TIMER EXPIRED - EXECUTE
+[Dispatcher] @0.400000000: Current floor: 1
+[Dispatcher] @0.400000000: Current hallway: NONE
+[Dispatcher] @0.400000000: Call at current floor: false
+[Dispatcher] @0.400000000: All doors closed: false
+[Dispatcher] @0.400000000: targetF: 1
+[Dispatcher] @0.400000000: TargetB: NONE
+[Dispatcher] @0.400000000: Desired direction: STOP
+[Dispatcher] @0.400000000: remains in state: STATE_SAFETY
+[Dispatcher] @0.400000000: State stored: STATE<-STATE_SAFETY
+[Dispatcher] @0.450000000: 
+[Dispatcher] @0.450000000: DISPATCHER TIMER EXPIRED - EXECUTE
+[Dispatcher] @0.450000000: Current floor: 1
+[Dispatcher] @0.450000000: Current hallway: NONE
+[Dispatcher] @0.450000000: Call at current floor: false
+[Dispatcher] @0.450000000: All doors closed: false
+[Dispatcher] @0.450000000: targetF: 1
+[Dispatcher] @0.450000000: TargetB: NONE
+[Dispatcher] @0.450000000: Desired direction: STOP
+[Dispatcher] @0.450000000: remains in state: STATE_SAFETY
+[Dispatcher] @0.450000000: State stored: STATE<-STATE_SAFETY
+[AssertionMonitor] @0.500000000: *****************************************************************************************
+[AssertionMonitor] @0.500000000: PASSED simulator.payloads.CanMailbox$ReadableCanMailbox@23ddd83c :: getFloor ?== 1 PASSED
+[AssertionMonitor] @0.500000000: *****************************************************************************************
+[AssertionMonitor] @0.500000000: ***********************************************************************************************
+[AssertionMonitor] @0.500000000: PASSED simulator.payloads.CanMailbox$ReadableCanMailbox@db5eaed :: getDirection ?== STOP PASSED
+[AssertionMonitor] @0.500000000: ***********************************************************************************************
+[AssertionMonitor] @0.500000000: **********************************************************************************************
+[AssertionMonitor] @0.500000000: PASSED simulator.payloads.CanMailbox$ReadableCanMailbox@53678aef :: getHallway ?== NONE PASSED
+[AssertionMonitor] @0.500000000: **********************************************************************************************
+[Dispatcher] @0.500000000: 
+[Dispatcher] @0.500000000: DISPATCHER TIMER EXPIRED - EXECUTE
+[Dispatcher] @0.500000000: Current floor: 1
+[Dispatcher] @0.500000000: Current hallway: NONE
+[Dispatcher] @0.500000000: Call at current floor: false
+[Dispatcher] @0.500000000: All doors closed: false
+[Dispatcher] @0.500000000: targetF: 1
+[Dispatcher] @0.500000000: TargetB: NONE
+[Dispatcher] @0.500000000: Desired direction: STOP
+[Dispatcher] @0.500000000: remains in state: STATE_SAFETY
+[Dispatcher] @0.500000000: State stored: STATE<-STATE_SAFETY
+[Dispatcher] @0.550000000: 
+[Dispatcher] @0.550000000: DISPATCHER TIMER EXPIRED - EXECUTE
+[Dispatcher] @0.550000000: Current floor: 1
+[Dispatcher] @0.550000000: Current hallway: NONE
+[Dispatcher] @0.550000000: Call at current floor: false
+[Dispatcher] @0.550000000: All doors closed: false
+[Dispatcher] @0.550000000: targetF: 1
+[Dispatcher] @0.550000000: TargetB: NONE
+[Dispatcher] @0.550000000: Desired direction: STOP
+[Dispatcher] @0.550000000: remains in state: STATE_SAFETY
+[Dispatcher] @0.550000000: State stored: STATE<-STATE_SAFETY
+[Dispatcher] @0.600000000: 
+[Dispatcher] @0.600000000: DISPATCHER TIMER EXPIRED - EXECUTE
+[Dispatcher] @0.600000000: Current floor: 1
+[Dispatcher] @0.600000000: Current hallway: NONE
+[Dispatcher] @0.600000000: Call at current floor: false
+[Dispatcher] @0.600000000: All doors closed: false
+[Dispatcher] @0.600000000: targetF: 1
+[Dispatcher] @0.600000000: TargetB: NONE
+[Dispatcher] @0.600000000: Desired direction: STOP
+[Dispatcher] @0.600000000: remains in state: STATE_SAFETY
+[Dispatcher] @0.600000000: State stored: STATE<-STATE_SAFETY
+[Dispatcher] @0.650000000: 
+[Dispatcher] @0.650000000: DISPATCHER TIMER EXPIRED - EXECUTE
+[Dispatcher] @0.650000000: Current floor: 1
+[Dispatcher] @0.650000000: Current hallway: NONE
+[Dispatcher] @0.650000000: Call at current floor: false
+[Dispatcher] @0.650000000: All doors closed: false
+[Dispatcher] @0.650000000: targetF: 1
+[Dispatcher] @0.650000000: TargetB: NONE
+[Dispatcher] @0.650000000: Desired direction: STOP
+[Dispatcher] @0.650000000: remains in state: STATE_SAFETY
+[Dispatcher] @0.650000000: State stored: STATE<-STATE_SAFETY
+[Dispatcher] @0.700000000: 
+[Dispatcher] @0.700000000: DISPATCHER TIMER EXPIRED - EXECUTE
+[Dispatcher] @0.700000000: Current floor: 1
+[Dispatcher] @0.700000000: Current hallway: NONE
+[Dispatcher] @0.700000000: Call at current floor: false
+[Dispatcher] @0.700000000: All doors closed: false
+[Dispatcher] @0.700000000: targetF: 1
+[Dispatcher] @0.700000000: TargetB: NONE
+[Dispatcher] @0.700000000: Desired direction: STOP
+[Dispatcher] @0.700000000: remains in state: STATE_SAFETY
+[Dispatcher] @0.700000000: State stored: STATE<-STATE_SAFETY
+[Dispatcher] @0.750000000: 
+[Dispatcher] @0.750000000: DISPATCHER TIMER EXPIRED - EXECUTE
+[Dispatcher] @0.750000000: Current floor: 1
+[Dispatcher] @0.750000000: Current hallway: NONE
+[Dispatcher] @0.750000000: Call at current floor: false
+[Dispatcher] @0.750000000: All doors closed: false
+[Dispatcher] @0.750000000: targetF: 1
+[Dispatcher] @0.750000000: TargetB: NONE
+[Dispatcher] @0.750000000: Desired direction: STOP
+[Dispatcher] @0.750000000: remains in state: STATE_SAFETY
+[Dispatcher] @0.750000000: State stored: STATE<-STATE_SAFETY
+[Dispatcher] @0.800000000: 
+[Dispatcher] @0.800000000: DISPATCHER TIMER EXPIRED - EXECUTE
+[Dispatcher] @0.800000000: Current floor: 1
+[Dispatcher] @0.800000000: Current hallway: NONE
+[Dispatcher] @0.800000000: Call at current floor: false
+[Dispatcher] @0.800000000: All doors closed: false
+[Dispatcher] @0.800000000: targetF: 1
+[Dispatcher] @0.800000000: TargetB: NONE
+[Dispatcher] @0.800000000: Desired direction: STOP
+[Dispatcher] @0.800000000: remains in state: STATE_SAFETY
+[Dispatcher] @0.800000000: State stored: STATE<-STATE_SAFETY
+[Dispatcher] @0.850000000: 
+[Dispatcher] @0.850000000: DISPATCHER TIMER EXPIRED - EXECUTE
+[Dispatcher] @0.850000000: Current floor: 1
+[Dispatcher] @0.850000000: Current hallway: NONE
+[Dispatcher] @0.850000000: Call at current floor: false
+[Dispatcher] @0.850000000: All doors closed: false
+[Dispatcher] @0.850000000: targetF: 1
+[Dispatcher] @0.850000000: TargetB: NONE
+[Dispatcher] @0.850000000: Desired direction: STOP
+[Dispatcher] @0.850000000: remains in state: STATE_SAFETY
+[Dispatcher] @0.850000000: State stored: STATE<-STATE_SAFETY
+[Dispatcher] @0.900000000: 
+[Dispatcher] @0.900000000: DISPATCHER TIMER EXPIRED - EXECUTE
+[Dispatcher] @0.900000000: Current floor: 1
+[Dispatcher] @0.900000000: Current hallway: NONE
+[Dispatcher] @0.900000000: Call at current floor: false
+[Dispatcher] @0.900000000: All doors closed: false
+[Dispatcher] @0.900000000: targetF: 1
+[Dispatcher] @0.900000000: TargetB: NONE
+[Dispatcher] @0.900000000: Desired direction: STOP
+[Dispatcher] @0.900000000: remains in state: STATE_SAFETY
+[Dispatcher] @0.900000000: State stored: STATE<-STATE_SAFETY
+[Dispatcher] @0.950000000: 
+[Dispatcher] @0.950000000: DISPATCHER TIMER EXPIRED - EXECUTE
+[Dispatcher] @0.950000000: Current floor: 1
+[Dispatcher] @0.950000000: Current hallway: NONE
+[Dispatcher] @0.950000000: Call at current floor: false
+[Dispatcher] @0.950000000: All doors closed: false
+[Dispatcher] @0.950000000: targetF: 1
+[Dispatcher] @0.950000000: TargetB: NONE
+[Dispatcher] @0.950000000: Desired direction: STOP
+[Dispatcher] @0.950000000: remains in state: STATE_SAFETY
+[Dispatcher] @0.950000000: State stored: STATE<-STATE_SAFETY
+[Dispatcher] @1.000000000: 
+[Dispatcher] @1.000000000: DISPATCHER TIMER EXPIRED - EXECUTE
+[Dispatcher] @1.000000000: Current floor: 1
+[Dispatcher] @1.000000000: Current hallway: NONE
+[Dispatcher] @1.000000000: Call at current floor: false
+[Dispatcher] @1.000000000: All doors closed: false
+[Dispatcher] @1.000000000: targetF: 1
+[Dispatcher] @1.000000000: TargetB: NONE
+[Dispatcher] @1.000000000: Desired direction: STOP
+[Dispatcher] @1.000000000: remains in state: STATE_SAFETY
+[Dispatcher] @1.000000000: State stored: STATE<-STATE_SAFETY
+[Dispatcher] @1.050000000: 
+[Dispatcher] @1.050000000: DISPATCHER TIMER EXPIRED - EXECUTE
+[Dispatcher] @1.050000000: Current floor: 1
+[Dispatcher] @1.050000000: Current hallway: NONE
+[Dispatcher] @1.050000000: Call at current floor: false
+[Dispatcher] @1.050000000: All doors closed: true
+[Dispatcher] @1.050000000: targetF: 1
+[Dispatcher] @1.050000000: TargetB: NONE
+[Dispatcher] @1.050000000: Desired direction: STOP
+[Dispatcher] @1.050000000: Transition:STATE_SAFETY->STATE_STOP
+[Dispatcher] @1.050000000: Transition:STATE_SAFETY->STATE_STOP
+[Dispatcher] @1.050000000: State stored: STATE<-STATE_STOP
+[Dispatcher] @1.100000000: 
+[Dispatcher] @1.100000000: DISPATCHER TIMER EXPIRED - EXECUTE
+[Dispatcher] @1.100000000: Current floor: 1
+[Dispatcher] @1.100000000: Current hallway: NONE
+[Dispatcher] @1.100000000: Call at current floor: false
+[Dispatcher] @1.100000000: All doors closed: true
+[Dispatcher] @1.100000000: targetF: 0
+[Dispatcher] @1.100000000: TargetB: NONE
+[Dispatcher] @1.100000000: Desired direction: STOP
+[Dispatcher] @1.100000000: remains in state: STATE_STOP
+[Dispatcher] @1.100000000: State stored: STATE<-STATE_STOP
+[Dispatcher] @1.150000000: 
+[Dispatcher] @1.150000000: DISPATCHER TIMER EXPIRED - EXECUTE
+[Dispatcher] @1.150000000: Current floor: 1
+[Dispatcher] @1.150000000: Current hallway: NONE
+[Dispatcher] @1.150000000: Call at current floor: false
+[Dispatcher] @1.150000000: All doors closed: true
+[Dispatcher] @1.150000000: targetF: 0
+[Dispatcher] @1.150000000: TargetB: NONE
+[Dispatcher] @1.150000000: Desired direction: STOP
+[Dispatcher] @1.150000000: remains in state: STATE_STOP
+[Dispatcher] @1.150000000: State stored: STATE<-STATE_STOP
+[Dispatcher] @1.200000000: 
+[Dispatcher] @1.200000000: DISPATCHER TIMER EXPIRED - EXECUTE
+[Dispatcher] @1.200000000: Current floor: 1
+[Dispatcher] @1.200000000: Current hallway: NONE
+[Dispatcher] @1.200000000: Call at current floor: false
+[Dispatcher] @1.200000000: All doors closed: true
+[Dispatcher] @1.200000000: targetF: 0
+[Dispatcher] @1.200000000: TargetB: NONE
+[Dispatcher] @1.200000000: Desired direction: STOP
+[Dispatcher] @1.200000000: remains in state: STATE_STOP
+[Dispatcher] @1.200000000: State stored: STATE<-STATE_STOP
+[Dispatcher] @1.250000000: 
+[Dispatcher] @1.250000000: DISPATCHER TIMER EXPIRED - EXECUTE
+[Dispatcher] @1.250000000: Current floor: 1
+[Dispatcher] @1.250000000: Current hallway: NONE
+[Dispatcher] @1.250000000: Call at current floor: false
+[Dispatcher] @1.250000000: All doors closed: true
+[Dispatcher] @1.250000000: targetF: 0
+[Dispatcher] @1.250000000: TargetB: NONE
+[Dispatcher] @1.250000000: Desired direction: STOP
+[Dispatcher] @1.250000000: remains in state: STATE_STOP
+[Dispatcher] @1.250000000: State stored: STATE<-STATE_STOP
+[Dispatcher] @1.300000000: 
+[Dispatcher] @1.300000000: DISPATCHER TIMER EXPIRED - EXECUTE
+[Dispatcher] @1.300000000: Current floor: 1
+[Dispatcher] @1.300000000: Current hallway: NONE
+[Dispatcher] @1.300000000: Call at current floor: false
+[Dispatcher] @1.300000000: All doors closed: true
+[Dispatcher] @1.300000000: targetF: 0
+[Dispatcher] @1.300000000: TargetB: NONE
+[Dispatcher] @1.300000000: Desired direction: STOP
+[Dispatcher] @1.300000000: remains in state: STATE_STOP
+[Dispatcher] @1.300000000: State stored: STATE<-STATE_STOP
+[Dispatcher] @1.350000000: 
+[Dispatcher] @1.350000000: DISPATCHER TIMER EXPIRED - EXECUTE
+[Dispatcher] @1.350000000: Current floor: 1
+[Dispatcher] @1.350000000: Current hallway: NONE
+[Dispatcher] @1.350000000: Call at current floor: false
+[Dispatcher] @1.350000000: All doors closed: true
+[Dispatcher] @1.350000000: targetF: 0
+[Dispatcher] @1.350000000: TargetB: NONE
+[Dispatcher] @1.350000000: Desired direction: STOP
+[Dispatcher] @1.350000000: remains in state: STATE_STOP
+[Dispatcher] @1.350000000: State stored: STATE<-STATE_STOP
+[Dispatcher] @1.400000000: 
+[Dispatcher] @1.400000000: DISPATCHER TIMER EXPIRED - EXECUTE
+[Dispatcher] @1.400000000: Current floor: 1
+[Dispatcher] @1.400000000: Current hallway: NONE
+[Dispatcher] @1.400000000: Call at current floor: false
+[Dispatcher] @1.400000000: All doors closed: true
+[Dispatcher] @1.400000000: targetF: 0
+[Dispatcher] @1.400000000: TargetB: NONE
+[Dispatcher] @1.400000000: Desired direction: STOP
+[Dispatcher] @1.400000000: remains in state: STATE_STOP
+[Dispatcher] @1.400000000: State stored: STATE<-STATE_STOP
+[Dispatcher] @1.450000000: 
+[Dispatcher] @1.450000000: DISPATCHER TIMER EXPIRED - EXECUTE
+[Dispatcher] @1.450000000: Current floor: 1
+[Dispatcher] @1.450000000: Current hallway: NONE
+[Dispatcher] @1.450000000: Call at current floor: false
+[Dispatcher] @1.450000000: All doors closed: true
+[Dispatcher] @1.450000000: targetF: 0
+[Dispatcher] @1.450000000: TargetB: NONE
+[Dispatcher] @1.450000000: Desired direction: STOP
+[Dispatcher] @1.450000000: remains in state: STATE_STOP
+[Dispatcher] @1.450000000: State stored: STATE<-STATE_STOP
+[AssertionMonitor] @1.500000000: ********************************************************************************************
+[AssertionMonitor] @1.500000000: PASSED simulator.payloads.CanMailbox$ReadableCanMailbox@18b679e1 :: getValue ?== true PASSED
+[AssertionMonitor] @1.500000000: ********************************************************************************************
+[AssertionMonitor] @1.500000000: *****************************************************************************************
+[AssertionMonitor] @1.500000000: PASSED simulator.payloads.CanMailbox$ReadableCanMailbox@10bbe282 :: getFloor ?== 0 PASSED
+[AssertionMonitor] @1.500000000: *****************************************************************************************
+[AssertionMonitor] @1.500000000: ************************************************************************************************
+[AssertionMonitor] @1.500000000: PASSED simulator.payloads.CanMailbox$ReadableCanMailbox@4d112e85 :: getDirection ?== STOP PASSED
+[AssertionMonitor] @1.500000000: ************************************************************************************************
+[AssertionMonitor] @1.500000000: **********************************************************************************************
+[AssertionMonitor] @1.500000000: PASSED simulator.payloads.CanMailbox$ReadableCanMailbox@2f080f3c :: getHallway ?== NONE PASSED
+[AssertionMonitor] @1.500000000: **********************************************************************************************
+[Dispatcher] @1.500000000: 
+[Dispatcher] @1.500000000: DISPATCHER TIMER EXPIRED - EXECUTE
+[Dispatcher] @1.500000000: Current floor: 1
+[Dispatcher] @1.500000000: Current hallway: NONE
+[Dispatcher] @1.500000000: Call at current floor: false
+[Dispatcher] @1.500000000: All doors closed: true
+[Dispatcher] @1.500000000: targetF: 0
+[Dispatcher] @1.500000000: TargetB: NONE
+[Dispatcher] @1.500000000: Desired direction: STOP
+[Dispatcher] @1.500000000: remains in state: STATE_STOP
+[Dispatcher] @1.500000000: State stored: STATE<-STATE_STOP
+[Dispatcher] @1.550000000: 
+[Dispatcher] @1.550000000: DISPATCHER TIMER EXPIRED - EXECUTE
+[Dispatcher] @1.550000000: Current floor: 1
+[Dispatcher] @1.550000000: Current hallway: NONE
+[Dispatcher] @1.550000000: Call at current floor: false
+[Dispatcher] @1.550000000: All doors closed: true
+[Dispatcher] @1.550000000: targetF: 0
+[Dispatcher] @1.550000000: TargetB: NONE
+[Dispatcher] @1.550000000: Desired direction: STOP
+[Dispatcher] @1.550000000: remains in state: STATE_STOP
+[Dispatcher] @1.550000000: State stored: STATE<-STATE_STOP
+[Dispatcher] @1.600000000: 
+[Dispatcher] @1.600000000: DISPATCHER TIMER EXPIRED - EXECUTE
+[Dispatcher] @1.600000000: Current floor: 1
+[Dispatcher] @1.600000000: Current hallway: NONE
+[Dispatcher] @1.600000000: Call at current floor: false
+[Dispatcher] @1.600000000: All doors closed: true
+[Dispatcher] @1.600000000: targetF: 0
+[Dispatcher] @1.600000000: TargetB: NONE
+[Dispatcher] @1.600000000: Desired direction: STOP
+[Dispatcher] @1.600000000: remains in state: STATE_STOP
+[Dispatcher] @1.600000000: State stored: STATE<-STATE_STOP
+[Dispatcher] @1.650000000: 
+[Dispatcher] @1.650000000: DISPATCHER TIMER EXPIRED - EXECUTE
+[Dispatcher] @1.650000000: Current floor: 1
+[Dispatcher] @1.650000000: Current hallway: NONE
+[Dispatcher] @1.650000000: Call at current floor: false
+[Dispatcher] @1.650000000: All doors closed: true
+[Dispatcher] @1.650000000: targetF: 0
+[Dispatcher] @1.650000000: TargetB: NONE
+[Dispatcher] @1.650000000: Desired direction: STOP
+[Dispatcher] @1.650000000: remains in state: STATE_STOP
+[Dispatcher] @1.650000000: State stored: STATE<-STATE_STOP
+[Dispatcher] @1.700000000: 
+[Dispatcher] @1.700000000: DISPATCHER TIMER EXPIRED - EXECUTE
+[Dispatcher] @1.700000000: Current floor: 1
+[Dispatcher] @1.700000000: Current hallway: NONE
+[Dispatcher] @1.700000000: Call at current floor: false
+[Dispatcher] @1.700000000: All doors closed: true
+[Dispatcher] @1.700000000: targetF: 0
+[Dispatcher] @1.700000000: TargetB: NONE
+[Dispatcher] @1.700000000: Desired direction: STOP
+[Dispatcher] @1.700000000: remains in state: STATE_STOP
+[Dispatcher] @1.700000000: State stored: STATE<-STATE_STOP
+[Dispatcher] @1.750000000: 
+[Dispatcher] @1.750000000: DISPATCHER TIMER EXPIRED - EXECUTE
+[Dispatcher] @1.750000000: Current floor: 1
+[Dispatcher] @1.750000000: Current hallway: NONE
+[Dispatcher] @1.750000000: Call at current floor: false
+[Dispatcher] @1.750000000: All doors closed: true
+[Dispatcher] @1.750000000: targetF: 0
+[Dispatcher] @1.750000000: TargetB: NONE
+[Dispatcher] @1.750000000: Desired direction: STOP
+[Dispatcher] @1.750000000: remains in state: STATE_STOP
+[Dispatcher] @1.750000000: State stored: STATE<-STATE_STOP
+[Dispatcher] @1.800000000: 
+[Dispatcher] @1.800000000: DISPATCHER TIMER EXPIRED - EXECUTE
+[Dispatcher] @1.800000000: Current floor: 1
+[Dispatcher] @1.800000000: Current hallway: NONE
+[Dispatcher] @1.800000000: Call at current floor: false
+[Dispatcher] @1.800000000: All doors closed: true
+[Dispatcher] @1.800000000: targetF: 0
+[Dispatcher] @1.800000000: TargetB: NONE
+[Dispatcher] @1.800000000: Desired direction: STOP
+[Dispatcher] @1.800000000: remains in state: STATE_STOP
+[Dispatcher] @1.800000000: State stored: STATE<-STATE_STOP
+[Dispatcher] @1.850000000: 
+[Dispatcher] @1.850000000: DISPATCHER TIMER EXPIRED - EXECUTE
+[Dispatcher] @1.850000000: Current floor: 1
+[Dispatcher] @1.850000000: Current hallway: NONE
+[Dispatcher] @1.850000000: Call at current floor: false
+[Dispatcher] @1.850000000: All doors closed: true
+[Dispatcher] @1.850000000: targetF: 0
+[Dispatcher] @1.850000000: TargetB: NONE
+[Dispatcher] @1.850000000: Desired direction: STOP
+[Dispatcher] @1.850000000: remains in state: STATE_STOP
+[Dispatcher] @1.850000000: State stored: STATE<-STATE_STOP
+[Dispatcher] @1.900000000: 
+[Dispatcher] @1.900000000: DISPATCHER TIMER EXPIRED - EXECUTE
+[Dispatcher] @1.900000000: Current floor: 1
+[Dispatcher] @1.900000000: Current hallway: NONE
+[Dispatcher] @1.900000000: Call at current floor: false
+[Dispatcher] @1.900000000: All doors closed: true
+[Dispatcher] @1.900000000: targetF: 0
+[Dispatcher] @1.900000000: TargetB: NONE
+[Dispatcher] @1.900000000: Desired direction: STOP
+[Dispatcher] @1.900000000: remains in state: STATE_STOP
+[Dispatcher] @1.900000000: State stored: STATE<-STATE_STOP
+[Dispatcher] @1.950000000: 
+[Dispatcher] @1.950000000: DISPATCHER TIMER EXPIRED - EXECUTE
+[Dispatcher] @1.950000000: Current floor: 1
+[Dispatcher] @1.950000000: Current hallway: NONE
+[Dispatcher] @1.950000000: Call at current floor: false
+[Dispatcher] @1.950000000: All doors closed: true
+[Dispatcher] @1.950000000: targetF: 0
+[Dispatcher] @1.950000000: TargetB: NONE
+[Dispatcher] @1.950000000: Desired direction: STOP
+[Dispatcher] @1.950000000: remains in state: STATE_STOP
+[Dispatcher] @1.950000000: State stored: STATE<-STATE_STOP
+[Dispatcher] @2.000000000: 
+[Dispatcher] @2.000000000: DISPATCHER TIMER EXPIRED - EXECUTE
+[Dispatcher] @2.000000000: Current floor: 1
+[Dispatcher] @2.000000000: Current hallway: NONE
+[Dispatcher] @2.000000000: Call at current floor: false
+[Dispatcher] @2.000000000: All doors closed: true
+[Dispatcher] @2.000000000: targetF: 3
+[Dispatcher] @2.000000000: TargetB: FRONT
+[Dispatcher] @2.000000000: Desired direction: UP
+[Dispatcher] @2.000000000: Transition:STATE_STOP->STATE_MOVE_ALL
+[Dispatcher] @2.000000000: Transition:STATE_STOP->STATE_MOVE_ALL
+[Dispatcher] @2.000000000: State stored: STATE<-STATE_MOVE_ALL
+[Dispatcher] @2.050000000: 
+[Dispatcher] @2.050000000: DISPATCHER TIMER EXPIRED - EXECUTE
+[Dispatcher] @2.050000000: Current floor: 1
+[Dispatcher] @2.050000000: Current hallway: NONE
+[Dispatcher] @2.050000000: Call at current floor: false
+[Dispatcher] @2.050000000: All doors closed: true
+[Dispatcher] @2.050000000: targetF: 3
+[Dispatcher] @2.050000000: TargetB: FRONT
+[Dispatcher] @2.050000000: Desired direction: UP
+[Dispatcher] @2.050000000: remains in state: STATE_MOVE_ALL
+[Dispatcher] @2.050000000: State stored: STATE<-STATE_MOVE_ALL
+[Dispatcher] @2.100000000: 
+[Dispatcher] @2.100000000: DISPATCHER TIMER EXPIRED - EXECUTE
+[Dispatcher] @2.100000000: Current floor: 1
+[Dispatcher] @2.100000000: Current hallway: NONE
+[Dispatcher] @2.100000000: Call at current floor: false
+[Dispatcher] @2.100000000: All doors closed: true
+[Dispatcher] @2.100000000: targetF: 3
+[Dispatcher] @2.100000000: TargetB: FRONT
+[Dispatcher] @2.100000000: Desired direction: UP
+[Dispatcher] @2.100000000: remains in state: STATE_MOVE_ALL
+[Dispatcher] @2.100000000: State stored: STATE<-STATE_MOVE_ALL
+[Dispatcher] @2.150000000: 
+[Dispatcher] @2.150000000: DISPATCHER TIMER EXPIRED - EXECUTE
+[Dispatcher] @2.150000000: Current floor: 1
+[Dispatcher] @2.150000000: Current hallway: NONE
+[Dispatcher] @2.150000000: Call at current floor: false
+[Dispatcher] @2.150000000: All doors closed: true
+[Dispatcher] @2.150000000: targetF: 3
+[Dispatcher] @2.150000000: TargetB: FRONT
+[Dispatcher] @2.150000000: Desired direction: UP
+[Dispatcher] @2.150000000: remains in state: STATE_MOVE_ALL
+[Dispatcher] @2.150000000: State stored: STATE<-STATE_MOVE_ALL
+[Dispatcher] @2.200000000: 
+[Dispatcher] @2.200000000: DISPATCHER TIMER EXPIRED - EXECUTE
+[Dispatcher] @2.200000000: Current floor: 1
+[Dispatcher] @2.200000000: Current hallway: NONE
+[Dispatcher] @2.200000000: Call at current floor: false
+[Dispatcher] @2.200000000: All doors closed: true
+[Dispatcher] @2.200000000: targetF: 3
+[Dispatcher] @2.200000000: TargetB: FRONT
+[Dispatcher] @2.200000000: Desired direction: UP
+[Dispatcher] @2.200000000: remains in state: STATE_MOVE_ALL
+[Dispatcher] @2.200000000: State stored: STATE<-STATE_MOVE_ALL
+[Dispatcher] @2.250000000: 
+[Dispatcher] @2.250000000: DISPATCHER TIMER EXPIRED - EXECUTE
+[Dispatcher] @2.250000000: Current floor: 1
+[Dispatcher] @2.250000000: Current hallway: NONE
+[Dispatcher] @2.250000000: Call at current floor: false
+[Dispatcher] @2.250000000: All doors closed: true
+[Dispatcher] @2.250000000: targetF: 3
+[Dispatcher] @2.250000000: TargetB: FRONT
+[Dispatcher] @2.250000000: Desired direction: UP
+[Dispatcher] @2.250000000: remains in state: STATE_MOVE_ALL
+[Dispatcher] @2.250000000: State stored: STATE<-STATE_MOVE_ALL
+[Dispatcher] @2.300000000: 
+[Dispatcher] @2.300000000: DISPATCHER TIMER EXPIRED - EXECUTE
+[Dispatcher] @2.300000000: Current floor: 1
+[Dispatcher] @2.300000000: Current hallway: NONE
+[Dispatcher] @2.300000000: Call at current floor: false
+[Dispatcher] @2.300000000: All doors closed: true
+[Dispatcher] @2.300000000: targetF: 3
+[Dispatcher] @2.300000000: TargetB: FRONT
+[Dispatcher] @2.300000000: Desired direction: UP
+[Dispatcher] @2.300000000: remains in state: STATE_MOVE_ALL
+[Dispatcher] @2.300000000: State stored: STATE<-STATE_MOVE_ALL
+[Dispatcher] @2.350000000: 
+[Dispatcher] @2.350000000: DISPATCHER TIMER EXPIRED - EXECUTE
+[Dispatcher] @2.350000000: Current floor: 1
+[Dispatcher] @2.350000000: Current hallway: NONE
+[Dispatcher] @2.350000000: Call at current floor: false
+[Dispatcher] @2.350000000: All doors closed: true
+[Dispatcher] @2.350000000: targetF: 3
+[Dispatcher] @2.350000000: TargetB: FRONT
+[Dispatcher] @2.350000000: Desired direction: UP
+[Dispatcher] @2.350000000: remains in state: STATE_MOVE_ALL
+[Dispatcher] @2.350000000: State stored: STATE<-STATE_MOVE_ALL
+[Dispatcher] @2.400000000: 
+[Dispatcher] @2.400000000: DISPATCHER TIMER EXPIRED - EXECUTE
+[Dispatcher] @2.400000000: Current floor: 1
+[Dispatcher] @2.400000000: Current hallway: NONE
+[Dispatcher] @2.400000000: Call at current floor: false
+[Dispatcher] @2.400000000: All doors closed: true
+[Dispatcher] @2.400000000: targetF: 3
+[Dispatcher] @2.400000000: TargetB: FRONT
+[Dispatcher] @2.400000000: Desired direction: UP
+[Dispatcher] @2.400000000: remains in state: STATE_MOVE_ALL
+[Dispatcher] @2.400000000: State stored: STATE<-STATE_MOVE_ALL
+[Dispatcher] @2.450000000: 
+[Dispatcher] @2.450000000: DISPATCHER TIMER EXPIRED - EXECUTE
+[Dispatcher] @2.450000000: Current floor: 1
+[Dispatcher] @2.450000000: Current hallway: NONE
+[Dispatcher] @2.450000000: Call at current floor: false
+[Dispatcher] @2.450000000: All doors closed: true
+[Dispatcher] @2.450000000: targetF: 3
+[Dispatcher] @2.450000000: TargetB: FRONT
+[Dispatcher] @2.450000000: Desired direction: UP
+[Dispatcher] @2.450000000: remains in state: STATE_MOVE_ALL
+[Dispatcher] @2.450000000: State stored: STATE<-STATE_MOVE_ALL
+[AssertionMonitor] @2.500000000: *****************************************************************************************
+[AssertionMonitor] @2.500000000: PASSED simulator.payloads.CanMailbox$ReadableCanMailbox@1c61a885 :: getFloor ?== 3 PASSED
+[AssertionMonitor] @2.500000000: *****************************************************************************************
+[AssertionMonitor] @2.500000000: *********************************************************************************************
+[AssertionMonitor] @2.500000000: PASSED simulator.payloads.CanMailbox$ReadableCanMailbox@b077c9d :: getDirection ?== UP PASSED
+[AssertionMonitor] @2.500000000: *********************************************************************************************
+[AssertionMonitor] @2.500000000: ***********************************************************************************************
+[AssertionMonitor] @2.500000000: PASSED simulator.payloads.CanMailbox$ReadableCanMailbox@10f946f9 :: getHallway ?== FRONT PASSED
+[AssertionMonitor] @2.500000000: ***********************************************************************************************
+[Dispatcher] @2.500000000: 
+[Dispatcher] @2.500000000: DISPATCHER TIMER EXPIRED - EXECUTE
+[Dispatcher] @2.500000000: Current floor: 1
+[Dispatcher] @2.500000000: Current hallway: NONE
+[Dispatcher] @2.500000000: Call at current floor: false
+[Dispatcher] @2.500000000: All doors closed: true
+[Dispatcher] @2.500000000: targetF: 3
+[Dispatcher] @2.500000000: TargetB: FRONT
+[Dispatcher] @2.500000000: Desired direction: UP
+[Dispatcher] @2.500000000: remains in state: STATE_MOVE_ALL
+[Dispatcher] @2.500000000: State stored: STATE<-STATE_MOVE_ALL
+[Dispatcher] @2.550000000: 
+[Dispatcher] @2.550000000: DISPATCHER TIMER EXPIRED - EXECUTE
+[Dispatcher] @2.550000000: Current floor: 1
+[Dispatcher] @2.550000000: Current hallway: NONE
+[Dispatcher] @2.550000000: Call at current floor: false
+[Dispatcher] @2.550000000: All doors closed: true
+[Dispatcher] @2.550000000: targetF: 3
+[Dispatcher] @2.550000000: TargetB: FRONT
+[Dispatcher] @2.550000000: Desired direction: UP
+[Dispatcher] @2.550000000: remains in state: STATE_MOVE_ALL
+[Dispatcher] @2.550000000: State stored: STATE<-STATE_MOVE_ALL
+[Dispatcher] @2.600000000: 
+[Dispatcher] @2.600000000: DISPATCHER TIMER EXPIRED - EXECUTE
+[Dispatcher] @2.600000000: Current floor: 1
+[Dispatcher] @2.600000000: Current hallway: NONE
+[Dispatcher] @2.600000000: Call at current floor: false
+[Dispatcher] @2.600000000: All doors closed: true
+[Dispatcher] @2.600000000: targetF: 3
+[Dispatcher] @2.600000000: TargetB: FRONT
+[Dispatcher] @2.600000000: Desired direction: UP
+[Dispatcher] @2.600000000: remains in state: STATE_MOVE_ALL
+[Dispatcher] @2.600000000: State stored: STATE<-STATE_MOVE_ALL
+[Dispatcher] @2.650000000: 
+[Dispatcher] @2.650000000: DISPATCHER TIMER EXPIRED - EXECUTE
+[Dispatcher] @2.650000000: Current floor: 1
+[Dispatcher] @2.650000000: Current hallway: NONE
+[Dispatcher] @2.650000000: Call at current floor: false
+[Dispatcher] @2.650000000: All doors closed: true
+[Dispatcher] @2.650000000: targetF: 3
+[Dispatcher] @2.650000000: TargetB: FRONT
+[Dispatcher] @2.650000000: Desired direction: UP
+[Dispatcher] @2.650000000: remains in state: STATE_MOVE_ALL
+[Dispatcher] @2.650000000: State stored: STATE<-STATE_MOVE_ALL
+[Dispatcher] @2.700000000: 
+[Dispatcher] @2.700000000: DISPATCHER TIMER EXPIRED - EXECUTE
+[Dispatcher] @2.700000000: Current floor: 1
+[Dispatcher] @2.700000000: Current hallway: NONE
+[Dispatcher] @2.700000000: Call at current floor: false
+[Dispatcher] @2.700000000: All doors closed: true
+[Dispatcher] @2.700000000: targetF: 3
+[Dispatcher] @2.700000000: TargetB: FRONT
+[Dispatcher] @2.700000000: Desired direction: UP
+[Dispatcher] @2.700000000: remains in state: STATE_MOVE_ALL
+[Dispatcher] @2.700000000: State stored: STATE<-STATE_MOVE_ALL
+[Dispatcher] @2.750000000: 
+[Dispatcher] @2.750000000: DISPATCHER TIMER EXPIRED - EXECUTE
+[Dispatcher] @2.750000000: Current floor: 1
+[Dispatcher] @2.750000000: Current hallway: NONE
+[Dispatcher] @2.750000000: Call at current floor: false
+[Dispatcher] @2.750000000: All doors closed: true
+[Dispatcher] @2.750000000: targetF: 3
+[Dispatcher] @2.750000000: TargetB: FRONT
+[Dispatcher] @2.750000000: Desired direction: UP
+[Dispatcher] @2.750000000: remains in state: STATE_MOVE_ALL
+[Dispatcher] @2.750000000: State stored: STATE<-STATE_MOVE_ALL
+[Dispatcher] @2.800000000: 
+[Dispatcher] @2.800000000: DISPATCHER TIMER EXPIRED - EXECUTE
+[Dispatcher] @2.800000000: Current floor: 1
+[Dispatcher] @2.800000000: Current hallway: NONE
+[Dispatcher] @2.800000000: Call at current floor: false
+[Dispatcher] @2.800000000: All doors closed: true
+[Dispatcher] @2.800000000: targetF: 3
+[Dispatcher] @2.800000000: TargetB: FRONT
+[Dispatcher] @2.800000000: Desired direction: UP
+[Dispatcher] @2.800000000: remains in state: STATE_MOVE_ALL
+[Dispatcher] @2.800000000: State stored: STATE<-STATE_MOVE_ALL
+[Dispatcher] @2.850000000: 
+[Dispatcher] @2.850000000: DISPATCHER TIMER EXPIRED - EXECUTE
+[Dispatcher] @2.850000000: Current floor: 1
+[Dispatcher] @2.850000000: Current hallway: NONE
+[Dispatcher] @2.850000000: Call at current floor: false
+[Dispatcher] @2.850000000: All doors closed: true
+[Dispatcher] @2.850000000: targetF: 3
+[Dispatcher] @2.850000000: TargetB: FRONT
+[Dispatcher] @2.850000000: Desired direction: UP
+[Dispatcher] @2.850000000: remains in state: STATE_MOVE_ALL
+[Dispatcher] @2.850000000: State stored: STATE<-STATE_MOVE_ALL
+[Dispatcher] @2.900000000: 
+[Dispatcher] @2.900000000: DISPATCHER TIMER EXPIRED - EXECUTE
+[Dispatcher] @2.900000000: Current floor: 1
+[Dispatcher] @2.900000000: Current hallway: NONE
+[Dispatcher] @2.900000000: Call at current floor: false
+[Dispatcher] @2.900000000: All doors closed: true
+[Dispatcher] @2.900000000: targetF: 3
+[Dispatcher] @2.900000000: TargetB: FRONT
+[Dispatcher] @2.900000000: Desired direction: UP
+[Dispatcher] @2.900000000: remains in state: STATE_MOVE_ALL
+[Dispatcher] @2.900000000: State stored: STATE<-STATE_MOVE_ALL
+[Dispatcher] @2.950000000: 
+[Dispatcher] @2.950000000: DISPATCHER TIMER EXPIRED - EXECUTE
+[Dispatcher] @2.950000000: Current floor: 1
+[Dispatcher] @2.950000000: Current hallway: NONE
+[Dispatcher] @2.950000000: Call at current floor: false
+[Dispatcher] @2.950000000: All doors closed: true
+[Dispatcher] @2.950000000: targetF: 3
+[Dispatcher] @2.950000000: TargetB: FRONT
+[Dispatcher] @2.950000000: Desired direction: UP
+[Dispatcher] @2.950000000: remains in state: STATE_MOVE_ALL
+[Dispatcher] @2.950000000: State stored: STATE<-STATE_MOVE_ALL
+[Dispatcher] @3.000000000: 
+[Dispatcher] @3.000000000: DISPATCHER TIMER EXPIRED - EXECUTE
+[Dispatcher] @3.000000000: Current floor: 1
+[Dispatcher] @3.000000000: Current hallway: NONE
+[Dispatcher] @3.000000000: Call at current floor: false
+[Dispatcher] @3.000000000: All doors closed: true
+[Dispatcher] @3.000000000: targetF: 3
+[Dispatcher] @3.000000000: TargetB: FRONT
+[Dispatcher] @3.000000000: Desired direction: UP
+[Dispatcher] @3.000000000: remains in state: STATE_MOVE_ALL
+[Dispatcher] @3.000000000: State stored: STATE<-STATE_MOVE_ALL
+[Dispatcher] @3.050000000: 
+[Dispatcher] @3.050000000: DISPATCHER TIMER EXPIRED - EXECUTE
+[Dispatcher] @3.050000000: Current floor: 1
+[Dispatcher] @3.050000000: Current hallway: NONE
+[Dispatcher] @3.050000000: Call at current floor: false
+[Dispatcher] @3.050000000: All doors closed: true
+[Dispatcher] @3.050000000: targetF: 3
+[Dispatcher] @3.050000000: TargetB: FRONT
+[Dispatcher] @3.050000000: Desired direction: UP
+[Dispatcher] @3.050000000: remains in state: STATE_MOVE_ALL
+[Dispatcher] @3.050000000: State stored: STATE<-STATE_MOVE_ALL
+[Dispatcher] @3.100000000: 
+[Dispatcher] @3.100000000: DISPATCHER TIMER EXPIRED - EXECUTE
+[Dispatcher] @3.100000000: Current floor: 1
+[Dispatcher] @3.100000000: Current hallway: NONE
+[Dispatcher] @3.100000000: Call at current floor: false
+[Dispatcher] @3.100000000: All doors closed: true
+[Dispatcher] @3.100000000: targetF: 3
+[Dispatcher] @3.100000000: TargetB: FRONT
+[Dispatcher] @3.100000000: Desired direction: UP
+[Dispatcher] @3.100000000: remains in state: STATE_MOVE_ALL
+[Dispatcher] @3.100000000: State stored: STATE<-STATE_MOVE_ALL
+[Dispatcher] @3.150000000: 
+[Dispatcher] @3.150000000: DISPATCHER TIMER EXPIRED - EXECUTE
+[Dispatcher] @3.150000000: Current floor: 1
+[Dispatcher] @3.150000000: Current hallway: NONE
+[Dispatcher] @3.150000000: Call at current floor: false
+[Dispatcher] @3.150000000: All doors closed: true
+[Dispatcher] @3.150000000: targetF: 3
+[Dispatcher] @3.150000000: TargetB: FRONT
+[Dispatcher] @3.150000000: Desired direction: UP
+[Dispatcher] @3.150000000: remains in state: STATE_MOVE_ALL
+[Dispatcher] @3.150000000: State stored: STATE<-STATE_MOVE_ALL
+[Dispatcher] @3.200000000: 
+[Dispatcher] @3.200000000: DISPATCHER TIMER EXPIRED - EXECUTE
+[Dispatcher] @3.200000000: Current floor: 1
+[Dispatcher] @3.200000000: Current hallway: NONE
+[Dispatcher] @3.200000000: Call at current floor: false
+[Dispatcher] @3.200000000: All doors closed: true
+[Dispatcher] @3.200000000: targetF: 3
+[Dispatcher] @3.200000000: TargetB: FRONT
+[Dispatcher] @3.200000000: Desired direction: UP
+[Dispatcher] @3.200000000: remains in state: STATE_MOVE_ALL
+[Dispatcher] @3.200000000: State stored: STATE<-STATE_MOVE_ALL
+[Dispatcher] @3.250000000: 
+[Dispatcher] @3.250000000: DISPATCHER TIMER EXPIRED - EXECUTE
+[Dispatcher] @3.250000000: Current floor: 1
+[Dispatcher] @3.250000000: Current hallway: NONE
+[Dispatcher] @3.250000000: Call at current floor: false
+[Dispatcher] @3.250000000: All doors closed: true
+[Dispatcher] @3.250000000: targetF: 3
+[Dispatcher] @3.250000000: TargetB: FRONT
+[Dispatcher] @3.250000000: Desired direction: UP
+[Dispatcher] @3.250000000: remains in state: STATE_MOVE_ALL
+[Dispatcher] @3.250000000: State stored: STATE<-STATE_MOVE_ALL
+[Dispatcher] @3.300000000: 
+[Dispatcher] @3.300000000: DISPATCHER TIMER EXPIRED - EXECUTE
+[Dispatcher] @3.300000000: Current floor: 1
+[Dispatcher] @3.300000000: Current hallway: NONE
+[Dispatcher] @3.300000000: Call at current floor: false
+[Dispatcher] @3.300000000: All doors closed: true
+[Dispatcher] @3.300000000: targetF: 3
+[Dispatcher] @3.300000000: TargetB: FRONT
+[Dispatcher] @3.300000000: Desired direction: UP
+[Dispatcher] @3.300000000: remains in state: STATE_MOVE_ALL
+[Dispatcher] @3.300000000: State stored: STATE<-STATE_MOVE_ALL
+[Dispatcher] @3.350000000: 
+[Dispatcher] @3.350000000: DISPATCHER TIMER EXPIRED - EXECUTE
+[Dispatcher] @3.350000000: Current floor: 1
+[Dispatcher] @3.350000000: Current hallway: NONE
+[Dispatcher] @3.350000000: Call at current floor: false
+[Dispatcher] @3.350000000: All doors closed: true
+[Dispatcher] @3.350000000: targetF: 3
+[Dispatcher] @3.350000000: TargetB: FRONT
+[Dispatcher] @3.350000000: Desired direction: UP
+[Dispatcher] @3.350000000: remains in state: STATE_MOVE_ALL
+[Dispatcher] @3.350000000: State stored: STATE<-STATE_MOVE_ALL
+[Dispatcher] @3.400000000: 
+[Dispatcher] @3.400000000: DISPATCHER TIMER EXPIRED - EXECUTE
+[Dispatcher] @3.400000000: Current floor: 1
+[Dispatcher] @3.400000000: Current hallway: NONE
+[Dispatcher] @3.400000000: Call at current floor: false
+[Dispatcher] @3.400000000: All doors closed: true
+[Dispatcher] @3.400000000: targetF: 3
+[Dispatcher] @3.400000000: TargetB: FRONT
+[Dispatcher] @3.400000000: Desired direction: UP
+[Dispatcher] @3.400000000: remains in state: STATE_MOVE_ALL
+[Dispatcher] @3.400000000: State stored: STATE<-STATE_MOVE_ALL
+[Dispatcher] @3.450000000: 
+[Dispatcher] @3.450000000: DISPATCHER TIMER EXPIRED - EXECUTE
+[Dispatcher] @3.450000000: Current floor: 1
+[Dispatcher] @3.450000000: Current hallway: NONE
+[Dispatcher] @3.450000000: Call at current floor: false
+[Dispatcher] @3.450000000: All doors closed: true
+[Dispatcher] @3.450000000: targetF: 3
+[Dispatcher] @3.450000000: TargetB: FRONT
+[Dispatcher] @3.450000000: Desired direction: UP
+[Dispatcher] @3.450000000: remains in state: STATE_MOVE_ALL
+[Dispatcher] @3.450000000: State stored: STATE<-STATE_MOVE_ALL
+[Dispatcher] @3.500000000: 
+[Dispatcher] @3.500000000: DISPATCHER TIMER EXPIRED - EXECUTE
+[Dispatcher] @3.500000000: Current floor: 1
+[Dispatcher] @3.500000000: Current hallway: NONE
+[Dispatcher] @3.500000000: Call at current floor: false
+[Dispatcher] @3.500000000: All doors closed: true
+[Dispatcher] @3.500000000: targetF: 3
+[Dispatcher] @3.500000000: TargetB: FRONT
+[Dispatcher] @3.500000000: Desired direction: UP
+[Dispatcher] @3.500000000: remains in state: STATE_MOVE_ALL
+[Dispatcher] @3.500000000: State stored: STATE<-STATE_MOVE_ALL
+[Dispatcher] @3.550000000: 
+[Dispatcher] @3.550000000: DISPATCHER TIMER EXPIRED - EXECUTE
+[Dispatcher] @3.550000000: Current floor: 1
+[Dispatcher] @3.550000000: Current hallway: NONE
+[Dispatcher] @3.550000000: Call at current floor: false
+[Dispatcher] @3.550000000: All doors closed: true
+[Dispatcher] @3.550000000: targetF: 3
+[Dispatcher] @3.550000000: TargetB: FRONT
+[Dispatcher] @3.550000000: Desired direction: UP
+[Dispatcher] @3.550000000: remains in state: STATE_MOVE_ALL
+[Dispatcher] @3.550000000: State stored: STATE<-STATE_MOVE_ALL
+[Dispatcher] @3.600000000: 
+[Dispatcher] @3.600000000: DISPATCHER TIMER EXPIRED - EXECUTE
+[Dispatcher] @3.600000000: Current floor: 1
+[Dispatcher] @3.600000000: Current hallway: NONE
+[Dispatcher] @3.600000000: Call at current floor: false
+[Dispatcher] @3.600000000: All doors closed: true
+[Dispatcher] @3.600000000: targetF: 3
+[Dispatcher] @3.600000000: TargetB: FRONT
+[Dispatcher] @3.600000000: Desired direction: UP
+[Dispatcher] @3.600000000: remains in state: STATE_MOVE_ALL
+[Dispatcher] @3.600000000: State stored: STATE<-STATE_MOVE_ALL
+[Dispatcher] @3.650000000: 
+[Dispatcher] @3.650000000: DISPATCHER TIMER EXPIRED - EXECUTE
+[Dispatcher] @3.650000000: Current floor: 1
+[Dispatcher] @3.650000000: Current hallway: NONE
+[Dispatcher] @3.650000000: Call at current floor: false
+[Dispatcher] @3.650000000: All doors closed: true
+[Dispatcher] @3.650000000: targetF: 3
+[Dispatcher] @3.650000000: TargetB: FRONT
+[Dispatcher] @3.650000000: Desired direction: UP
+[Dispatcher] @3.650000000: remains in state: STATE_MOVE_ALL
+[Dispatcher] @3.650000000: State stored: STATE<-STATE_MOVE_ALL
+[Dispatcher] @3.700000000: 
+[Dispatcher] @3.700000000: DISPATCHER TIMER EXPIRED - EXECUTE
+[Dispatcher] @3.700000000: Current floor: 1
+[Dispatcher] @3.700000000: Current hallway: NONE
+[Dispatcher] @3.700000000: Call at current floor: false
+[Dispatcher] @3.700000000: All doors closed: true
+[Dispatcher] @3.700000000: targetF: 3
+[Dispatcher] @3.700000000: TargetB: FRONT
+[Dispatcher] @3.700000000: Desired direction: UP
+[Dispatcher] @3.700000000: remains in state: STATE_MOVE_ALL
+[Dispatcher] @3.700000000: State stored: STATE<-STATE_MOVE_ALL
+[Dispatcher] @3.750000000: 
+[Dispatcher] @3.750000000: DISPATCHER TIMER EXPIRED - EXECUTE
+[Dispatcher] @3.750000000: Current floor: 1
+[Dispatcher] @3.750000000: Current hallway: NONE
+[Dispatcher] @3.750000000: Call at current floor: false
+[Dispatcher] @3.750000000: All doors closed: true
+[Dispatcher] @3.750000000: targetF: 3
+[Dispatcher] @3.750000000: TargetB: FRONT
+[Dispatcher] @3.750000000: Desired direction: UP
+[Dispatcher] @3.750000000: remains in state: STATE_MOVE_ALL
+[Dispatcher] @3.750000000: State stored: STATE<-STATE_MOVE_ALL
+[Dispatcher] @3.800000000: 
+[Dispatcher] @3.800000000: DISPATCHER TIMER EXPIRED - EXECUTE
+[Dispatcher] @3.800000000: Current floor: 1
+[Dispatcher] @3.800000000: Current hallway: NONE
+[Dispatcher] @3.800000000: Call at current floor: false
+[Dispatcher] @3.800000000: All doors closed: true
+[Dispatcher] @3.800000000: targetF: 3
+[Dispatcher] @3.800000000: TargetB: FRONT
+[Dispatcher] @3.800000000: Desired direction: UP
+[Dispatcher] @3.800000000: remains in state: STATE_MOVE_ALL
+[Dispatcher] @3.800000000: State stored: STATE<-STATE_MOVE_ALL
+[Dispatcher] @3.850000000: 
+[Dispatcher] @3.850000000: DISPATCHER TIMER EXPIRED - EXECUTE
+[Dispatcher] @3.850000000: Current floor: 1
+[Dispatcher] @3.850000000: Current hallway: NONE
+[Dispatcher] @3.850000000: Call at current floor: false
+[Dispatcher] @3.850000000: All doors closed: true
+[Dispatcher] @3.850000000: targetF: 3
+[Dispatcher] @3.850000000: TargetB: FRONT
+[Dispatcher] @3.850000000: Desired direction: UP
+[Dispatcher] @3.850000000: remains in state: STATE_MOVE_ALL
+[Dispatcher] @3.850000000: State stored: STATE<-STATE_MOVE_ALL
+[Dispatcher] @3.900000000: 
+[Dispatcher] @3.900000000: DISPATCHER TIMER EXPIRED - EXECUTE
+[Dispatcher] @3.900000000: Current floor: 1
+[Dispatcher] @3.900000000: Current hallway: NONE
+[Dispatcher] @3.900000000: Call at current floor: false
+[Dispatcher] @3.900000000: All doors closed: true
+[Dispatcher] @3.900000000: targetF: 3
+[Dispatcher] @3.900000000: TargetB: FRONT
+[Dispatcher] @3.900000000: Desired direction: UP
+[Dispatcher] @3.900000000: remains in state: STATE_MOVE_ALL
+[Dispatcher] @3.900000000: State stored: STATE<-STATE_MOVE_ALL
+[Dispatcher] @3.950000000: 
+[Dispatcher] @3.950000000: DISPATCHER TIMER EXPIRED - EXECUTE
+[Dispatcher] @3.950000000: Current floor: 1
+[Dispatcher] @3.950000000: Current hallway: NONE
+[Dispatcher] @3.950000000: Call at current floor: false
+[Dispatcher] @3.950000000: All doors closed: true
+[Dispatcher] @3.950000000: targetF: 3
+[Dispatcher] @3.950000000: TargetB: FRONT
+[Dispatcher] @3.950000000: Desired direction: UP
+[Dispatcher] @3.950000000: remains in state: STATE_MOVE_ALL
+[Dispatcher] @3.950000000: State stored: STATE<-STATE_MOVE_ALL
+[Dispatcher] @4.000000000: 
+[Dispatcher] @4.000000000: DISPATCHER TIMER EXPIRED - EXECUTE
+[Dispatcher] @4.000000000: Current floor: 1
+[Dispatcher] @4.000000000: Current hallway: NONE
+[Dispatcher] @4.000000000: Call at current floor: false
+[Dispatcher] @4.000000000: All doors closed: true
+[Dispatcher] @4.000000000: targetF: 3
+[Dispatcher] @4.000000000: TargetB: FRONT
+[Dispatcher] @4.000000000: Desired direction: UP
+[Dispatcher] @4.000000000: remains in state: STATE_MOVE_ALL
+[Dispatcher] @4.000000000: State stored: STATE<-STATE_MOVE_ALL
+[Dispatcher] @4.050000000: 
+[Dispatcher] @4.050000000: DISPATCHER TIMER EXPIRED - EXECUTE
+[Dispatcher] @4.050000000: Current floor: 1
+[Dispatcher] @4.050000000: Current hallway: NONE
+[Dispatcher] @4.050000000: Call at current floor: false
+[Dispatcher] @4.050000000: All doors closed: true
+[Dispatcher] @4.050000000: targetF: 3
+[Dispatcher] @4.050000000: TargetB: FRONT
+[Dispatcher] @4.050000000: Desired direction: UP
+[Dispatcher] @4.050000000: remains in state: STATE_MOVE_ALL
+[Dispatcher] @4.050000000: State stored: STATE<-STATE_MOVE_ALL
+[Dispatcher] @4.100000000: 
+[Dispatcher] @4.100000000: DISPATCHER TIMER EXPIRED - EXECUTE
+[Dispatcher] @4.100000000: Current floor: 1
+[Dispatcher] @4.100000000: Current hallway: NONE
+[Dispatcher] @4.100000000: Call at current floor: false
+[Dispatcher] @4.100000000: All doors closed: true
+[Dispatcher] @4.100000000: targetF: 3
+[Dispatcher] @4.100000000: TargetB: FRONT
+[Dispatcher] @4.100000000: Desired direction: UP
+[Dispatcher] @4.100000000: remains in state: STATE_MOVE_ALL
+[Dispatcher] @4.100000000: State stored: STATE<-STATE_MOVE_ALL
+[Dispatcher] @4.150000000: 
+[Dispatcher] @4.150000000: DISPATCHER TIMER EXPIRED - EXECUTE
+[Dispatcher] @4.150000000: Current floor: 1
+[Dispatcher] @4.150000000: Current hallway: NONE
+[Dispatcher] @4.150000000: Call at current floor: false
+[Dispatcher] @4.150000000: All doors closed: true
+[Dispatcher] @4.150000000: targetF: 3
+[Dispatcher] @4.150000000: TargetB: FRONT
+[Dispatcher] @4.150000000: Desired direction: UP
+[Dispatcher] @4.150000000: remains in state: STATE_MOVE_ALL
+[Dispatcher] @4.150000000: State stored: STATE<-STATE_MOVE_ALL
+[Dispatcher] @4.200000000: 
+[Dispatcher] @4.200000000: DISPATCHER TIMER EXPIRED - EXECUTE
+[Dispatcher] @4.200000000: Current floor: 1
+[Dispatcher] @4.200000000: Current hallway: NONE
+[Dispatcher] @4.200000000: Call at current floor: false
+[Dispatcher] @4.200000000: All doors closed: true
+[Dispatcher] @4.200000000: targetF: 3
+[Dispatcher] @4.200000000: TargetB: FRONT
+[Dispatcher] @4.200000000: Desired direction: UP
+[Dispatcher] @4.200000000: remains in state: STATE_MOVE_ALL
+[Dispatcher] @4.200000000: State stored: STATE<-STATE_MOVE_ALL
+[Dispatcher] @4.250000000: 
+[Dispatcher] @4.250000000: DISPATCHER TIMER EXPIRED - EXECUTE
+[Dispatcher] @4.250000000: Current floor: 1
+[Dispatcher] @4.250000000: Current hallway: NONE
+[Dispatcher] @4.250000000: Call at current floor: false
+[Dispatcher] @4.250000000: All doors closed: true
+[Dispatcher] @4.250000000: targetF: 3
+[Dispatcher] @4.250000000: TargetB: FRONT
+[Dispatcher] @4.250000000: Desired direction: UP
+[Dispatcher] @4.250000000: remains in state: STATE_MOVE_ALL
+[Dispatcher] @4.250000000: State stored: STATE<-STATE_MOVE_ALL
+[Dispatcher] @4.300000000: 
+[Dispatcher] @4.300000000: DISPATCHER TIMER EXPIRED - EXECUTE
+[Dispatcher] @4.300000000: Current floor: 1
+[Dispatcher] @4.300000000: Current hallway: NONE
+[Dispatcher] @4.300000000: Call at current floor: false
+[Dispatcher] @4.300000000: All doors closed: true
+[Dispatcher] @4.300000000: targetF: 3
+[Dispatcher] @4.300000000: TargetB: FRONT
+[Dispatcher] @4.300000000: Desired direction: UP
+[Dispatcher] @4.300000000: remains in state: STATE_MOVE_ALL
+[Dispatcher] @4.300000000: State stored: STATE<-STATE_MOVE_ALL
+[Dispatcher] @4.350000000: 
+[Dispatcher] @4.350000000: DISPATCHER TIMER EXPIRED - EXECUTE
+[Dispatcher] @4.350000000: Current floor: 1
+[Dispatcher] @4.350000000: Current hallway: NONE
+[Dispatcher] @4.350000000: Call at current floor: false
+[Dispatcher] @4.350000000: All doors closed: true
+[Dispatcher] @4.350000000: targetF: 3
+[Dispatcher] @4.350000000: TargetB: FRONT
+[Dispatcher] @4.350000000: Desired direction: UP
+[Dispatcher] @4.350000000: remains in state: STATE_MOVE_ALL
+[Dispatcher] @4.350000000: State stored: STATE<-STATE_MOVE_ALL
+[Dispatcher] @4.400000000: 
+[Dispatcher] @4.400000000: DISPATCHER TIMER EXPIRED - EXECUTE
+[Dispatcher] @4.400000000: Current floor: 1
+[Dispatcher] @4.400000000: Current hallway: NONE
+[Dispatcher] @4.400000000: Call at current floor: false
+[Dispatcher] @4.400000000: All doors closed: true
+[Dispatcher] @4.400000000: targetF: 3
+[Dispatcher] @4.400000000: TargetB: FRONT
+[Dispatcher] @4.400000000: Desired direction: UP
+[Dispatcher] @4.400000000: remains in state: STATE_MOVE_ALL
+[Dispatcher] @4.400000000: State stored: STATE<-STATE_MOVE_ALL
+[Dispatcher] @4.450000000: 
+[Dispatcher] @4.450000000: DISPATCHER TIMER EXPIRED - EXECUTE
+[Dispatcher] @4.450000000: Current floor: 1
+[Dispatcher] @4.450000000: Current hallway: NONE
+[Dispatcher] @4.450000000: Call at current floor: false
+[Dispatcher] @4.450000000: All doors closed: true
+[Dispatcher] @4.450000000: targetF: 3
+[Dispatcher] @4.450000000: TargetB: FRONT
+[Dispatcher] @4.450000000: Desired direction: UP
+[Dispatcher] @4.450000000: remains in state: STATE_MOVE_ALL
+[Dispatcher] @4.450000000: State stored: STATE<-STATE_MOVE_ALL
+[Dispatcher] @4.500000000: 
+[Dispatcher] @4.500000000: DISPATCHER TIMER EXPIRED - EXECUTE
+[Dispatcher] @4.500000000: Current floor: 1
+[Dispatcher] @4.500000000: Current hallway: NONE
+[Dispatcher] @4.500000000: Call at current floor: false
+[Dispatcher] @4.500000000: All doors closed: true
+[Dispatcher] @4.500000000: targetF: 3
+[Dispatcher] @4.500000000: TargetB: FRONT
+[Dispatcher] @4.500000000: Desired direction: UP
+[Dispatcher] @4.500000000: remains in state: STATE_MOVE_ALL
+[Dispatcher] @4.500000000: State stored: STATE<-STATE_MOVE_ALL
+[Dispatcher] @4.550000000: 
+[Dispatcher] @4.550000000: DISPATCHER TIMER EXPIRED - EXECUTE
+[Dispatcher] @4.550000000: Current floor: 1
+[Dispatcher] @4.550000000: Current hallway: NONE
+[Dispatcher] @4.550000000: Call at current floor: false
+[Dispatcher] @4.550000000: All doors closed: true
+[Dispatcher] @4.550000000: targetF: 3
+[Dispatcher] @4.550000000: TargetB: FRONT
+[Dispatcher] @4.550000000: Desired direction: UP
+[Dispatcher] @4.550000000: remains in state: STATE_MOVE_ALL
+[Dispatcher] @4.550000000: State stored: STATE<-STATE_MOVE_ALL
+[Dispatcher] @4.600000000: 
+[Dispatcher] @4.600000000: DISPATCHER TIMER EXPIRED - EXECUTE
+[Dispatcher] @4.600000000: Current floor: 1
+[Dispatcher] @4.600000000: Current hallway: NONE
+[Dispatcher] @4.600000000: Call at current floor: false
+[Dispatcher] @4.600000000: All doors closed: true
+[Dispatcher] @4.600000000: targetF: 3
+[Dispatcher] @4.600000000: TargetB: FRONT
+[Dispatcher] @4.600000000: Desired direction: UP
+[Dispatcher] @4.600000000: remains in state: STATE_MOVE_ALL
+[Dispatcher] @4.600000000: State stored: STATE<-STATE_MOVE_ALL
+[Dispatcher] @4.650000000: 
+[Dispatcher] @4.650000000: DISPATCHER TIMER EXPIRED - EXECUTE
+[Dispatcher] @4.650000000: Current floor: 1
+[Dispatcher] @4.650000000: Current hallway: NONE
+[Dispatcher] @4.650000000: Call at current floor: false
+[Dispatcher] @4.650000000: All doors closed: true
+[Dispatcher] @4.650000000: targetF: 3
+[Dispatcher] @4.650000000: TargetB: FRONT
+[Dispatcher] @4.650000000: Desired direction: UP
+[Dispatcher] @4.650000000: remains in state: STATE_MOVE_ALL
+[Dispatcher] @4.650000000: State stored: STATE<-STATE_MOVE_ALL
+[Dispatcher] @4.700000000: 
+[Dispatcher] @4.700000000: DISPATCHER TIMER EXPIRED - EXECUTE
+[Dispatcher] @4.700000000: Current floor: 1
+[Dispatcher] @4.700000000: Current hallway: NONE
+[Dispatcher] @4.700000000: Call at current floor: false
+[Dispatcher] @4.700000000: All doors closed: true
+[Dispatcher] @4.700000000: targetF: 3
+[Dispatcher] @4.700000000: TargetB: FRONT
+[Dispatcher] @4.700000000: Desired direction: UP
+[Dispatcher] @4.700000000: remains in state: STATE_MOVE_ALL
+[Dispatcher] @4.700000000: State stored: STATE<-STATE_MOVE_ALL
+[Dispatcher] @4.750000000: 
+[Dispatcher] @4.750000000: DISPATCHER TIMER EXPIRED - EXECUTE
+[Dispatcher] @4.750000000: Current floor: 1
+[Dispatcher] @4.750000000: Current hallway: NONE
+[Dispatcher] @4.750000000: Call at current floor: false
+[Dispatcher] @4.750000000: All doors closed: true
+[Dispatcher] @4.750000000: targetF: 3
+[Dispatcher] @4.750000000: TargetB: FRONT
+[Dispatcher] @4.750000000: Desired direction: UP
+[Dispatcher] @4.750000000: remains in state: STATE_MOVE_ALL
+[Dispatcher] @4.750000000: State stored: STATE<-STATE_MOVE_ALL
+[Dispatcher] @4.800000000: 
+[Dispatcher] @4.800000000: DISPATCHER TIMER EXPIRED - EXECUTE
+[Dispatcher] @4.800000000: Current floor: 1
+[Dispatcher] @4.800000000: Current hallway: NONE
+[Dispatcher] @4.800000000: Call at current floor: false
+[Dispatcher] @4.800000000: All doors closed: true
+[Dispatcher] @4.800000000: targetF: 3
+[Dispatcher] @4.800000000: TargetB: FRONT
+[Dispatcher] @4.800000000: Desired direction: UP
+[Dispatcher] @4.800000000: remains in state: STATE_MOVE_ALL
+[Dispatcher] @4.800000000: State stored: STATE<-STATE_MOVE_ALL
+[Dispatcher] @4.850000000: 
+[Dispatcher] @4.850000000: DISPATCHER TIMER EXPIRED - EXECUTE
+[Dispatcher] @4.850000000: Current floor: 1
+[Dispatcher] @4.850000000: Current hallway: NONE
+[Dispatcher] @4.850000000: Call at current floor: false
+[Dispatcher] @4.850000000: All doors closed: true
+[Dispatcher] @4.850000000: targetF: 3
+[Dispatcher] @4.850000000: TargetB: FRONT
+[Dispatcher] @4.850000000: Desired direction: UP
+[Dispatcher] @4.850000000: remains in state: STATE_MOVE_ALL
+[Dispatcher] @4.850000000: State stored: STATE<-STATE_MOVE_ALL
+[Dispatcher] @4.900000000: 
+[Dispatcher] @4.900000000: DISPATCHER TIMER EXPIRED - EXECUTE
+[Dispatcher] @4.900000000: Current floor: 1
+[Dispatcher] @4.900000000: Current hallway: NONE
+[Dispatcher] @4.900000000: Call at current floor: false
+[Dispatcher] @4.900000000: All doors closed: true
+[Dispatcher] @4.900000000: targetF: 3
+[Dispatcher] @4.900000000: TargetB: FRONT
+[Dispatcher] @4.900000000: Desired direction: UP
+[Dispatcher] @4.900000000: remains in state: STATE_MOVE_ALL
+[Dispatcher] @4.900000000: State stored: STATE<-STATE_MOVE_ALL
+[Dispatcher] @4.950000000: 
+[Dispatcher] @4.950000000: DISPATCHER TIMER EXPIRED - EXECUTE
+[Dispatcher] @4.950000000: Current floor: 1
+[Dispatcher] @4.950000000: Current hallway: NONE
+[Dispatcher] @4.950000000: Call at current floor: false
+[Dispatcher] @4.950000000: All doors closed: true
+[Dispatcher] @4.950000000: targetF: 3
+[Dispatcher] @4.950000000: TargetB: FRONT
+[Dispatcher] @4.950000000: Desired direction: UP
+[Dispatcher] @4.950000000: remains in state: STATE_MOVE_ALL
+[Dispatcher] @4.950000000: State stored: STATE<-STATE_MOVE_ALL
+[Dispatcher] @5.000000000: 
+[Dispatcher] @5.000000000: DISPATCHER TIMER EXPIRED - EXECUTE
+[Dispatcher] @5.000000000: Current floor: 1
+[Dispatcher] @5.000000000: Current hallway: NONE
+[Dispatcher] @5.000000000: Call at current floor: false
+[Dispatcher] @5.000000000: All doors closed: true
+[Dispatcher] @5.000000000: targetF: 3
+[Dispatcher] @5.000000000: TargetB: FRONT
+[Dispatcher] @5.000000000: Desired direction: UP
+[Dispatcher] @5.000000000: remains in state: STATE_MOVE_ALL
+[Dispatcher] @5.000000000: State stored: STATE<-STATE_MOVE_ALL
+[Dispatcher] @5.050000000: 
+[Dispatcher] @5.050000000: DISPATCHER TIMER EXPIRED - EXECUTE
+[Dispatcher] @5.050000000: Current floor: 1
+[Dispatcher] @5.050000000: Current hallway: NONE
+[Dispatcher] @5.050000000: Call at current floor: false
+[Dispatcher] @5.050000000: All doors closed: true
+[Dispatcher] @5.050000000: targetF: 3
+[Dispatcher] @5.050000000: TargetB: FRONT
+[Dispatcher] @5.050000000: Desired direction: UP
+[Dispatcher] @5.050000000: remains in state: STATE_MOVE_ALL
+[Dispatcher] @5.050000000: State stored: STATE<-STATE_MOVE_ALL
+[Dispatcher] @5.100000000: 
+[Dispatcher] @5.100000000: DISPATCHER TIMER EXPIRED - EXECUTE
+[Dispatcher] @5.100000000: Current floor: 1
+[Dispatcher] @5.100000000: Current hallway: NONE
+[Dispatcher] @5.100000000: Call at current floor: false
+[Dispatcher] @5.100000000: All doors closed: true
+[Dispatcher] @5.100000000: targetF: 3
+[Dispatcher] @5.100000000: TargetB: FRONT
+[Dispatcher] @5.100000000: Desired direction: UP
+[Dispatcher] @5.100000000: remains in state: STATE_MOVE_ALL
+[Dispatcher] @5.100000000: State stored: STATE<-STATE_MOVE_ALL
+[Dispatcher] @5.150000000: 
+[Dispatcher] @5.150000000: DISPATCHER TIMER EXPIRED - EXECUTE
+[Dispatcher] @5.150000000: Current floor: 1
+[Dispatcher] @5.150000000: Current hallway: NONE
+[Dispatcher] @5.150000000: Call at current floor: false
+[Dispatcher] @5.150000000: All doors closed: true
+[Dispatcher] @5.150000000: targetF: 3
+[Dispatcher] @5.150000000: TargetB: FRONT
+[Dispatcher] @5.150000000: Desired direction: UP
+[Dispatcher] @5.150000000: remains in state: STATE_MOVE_ALL
+[Dispatcher] @5.150000000: State stored: STATE<-STATE_MOVE_ALL
+[Dispatcher] @5.200000000: 
+[Dispatcher] @5.200000000: DISPATCHER TIMER EXPIRED - EXECUTE
+[Dispatcher] @5.200000000: Current floor: 1
+[Dispatcher] @5.200000000: Current hallway: NONE
+[Dispatcher] @5.200000000: Call at current floor: false
+[Dispatcher] @5.200000000: All doors closed: true
+[Dispatcher] @5.200000000: targetF: 3
+[Dispatcher] @5.200000000: TargetB: FRONT
+[Dispatcher] @5.200000000: Desired direction: UP
+[Dispatcher] @5.200000000: remains in state: STATE_MOVE_ALL
+[Dispatcher] @5.200000000: State stored: STATE<-STATE_MOVE_ALL
+[Dispatcher] @5.250000000: 
+[Dispatcher] @5.250000000: DISPATCHER TIMER EXPIRED - EXECUTE
+[Dispatcher] @5.250000000: Current floor: 1
+[Dispatcher] @5.250000000: Current hallway: NONE
+[Dispatcher] @5.250000000: Call at current floor: false
+[Dispatcher] @5.250000000: All doors closed: true
+[Dispatcher] @5.250000000: targetF: 3
+[Dispatcher] @5.250000000: TargetB: FRONT
+[Dispatcher] @5.250000000: Desired direction: UP
+[Dispatcher] @5.250000000: remains in state: STATE_MOVE_ALL
+[Dispatcher] @5.250000000: State stored: STATE<-STATE_MOVE_ALL
+[Dispatcher] @5.300000000: 
+[Dispatcher] @5.300000000: DISPATCHER TIMER EXPIRED - EXECUTE
+[Dispatcher] @5.300000000: Current floor: 1
+[Dispatcher] @5.300000000: Current hallway: NONE
+[Dispatcher] @5.300000000: Call at current floor: false
+[Dispatcher] @5.300000000: All doors closed: true
+[Dispatcher] @5.300000000: targetF: 3
+[Dispatcher] @5.300000000: TargetB: FRONT
+[Dispatcher] @5.300000000: Desired direction: UP
+[Dispatcher] @5.300000000: remains in state: STATE_MOVE_ALL
+[Dispatcher] @5.300000000: State stored: STATE<-STATE_MOVE_ALL
+[Dispatcher] @5.350000000: 
+[Dispatcher] @5.350000000: DISPATCHER TIMER EXPIRED - EXECUTE
+[Dispatcher] @5.350000000: Current floor: 1
+[Dispatcher] @5.350000000: Current hallway: NONE
+[Dispatcher] @5.350000000: Call at current floor: false
+[Dispatcher] @5.350000000: All doors closed: true
+[Dispatcher] @5.350000000: targetF: 3
+[Dispatcher] @5.350000000: TargetB: FRONT
+[Dispatcher] @5.350000000: Desired direction: UP
+[Dispatcher] @5.350000000: remains in state: STATE_MOVE_ALL
+[Dispatcher] @5.350000000: State stored: STATE<-STATE_MOVE_ALL
+[Dispatcher] @5.400000000: 
+[Dispatcher] @5.400000000: DISPATCHER TIMER EXPIRED - EXECUTE
+[Dispatcher] @5.400000000: Current floor: 1
+[Dispatcher] @5.400000000: Current hallway: NONE
+[Dispatcher] @5.400000000: Call at current floor: false
+[Dispatcher] @5.400000000: All doors closed: true
+[Dispatcher] @5.400000000: targetF: 3
+[Dispatcher] @5.400000000: TargetB: FRONT
+[Dispatcher] @5.400000000: Desired direction: UP
+[Dispatcher] @5.400000000: remains in state: STATE_MOVE_ALL
+[Dispatcher] @5.400000000: State stored: STATE<-STATE_MOVE_ALL
+[Dispatcher] @5.450000000: 
+[Dispatcher] @5.450000000: DISPATCHER TIMER EXPIRED - EXECUTE
+[Dispatcher] @5.450000000: Current floor: 1
+[Dispatcher] @5.450000000: Current hallway: NONE
+[Dispatcher] @5.450000000: Call at current floor: false
+[Dispatcher] @5.450000000: All doors closed: true
+[Dispatcher] @5.450000000: targetF: 3
+[Dispatcher] @5.450000000: TargetB: FRONT
+[Dispatcher] @5.450000000: Desired direction: UP
+[Dispatcher] @5.450000000: remains in state: STATE_MOVE_ALL
+[Dispatcher] @5.450000000: State stored: STATE<-STATE_MOVE_ALL
+[Dispatcher] @5.500000000: 
+[Dispatcher] @5.500000000: DISPATCHER TIMER EXPIRED - EXECUTE
+[Dispatcher] @5.500000000: Current floor: 1
+[Dispatcher] @5.500000000: Current hallway: NONE
+[Dispatcher] @5.500000000: Call at current floor: false
+[Dispatcher] @5.500000000: All doors closed: true
+[Dispatcher] @5.500000000: targetF: 3
+[Dispatcher] @5.500000000: TargetB: FRONT
+[Dispatcher] @5.500000000: Desired direction: UP
+[Dispatcher] @5.500000000: remains in state: STATE_MOVE_ALL
+[Dispatcher] @5.500000000: State stored: STATE<-STATE_MOVE_ALL
+[Dispatcher] @5.550000000: 
+[Dispatcher] @5.550000000: DISPATCHER TIMER EXPIRED - EXECUTE
+[Dispatcher] @5.550000000: Current floor: 1
+[Dispatcher] @5.550000000: Current hallway: NONE
+[Dispatcher] @5.550000000: Call at current floor: false
+[Dispatcher] @5.550000000: All doors closed: true
+[Dispatcher] @5.550000000: targetF: 3
+[Dispatcher] @5.550000000: TargetB: FRONT
+[Dispatcher] @5.550000000: Desired direction: UP
+[Dispatcher] @5.550000000: remains in state: STATE_MOVE_ALL
+[Dispatcher] @5.550000000: State stored: STATE<-STATE_MOVE_ALL
+[Dispatcher] @5.600000000: 
+[Dispatcher] @5.600000000: DISPATCHER TIMER EXPIRED - EXECUTE
+[Dispatcher] @5.600000000: Current floor: 1
+[Dispatcher] @5.600000000: Current hallway: NONE
+[Dispatcher] @5.600000000: Call at current floor: false
+[Dispatcher] @5.600000000: All doors closed: true
+[Dispatcher] @5.600000000: targetF: 3
+[Dispatcher] @5.600000000: TargetB: FRONT
+[Dispatcher] @5.600000000: Desired direction: UP
+[Dispatcher] @5.600000000: remains in state: STATE_MOVE_ALL
+[Dispatcher] @5.600000000: State stored: STATE<-STATE_MOVE_ALL
+[Dispatcher] @5.650000000: 
+[Dispatcher] @5.650000000: DISPATCHER TIMER EXPIRED - EXECUTE
+[Dispatcher] @5.650000000: Current floor: 1
+[Dispatcher] @5.650000000: Current hallway: NONE
+[Dispatcher] @5.650000000: Call at current floor: false
+[Dispatcher] @5.650000000: All doors closed: true
+[Dispatcher] @5.650000000: targetF: 3
+[Dispatcher] @5.650000000: TargetB: FRONT
+[Dispatcher] @5.650000000: Desired direction: UP
+[Dispatcher] @5.650000000: remains in state: STATE_MOVE_ALL
+[Dispatcher] @5.650000000: State stored: STATE<-STATE_MOVE_ALL
+[Dispatcher] @5.700000000: 
+[Dispatcher] @5.700000000: DISPATCHER TIMER EXPIRED - EXECUTE
+[Dispatcher] @5.700000000: Current floor: 1
+[Dispatcher] @5.700000000: Current hallway: NONE
+[Dispatcher] @5.700000000: Call at current floor: false
+[Dispatcher] @5.700000000: All doors closed: true
+[Dispatcher] @5.700000000: targetF: 3
+[Dispatcher] @5.700000000: TargetB: FRONT
+[Dispatcher] @5.700000000: Desired direction: UP
+[Dispatcher] @5.700000000: remains in state: STATE_MOVE_ALL
+[Dispatcher] @5.700000000: State stored: STATE<-STATE_MOVE_ALL
+[Dispatcher] @5.750000000: 
+[Dispatcher] @5.750000000: DISPATCHER TIMER EXPIRED - EXECUTE
+[Dispatcher] @5.750000000: Current floor: 1
+[Dispatcher] @5.750000000: Current hallway: NONE
+[Dispatcher] @5.750000000: Call at current floor: false
+[Dispatcher] @5.750000000: All doors closed: true
+[Dispatcher] @5.750000000: targetF: 3
+[Dispatcher] @5.750000000: TargetB: FRONT
+[Dispatcher] @5.750000000: Desired direction: UP
+[Dispatcher] @5.750000000: remains in state: STATE_MOVE_ALL
+[Dispatcher] @5.750000000: State stored: STATE<-STATE_MOVE_ALL
+[Dispatcher] @5.800000000: 
+[Dispatcher] @5.800000000: DISPATCHER TIMER EXPIRED - EXECUTE
+[Dispatcher] @5.800000000: Current floor: 1
+[Dispatcher] @5.800000000: Current hallway: NONE
+[Dispatcher] @5.800000000: Call at current floor: false
+[Dispatcher] @5.800000000: All doors closed: true
+[Dispatcher] @5.800000000: targetF: 3
+[Dispatcher] @5.800000000: TargetB: FRONT
+[Dispatcher] @5.800000000: Desired direction: UP
+[Dispatcher] @5.800000000: remains in state: STATE_MOVE_ALL
+[Dispatcher] @5.800000000: State stored: STATE<-STATE_MOVE_ALL
+[Dispatcher] @5.850000000: 
+[Dispatcher] @5.850000000: DISPATCHER TIMER EXPIRED - EXECUTE
+[Dispatcher] @5.850000000: Current floor: 1
+[Dispatcher] @5.850000000: Current hallway: NONE
+[Dispatcher] @5.850000000: Call at current floor: false
+[Dispatcher] @5.850000000: All doors closed: true
+[Dispatcher] @5.850000000: targetF: 3
+[Dispatcher] @5.850000000: TargetB: FRONT
+[Dispatcher] @5.850000000: Desired direction: UP
+[Dispatcher] @5.850000000: remains in state: STATE_MOVE_ALL
+[Dispatcher] @5.850000000: State stored: STATE<-STATE_MOVE_ALL
+[Dispatcher] @5.900000000: 
+[Dispatcher] @5.900000000: DISPATCHER TIMER EXPIRED - EXECUTE
+[Dispatcher] @5.900000000: Current floor: 1
+[Dispatcher] @5.900000000: Current hallway: NONE
+[Dispatcher] @5.900000000: Call at current floor: false
+[Dispatcher] @5.900000000: All doors closed: true
+[Dispatcher] @5.900000000: targetF: 3
+[Dispatcher] @5.900000000: TargetB: FRONT
+[Dispatcher] @5.900000000: Desired direction: UP
+[Dispatcher] @5.900000000: remains in state: STATE_MOVE_ALL
+[Dispatcher] @5.900000000: State stored: STATE<-STATE_MOVE_ALL
+[Dispatcher] @5.950000000: 
+[Dispatcher] @5.950000000: DISPATCHER TIMER EXPIRED - EXECUTE
+[Dispatcher] @5.950000000: Current floor: 1
+[Dispatcher] @5.950000000: Current hallway: NONE
+[Dispatcher] @5.950000000: Call at current floor: false
+[Dispatcher] @5.950000000: All doors closed: true
+[Dispatcher] @5.950000000: targetF: 3
+[Dispatcher] @5.950000000: TargetB: FRONT
+[Dispatcher] @5.950000000: Desired direction: UP
+[Dispatcher] @5.950000000: remains in state: STATE_MOVE_ALL
+[Dispatcher] @5.950000000: State stored: STATE<-STATE_MOVE_ALL
+[Dispatcher] @6.000000000: 
+[Dispatcher] @6.000000000: DISPATCHER TIMER EXPIRED - EXECUTE
+[Dispatcher] @6.000000000: Current floor: 1
+[Dispatcher] @6.000000000: Current hallway: NONE
+[Dispatcher] @6.000000000: Call at current floor: false
+[Dispatcher] @6.000000000: All doors closed: true
+[Dispatcher] @6.000000000: targetF: 3
+[Dispatcher] @6.000000000: TargetB: FRONT
+[Dispatcher] @6.000000000: Desired direction: UP
+[Dispatcher] @6.000000000: remains in state: STATE_MOVE_ALL
+[Dispatcher] @6.000000000: State stored: STATE<-STATE_MOVE_ALL
+[Dispatcher] @6.050000000: 
+[Dispatcher] @6.050000000: DISPATCHER TIMER EXPIRED - EXECUTE
+[Dispatcher] @6.050000000: Current floor: 1
+[Dispatcher] @6.050000000: Current hallway: NONE
+[Dispatcher] @6.050000000: Call at current floor: false
+[Dispatcher] @6.050000000: All doors closed: true
+[Dispatcher] @6.050000000: targetF: 3
+[Dispatcher] @6.050000000: TargetB: FRONT
+[Dispatcher] @6.050000000: Desired direction: UP
+[Dispatcher] @6.050000000: remains in state: STATE_MOVE_ALL
+[Dispatcher] @6.050000000: State stored: STATE<-STATE_MOVE_ALL
+[Dispatcher] @6.100000000: 
+[Dispatcher] @6.100000000: DISPATCHER TIMER EXPIRED - EXECUTE
+[Dispatcher] @6.100000000: Current floor: 1
+[Dispatcher] @6.100000000: Current hallway: NONE
+[Dispatcher] @6.100000000: Call at current floor: false
+[Dispatcher] @6.100000000: All doors closed: true
+[Dispatcher] @6.100000000: targetF: 3
+[Dispatcher] @6.100000000: TargetB: FRONT
+[Dispatcher] @6.100000000: Desired direction: UP
+[Dispatcher] @6.100000000: remains in state: STATE_MOVE_ALL
+[Dispatcher] @6.100000000: State stored: STATE<-STATE_MOVE_ALL
+[Dispatcher] @6.150000000: 
+[Dispatcher] @6.150000000: DISPATCHER TIMER EXPIRED - EXECUTE
+[Dispatcher] @6.150000000: Current floor: 1
+[Dispatcher] @6.150000000: Current hallway: NONE
+[Dispatcher] @6.150000000: Call at current floor: false
+[Dispatcher] @6.150000000: All doors closed: true
+[Dispatcher] @6.150000000: targetF: 3
+[Dispatcher] @6.150000000: TargetB: FRONT
+[Dispatcher] @6.150000000: Desired direction: UP
+[Dispatcher] @6.150000000: remains in state: STATE_MOVE_ALL
+[Dispatcher] @6.150000000: State stored: STATE<-STATE_MOVE_ALL
+[Dispatcher] @6.200000000: 
+[Dispatcher] @6.200000000: DISPATCHER TIMER EXPIRED - EXECUTE
+[Dispatcher] @6.200000000: Current floor: 1
+[Dispatcher] @6.200000000: Current hallway: NONE
+[Dispatcher] @6.200000000: Call at current floor: false
+[Dispatcher] @6.200000000: All doors closed: true
+[Dispatcher] @6.200000000: targetF: 3
+[Dispatcher] @6.200000000: TargetB: FRONT
+[Dispatcher] @6.200000000: Desired direction: UP
+[Dispatcher] @6.200000000: remains in state: STATE_MOVE_ALL
+[Dispatcher] @6.200000000: State stored: STATE<-STATE_MOVE_ALL
+[Dispatcher] @6.250000000: 
+[Dispatcher] @6.250000000: DISPATCHER TIMER EXPIRED - EXECUTE
+[Dispatcher] @6.250000000: Current floor: 1
+[Dispatcher] @6.250000000: Current hallway: NONE
+[Dispatcher] @6.250000000: Call at current floor: false
+[Dispatcher] @6.250000000: All doors closed: true
+[Dispatcher] @6.250000000: targetF: 3
+[Dispatcher] @6.250000000: TargetB: FRONT
+[Dispatcher] @6.250000000: Desired direction: UP
+[Dispatcher] @6.250000000: remains in state: STATE_MOVE_ALL
+[Dispatcher] @6.250000000: State stored: STATE<-STATE_MOVE_ALL
+[Dispatcher] @6.300000000: 
+[Dispatcher] @6.300000000: DISPATCHER TIMER EXPIRED - EXECUTE
+[Dispatcher] @6.300000000: Current floor: 1
+[Dispatcher] @6.300000000: Current hallway: NONE
+[Dispatcher] @6.300000000: Call at current floor: false
+[Dispatcher] @6.300000000: All doors closed: true
+[Dispatcher] @6.300000000: targetF: 3
+[Dispatcher] @6.300000000: TargetB: FRONT
+[Dispatcher] @6.300000000: Desired direction: UP
+[Dispatcher] @6.300000000: remains in state: STATE_MOVE_ALL
+[Dispatcher] @6.300000000: State stored: STATE<-STATE_MOVE_ALL
+[Dispatcher] @6.350000000: 
+[Dispatcher] @6.350000000: DISPATCHER TIMER EXPIRED - EXECUTE
+[Dispatcher] @6.350000000: Current floor: 1
+[Dispatcher] @6.350000000: Current hallway: NONE
+[Dispatcher] @6.350000000: Call at current floor: false
+[Dispatcher] @6.350000000: All doors closed: true
+[Dispatcher] @6.350000000: targetF: 3
+[Dispatcher] @6.350000000: TargetB: FRONT
+[Dispatcher] @6.350000000: Desired direction: UP
+[Dispatcher] @6.350000000: remains in state: STATE_MOVE_ALL
+[Dispatcher] @6.350000000: State stored: STATE<-STATE_MOVE_ALL
+[Dispatcher] @6.400000000: 
+[Dispatcher] @6.400000000: DISPATCHER TIMER EXPIRED - EXECUTE
+[Dispatcher] @6.400000000: Current floor: 1
+[Dispatcher] @6.400000000: Current hallway: NONE
+[Dispatcher] @6.400000000: Call at current floor: false
+[Dispatcher] @6.400000000: All doors closed: true
+[Dispatcher] @6.400000000: targetF: 3
+[Dispatcher] @6.400000000: TargetB: FRONT
+[Dispatcher] @6.400000000: Desired direction: UP
+[Dispatcher] @6.400000000: remains in state: STATE_MOVE_ALL
+[Dispatcher] @6.400000000: State stored: STATE<-STATE_MOVE_ALL
+[Dispatcher] @6.450000000: 
+[Dispatcher] @6.450000000: DISPATCHER TIMER EXPIRED - EXECUTE
+[Dispatcher] @6.450000000: Current floor: 1
+[Dispatcher] @6.450000000: Current hallway: NONE
+[Dispatcher] @6.450000000: Call at current floor: false
+[Dispatcher] @6.450000000: All doors closed: true
+[Dispatcher] @6.450000000: targetF: 3
+[Dispatcher] @6.450000000: TargetB: FRONT
+[Dispatcher] @6.450000000: Desired direction: UP
+[Dispatcher] @6.450000000: remains in state: STATE_MOVE_ALL
+[Dispatcher] @6.450000000: State stored: STATE<-STATE_MOVE_ALL
+[Dispatcher] @6.500000000: 
+[Dispatcher] @6.500000000: DISPATCHER TIMER EXPIRED - EXECUTE
+[Dispatcher] @6.500000000: Current floor: 1
+[Dispatcher] @6.500000000: Current hallway: NONE
+[Dispatcher] @6.500000000: Call at current floor: false
+[Dispatcher] @6.500000000: All doors closed: true
+[Dispatcher] @6.500000000: targetF: 3
+[Dispatcher] @6.500000000: TargetB: FRONT
+[Dispatcher] @6.500000000: Desired direction: UP
+[Dispatcher] @6.500000000: remains in state: STATE_MOVE_ALL
+[Dispatcher] @6.500000000: State stored: STATE<-STATE_MOVE_ALL
+[Dispatcher] @6.550000000: 
+[Dispatcher] @6.550000000: DISPATCHER TIMER EXPIRED - EXECUTE
+[Dispatcher] @6.550000000: Current floor: 1
+[Dispatcher] @6.550000000: Current hallway: NONE
+[Dispatcher] @6.550000000: Call at current floor: false
+[Dispatcher] @6.550000000: All doors closed: true
+[Dispatcher] @6.550000000: targetF: 3
+[Dispatcher] @6.550000000: TargetB: FRONT
+[Dispatcher] @6.550000000: Desired direction: UP
+[Dispatcher] @6.550000000: remains in state: STATE_MOVE_ALL
+[Dispatcher] @6.550000000: State stored: STATE<-STATE_MOVE_ALL
+[Dispatcher] @6.600000000: 
+[Dispatcher] @6.600000000: DISPATCHER TIMER EXPIRED - EXECUTE
+[Dispatcher] @6.600000000: Current floor: 1
+[Dispatcher] @6.600000000: Current hallway: NONE
+[Dispatcher] @6.600000000: Call at current floor: false
+[Dispatcher] @6.600000000: All doors closed: true
+[Dispatcher] @6.600000000: targetF: 3
+[Dispatcher] @6.600000000: TargetB: FRONT
+[Dispatcher] @6.600000000: Desired direction: UP
+[Dispatcher] @6.600000000: remains in state: STATE_MOVE_ALL
+[Dispatcher] @6.600000000: State stored: STATE<-STATE_MOVE_ALL
+[Dispatcher] @6.650000000: 
+[Dispatcher] @6.650000000: DISPATCHER TIMER EXPIRED - EXECUTE
+[Dispatcher] @6.650000000: Current floor: 1
+[Dispatcher] @6.650000000: Current hallway: NONE
+[Dispatcher] @6.650000000: Call at current floor: false
+[Dispatcher] @6.650000000: All doors closed: true
+[Dispatcher] @6.650000000: targetF: 3
+[Dispatcher] @6.650000000: TargetB: FRONT
+[Dispatcher] @6.650000000: Desired direction: UP
+[Dispatcher] @6.650000000: remains in state: STATE_MOVE_ALL
+[Dispatcher] @6.650000000: State stored: STATE<-STATE_MOVE_ALL
+[Dispatcher] @6.700000000: 
+[Dispatcher] @6.700000000: DISPATCHER TIMER EXPIRED - EXECUTE
+[Dispatcher] @6.700000000: Current floor: 1
+[Dispatcher] @6.700000000: Current hallway: NONE
+[Dispatcher] @6.700000000: Call at current floor: false
+[Dispatcher] @6.700000000: All doors closed: true
+[Dispatcher] @6.700000000: targetF: 3
+[Dispatcher] @6.700000000: TargetB: FRONT
+[Dispatcher] @6.700000000: Desired direction: UP
+[Dispatcher] @6.700000000: remains in state: STATE_MOVE_ALL
+[Dispatcher] @6.700000000: State stored: STATE<-STATE_MOVE_ALL
+[Dispatcher] @6.750000000: 
+[Dispatcher] @6.750000000: DISPATCHER TIMER EXPIRED - EXECUTE
+[Dispatcher] @6.750000000: Current floor: 1
+[Dispatcher] @6.750000000: Current hallway: NONE
+[Dispatcher] @6.750000000: Call at current floor: false
+[Dispatcher] @6.750000000: All doors closed: true
+[Dispatcher] @6.750000000: targetF: 3
+[Dispatcher] @6.750000000: TargetB: FRONT
+[Dispatcher] @6.750000000: Desired direction: UP
+[Dispatcher] @6.750000000: remains in state: STATE_MOVE_ALL
+[Dispatcher] @6.750000000: State stored: STATE<-STATE_MOVE_ALL
+[Dispatcher] @6.800000000: 
+[Dispatcher] @6.800000000: DISPATCHER TIMER EXPIRED - EXECUTE
+[Dispatcher] @6.800000000: Current floor: 1
+[Dispatcher] @6.800000000: Current hallway: NONE
+[Dispatcher] @6.800000000: Call at current floor: false
+[Dispatcher] @6.800000000: All doors closed: true
+[Dispatcher] @6.800000000: targetF: 3
+[Dispatcher] @6.800000000: TargetB: FRONT
+[Dispatcher] @6.800000000: Desired direction: UP
+[Dispatcher] @6.800000000: remains in state: STATE_MOVE_ALL
+[Dispatcher] @6.800000000: State stored: STATE<-STATE_MOVE_ALL
+[Dispatcher] @6.850000000: 
+[Dispatcher] @6.850000000: DISPATCHER TIMER EXPIRED - EXECUTE
+[Dispatcher] @6.850000000: Current floor: 1
+[Dispatcher] @6.850000000: Current hallway: NONE
+[Dispatcher] @6.850000000: Call at current floor: false
+[Dispatcher] @6.850000000: All doors closed: true
+[Dispatcher] @6.850000000: targetF: 3
+[Dispatcher] @6.850000000: TargetB: FRONT
+[Dispatcher] @6.850000000: Desired direction: UP
+[Dispatcher] @6.850000000: remains in state: STATE_MOVE_ALL
+[Dispatcher] @6.850000000: State stored: STATE<-STATE_MOVE_ALL
+[Dispatcher] @6.900000000: 
+[Dispatcher] @6.900000000: DISPATCHER TIMER EXPIRED - EXECUTE
+[Dispatcher] @6.900000000: Current floor: 1
+[Dispatcher] @6.900000000: Current hallway: NONE
+[Dispatcher] @6.900000000: Call at current floor: false
+[Dispatcher] @6.900000000: All doors closed: true
+[Dispatcher] @6.900000000: targetF: 3
+[Dispatcher] @6.900000000: TargetB: FRONT
+[Dispatcher] @6.900000000: Desired direction: UP
+[Dispatcher] @6.900000000: remains in state: STATE_MOVE_ALL
+[Dispatcher] @6.900000000: State stored: STATE<-STATE_MOVE_ALL
+[Dispatcher] @6.950000000: 
+[Dispatcher] @6.950000000: DISPATCHER TIMER EXPIRED - EXECUTE
+[Dispatcher] @6.950000000: Current floor: 1
+[Dispatcher] @6.950000000: Current hallway: NONE
+[Dispatcher] @6.950000000: Call at current floor: false
+[Dispatcher] @6.950000000: All doors closed: true
+[Dispatcher] @6.950000000: targetF: 3
+[Dispatcher] @6.950000000: TargetB: FRONT
+[Dispatcher] @6.950000000: Desired direction: UP
+[Dispatcher] @6.950000000: remains in state: STATE_MOVE_ALL
+[Dispatcher] @6.950000000: State stored: STATE<-STATE_MOVE_ALL
+[Dispatcher] @7.000000000: 
+[Dispatcher] @7.000000000: DISPATCHER TIMER EXPIRED - EXECUTE
+[Dispatcher] @7.000000000: Current floor: 1
+[Dispatcher] @7.000000000: Current hallway: NONE
+[Dispatcher] @7.000000000: Call at current floor: false
+[Dispatcher] @7.000000000: All doors closed: true
+[Dispatcher] @7.000000000: targetF: 3
+[Dispatcher] @7.000000000: TargetB: FRONT
+[Dispatcher] @7.000000000: Desired direction: UP
+[Dispatcher] @7.000000000: remains in state: STATE_MOVE_ALL
+[Dispatcher] @7.000000000: State stored: STATE<-STATE_MOVE_ALL
+[Dispatcher] @7.050000000: 
+[Dispatcher] @7.050000000: DISPATCHER TIMER EXPIRED - EXECUTE
+[Dispatcher] @7.050000000: Current floor: 1
+[Dispatcher] @7.050000000: Current hallway: NONE
+[Dispatcher] @7.050000000: Call at current floor: false
+[Dispatcher] @7.050000000: All doors closed: true
+[Dispatcher] @7.050000000: targetF: 3
+[Dispatcher] @7.050000000: TargetB: FRONT
+[Dispatcher] @7.050000000: Desired direction: UP
+[Dispatcher] @7.050000000: remains in state: STATE_MOVE_ALL
+[Dispatcher] @7.050000000: State stored: STATE<-STATE_MOVE_ALL
+[Dispatcher] @7.100000000: 
+[Dispatcher] @7.100000000: DISPATCHER TIMER EXPIRED - EXECUTE
+[Dispatcher] @7.100000000: Current floor: 1
+[Dispatcher] @7.100000000: Current hallway: NONE
+[Dispatcher] @7.100000000: Call at current floor: false
+[Dispatcher] @7.100000000: All doors closed: true
+[Dispatcher] @7.100000000: targetF: 3
+[Dispatcher] @7.100000000: TargetB: FRONT
+[Dispatcher] @7.100000000: Desired direction: UP
+[Dispatcher] @7.100000000: remains in state: STATE_MOVE_ALL
+[Dispatcher] @7.100000000: State stored: STATE<-STATE_MOVE_ALL
+[Dispatcher] @7.150000000: 
+[Dispatcher] @7.150000000: DISPATCHER TIMER EXPIRED - EXECUTE
+[Dispatcher] @7.150000000: Current floor: 1
+[Dispatcher] @7.150000000: Current hallway: NONE
+[Dispatcher] @7.150000000: Call at current floor: false
+[Dispatcher] @7.150000000: All doors closed: true
+[Dispatcher] @7.150000000: targetF: 3
+[Dispatcher] @7.150000000: TargetB: FRONT
+[Dispatcher] @7.150000000: Desired direction: UP
+[Dispatcher] @7.150000000: remains in state: STATE_MOVE_ALL
+[Dispatcher] @7.150000000: State stored: STATE<-STATE_MOVE_ALL
+[Dispatcher] @7.200000000: 
+[Dispatcher] @7.200000000: DISPATCHER TIMER EXPIRED - EXECUTE
+[Dispatcher] @7.200000000: Current floor: 1
+[Dispatcher] @7.200000000: Current hallway: NONE
+[Dispatcher] @7.200000000: Call at current floor: false
+[Dispatcher] @7.200000000: All doors closed: true
+[Dispatcher] @7.200000000: targetF: 3
+[Dispatcher] @7.200000000: TargetB: FRONT
+[Dispatcher] @7.200000000: Desired direction: UP
+[Dispatcher] @7.200000000: remains in state: STATE_MOVE_ALL
+[Dispatcher] @7.200000000: State stored: STATE<-STATE_MOVE_ALL
+[Dispatcher] @7.250000000: 
+[Dispatcher] @7.250000000: DISPATCHER TIMER EXPIRED - EXECUTE
+[Dispatcher] @7.250000000: Current floor: 1
+[Dispatcher] @7.250000000: Current hallway: NONE
+[Dispatcher] @7.250000000: Call at current floor: false
+[Dispatcher] @7.250000000: All doors closed: true
+[Dispatcher] @7.250000000: targetF: 3
+[Dispatcher] @7.250000000: TargetB: FRONT
+[Dispatcher] @7.250000000: Desired direction: UP
+[Dispatcher] @7.250000000: remains in state: STATE_MOVE_ALL
+[Dispatcher] @7.250000000: State stored: STATE<-STATE_MOVE_ALL
+[Dispatcher] @7.300000000: 
+[Dispatcher] @7.300000000: DISPATCHER TIMER EXPIRED - EXECUTE
+[Dispatcher] @7.300000000: Current floor: 1
+[Dispatcher] @7.300000000: Current hallway: NONE
+[Dispatcher] @7.300000000: Call at current floor: false
+[Dispatcher] @7.300000000: All doors closed: true
+[Dispatcher] @7.300000000: targetF: 3
+[Dispatcher] @7.300000000: TargetB: FRONT
+[Dispatcher] @7.300000000: Desired direction: UP
+[Dispatcher] @7.300000000: remains in state: STATE_MOVE_ALL
+[Dispatcher] @7.300000000: State stored: STATE<-STATE_MOVE_ALL
+[Dispatcher] @7.350000000: 
+[Dispatcher] @7.350000000: DISPATCHER TIMER EXPIRED - EXECUTE
+[Dispatcher] @7.350000000: Current floor: 1
+[Dispatcher] @7.350000000: Current hallway: NONE
+[Dispatcher] @7.350000000: Call at current floor: false
+[Dispatcher] @7.350000000: All doors closed: true
+[Dispatcher] @7.350000000: targetF: 3
+[Dispatcher] @7.350000000: TargetB: FRONT
+[Dispatcher] @7.350000000: Desired direction: UP
+[Dispatcher] @7.350000000: remains in state: STATE_MOVE_ALL
+[Dispatcher] @7.350000000: State stored: STATE<-STATE_MOVE_ALL
+[Dispatcher] @7.400000000: 
+[Dispatcher] @7.400000000: DISPATCHER TIMER EXPIRED - EXECUTE
+[Dispatcher] @7.400000000: Current floor: 1
+[Dispatcher] @7.400000000: Current hallway: NONE
+[Dispatcher] @7.400000000: Call at current floor: false
+[Dispatcher] @7.400000000: All doors closed: true
+[Dispatcher] @7.400000000: targetF: 3
+[Dispatcher] @7.400000000: TargetB: FRONT
+[Dispatcher] @7.400000000: Desired direction: UP
+[Dispatcher] @7.400000000: remains in state: STATE_MOVE_ALL
+[Dispatcher] @7.400000000: State stored: STATE<-STATE_MOVE_ALL
+[Dispatcher] @7.450000000: 
+[Dispatcher] @7.450000000: DISPATCHER TIMER EXPIRED - EXECUTE
+[Dispatcher] @7.450000000: Current floor: 1
+[Dispatcher] @7.450000000: Current hallway: NONE
+[Dispatcher] @7.450000000: Call at current floor: false
+[Dispatcher] @7.450000000: All doors closed: true
+[Dispatcher] @7.450000000: targetF: 3
+[Dispatcher] @7.450000000: TargetB: FRONT
+[Dispatcher] @7.450000000: Desired direction: UP
+[Dispatcher] @7.450000000: remains in state: STATE_MOVE_ALL
+[Dispatcher] @7.450000000: State stored: STATE<-STATE_MOVE_ALL
+[Dispatcher] @7.500000000: 
+[Dispatcher] @7.500000000: DISPATCHER TIMER EXPIRED - EXECUTE
+[Dispatcher] @7.500000000: Current floor: 1
+[Dispatcher] @7.500000000: Current hallway: NONE
+[Dispatcher] @7.500000000: Call at current floor: false
+[Dispatcher] @7.500000000: All doors closed: true
+[Dispatcher] @7.500000000: targetF: 3
+[Dispatcher] @7.500000000: TargetB: FRONT
+[Dispatcher] @7.500000000: Desired direction: UP
+[Dispatcher] @7.500000000: remains in state: STATE_MOVE_ALL
+[Dispatcher] @7.500000000: State stored: STATE<-STATE_MOVE_ALL
+[Elevator] @7.500000000: Simulation Finished ***
+******************Summary******************
+Passed:  10
+Failed:  0
+Total :  10
+

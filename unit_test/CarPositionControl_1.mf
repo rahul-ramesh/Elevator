@@ -1,0 +1,66 @@
+; CarPositionControl_1.mf
+; 18-649 Distributed Embedded Systems
+; Group 11
+; Rahul Ramesh // rahulram. Daniel Santoro // ddsantor. David Thompson // davidtho. Jialiang Tan // jialiant
+; !@
+
+#INCLUDE defines.mf
+
+
+; Initial conditions: Elevator at floor 1
++0ms I DRIVE_PERIOD N DRIVE_SPEED_CAN_ID DriveSpeed = 0 STOP
++0ms I CAR_LEVEL_POSITION_PERIOD N CAR_LEVEL_POSITION_CAN_ID CarLevelPosition = 0
+
+; assert that 1 is displayed
+;#state 'INDICATE_POSITION'
++500ms A F CarPositionIndicator : floor == 1
+
+; Speed Slow Up, between floors 1 & 2
++500ms I DRIVE_PERIOD N DRIVE_SPEED_CAN_ID DriveSpeed = 250 UP
++0ms I CAR_LEVEL_POSITION_PERIOD N CAR_LEVEL_POSITION_CAN_ID CarLevelPosition = 2500
+
+; assert that indicator now displays 2
+;#state 'INDICATE_POSITION'
++500ms A F CarPositionIndicator : floor == 2
+
+; Speed Slow Up, between floors 2 & 3
++500ms I CAR_LEVEL_POSITION_PERIOD N CAR_LEVEL_POSITION_CAN_ID CarLevelPosition = 7500
+
+; assert that indicator now displays 3
+;#state 'INDICATE_POSITION'
++500ms A F CarPositionIndicator : floor == 3
+
+; Speed Slow Down, between floors 2 & 3
++500ms I DRIVE_PERIOD N DRIVE_SPEED_CAN_ID DriveSpeed = 250 DOWN
+
+; assert that indicator now displays 2
+;#state 'INDICATE_POSITION'
++500ms A F CarPositionIndicator : floor == 2
+
+; speed Fast Down
++500ms I DRIVE_PERIOD N DRIVE_SPEED_CAN_ID DriveSpeed = 5000 DOWN
+
+; assert that indicator now displays 1
+;#state 'INDICATE_POSITION'
++500ms A F CarPositionIndicator : floor == 1
+
+; speed Fast Up
++500ms I DRIVE_PERIOD N DRIVE_SPEED_CAN_ID DriveSpeed = 5000 UP
+
+; assert that indicator now displays 6
+;#state 'INDICATE_POSITION'
++500ms A F CarPositionIndicator : floor == 6
+
+; between floors 6 & 7
++500ms I CAR_LEVEL_POSITION_PERIOD N CAR_LEVEL_POSITION_CAN_ID CarLevelPosition = 27500
+
+; assert that indicator now displays 8
+;#state 'INDICATE_POSITION'
++500ms A F CarPositionIndicator : floor == 8
+
+; speed Fast Down
++500ms I DRIVE_PERIOD N DRIVE_SPEED_CAN_ID DriveSpeed = 5000 DOWN
+
+; assert that indicator now displays 2
+;#state 'INDICATE_POSITION'
++500ms A F CarPositionIndicator : floor == 3

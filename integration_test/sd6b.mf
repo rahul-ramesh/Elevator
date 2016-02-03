@@ -1,0 +1,114 @@
+; sd6b.mf
+; 18-649 Distributed Embedded Systems
+; Group 11
+; Rahul Ramesh // rahulram. Daniel Santoro // ddsantor. David Thompson // davidtho. Jialiang Tan // jialiant
+; !@
+
+#INCLUDE defines.mf
+
+; PRE-CONDITIONS
+
+; Check initial conditions
+; Door state '1. CLOSED'
+
+0ms I DOOR_CLOSED_SENSOR_PERIOD N DOOR_CLOSED_SENSOR_[BACK][LEFT]_CAN_ID DoorClosed BACK LEFT = TRUE
+0ms I DOOR_CLOSED_SENSOR_PERIOD N DOOR_CLOSED_SENSOR_[BACK][RIGHT]_CAN_ID DoorClosed BACK RIGHT = TRUE
+0ms I DOOR_CLOSED_SENSOR_PERIOD N DOOR_CLOSED_SENSOR_[FRONT][LEFT]_CAN_ID DoorClosed FRONT LEFT = TRUE
+0ms I DOOR_CLOSED_SENSOR_PERIOD N DOOR_CLOSED_SENSOR_[FRONT][RIGHT]_CAN_ID DoorClosed FRONT RIGHT = TRUE
++0ms I DOOR_CONTROL_PERIOD N DOOR_MOTOR_COMMAND_[FRONT][LEFT]_CAN_ID DoorMotorCommand FRONT LEFT = MDOOR_STOP
++0ms I DOOR_CONTROL_PERIOD N DOOR_MOTOR_COMMAND_[FRONT][RIGHT]_CAN_ID DoorMotorCommand FRONT RIGHT = MDOOR_STOP
+
+; Stopped at floor 1
++0ms I AT_FLOOR_PERIOD N AT_FLOOR_[1][FRONT]_CAN_ID AtFloor 1 FRONT = TRUE
++0ms I AT_FLOOR_PERIOD N AT_FLOOR_[1][BACK]_CAN_ID AtFloor 1 BACK = TRUE
++0ms I DRIVE_PERIOD N DRIVE_SPEED_CAN_ID DriveSpeed = 0 STOP
++0ms I WEIGHT_PERIOD N CAR_WEIGHT_CAN_ID CarWeight = 500
+
+
++500ms A F DoorMotor BACK LEFT : command == STOP
++0ms A F DoorMotor BACK RIGHT : command == STOP
++0ms A F DoorMotor FRONT LEFT : command == STOP
++0ms A F DoorMotor FRONT RIGHT : command == STOP
+
+; Inject a hall call for floor 1 to get back doors open
++200ms I HALL_BUTTON_CONTROL_PERIOD N HALL_CALL_[1][BACK][UP]_CAN_ID HallCall 1 BACK UP = true
+
+; Check if door in state 2
+; Door state '2. OPEN'
++1000ms A F DoorMotor BACK LEFT : command == OPEN
++0ms A F DoorMotor BACK RIGHT : command == OPEN
+
+; Trigger door transition to state 3
+; Door transition 'PT2'
++500ms I DOOR_CLOSED_SENSOR_PERIOD N DOOR_CLOSED_SENSOR_[BACK][LEFT]_CAN_ID DoorClosed BACK LEFT = FALSE
++0ms I DOOR_CLOSED_SENSOR_PERIOD N DOOR_CLOSED_SENSOR_[BACK][RIGHT]_CAN_ID DoorClosed BACK RIGHT = FALSE
+; Floor 1 has been serviced
++500ms I HALL_BUTTON_CONTROL_PERIOD N HALL_CALL_[1][BACK][UP]_CAN_ID HallCall 1 BACK UP = false
+; Inject a car call for floor 4
++200ms I CAR_BUTTON_CONTROL_PERIOD N CAR_CALL_[4][FRONT]_CAN_ID CarCall 4 FRONT = true
++500ms I DOOR_OPENED_SENSOR_PERIOD N DOOR_OPEN_SENSOR_[BACK][LEFT]_CAN_ID DoorOpened BACK LEFT = TRUE
++500ms I DOOR_OPENED_SENSOR_PERIOD N DOOR_OPEN_SENSOR_[BACK][RIGHT]_CAN_ID DoorOpened BACK RIGHT = TRUE
+
+; Check door if in state 3
+; Door state '3. OPENED_COUNTDOWN'
++1000ms A F DoorMotor BACK LEFT : command == STOP
++0ms A F DoorMotor BACK RIGHT : command == STOP
+
+; Door transition to state 4 triggered after dwell countdown
+; Door transition 'PT3'
+; Door state '4. CLOSE'
++6s A F DoorMotor BACK LEFT : command == CLOSE
++0s A F DoorMotor BACK RIGHT : command == CLOSE
++500ms I DOOR_OPENED_SENSOR_PERIOD N DOOR_OPEN_SENSOR_[BACK][LEFT]_CAN_ID DoorOpened BACK LEFT = FALSE
++0ms I DOOR_OPENED_SENSOR_PERIOD N DOOR_OPEN_SENSOR_[BACK][RIGHT]_CAN_ID DoorOpened BACK RIGHT = FALSE
+
+; Inject doorReversal to trigger door transition PT10 to state 8
+; Door transition 'PT10'
++1000ms I 100ms N DOOR_REVERSAL_SENSOR_[BACK][LEFT]_CAN_ID DoorReversal BACK LEFT = TRUE
++100ms I 100ms N DOOR_REVERSAL_SENSOR_[BACK][LEFT]_CAN_ID DoorReversal BACK LEFT = FALSE
+
+; Check if door in state 8
+; Door state '8. REVERSAL'
++180ms A F DoorMotor BACK LEFT : command == OPEN
++0ms A F DoorMotor BACK RIGHT : command == OPEN
+
+; Trigger door transition to state 3
+; Door transition 'PT11'
++500ms I DOOR_OPENED_SENSOR_PERIOD N DOOR_OPEN_SENSOR_[BACK][LEFT]_CAN_ID DoorOpened BACK LEFT = TRUE
++0ms I DOOR_OPENED_SENSOR_PERIOD N DOOR_OPEN_SENSOR_[BACK][RIGHT]_CAN_ID DoorOpened BACK RIGHT = TRUE
+
+; Check if door in state 3
+; Door state '3. OPENED_COUNTDOWN'
++1000ms A F DoorMotor BACK LEFT : command == STOP
++0ms A F DoorMotor BACK RIGHT : command == STOP
+
+
+; SCENARIO
+
+; Transition door to state 4 triggered after dwell countdown
+; Door transition 'PT3'
+; Door state '4. CLOSE'
+;#arc '6B/1'
++6s A F DoorMotor BACK LEFT : command == CLOSE
++0s A F DoorMotor BACK RIGHT : command == CLOSE
+
+; Inject doorReversal to trigger transition PT10 to door state 8
+; Door transition 'PT10'
+;#arc '6B/2a'
+;#arc '6B/2b'
++1000ms I 100ms N DOOR_REVERSAL_SENSOR_[BACK][LEFT]_CAN_ID DoorReversal BACK LEFT = TRUE
+
+; Check if doors nudge
+;#arc '6B/3'
++180ms A F DoorMotor BACK LEFT : command == NUDGE
++0ms A F DoorMotor BACK RIGHT : command == NUDGE
+
+; Inject a hall call for floor 1
+;#arc '6B/4'
++200ms I HALL_BUTTON_CONTROL_PERIOD N HALL_CALL_[1][BACK][UP]_CAN_ID HallCall 1 BACK UP = true
+
+; Check if doors still nudging
+;#arc '6B/5a'
+;#arc '6B/5b'
++180ms A F DoorMotor BACK LEFT : command == NUDGE
++0ms A F DoorMotor BACK RIGHT : command == NUDGE

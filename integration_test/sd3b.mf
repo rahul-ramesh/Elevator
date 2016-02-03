@@ -1,0 +1,90 @@
+; sd3b.mf
+; 18-649 Distributed Embedded Systems
+; Group 11
+; Rahul Ramesh // rahulram. Daniel Santoro // ddsantor. David Thompson // davidtho. Jialiang Tan // jialiant
+; !@
+
+#INCLUDE defines.mf
+
+;PRE-CONDITIONS 1 : Car is moving towards floor f and hallway b.
+
+;PRE-CONDITIONS 2 : The mAtFloor[f,b] was last received as False.
+0s I AT_FLOOR_PERIOD N AT_FLOOR_[5][FRONT]_CAN_ID AtFloor 5 FRONT = FALSE
+
+;PRE-CONDITION 3 : CarLight[f,b] is on.
++0.5s I CAR_BUTTON_CONTROL_PERIOD F CarCall 5 FRONT = TRUE
++0.5s I CAR_BUTTON_CONTROL_PERIOD F CarCall 5 FRONT = FALSE
++0.5s A F CarLight 5 FRONT : lighted == TRUE
+
+;PRE-CONDITION 4 : HallLight[f,b,d] is on.
++0.5s I HALL_BUTTON_CONTROL_PERIOD F HallCall 5 FRONT UP = TRUE
++1s I HALL_BUTTON_CONTROL_PERIOD F HallCall 5 FRONT UP = FALSE
++0.5s A F HallLight 5 FRONT UP : lighted == TRUE
+
+;PRE-CONDITION 5 : Doors [b,*] are closed.
++0.5s I DOOR_CLOSED_SENSOR_PERIOD N DOOR_CLOSED_SENSOR_[FRONT][LEFT]_CAN_ID DoorClosed FRONT LEFT = TRUE
++0.5s I DOOR_CLOSED_SENSOR_PERIOD N DOOR_CLOSED_SENSOR_[FRONT][RIGHT]_CAN_ID DoorClosed FRONT RIGHT = TRUE
++0.5s I DOOR_CLOSED_SENSOR_PERIOD N DOOR_CLOSED_SENSOR_[BACK][LEFT]_CAN_ID DoorClosed BACK LEFT = TRUE
++0.5s I DOOR_CLOSED_SENSOR_PERIOD N DOOR_CLOSED_SENSOR_[BACK][RIGHT]_CAN_ID DoorClosed BACK RIGHT = TRUE
+
+;PRE-CONDITION 6 : Dispatcher has sent mDesiredFloor[f, b, d].
++0.5s I DISPATCHER_PERIOD N DESIRED_FLOOR_CAN_ID DesiredFloor = 5 FRONT DOWN
+
+;PRE-CONDITION 7 : Car has arrived at floor.
++0.5s I AT_FLOOR_PERIOD N AT_FLOOR_[5][FRONT]_CAN_ID AtFloor 5 FRONT = TRUE
+
+;PRE-CONDITION Door Setup
++0.5s I DRIVE_CONTROL_PERIOD N DRIVE_SPEED_CAN_ID DriveSpeed = 0 UP
+
+;#state 'OPEN'
++0.5s A F DoorMotor FRONT LEFT : command == OPEN
++0s A F DoorMotor FRONT RIGHT : command == OPEN
++0.5s A N DOOR_MOTOR_COMMAND_[FRONT][LEFT]_CAN_ID DoorMotorCommand FRONT LEFT : getValue == MDOOR_OPEN
++0.0s A N DOOR_MOTOR_COMMAND_[FRONT][RIGHT]_CAN_ID DoorMotorCommand FRONT RIGHT : getValue == MDOOR_OPEN
+
+;#arc '3A/1'
+;setting up dwell time for the door
+
+;#arc '3A/2a'
++0.5s A F DoorMotor FRONT LEFT : command == OPEN
++0s A F DoorMotor FRONT RIGHT : command == OPEN
+
+;#arc '3A/2b'
++0.5s I DOOR_CLOSED_SENSOR_PERIOD N DOOR_CLOSED_SENSOR_[FRONT][LEFT]_CAN_ID DoorClosed FRONT LEFT = FALSE
++0s I DOOR_CLOSED_SENSOR_PERIOD N DOOR_CLOSED_SENSOR_[FRONT][RIGHT]_CAN_ID DoorClosed FRONT RIGHT = FALSE
+
+;#arc '3A/3'
++1s A N CAR_CALL_[5][FRONT]_CAN_ID CarCall 5 FRONT : getValue == FALSE
+
+;#arc '3A/4'
++1s A N HALL_CALL_[5][FRONT][UP]_CAN_ID HallCall 5 FRONT UP : getValue == TRUE
++0s I DISPATCHER_PERIOD N DESIRED_FLOOR_CAN_ID DesiredFloor = 0 NONE STOP
+
+;#arc '3A/5a'
++0.5s I DOOR_OPENED_SENSOR_PERIOD N DOOR_OPEN_SENSOR_[FRONT][LEFT]_CAN_ID DoorOpened FRONT LEFT = TRUE
++0s I DOOR_OPENED_SENSOR_PERIOD N DOOR_OPEN_SENSOR_[FRONT][RIGHT]_CAN_ID DoorOpened FRONT RIGHT = TRUE
+
+;#arc '3A/5b'
++0.5s A F DoorMotor FRONT LEFT : command == STOP
++0s A F DoorMotor FRONT RIGHT : command == STOP
+
+;#arc '3A/6' Door Control internal count down
+
+;#arc '3A/7'
++6s A F DoorMotor FRONT LEFT : command == CLOSE
++0s A F DoorMotor FRONT RIGHT : command == CLOSE
+
+;POST-CONDITION 1 : Car at floor f and hallway b.
+;+0.5s A N AT_FLOOR_[5][FRONT]_CAN_ID AtFloor 5 FRONT : getValue == TRUE
+
+;POST-CONDITION 2 : CarLight[f,b] is off.
++0.5s A F CarLight 5 FRONT : lighted == FALSE
+
+;POST-CONDITION 3 : HallLight[f,b,d] is off.
++0.5s A F HallLight 5 FRONT UP : lighted == TRUE
+
+;POST-CONDITION 4 : Doors are closing
++0.5s A F DoorMotor FRONT LEFT : command == CLOSE
++0s A F DoorMotor FRONT RIGHT : command == CLOSE
+
+

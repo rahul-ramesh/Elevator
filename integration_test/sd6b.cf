@@ -1,0 +1,9 @@
+; sd6b.cf
+; 18-649 Distributed Embedded Systems
+; Group 11
+; Rahul Ramesh // rahulram. Daniel Santoro // ddsantor. David Thompson // davidtho. Jialiang Tan // jialiant
+; !@
+
+DoorControl BACK LEFT 10ms true
+DoorControl BACK RIGHT 10ms true
+Dispatcher 8 0.050s true

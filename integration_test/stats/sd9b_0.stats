@@ -1,0 +1,61 @@
+; sd9b_0.stats
+; 18-649 Distributed Embedded Systems
+; Group 11
+; Rahul Ramesh // rahulram. Daniel Santoro // ddsantor. David Thompson // davidtho. Jialiang Tan // jialiant
+; !@
+
+Simulator Parameters:
+Command line = -cf ../../portfolio_grp11/integration_test/sd9b.cf -mf ../../portfolio_grp11/integration_test/sd9b.mf -head ../../portfolio_grp11/scripts/grp11.head
+RandomSeed = 1450147643397
+CanNetworkBitTime = 0 ns
+Effective Can Bitrate = Infinity
+Run Time = null
+Real time rate = null
+Message File = ../../portfolio_grp11/integration_test/sd9b.mf
+Controller File = ../../portfolio_grp11/integration_test/sd9b.cf
+
+Assertion Results:
+@0.5s:  PASSED simulator.payloads.DoorMotorPayload$ReadableDoorMotorPayload@17770bec :: command ?== STOP PASSED
+@0.5s:  PASSED simulator.payloads.DoorMotorPayload$ReadableDoorMotorPayload@4a23d87f :: command ?== STOP PASSED
+@0.5s:  PASSED simulator.payloads.DoorMotorPayload$ReadableDoorMotorPayload@5eb626b0 :: command ?== STOP PASSED
+@0.5s:  PASSED simulator.payloads.DoorMotorPayload$ReadableDoorMotorPayload@51d394ab :: command ?== STOP PASSED
+@0.6s:  PASSED simulator.payloads.CanMailbox$ReadableCanMailbox@799318fa :: getValue ?== 2 PASSED
+@0.6s:  PASSED simulator.payloads.CanMailbox$ReadableCanMailbox@581d0462 :: getValue ?== 2 PASSED
+@0.6s:  PASSED simulator.payloads.CanMailbox$ReadableCanMailbox@5bd26de4 :: getValue ?== 2 PASSED
+@0.6s:  PASSED simulator.payloads.CanMailbox$ReadableCanMailbox@46ab1778 :: getValue ?== 2 PASSED
+@1.67s:  PASSED simulator.payloads.DoorMotorPayload$ReadableDoorMotorPayload@56f93e5b :: command ?== OPEN PASSED
+@1.67s:  PASSED simulator.payloads.DoorMotorPayload$ReadableDoorMotorPayload@34470a37 :: command ?== OPEN PASSED
+@1.77s:  PASSED simulator.payloads.CanMailbox$ReadableCanMailbox@500b73e5 :: getValue ?== 0 PASSED
+@1.77s:  PASSED simulator.payloads.CanMailbox$ReadableCanMailbox@2eff6313 :: getValue ?== 0 PASSED
+@3.87s:  PASSED simulator.payloads.DoorMotorPayload$ReadableDoorMotorPayload@22ef27e3 :: command ?== STOP PASSED
+@3.87s:  PASSED simulator.payloads.DoorMotorPayload$ReadableDoorMotorPayload@1e88579c :: command ?== STOP PASSED
+@3.87s:  PASSED simulator.payloads.CanMailbox$ReadableCanMailbox@229ff6d1 :: getValue ?== 2 PASSED
+@3.87s:  PASSED simulator.payloads.CanMailbox$ReadableCanMailbox@3dc6a6fd :: getValue ?== 2 PASSED
+@9.87s:  PASSED simulator.payloads.DoorMotorPayload$ReadableDoorMotorPayload@431e2b21 :: command ?== CLOSE PASSED
+@9.87s:  PASSED simulator.payloads.DoorMotorPayload$ReadableDoorMotorPayload@2b962ecd :: command ?== CLOSE PASSED
+@9.87s:  PASSED simulator.payloads.CanMailbox$ReadableCanMailbox@41639ff :: getValue ?== 1 PASSED
+@9.87s:  PASSED simulator.payloads.CanMailbox$ReadableCanMailbox@4dc3fd59 :: getValue ?== 1 PASSED
+@11.42s:  PASSED simulator.payloads.DoorMotorPayload$ReadableDoorMotorPayload@7f8851ee :: command ?== STOP PASSED
+@11.42s:  PASSED simulator.payloads.DoorMotorPayload$ReadableDoorMotorPayload@5f9f89ee :: command ?== STOP PASSED
+@11.42s:  PASSED simulator.payloads.CanMailbox$ReadableCanMailbox@63f8c10e :: getValue ?== 2 PASSED
+@11.42s:  PASSED simulator.payloads.CanMailbox$ReadableCanMailbox@47c5543b :: getValue ?== 2 PASSED
+@12.02s:  PASSED simulator.payloads.DrivePayload$ReadableDrivePayload@689c7307 :: speed ?== SLOW PASSED
+@12.02s:  PASSED simulator.payloads.DrivePayload$ReadableDrivePayload@12f483b4 :: direction ?== UP PASSED
+@13.67s:  PASSED simulator.payloads.DrivePayload$ReadableDrivePayload@dbf2988 :: speed ?== FAST PASSED
+@13.67s:  PASSED simulator.payloads.DrivePayload$ReadableDrivePayload@79ddd026 :: direction ?== UP PASSED
+@15.57s:  PASSED simulator.payloads.DrivePayload$ReadableDrivePayload@6ac540c0 :: speed ?== SLOW PASSED
+@15.57s:  PASSED simulator.payloads.DrivePayload$ReadableDrivePayload@62e8cfca :: direction ?== UP PASSED
+@18.17s:  PASSED simulator.payloads.DrivePayload$ReadableDrivePayload@3c1e05ea :: speed ?== STOP PASSED
+@18.17s:  PASSED simulator.payloads.DrivePayload$ReadableDrivePayload@7f1ef3e7 :: direction ?== STOP PASSED
+@18.67s:  PASSED simulator.payloads.CanMailbox$ReadableCanMailbox@1338933d :: getValue ?== true PASSED
+@18.72s:  PASSED simulator.payloads.CanMailbox$ReadableCanMailbox@5123ac44 :: getValue ?== true PASSED
+@18.72s:  PASSED simulator.payloads.CanMailbox$ReadableCanMailbox@4320d68d :: getValue ?== true PASSED
+@18.72s:  PASSED simulator.payloads.CanMailbox$ReadableCanMailbox@5538615e :: getValue ?== true PASSED
+@18.72s:  PASSED simulator.payloads.CanMailbox$ReadableCanMailbox@4feca32a :: getValue ?== true PASSED
+
+
+******************Summary******************
+Passed:  37
+Failed:  0
+Total :  37
+

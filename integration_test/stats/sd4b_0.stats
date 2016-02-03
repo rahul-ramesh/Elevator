@@ -1,0 +1,32 @@
+; sd4b_0.stats
+; 18-649 Distributed Embedded Systems
+; Group 11
+; Rahul Ramesh // rahulram. Daniel Santoro // ddsantor. David Thompson // davidtho. Jialiang Tan // jialiant
+; !@
+
+Simulator Parameters:
+Command line = -cf ../../portfolio_grp11/integration_test/sd4b.cf -mf ../../portfolio_grp11/integration_test/sd4b.mf -head ../../portfolio_grp11/scripts/grp11.head
+RandomSeed = 1450147624722
+CanNetworkBitTime = 0 ns
+Effective Can Bitrate = Infinity
+Run Time = null
+Real time rate = null
+Message File = ../../portfolio_grp11/integration_test/sd4b.mf
+Controller File = ../../portfolio_grp11/integration_test/sd4b.cf
+
+Assertion Results:
+@5.0s:  PASSED simulator.payloads.DoorMotorPayload$ReadableDoorMotorPayload@7b87b9fe :: command ?== OPEN PASSED
+@5.0s:  PASSED simulator.payloads.DoorMotorPayload$ReadableDoorMotorPayload@757d5b2a :: command ?== OPEN PASSED
+@6.0s:  PASSED simulator.payloads.DoorMotorPayload$ReadableDoorMotorPayload@663aa59d :: command ?== STOP PASSED
+@6.0s:  PASSED simulator.payloads.DoorMotorPayload$ReadableDoorMotorPayload@556be8a0 :: command ?== STOP PASSED
+@7.0s:  PASSED simulator.payloads.CanMailbox$ReadableCanMailbox@5e46b372 :: getValue ?== true PASSED
+@7.5s:  PASSED simulator.payloads.CanMailbox$ReadableCanMailbox@72e9625d :: getValue ?== true PASSED
+@7.5s:  PASSED simulator.payloads.CanMailbox$ReadableCanMailbox@26da2af3 :: getValue ?== true PASSED
+@7.5s:  PASSED simulator.payloads.CanMailbox$ReadableCanMailbox@1d5bc8c5 :: getValue ?== 5000 PASSED
+
+
+******************Summary******************
+Passed:  8
+Failed:  0
+Total :  8
+

@@ -1,0 +1,32 @@
+; CarPositionControl_1_0.stats
+; 18-649 Distributed Embedded Systems
+; Group 11
+; Rahul Ramesh // rahulram. Daniel Santoro // ddsantor. David Thompson // davidtho. Jialiang Tan // jialiant
+; !@
+
+Simulator Parameters:
+Command line = -cf ../../portfolio_grp11/unit_test/CarPositionControl.cf -mf ../../portfolio_grp11/unit_test/CarPositionControl_1.mf -head ../../portfolio_grp11/scripts/grp11.head
+RandomSeed = 1450146973173
+CanNetworkBitTime = 0 ns
+Effective Can Bitrate = Infinity
+Run Time = null
+Real time rate = null
+Message File = ../../portfolio_grp11/unit_test/CarPositionControl_1.mf
+Controller File = ../../portfolio_grp11/unit_test/CarPositionControl.cf
+
+Assertion Results:
+@0.5s:  PASSED simulator.payloads.CarPositionIndicatorPayload$ReadableCarPositionIndicatorPayload@2515272a :: floor ?== 1 PASSED
+@1.5s:  PASSED simulator.payloads.CarPositionIndicatorPayload$ReadableCarPositionIndicatorPayload@15c617e0 :: floor ?== 2 PASSED
+@2.5s:  PASSED simulator.payloads.CarPositionIndicatorPayload$ReadableCarPositionIndicatorPayload@59026e12 :: floor ?== 3 PASSED
+@3.5s:  PASSED simulator.payloads.CarPositionIndicatorPayload$ReadableCarPositionIndicatorPayload@6faf9c1 :: floor ?== 2 PASSED
+@4.5s:  PASSED simulator.payloads.CarPositionIndicatorPayload$ReadableCarPositionIndicatorPayload@471be6b9 :: floor ?== 1 PASSED
+@5.5s:  PASSED simulator.payloads.CarPositionIndicatorPayload$ReadableCarPositionIndicatorPayload@3b8a9e64 :: floor ?== 6 PASSED
+@6.5s:  PASSED simulator.payloads.CarPositionIndicatorPayload$ReadableCarPositionIndicatorPayload@24cebf1c :: floor ?== 8 PASSED
+@7.5s:  PASSED simulator.payloads.CarPositionIndicatorPayload$ReadableCarPositionIndicatorPayload@42db3da :: floor ?== 3 PASSED
+
+
+******************Summary******************
+Passed:  8
+Failed:  0
+Total :  8
+

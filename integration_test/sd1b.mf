@@ -1,0 +1,114 @@
+; sd1b.mf
+; 18-649 Distributed Embedded Systems
+; Group 11
+; Rahul Ramesh // rahulram. Daniel Santoro // ddsantor. David Thompson // davidtho. Jialiang Tan // jialiant
+; !@
+
+#INCLUDE defines.mf
+
+; PRE-CONDITIONS
+
+; Door state '1. CLOSED'
+0ms I DOOR_CLOSED_SENSOR_PERIOD N DOOR_CLOSED_SENSOR_[BACK][LEFT]_CAN_ID DoorClosed BACK LEFT = TRUE
+0ms I DOOR_CLOSED_SENSOR_PERIOD N DOOR_CLOSED_SENSOR_[BACK][RIGHT]_CAN_ID DoorClosed BACK RIGHT = TRUE
+0ms I DOOR_CLOSED_SENSOR_PERIOD N DOOR_CLOSED_SENSOR_[FRONT][LEFT]_CAN_ID DoorClosed FRONT LEFT = TRUE
+0ms I DOOR_CLOSED_SENSOR_PERIOD N DOOR_CLOSED_SENSOR_[FRONT][RIGHT]_CAN_ID DoorClosed FRONT RIGHT = TRUE
+
+; Stopped at floor 1
++0ms I AT_FLOOR_PERIOD N AT_FLOOR_[1][FRONT]_CAN_ID AtFloor 1 FRONT = TRUE
++0ms I AT_FLOOR_PERIOD N AT_FLOOR_[1][BACK]_CAN_ID AtFloor 1 BACK = TRUE
++0ms I DRIVE_PERIOD N DRIVE_SPEED_CAN_ID DriveSpeed = 0 STOP
+
++500ms A F DoorMotor BACK LEFT : command == STOP
++0ms A F DoorMotor BACK RIGHT : command == STOP
++0ms A F DoorMotor FRONT LEFT : command == STOP
++0ms A F DoorMotor FRONT RIGHT : command == STOP
+
+; Inject hall call at floor 1 to get doors open
++500ms I 0s F HallCall 1 FRONT UP = true
++200ms I 0s F HallCall 1 FRONT UP = false
+
+; Trigger Door transition to state 2
+; Door transition 'PT1'
++0ms I WEIGHT_PERIOD N CAR_WEIGHT_CAN_ID CarWeight = 500
+
+; Check if Door in state 2
+; Door state '2. OPEN'
++1000ms A F DoorMotor FRONT LEFT : command == OPEN
++0ms A F DoorMotor FRONT RIGHT : command == OPEN
+
+; Trigger Door transition to state 3
+; Door transition 'PT2'
++0ms I DOOR_CLOSED_SENSOR_PERIOD N DOOR_CLOSED_SENSOR_[FRONT][LEFT]_CAN_ID DoorClosed FRONT LEFT = FALSE
++0ms I DOOR_CLOSED_SENSOR_PERIOD N DOOR_CLOSED_SENSOR_[FRONT][RIGHT]_CAN_ID DoorClosed FRONT RIGHT = FALSE
++1000ms I DOOR_OPENED_SENSOR_PERIOD N DOOR_OPEN_SENSOR_[FRONT][LEFT]_CAN_ID DoorOpened FRONT LEFT = TRUE
++0ms I DOOR_OPENED_SENSOR_PERIOD N DOOR_OPEN_SENSOR_[FRONT][RIGHT]_CAN_ID DoorOpened FRONT RIGHT = TRUE
+
+; Check if in state 3
+; Door state '3. OPENED_COUNTDOWN'
++1000ms A F DoorMotor FRONT LEFT : command == STOP
++0ms A F DoorMotor FRONT RIGHT : command == STOP
+
+; Inject a car call for floor 4 to get desiredDirection UP
++200ms I CAR_BUTTON_CONTROL_PERIOD N CAR_CALL_[4][FRONT]_CAN_ID CarCall 4 FRONT = true
+
+
+; Check initial hallButton state'OFF'
++700ms A F HallLight 1 FRONT UP : lighted == false
++0ms A N HALL_CALL_[1][FRONT][UP]_CAN_ID HallCall 1 FRONT UP : getValue == false
+
+
+; SCENARIO
+
+; Door Transition to state 4 triggered after dwell countdown
+; Door transition 'PT3'
+; Door state '4. CLOSE'
+;#arc '1B/1'
++6s A F DoorMotor FRONT LEFT : command == CLOSE
++0s A F DoorMotor FRONT RIGHT : command == CLOSE
++500ms I DOOR_OPENED_SENSOR_PERIOD N DOOR_OPEN_SENSOR_[FRONT][LEFT]_CAN_ID DoorOpened FRONT LEFT = FALSE
++0ms I DOOR_OPENED_SENSOR_PERIOD N DOOR_OPEN_SENSOR_[FRONT][RIGHT]_CAN_ID DoorOpened FRONT RIGHT = FALSE
+
+;; Passenger presses the hall call button while doors are closing
+;#arc '1B/2'
+;#arc '1B/3a' 
+;#arc '1B/3b'
++500ms  I  0s F HallCall 1 FRONT UP = true
+
+;Check that HallLight has turned on:
+;#arc '1B/4a'
+;#arc '1B/4b'
++500ms A F HallLight 1 FRONT UP : lighted == true
+
+;; Passenger releases the hall call button
++500ms  I  0s F HallCall 1 FRONT UP = false
+
+; Check that HallCall message is sent, causing dispatcher update,
+; causing hallLight to turn off:
+;#arc '1B/4c'
+;#arc '1B/5a'
+;#arc '1B/5b'
+;#arc '1B/6a'
+;#arc '1B/6b'
++1500ms A F HallLight 1 FRONT UP : lighted == false
+
+; Check that doors open:
+;#arc '1B/7'
++0ms A F DoorMotor FRONT LEFT : command == OPEN
++0ms A F DoorMotor FRONT RIGHT : command == OPEN
+
+; Doors have opened:
++500ms I DOOR_OPENED_SENSOR_PERIOD N DOOR_OPEN_SENSOR_[FRONT][LEFT]_CAN_ID DoorOpened FRONT LEFT = TRUE
++0ms I DOOR_OPENED_SENSOR_PERIOD N DOOR_OPEN_SENSOR_[FRONT][RIGHT]_CAN_ID DoorOpened FRONT RIGHT = TRUE
+
+; Check if Doors in state 3
+; Door state '3. OPENED_COUNTDOWN'
++500ms A F DoorMotor FRONT LEFT : command == STOP
++0ms A F DoorMotor FRONT RIGHT : command == STOP
+
+; Door Transition to state 4 triggered after dwell countdown
+; Door transition 'PT3'
+; Door state '4. CLOSE'
+;#arc '1B/8'
++6s A F DoorMotor FRONT LEFT : command == CLOSE
++0s A F DoorMotor FRONT RIGHT : command == CLOSE

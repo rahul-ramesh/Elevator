@@ -1,0 +1,12 @@
+; sd8a.cf
+; 18-649 Distributed Embedded Systems
+; Group 11
+; Rahul Ramesh // rahulram. Daniel Santoro // ddsantor. David Thompson // davidtho. Jialiang Tan // jialiant
+; !@
+
+LanternControl UP 0.200s true
+LanternControl DOWN 0.200s true
+DoorControl FRONT LEFT 0.010s true
+DoorControl FRONT RIGHT 0.010s true
+DoorControl BACK LEFT 0.010s true
+DoorControl BACK RIGHT 0.010s true

@@ -1,0 +1,44 @@
+; sd1b_0.stats
+; 18-649 Distributed Embedded Systems
+; Group 11
+; Rahul Ramesh // rahulram. Daniel Santoro // ddsantor. David Thompson // davidtho. Jialiang Tan // jialiant
+; !@
+
+Simulator Parameters:
+Command line = -cf ../../portfolio_grp11/integration_test/sd1b.cf -mf ../../portfolio_grp11/integration_test/sd1b.mf -head ../../portfolio_grp11/scripts/grp11.head
+RandomSeed = 1450147601623
+CanNetworkBitTime = 0 ns
+Effective Can Bitrate = Infinity
+Run Time = null
+Real time rate = null
+Message File = ../../portfolio_grp11/integration_test/sd1b.mf
+Controller File = ../../portfolio_grp11/integration_test/sd1b.cf
+
+Assertion Results:
+@0.5s:  PASSED simulator.payloads.DoorMotorPayload$ReadableDoorMotorPayload@7540138b :: command ?== STOP PASSED
+@0.5s:  PASSED simulator.payloads.DoorMotorPayload$ReadableDoorMotorPayload@7b5e236a :: command ?== STOP PASSED
+@0.5s:  PASSED simulator.payloads.DoorMotorPayload$ReadableDoorMotorPayload@427b9969 :: command ?== STOP PASSED
+@0.5s:  PASSED simulator.payloads.DoorMotorPayload$ReadableDoorMotorPayload@6da1ee47 :: command ?== STOP PASSED
+@2.2s:  PASSED simulator.payloads.DoorMotorPayload$ReadableDoorMotorPayload@1f27273 :: command ?== OPEN PASSED
+@2.2s:  PASSED simulator.payloads.DoorMotorPayload$ReadableDoorMotorPayload@1f8f5cce :: command ?== OPEN PASSED
+@4.2s:  PASSED simulator.payloads.DoorMotorPayload$ReadableDoorMotorPayload@2957c7bf :: command ?== STOP PASSED
+@4.2s:  PASSED simulator.payloads.DoorMotorPayload$ReadableDoorMotorPayload@3dfe7b92 :: command ?== STOP PASSED
+@5.1s:  PASSED simulator.payloads.HallLightPayload$ReadableHallLightPayload@78c4f9e6 :: lighted ?== false PASSED
+@5.1s:  PASSED simulator.payloads.CanMailbox$ReadableCanMailbox@28341db1 :: getValue ?== false PASSED
+@11.1s:  PASSED simulator.payloads.DoorMotorPayload$ReadableDoorMotorPayload@5007de1a :: command ?== CLOSE PASSED
+@11.1s:  PASSED simulator.payloads.DoorMotorPayload$ReadableDoorMotorPayload@73fce83e :: command ?== CLOSE PASSED
+@12.6s:  PASSED simulator.payloads.HallLightPayload$ReadableHallLightPayload@10ca6ba3 :: lighted ?== true PASSED
+@14.6s:  PASSED simulator.payloads.HallLightPayload$ReadableHallLightPayload@5769aa0e :: lighted ?== false PASSED
+@14.6s:  PASSED simulator.payloads.DoorMotorPayload$ReadableDoorMotorPayload@4e33c558 :: command ?== OPEN PASSED
+@14.6s:  PASSED simulator.payloads.DoorMotorPayload$ReadableDoorMotorPayload@5b4c1313 :: command ?== OPEN PASSED
+@15.6s:  PASSED simulator.payloads.DoorMotorPayload$ReadableDoorMotorPayload@5cd4927f :: command ?== STOP PASSED
+@15.6s:  PASSED simulator.payloads.DoorMotorPayload$ReadableDoorMotorPayload@7faea002 :: command ?== STOP PASSED
+@21.6s:  PASSED simulator.payloads.DoorMotorPayload$ReadableDoorMotorPayload@106f29c8 :: command ?== CLOSE PASSED
+@21.6s:  PASSED simulator.payloads.DoorMotorPayload$ReadableDoorMotorPayload@17770bec :: command ?== CLOSE PASSED
+
+
+******************Summary******************
+Passed:  20
+Failed:  0
+Total :  20
+
